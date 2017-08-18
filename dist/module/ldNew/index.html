@@ -45,6 +45,7 @@
 				<div v-show="flag.circle" class="circle_box">
 					<div class="bigCircle"></div>
 					<div class="smallCircle"></div>
+					<div class="normalCircle"></div>
 					<h1>{{list_obj.ruleTitle}}</h1>
 					<h2>{{list_obj.ruleSubTitle}}的玩家平分奖池</h2>
 					<div @click="showRules" class="rules_btn">详细规则</div>
@@ -78,7 +79,7 @@
 
 		<div v-if="!flag.noInfo" class="right_bottom" v-cloak>
 			<div class="count">
-				<p>本时段已达成人数：<span @click="listRecords">{{list_obj.achieveUserCnt}}</span></p>
+				<!--<p>本时段已达成人数：<span @click="listRecords">{{list_obj.achieveUserCnt}}</span></p>-->
 				<p>已达成奖励份数：<span @click="listRecords">{{list_obj.achieveCnt}}</span></p>
 			</div>
 			<h1>奖池顺豆累积来自于本时段所有报名玩家，<span>同时段内可多次报名参加。</span>{{list_obj.applyEndTime}}结束报名，{{list_obj.calculateTime}}结算</h1>

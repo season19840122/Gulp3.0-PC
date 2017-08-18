@@ -391,15 +391,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -487,6 +493,12 @@ body {
 
 .smallScroll::-webkit-scrollbar-thumb:active {
   background: #463714;
+}
+
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
 }
 
 .box {
@@ -585,7 +597,7 @@ body {
 
 .box .contents-wrap .btn-wrap {
   position: absolute;
-  left: 50%;
+  left: 31.8%;
   bottom: 8px;
   z-index: 10;
   -webkit-transform: translateX(-50%);
@@ -1440,16 +1452,16 @@ body {
 
 .box .contents-wrap #security .remind {
   position: absolute;
-  left: 480px;
-  top: 86px;
+  left: 300px;
+  top: 0;
   font-size: 12px;
-  color: #b3b3b3;
+  color: #3d4146;
 }
 
 .box .contents-wrap #security .qrcode-wrap {
   position: absolute;
-  left: 608px;
-  top: 176px;
+  left: 390px;
+  top: 115px;
   width: 292px;
   height: 193px;
   border-left: 1px solid  #20242a;

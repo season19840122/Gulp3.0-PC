@@ -92,6 +92,10 @@ html {
                 &:active {
                     background-position: 0px -248px;
                 }
+                &.disable{
+                    cursor: default;
+                    background-position: 0px -321px;
+                }
             }
             .list_box {
                 @include abTopLeft(966px, 445px, 750px, 50%);

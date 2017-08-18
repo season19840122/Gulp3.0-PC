@@ -1,0 +1,773 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+[v-cloak] {
+    display: none !important;
+}
+.hide_ {
+    display: none;
+}
+
+.box {
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/activity/tel_bg.webp');
+    .box_banner{
+        @include abTopLeft(1200px, 39px, 175px, 0px);
+        @include bg('../../images/activity/tel_banner.png');
+        ul{
+            margin-left: 338px;
+            height: 30px;
+            li{
+                position: relative;
+                float: left;
+                width: 56px;
+                line-height: 32px;
+                cursor: pointer;
+                text-align: center;
+                margin-right: 60px;
+                span{
+                    color: #a78a4f;
+                    font-family: "微软雅黑";
+                    font-size: 12px;
+                    display: inline-block;
+                    font-weight: bold;
+                    color: #dbcbb1;
+                }
+                &:hover{
+                    span{color: #ffd789;}
+                }
+                &.tip{
+                    cursor: pointer;
+                    span{color: #dbcbb1;}
+                }
+                &.now{
+                    cursor: default;
+                    span{color: #ffd789;}
+                    &:after{
+                        content: "";
+                        @include abTopLeft(28px, 17px, 32px, 50%);
+                        margin-left: -14px;
+                        @include bg('../../images/activity/tel_tip.png');
+                    }
+                }
+                &.lock{
+                    cursor: default;
+                    span{color: #a78a4f;}
+                    &:before {
+                        color: #a78a4f;
+                        content: "\e74d";
+                        @include iconfont;
+                        font-size: 12px;
+                        @include abTopLeft(15px, 15px, 0px, -15px);
+                    }
+                }
+            }
+        }
+        .tip_content{
+            display: none;
+            @include abBottomLeft(400px, 110px, -133px, -90px);
+            font-size: 12px;
+            z-index: 100;
+            color: #8d7b59;
+            background: #070d11;
+            padding: 12px 15px;
+            border: 1px solid #4b442c;
+            p{
+                line-height: 20px;
+                margin: 0px;
+                height: 20px;
+            }
+            &:before{
+                content: "";
+                position: absolute;
+                top: -20px;
+                left: 103px;
+                width: 0px;
+                height: 0px;
+                border: 10px solid;
+                border-color: transparent transparent #67501f transparent;
+            }
+            &:after{
+                content: "";
+                position: absolute;
+                top: -19px;
+                left: 103px;
+                width: 0px;
+                height: 0px;
+                border: 10px solid;
+                border-color: transparent transparent #070d11 transparent;
+            }
+        }
+    }
+    .title {
+        position: relative;
+        color: #7999f4;
+        font-size: 14px;
+        font-weight: bold;
+        width: 370px;
+        border-bottom: 1px solid #262722;
+        margin-left: 7px;
+        height: 30px;
+        line-height: 30px;
+        text-align: left;
+        text-indent: 12px;
+        margin-bottom: 15px;
+        text-align: left;
+        color: #dbce99;
+        p{
+            font-weight: normal;
+            color: #dbce99;
+            float: right;
+        }
+        span{color: #ffc462;}
+        &:before {
+            color: #dbce99;
+            content: "\e62f";
+            @include iconfont;
+            font-size: 19px;
+            @include abTopLeft(15px, 15px, 1px, -22px);
+        }
+    }
+    .go_back{
+        font-size: 12px;
+        color: #eaeaea;
+        @include textCenter(20px);
+        @include abTopLeft(90px,22px,10px,0px);
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .box_left {
+        @include abBottomLeft(440px, 400px, 0px, 0px);
+        padding: 0px 38px;
+        .alert_box {
+            .input_again{
+                margin-top: 15px;
+                position: absolute;
+                width: 160px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                color: white;
+                cursor: pointer;
+                background: #0e80c1;
+                &:hover {
+                    background: #0094e9;
+                }
+                &:active {
+                    background: #0086d3;
+                }
+            }
+            .alert_content {
+                color: #dbc08f;
+                font-size: 14px;
+                margin-bottom: 20px;
+                span {
+                    display: block;
+                    background: url(../../images/activity/tel_btn2.png);
+                    color: #dbc08f;
+                    cursor: pointer;
+                    font-size: 12px;
+                    margin-top: 30px;
+                    width: 100px;
+                    text-align: center;
+                    line-height: 29px;
+                    height: 30px;
+                }
+            }
+            p {
+                font-size: 12px;
+                color: #919ed0;
+            }
+            #msg_status {
+                margin-bottom: 10px;
+                position: relative;
+                h1 {
+                    padding-left: 45px;
+                    font-size: 24px;
+                }
+                h2 {
+                    padding-left: 45px;
+                    font-size: 14px;
+                }
+            }
+            .icon-zhuyi1 {
+                color: #882603;
+                &:before {
+                    position: absolute;
+                    top: -6px;
+                    left: 0px;
+                    font-size: 38px;
+                }
+                h1,
+                h2 {
+                    color: #b93709;
+                }
+            }
+            .icon-duigou {
+                color: #0bc779;
+                &:before {
+                    position: absolute;
+                    top: -6px;
+                    left: 0px;
+                    font-size: 38px;
+                }
+                h1,
+                h2 {
+                    color: #0bc779;
+                }
+            }
+            .fail {
+                color: #179297;
+                h1 {
+                    color: #b7cee7;
+                }
+                h2 {
+                    color: #919ed0;
+                }
+            }
+        }
+        .input_box {
+            position: relative;
+            ul {
+                position: relative;
+                width: 375px;
+                height: 290px;
+                li {
+                    position: relative;
+                    margin-bottom: 5px;
+                    height: 30px;
+                    width: 100%;
+                    color: #dbc08f;
+                    line-height: 30px;
+                    &:first-child{
+                        margin-bottom: 10px;
+                    }
+                    label {
+                        position: absolute;
+                        left: 0px;
+                        height: 24px;
+                        width: 80px;
+                        font-weight: normal;
+                        font-size: 14px;
+                        text-align: left;
+                    }
+                    .content {
+                        position: absolute;
+                        left: 85px;
+                        top: 3px;
+                        width: 230px;
+                        line-height: 24px;
+                        height: 24px;
+                        text-align: left;
+                        input[type='text'] {
+                            border: 0;
+                            position: absolute;
+                            width: 230px;
+                            height: 24px;
+                            left: 0px;
+                            text-indent: 10px;
+                            top: 0px;
+                            color: #6c7d81;
+                            outline:none;
+                            background: transparent;
+                            box-shadow: 0px 0px 0px 1px #253336;
+                            &:focus{
+                                box-shadow: 0px 0px 0px 1px #695f41;
+                                color: #a38f52;
+                            }
+                        }
+                        input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+                            color: #2a3338; 
+                        } 
+                        input:-moz-placeholder, textarea:-moz-placeholder { 
+                            color: #2a3338; 
+                        } 
+                        input::-moz-placeholder, textarea::-moz-placeholder { 
+                            color: #2a3338; 
+                        } 
+                        input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+                            color: #2a3338; 
+                        } 
+                        .errorTip {
+                            color: #bf0f0f;
+                            font-size: 12px;
+                            position: absolute;
+                            right: -105px;
+                            top: -3px;
+                        }
+                        .errorConfirm {
+                            color: #bf0f0f;
+                            position: absolute;
+                            right: 10px;
+                            top: 10px;
+                        }
+                        .add_box {
+                            position: relative;
+                            display: inline-block;
+                            width: 32px;
+                            height: 32px;
+                            box-shadow: 0px 0px 0px 1px #2e456b;
+                            cursor: pointer;
+                            margin-right: 9px;
+                            color: #1d516e;
+                            .uploadify{
+                             z-index: 10;   
+                            }
+                            .add {
+                                top: 0px;
+                                left: 0px;
+                                font-size: 35px;
+                                position: absolute;
+                                width: 32px;
+                                height: 32px;
+                                &.icon-tupian{
+                                    font-size: 25px;
+                                }
+                                &:before {
+                                    position: absolute;
+                                    left: -1px;
+                                    top: 3px;
+                                    font-weight: normal;
+                                }
+                                &:hover {
+                                    color: #005f96;
+                                    box-shadow: 0px 0px 0px 1px #0094e9;
+                                }
+                                &:active {
+                                    color: #07527d;
+                                    box-shadow: 0px 0px 0px 1px #0086d3;
+                                }
+                            }
+                            a {
+                                z-index: 0;
+                                font-size: 14px;
+                                cursor: default;
+                                position: absolute;
+                                top: 35px;
+                                width: 32px;
+                                text-align: center;
+                                &.on{
+                                    color: #00a2ff;
+                                    &.icon-gou1:before {
+                                        position: absolute;
+                                        top: -28px;
+                                        left: 13px;
+                                        font-size: 20px;
+                                        color: #01ba7f;
+                                    }
+                                }
+                                &.off{
+                                    color: #919ed0;
+                                }
+                            }
+                        }
+                        p {
+                            height: 17px;
+                            color: #3c4a7a;
+                            font-size: 14px;
+                            &:first-child {
+                                margin-top: 17px;
+                            }
+                        }
+                        .confirm {
+                            margin-top: 10px;
+                            position: absolute;
+                            width: 100px;
+                            height: 30px;
+                            line-height: 30px;
+                            background: url(../../images/activity/tel_btn2.png);
+                            text-align: center;
+                            color: #dbc08f;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .box_right {
+        @include abBottomRight(745px, 400px, 0px, 0px);
+        padding: 0px 34px;
+        p {
+            color: #6c7d81;
+            font-size: 12px;
+            margin-bottom: 2px;
+            span {
+                color: #efb95e;
+            }
+        }
+        .check_game {
+            position: relative;
+            width: 220px;
+            height: 35px;
+            background: #0e80c1;
+            @include textCenter(35px);
+            font-size: 14px;
+            color: white;
+            cursor: pointer;
+            margin-top: 42px;
+            display: inline-block;
+            &:hover { 
+                background: #0094e9;
+            }
+            &:active {
+                background: #0086d3;
+            }
+        }
+        .join {
+            @include abTopLeft(248px, 30px, 0px, 0px);
+            background: url(../../images/activity/tel_btn.png);
+            position: relative;
+            font-size: 12px;
+            color: #dbc08f;
+            margin-top: 20px;
+            display: block;
+            cursor: pointer;
+            line-height: 30px;
+            text-align: center;
+            text-decoration: none;
+            &:hover {
+                background-position: 0px -30px;
+            }
+            &:active {
+                background-position: 0px -60px;
+            }
+        }
+    }
+    .box_content{
+        &>.title8{
+            @include abTopLeft(1154px, 61px, 215px, 50%);
+            margin-left: -577px;
+            text-align: center;
+            background: url(../../images/activity/8title.png);
+            span{
+                display: inline-block;
+                height: 40px;
+                width: 170px;
+                margin-top: 22px;
+                line-height: 38px;
+                font-size: 12px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+        }
+        #game_line{
+            width: 992px;
+            height: 278px;
+            position: absolute;
+            left: 50%;
+            margin-left: -496px;
+            top: 282px;
+            &.team_8{background: url(../../images/activity/game_line.png);}
+            &.team_4{background: url(../../images/activity/game_line2.png);}
+            &.team_2{background: url(../../images/activity/game_line3.png);}
+            &.team_1{background: url(../../images/activity/game_line4.png);}
+            div{
+                position: absolute;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100px;
+                height: 20px;
+                color:#5e5642;
+                font-size: 12px;
+            }
+            .team_8_1,
+            .team_8_2,
+            .team_8_3,
+            .team_8_4,
+            .team_8_5,
+            .team_8_6,
+            .team_8_7,
+            .team_8_8{
+                left: 0px;
+            }
+            .team_8_1{top: -18px;}
+            .team_8_2{top: 22px;}
+            .team_8_3{top: 62px;}
+            .team_8_4{top: 102px;}
+            .team_8_5{top: 140px;}
+            .team_8_6{top: 180px;}
+            .team_8_7{top: 220px;}
+            .team_8_8{top: 260px;}
+            
+            .team_8_9,
+            .team_8_10,
+            .team_8_11,
+            .team_8_12,
+            .team_8_13,
+            .team_8_14,
+            .team_8_15,
+            .team_8_16{
+                text-align: right;
+                right: 0px;
+            }
+            .team_8_9{top: -18px;}
+            .team_8_10{top: 22px;}
+            .team_8_11{top: 62px;}
+            .team_8_12{top: 102px;}
+            .team_8_13{top: 140px;}
+            .team_8_14{top: 180px;}
+            .team_8_15{top: 220px;}
+            .team_8_16{top: 260px;}
+            
+            .team_4_1,
+            .team_4_2,
+            .team_4_3,
+            .team_4_4{
+                left: 120px;
+            }
+            .team_4_1{top: 2px;}
+            .team_4_2{top: 82px;}
+            .team_4_3{top: 158px;}
+            .team_4_4{top: 238px;}
+            
+            .team_4_5,
+            .team_4_6,
+            .team_4_7,
+            .team_4_8{
+                text-align: right;
+                right: 120px;
+            }
+            .team_4_5{top: 2px;}
+            .team_4_6{top: 82px;}
+            .team_4_7{top: 158px;}
+            .team_4_8{top: 238px;}
+            
+            .team_2_1,
+            .team_2_2{
+                left: 260px;
+            }
+            .team_2_1{top: 42px;}
+            .team_2_2{top: 200px;}
+            
+            .team_2_3,
+            .team_2_4{
+                text-align: right;
+                right: 260px;
+            }
+            .team_2_3{top: 42px;}
+            .team_2_4{top: 200px;}
+            
+            .team_1_1{
+                left: 320px;
+                top: 130px;
+                text-align: right;
+            }
+            .team_1_2{
+                right: 320px;
+                top: 130px;
+            }
+            .game_cup{
+                position: absolute;
+                left: 469px;
+                top: 69px;
+            }
+            .cup_box{
+                position: absolute;
+                left: 436px;
+                top: 126px;
+                line-height: 24px;
+                text-align: center;
+                width: 120px;
+                height: 25px;
+                background: #2288b9;
+                color: #4ca8e6;
+            }
+            .cup_box.active{color: white;font-weight: bold;}
+            div.active{
+                color: #dbcbb1;
+            }
+            div.win{
+                color: #f4cb7c;
+            }
+            .game_remind{
+                color: #86b1ce;
+                position: absolute;
+                width: 240px;
+                height: 20px;
+                font-size: 14px;
+                left: 378px;
+                top: 200px;
+                text-align: center;
+            }
+            .count_back{
+                position: absolute;
+                width: 189px;
+                height: 52px;
+                left: 400px;
+                top: 233px;
+                color: #8fc6e5;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 51px;
+                background: url(../images/count_back_bg.png);
+                span{
+                    display: inline-block;
+                    width: 30px;
+                }
+            }
+        }
+    }
+    .provinceSchool {
+        position: absolute;
+        width: 580px;
+        height: 360px;
+        margin-left: -290px;
+        top: 50%;
+        left: 50%;
+        margin-top: -175px;
+        background: #222b4b;
+        border: 1px solid black;
+        .head {
+            width: 100%;
+            height: 40px;
+            background: #445183;
+            text-align: center;
+            line-height: 40px;
+            span {
+                font-size: 18px;
+                color: #d3d6e3;
+                font-weight: bold;
+            }
+        }
+        .proSelect {
+            height: 48px;
+            position: relative;
+            p {
+                position: absolute;
+                left: 173px;
+                top: 17px;
+                color: #646e8f;
+                padding-left: 10px;
+            }
+            #sheng {
+                position: absolute;
+                box-shadow: 0px 0px 0px 1px #414f7d;
+                width: 160px;
+                height: 30px;
+                top: 10px;
+                left: 10px;
+                span {
+                    color: #646e8f;
+                    cursor: pointer;
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                }
+                #shengName {
+                    font-size: 14px;
+                    cursor: pointer;
+                    position: absolute;
+                    width: 160px;
+                    height: 30px;
+                    border: 0;
+                    left: 0px;
+                    top: 0px;
+                    color: #bdcce5;
+                    background: #222b4b;
+                    outline: none;
+                    text-indent: 10px;
+                }
+                .list {
+                    z-index: 10;
+                    position: absolute;
+                    top: 30px;
+                    left: 0px;
+                    height: 270px;
+                    width: 160px;
+                    box-shadow: 0px 0px 0px 1px #414f7d;
+                    background: #19203b;
+                    overflow: auto;
+                    overflow-x: hidden;
+                    ul {
+                        li {
+                            height: 30px;
+                            display: block;
+                            color: #bdcce5;
+                            font-size: 14px;
+                            line-height: 30px;
+                            text-align: left;
+                            text-indent: 10px;
+                            cursor: pointer;
+                            width: 160px;
+                            &:hover {
+                                background: #111629;
+                                color: #00a2ff;
+                            }
+                        }
+                    }
+                }
+            }
+            .userInput {
+                position: absolute;
+                width: 250px;
+                height: 30px;
+                color: #bdcce5;
+                font-size: 14px;
+                text-indent: 10px;
+                background: #273152;
+                outline: none;
+                border: 1px solid #414f7d;
+                right: 135px;
+                top: 10px;
+            }
+        }
+        #schoolList {
+            z-index: 0;
+            position: absolute;
+            top: 90px;
+            left: 10px;
+            width: 550px;
+            height: 220px;
+            padding: 10px 0;
+            overflow-y: auto;
+            border: 1px solid #303956;
+            ul {
+                li {
+                    float: left;
+                    text-align: center;
+                    width: 170px;
+                    margin: 5px;
+                    height: 30px;
+                    font-size: 12px;
+                    color: #748fbb;
+                    line-height: 30px;
+                    cursor: pointer;
+                    background: #273152;
+                    overflow: hidden;
+                    &:hover {
+                        background: #505e8d;
+                        color: #d3e3ff;
+                    }
+                }
+                span.entertext {
+                    display: block;
+                    height: 180px;
+                    text-align: center;
+                    font-size: 20px;
+                    color: #bdcce5;
+                }
+            }
+        }
+        .button {
+            position: absolute;
+            width: 100px;
+            height: 30px;
+            right: 19px;
+            bottom: 10px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            background: #0e80c1;
+            &:hover {
+                background: #0094e9;
+            }
+            &:active {
+                background: #0086d3;
+            }
+        }
+    }
+}

@@ -63,15 +63,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -161,6 +167,12 @@ body {
   background: #463714;
 }
 
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+}
+
 .box {
   color: #9d9d9d;
   font-family: "微软雅黑";
@@ -192,14 +204,14 @@ body {
   font-size: 12px;
   position: absolute;
   width: 500px;
-  height: 400px;
+  min-height: 400px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -200px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_box h1 {
@@ -217,9 +229,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 388px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -520,14 +532,14 @@ body {
 .box .alert_msg {
   position: absolute;
   width: 500px;
-  height: 193px;
+  min-height: 193px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -96.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
 }
 
@@ -546,9 +558,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 181px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -651,14 +663,14 @@ body {
 .box .alert_pay {
   position: absolute;
   width: 500px;
-  height: 380px;
+  min-height: 380px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -190px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
 }
 
@@ -677,9 +689,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 368px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -989,14 +1001,14 @@ body {
 .box .alert_boundC {
   position: absolute;
   width: 520px;
-  height: 193px;
+  min-height: 193px;
   background: #0B0C10;
   left: 50%;
   margin-left: -260px;
   top: 50%;
   margin-top: -96.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_boundC h1 {
@@ -1014,9 +1026,9 @@ body {
   position: absolute;
   content: "";
   width: 508px;
-  height: 181px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1137,14 +1149,14 @@ body {
 .box .alert_apply {
   position: absolute;
   width: 520px;
-  height: 200px;
+  min-height: 200px;
   background: #0B0C10;
   left: 50%;
   margin-left: -260px;
   top: 50%;
   margin-top: -100px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_apply h1 {
@@ -1162,9 +1174,9 @@ body {
   position: absolute;
   content: "";
   width: 508px;
-  height: 188px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1300,14 +1312,14 @@ body {
 .box .alert_switch {
   position: absolute;
   width: 520px;
-  height: 260px;
+  min-height: 260px;
   background: #0B0C10;
   left: 50%;
   margin-left: -260px;
   top: 50%;
   margin-top: -130px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_switch h1 {
@@ -1325,9 +1337,9 @@ body {
   position: absolute;
   content: "";
   width: 508px;
-  height: 248px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1513,15 +1525,14 @@ body {
 .box .alert_bound {
   position: absolute;
   width: 500px;
-  height: 190px;
+  min-height: 190px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -95px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_bound h1 {
@@ -1539,9 +1550,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 178px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1683,15 +1694,14 @@ body {
 .box .alert_qrcode {
   position: absolute;
   width: 500px;
-  height: 350px;
+  min-height: 350px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -175px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_qrcode h1 {
@@ -1709,9 +1719,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 338px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1852,15 +1862,14 @@ body {
 .box .alert_msg {
   position: absolute;
   width: 480px;
-  height: 193px;
+  min-height: 193px;
   background: #0B0C10;
   left: 50%;
   margin-left: -240px;
   top: 50%;
   margin-top: -96.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
 }
 
@@ -1879,9 +1888,9 @@ body {
   position: absolute;
   content: "";
   width: 468px;
-  height: 181px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1985,14 +1994,14 @@ body {
 .box .alert_bound_remind {
   position: absolute;
   width: 480px;
-  height: 250px;
+  min-height: 250px;
   background: #0B0C10;
   left: 50%;
   margin-left: -240px;
   top: 50%;
   margin-top: -125px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_bound_remind h1 {
@@ -2010,9 +2019,9 @@ body {
   position: absolute;
   content: "";
   width: 468px;
-  height: 238px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2112,15 +2121,14 @@ body {
 .box .alert_bound {
   position: absolute;
   width: 480px;
-  height: 238px;
+  min-height: 238px;
   background: #0B0C10;
   left: 50%;
   margin-left: -240px;
   top: 50%;
   margin-top: -119px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_bound h1 {
@@ -2138,9 +2146,9 @@ body {
   position: absolute;
   content: "";
   width: 468px;
-  height: 226px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2270,15 +2278,14 @@ body {
 .box .alert_check, .box .alert_prizeInfo {
   position: absolute;
   width: 500px;
-  height: 561px;
+  min-height: 561px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -280.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_check h1, .box .alert_prizeInfo h1 {
@@ -2296,9 +2303,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 549px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2474,14 +2481,14 @@ body {
 .box .alert_prizeInfo {
   position: absolute;
   width: 500px;
-  height: 425px;
+  min-height: 425px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -212.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_prizeInfo h1 {
@@ -2499,9 +2506,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 413px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2618,14 +2625,14 @@ body {
 .box .pay_error, .box .pay_success, .box #pay_error, .box #pay_success {
   position: absolute;
   width: 480px;
-  height: 340px;
+  min-height: 340px;
   background: #0B0C10;
   left: 50%;
   margin-left: -240px;
   top: 50%;
   margin-top: -170px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   display: none;
 }
 
@@ -2644,9 +2651,9 @@ body {
   position: absolute;
   content: "";
   width: 468px;
-  height: 328px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2797,14 +2804,14 @@ body {
 .box .pay_box, .box #pay_box {
   position: absolute;
   width: 480px;
-  height: 340px;
+  min-height: 340px;
   background: #0B0C10;
   left: 50%;
   margin-left: -240px;
   top: 50%;
   margin-top: -170px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   display: none;
 }
 
@@ -2823,9 +2830,9 @@ body {
   position: absolute;
   content: "";
   width: 468px;
-  height: 328px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2953,14 +2960,14 @@ body {
 .box .alert_join {
   position: absolute;
   width: 780px;
-  height: 375px;
+  min-height: 375px;
   background: #0B0C10;
   left: 50%;
   margin-left: -390px;
   top: 50%;
   margin-top: -187.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_join h1 {
@@ -2978,9 +2985,9 @@ body {
   position: absolute;
   content: "";
   width: 768px;
-  height: 363px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -3213,14 +3220,14 @@ body {
 .box .alert_list {
   position: absolute;
   width: 780px;
-  height: 375px;
+  min-height: 375px;
   background: #0B0C10;
   left: 50%;
   margin-left: -390px;
   top: 50%;
   margin-top: -187.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_list h1 {
@@ -3238,9 +3245,9 @@ body {
   position: absolute;
   content: "";
   width: 768px;
-  height: 363px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -3571,15 +3578,14 @@ body {
 .box .alert_add {
   position: absolute;
   width: 500px;
-  height: 450px;
+  min-height: 450px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -225px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
 }
 
@@ -3598,9 +3604,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 438px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -3756,14 +3762,14 @@ body {
   display: none;
   position: absolute;
   width: 500px;
-  height: 450px;
+  min-height: 450px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -225px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_create h1, .box .alert_accept h1 {
@@ -3781,9 +3787,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 438px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }

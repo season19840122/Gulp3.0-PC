@@ -19,6 +19,9 @@
 			}
 			return null;
 		},
+		switchStartInfo:function(gameId,flag) {
+			console.log('login: '+gameId);
+		},
 		getLoginXingYun:function() {
 			return {'userId':'20001', 'nickName':'大家都来撸'};
 		},

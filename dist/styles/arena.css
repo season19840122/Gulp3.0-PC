@@ -391,15 +391,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -487,6 +493,12 @@ body {
 
 .smallScroll::-webkit-scrollbar-thumb:active {
   background: #463714;
+}
+
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
 }
 
 .menu {
@@ -644,32 +656,11 @@ body {
   position: relative;
 }
 
-.box .main .caption-wrap {
+.box .main nav {
   position: relative;
-}
-
-.box .main .caption-wrap .ico-arena {
-  background: url(../images/arena/sprite-arena.png) no-repeat;
-  width: 46px;
-  height: 58px;
-  display: inline-block;
-}
-
-.box .main .caption-wrap .caption {
-  position: absolute;
-  left: 55px;
-  top: 5px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.box .main .caption-wrap .txt {
-  position: absolute;
-  left: 55px;
-  top: 37px;
-  color: #9d9d9d;
-  font-size: 14px;
+  background: url(../images/arena/nav-bg.png) no-repeat;
+  width: 1132px;
+  height: 67px;
 }
 
 .box .main nav .link-wrap {
@@ -690,12 +681,19 @@ body {
   margin-left: 3px;
 }
 
+.box .main nav .link-wrap a:hover {
+  background-position: 0 -30px;
+}
+
+.box .main nav .link-wrap a:active {
+  background-position: 0 -60px;
+}
+
 .box .main .content {
   display: -webkit-flex;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 9px;
   border-top: 1px solid  #1d3039;
   padding-top: 13px;
 }
@@ -885,6 +883,14 @@ body {
   background: url(../images/arena/btn-support.png) no-repeat;
 }
 
+.box .main .content .winner-wrap .content-wrap .captain .name-wrap .support:hover {
+  background-position: 0 -30px;
+}
+
+.box .main .content .winner-wrap .content-wrap .captain .name-wrap .support:active {
+  background-position: 0 -60px;
+}
+
 .box .main .content .winner-wrap .content-wrap .captain .name-wrap .support.disable {
   display: none;
 }
@@ -933,8 +939,11 @@ body {
 
 .box .main .content .winner-wrap .count span {
   background: #1442a7;
-  background: linear-gradient(#1442a7, #7fa9ff);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(left, #1442a7, #7ca7fd);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(left, #1442a7, #7ca7fd);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
   height: 7px;
   width: 49%;
   display: inline-block;
@@ -944,8 +953,11 @@ body {
 
 .box .main .content .winner-wrap .count span.two {
   background: #460000;
-  background: linear-gradient(#460000, #ff5b00);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(left, #460000, #f95800);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(left, #460000, #f95800);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .box .main .content .winner-wrap .count p {
@@ -979,7 +991,6 @@ body {
   position: absolute;
   right: 0;
   width: 350px;
-  overflow: hidden;
 }
 
 .box .main .content .guess-wrap > ul {

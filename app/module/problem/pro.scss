@@ -90,13 +90,16 @@
             .scroll_box {
                 position: relative;
                 top: 0;
+                #shundou{
+                    height: 560px;
+                }
                 .item{
                     padding-left: 55px;
                     dl {
                         margin-bottom: 20px;
                         dt {
                             line-height: 36px;
-                            font-size: 12px;
+                            font-size: 18px;
                             font-weight: 700;
                             color: #f0e6d2;
                             margin-bottom: 30px;

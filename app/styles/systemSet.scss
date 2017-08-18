@@ -90,7 +90,7 @@
     width: 685px;
     .btn-wrap {
       position: absolute;
-      left: 50%;
+      left: 50% - 18.2%;
       bottom: 8px;
       z-index: 10;
       -webkit-transform: translateX(-50%);
@@ -477,15 +477,15 @@
       }
       .remind {
         position: absolute;
-        left: 480px;
-        top: 86px;
+        left: 300px;
+        top: 0;
         font-size: 12px;
-        color: #b3b3b3;
+        color: #3d4146;
       }
       .qrcode-wrap {
         position: absolute;
-        left: 608px;
-        top: 176px;
+        left: 390px;
+        top: 115px;
         width: 292px;
         height: 193px;
         border-left: 1px solid  #20242a;

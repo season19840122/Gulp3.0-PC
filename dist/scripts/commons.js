@@ -26,23 +26,15 @@ define(['jquery'],function($) {
 		 * newData：每个接口的json参数
 		 * des：获取接口的全部参数，通过每个接口不同的参数合并公用参数值
 		 */
-		this.getData = function(newDate) {
-			if(typeof newDate == 'object') {//是否是post方法的参数
-				var data = $.extend('', this.options.globalData, newDate || {});
-				return this.options.contentType === 'application/json' && this.options.method === 'post'?JSON.stringify(data) : data;
-			} else if(newDate){//是否是get方法的参数
-				return newDate;
+		this.getData = function(obj) {
+			if(typeof obj.data == 'object') {//是否是post方法的参数
+				var data = $.extend('', this.options.globalData, obj.data || {});
+				return this.options.contentType === 'application/json' && obj.type == 'POST'?JSON.stringify(obj.data) : obj.data;
+			} else if(obj.data){//是否是get方法的参数
+				return obj.data;
 			} else {
 				return '';
 			}
-			
-			
-//			if(newDate) {
-//				return JSON.stringify($.extend('', this.options.globalData, newDate || {}));
-//			} else {
-//				return '';
-//			}
-			
 		}
 		
 		//js小数相乘
@@ -97,7 +89,7 @@ define(['jquery'],function($) {
 				url: this_.getUrl(obj.url),
 				dataType: obj.dataType || 'json',
 				contentType: this.options.contentType,
-				data:this_.getData(obj.data),
+				data:this_.getData(obj),
 				timeout: this.options.ajaxTimeout,
 				success: obj.success,
 				error: obj.error || function() {

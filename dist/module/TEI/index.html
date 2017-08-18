@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TEL</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="tei.css" />
+		<script data-main="main.js" src="../../scripts/require.min.js"></script>
+	</head>
+	<body>
+		<div class="box">
+			<a class="go_back" @click="goBack">返回</a>
+			<div class="box_banner">
+				<ul>
+					<li class="now"><span>线上报名</span></li>
+					<li class="lock"><span>线上选拔</span></li>
+					<li class="lock"><span>入围战队</span></li>
+					<li class="lock"><span>在线直播</span></li>
+				</ul>
+			</div>
+			
+			<div class="box_left" v-cloak>
+				<div class="title">
+					战队<span>报名</span>
+					<p>报名截止：8月6日</p>
+				</div>
+				<div v-show = "flag.remind_box" class="alert_box">
+					<div v-if="status == 'noLogin'"  class="alert_content">您尚未登录火马电竞<span @click="login">请登录</span></div>
+					<div v-else-if="status == 'noTeam'"  class="alert_content">您尚未加入任何战队，快去创建一支你的战队吧~<span @click="create">创建战队</span></div>
+					<div v-else-if="status == 'msg'"  class="alert_content">{{alert_c}}</div>
+					<tem_status v-else  :class = "statusClass" :msg = "c_status_msg"></tem_status>
+				</div>
+				<div v-show = "flag.input_box" class="input_box">
+					<ul>
+						<li>
+							<label>*战队名称：</label>
+							<div class="content">{{teamName}}</div>
+						</li>
+						<li>
+							<label>*联系电话：</label>
+							<div class="content">
+								<input v-model="input.phone" @blur="phoneChange" autocomplete="off" type="text" name="phone" id="phone" :placeholder="phone_remind"/>
+								<span v-if="input.errorPhone" class="errorTip">手机号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<label>*身份证号：</label>
+							<div class="content">
+								<input v-model="input.card1" @blur="cardChange(1)" autocomplete="off" type="text" name="card1" id="card1" :placeholder="card_remind"/>
+								<span v-if="input.errorCard1" class="errorTip">身份证号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<label></label>
+							<div class="content">
+								<input v-model="input.card2" @blur="cardChange(2)" autocomplete="off" type="text" name="card2" id="card2" :placeholder="card_remind"/>
+								<span v-if="input.errorCard2" class="errorTip">身份证号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<label></label>
+							<div class="content">
+								<input v-model="input.card3" @blur="cardChange(3)" autocomplete="off" type="text" name="card3" id="card3" :placeholder="card_remind"/>
+								<span v-if="input.errorCard3" class="errorTip">身份证号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<label></label>
+							<div class="content">
+								<input v-model="input.card4" @blur="cardChange(4)" autocomplete="off" type="text" name="card4" id="card4" :placeholder="card_remind"/>
+								<span v-if="input.errorCard4" class="errorTip">身份证号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<label></label>
+							<div class="content">
+								<input v-model="input.card5" @blur="cardChange(5)" autocomplete="off" type="text" name="card5" id="card5" :placeholder="card_remind"/>
+								<span v-if="input.errorCard5" class="errorTip">身份证号输入有误</span>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div @click="confirm" class="confirm">我要报名</div>
+								<span v-if="input.errorConfirm" class="errorConfirm">{{confirmTip}}</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box_right">
+				<div class="title">赛事<span>规则</span></div>
+				<p>1.TEI环太湖电子竞技邀请赛是由苏州电子竞技运动协会主办，火马电竞是官方唯一指定线上选拔平台；</p>
+				<p>2.参赛队伍需在火马电竞平台（官网www.huoma.cn下载个人版）-<span>艾欧尼亚区服创建满5人，最多不超过9人的战队</span>；</p>
+				<p>3.线上赛期间每个队员必须<span>全程开启火马电竞，使用注册战队时的游戏账号登录游戏</span>，且必须通过火马电竞的战队赛插件来创建或加入比赛房间；</p>
+				<p>4.根据火马电竞工作人员安排，准时参加小组赛，如遇特殊情况无法按时参赛，至少提前一天告知工作人员，无故临时弃权作永久禁赛处理；</p>
+				<p>5.所有线上小组选拔除决赛外均为BO1赛制，<span>小组决赛为BO3制</span>，且每到小组四强进行视频身份验证；</p>
+				<p>6.线上四强赛全程视频比赛，请自备电脑/手机摄像头，最终产生2个入围线下总决赛的名额（总决赛共计8支队伍）；</p>
+				<p><span>总决赛奖金：冠军 ￥50000 亚军 ￥20000 季军 ￥10000</span>；</p>
+				<p>7.赛事期间须服从裁判管理，有任何不合理要求的，视为弃权；</p>
+				<p>8.本赛事的最终解释权归杭州顺网科技股份有限公司所有。</p>
+				<p>参赛须知：</p>
+				<p>1.<span>线上海选赛不提供赛事奖金</span>；</p>
+				<p>2.线下赛差旅费用由赛事主办方补贴。</p>
+				<a @click="joinGame" class="join">加入官方赛事群，了解更多详情</a>
+			</div>
+		</div>
+	</body>
+</html>

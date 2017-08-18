@@ -282,6 +282,14 @@ html {
                     animation: circle2 40s .3s linear infinite;
                     -webkit-animation: circle2 40s .3s linear infinite;
                 }
+                .normalCircle {
+                    position: absolute;
+                    width: 455px;
+                    height: 455px;
+                    left: 13.5px;
+                    top: 13.5px;
+                    background: url(../../images/ldNew/circle_normal.png);
+                }
                 h1 {
                     font-size: 35px;
                     color: #B1B1B1;
@@ -416,7 +424,7 @@ html {
                 50%);
                 animation: bigIn .1s linear both;
                 -webkit-animation: bigIn .1s linear both;
-                margin-left: -284px;
+                margin-left: -340px;
                 text-align: left;
                 i {
                     position: absolute;

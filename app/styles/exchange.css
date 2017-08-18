@@ -391,15 +391,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -487,6 +493,12 @@ body {
 
 .smallScroll::-webkit-scrollbar-thumb:active {
   background: #463714;
+}
+
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
 }
 
 .menu {
@@ -717,8 +729,11 @@ body {
   width: 51px;
   color: #ab5338;
   background: #fce547;
-  background: linear-gradient(#fce547, #f8cf28);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #fce547, #f8cf28);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #fce547, #f8cf28);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .box .exchange-wrap ul li .exchange .money {
@@ -833,11 +848,11 @@ body {
 }
 
 .dialog-wrap.dialog-result.s {
-  height: 150px;
+  height: 220px;
 }
 
 .dialog-wrap.dialog-result.s::before {
-  height: 140px;
+  height: 210px;
 }
 
 .dialog-wrap.dialog-result .content-wrap .caption {
@@ -985,8 +1000,8 @@ body {
 }
 
 .dialog-wrap.dialog-pay .content-wrap .qrcode_box {
-  position: absolute;
-  top: 80px;
+  position: relative;
+  top: 0;
   width: 150px;
   height: 180px;
   padding: 9px;
@@ -1023,6 +1038,20 @@ body {
   bottom: 4px;
   text-align: left;
   color: #8d7652;
+}
+
+.dialog-wrap.dialog-pay .content-wrap .info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #8d7652;
+  line-height: 28px;
+}
+
+.dialog-wrap.dialog-pay .content-wrap .info .sd {
+  font-size: 14px;
+  color: #e0a119;
+  font-weight: bold;
 }
 
 .dialog-wrap .row-wrap {

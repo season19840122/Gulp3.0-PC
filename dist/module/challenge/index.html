@@ -143,7 +143,7 @@
 			  	<div :class="flag.noSd?'sd_pay off':'sd_pay'" @click="goPay('sd')">{{sd_word}}</div>
 				<h1 v-show="flag.fastTip">请选择快捷支付报名</h1>
 				<h2 v-show="flag.lastSd">今日顺豆报名挑战赛已用次数（{{sd_last}}）</h2>
-				<h1 v-show="flag.vipTip"><span>购买VIP</span>，提升每日挑战次数</h1>
+				<h1 v-show="flag.vipTip"><span @click="goVip">购买VIP</span>，提升每日挑战次数</h1>
 			</div>
 		</div>
 		

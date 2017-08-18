@@ -92,6 +92,6 @@ function dayObj(){
       // var sed = daySel==i?'selected':'';
       dayObj.push({text:i, value:i});
   }
-  console.log(dayObj);
+  // console.log(dayObj);
   return dayObj;
 }

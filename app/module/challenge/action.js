@@ -333,9 +333,6 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 								t['level_'+v.levelType].clickFlag = false;
 							}
 						}
-						console.log(t.level_1);
-						console.log(t.level_2);
-						console.log(t.level_3);
 					}
 				});
 			},
@@ -397,7 +394,6 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 					return;
 				}
 		
-				console.log(!resultData['success'] && resultData['code'])
 				if(!resultData['success'] && resultData['code']) {
 					if(resultData['code'] == 1004) {
 						var otherUser = resultData['data'];
@@ -556,7 +552,6 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 			qrcodeTimeBack: function () {
 				//处理扫码倒计时
 				this.pay.timeNum--;
-				console.log("time back " + this.pay.timeNum);
 				var t = this;
 				this.pay.timeBack = setTimeout(function () {
 					if (t.pay.timeNum <= 0) {
@@ -575,7 +570,7 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 			},
 			goPay: function (type) {
 				var URLOBJ = urlObj.enterRoom;
-				if (this.flag.noSd) return;//如果没有顺豆，不允许点击
+				if (this.flag.noSd && type == 'sd') return;//如果没有顺豆，不允许点击
 				if (URLOBJ.again) return;
 				URLOBJ.again = true;
 				if(type != "sd") this.closeQrcode();//二维码支付扫码成功后关闭倒计时
@@ -602,6 +597,9 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 						}
 					}
 				});
+			},
+			goVip:function() {
+				
 			},
 			closePay: function () {
 				this.flag.pay = false;
@@ -741,7 +739,6 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 				}
 			},
 			showDetail:function(e) {
-				console.log(e.target.id);
 				if (e.target.id == "checkDetail") {
 					var challengeRoomId = $(e.target).attr('data-challengeRoomId');
 					var challengeType = $(e.target).attr('data-challengeType');

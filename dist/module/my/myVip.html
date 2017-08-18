@@ -305,12 +305,12 @@
 				}
 			}
 			$('.card_box>ul>li').hover(function() {
-				if($(this).hasClass('open')) return;
 				var id = $(this)[0].id;
-				$('.card_box ul li').removeClass('open');
-				$(this).addClass('open');
 				$('#info_tip').show().attr('class','').addClass(id);
 				cardFun[id]();
+				if($(this).hasClass('open')) return;
+				$('.card_box ul li').removeClass('open');
+				$(this).addClass('open');
 			},function() {
 				$('#info_tip').hide();
 			})

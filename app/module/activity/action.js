@@ -51,7 +51,9 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 		el: ".box",
 		data: {
 			flag: {
-				apply: false,
+				alert:true,
+				apply:true,
+				switch:false,
 				myList:false
 			},
 			input:{
@@ -70,6 +72,7 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 			alert_confirm:"",
 			detial_tip:"",
 			alert_msg:"",
+			btn_name:"btn_apply",
 		},
 		components: {
 			'tem_ul': temUl
@@ -123,9 +126,17 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 				}
 				return null;
 			},
+			getLevel:function(gameId) {
+				var game =  ClientAPI.getLoginGame(gameId);
+				if(game){
+					return game.level;
+				}
+				return null;
+			},
 			goApply:function() {
 				var t = this;
-				COMMONS.do_Login(function() {
+				if(this.btn_name.indexOf('disable') != -1) return;
+				this.do_challengeValidate(function() {
 					$('#alert_know').show_();
 					//设置电话、账号、大区
 					t.input.subAccount = ClientAPI.getSubAccount(GameID.LOL);
@@ -133,17 +144,30 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 					t.input.account = t.getAccount(GameID.LOL);
 				});
 			},
-			showAlert: function (flag,title, msg,confirm) {
-				if(flag) {
-					this.statusName = "success";
-					this.flag.apply = true;
-				} else {
-					this.statusName = "fail";
-					this.flag.apply = false;
-				}
+			showAlert: function (title, msg) {
 				this.alert_title = title;
 				this.alert_msg = msg;
-				this.alert_confirm = confirm;
+				$('#alert_msg3').show_();
+			},
+			showLogin: function (title, msg) {
+				this.alert_title = title;
+				this.alert_msg = msg;
+				$('#alert_msg2').show_();
+			},
+			showResponse: function (flag,msg) {
+				if(flag) {
+					this.statusName = "success";
+					this.alert_title = "报名成功";
+					this.alert_confirm = "立即前往";
+					this.detial_tip = "您已成功注册为摩杰电竞会员，点击前往官网查看详情";
+				} else {
+					this.statusName = "fail";
+					this.alert_confirm = "确定";
+					this.alert_title = "报名失败";
+					this.detial_tip = "";
+				}
+				this.flag.apply = flag;
+				this.alert_msg = msg;
 				$('#alert_msg').show_();
 			},
 			listRank: function () {
@@ -162,18 +186,19 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 							t.input.phone = data.phone || "";
 							t.list_arr = obj.data.rankList;
 							if(obj.data.userRank) {
+								t.btn_name = "btn_apply disable";
 								t.flag.myList = true;
 								t.my_arr = obj.data.userRank;
 							}
 						} else if (!obj['success']) {
-							t.showAlert(false,"列表获取失败","","确定");
+							t.showAlert("友情提示","获取列表失败");
 						}
 					}
 				});
 			},
 			applyConfirm:function() {
 				if(this.flag.apply) {
-					window.open("http://mjdj.cn/");
+					window.open(this.mjUrl);
 				} else {
 					$('#alert_msg').hide_();
 				}
@@ -198,15 +223,40 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 					success: function (obj) {
 						URLOBJ.again = false;
 						if (obj['success'] && obj['code'] == 0 && obj['data']) {
-							t.showAlert(true,"报名成功","请在比赛阶段完成<span>50场</span>个人排位赛","立即前往");
-							t.detial_tip = "您已成功注册为摩杰电竞会员，点击立即访问摩杰电竞官网查看信息";
-						} else if (!obj['success']) {
-							t.detial_tip = "";
+							t.showResponse(true,"请在比赛阶段完成<span>50场</span>个人排位赛");
 							t.mjUrl = obj.data;
-							t.showAlert(false,"报名失败",obj.message,"确定");
+						} else if (!obj['success']) {
+							t.showResponse(false,obj.message);
 						}
 					}
 				});
+			},
+			do_challengeValidate:function(callBack) {
+				//校检火马登录
+				var t = this;
+				var user = ClientAPI.getLoginXingYun();
+				if(!user.hasOwnProperty("userId") || user.userId == 0) {
+					//调起登陆窗
+					ClientAPI.startLogin('VC_LOGIN');
+					return;
+				}
+				
+				//校检游戏登录
+				var loginGame = ClientAPI.getLoginGame(GameID.LOL);
+				if(!loginGame) {
+					t.showLogin("友情提示","请先登录英雄联盟，才能报名参加比赛");
+					return;
+				} else if(t.getLevel(GameID.LOL)<30) {
+					//判断等级是否符合要求
+					t.showAlert("友情提示","召唤师等级必须满30级才能参加比赛");
+					return;
+				}
+		
+				callBack();
+				return;
+			},
+			login:function() {
+				ClientAPI.switchStartInfo(GameID.LOL, true);
 			},
 			goBack: function () {
 				//返回

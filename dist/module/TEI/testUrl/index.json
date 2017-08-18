@@ -1,0 +1,21 @@
+{
+	"success":true,
+	"code":0,
+	"data":{
+		"isLeader" : true,
+		"isHasCombatTeam" : true,
+		"teamName":"梦之队1",
+		"isApplyed": "false",
+		"cjSchoolMatchTeam1": {
+			"cjSchoolMatchTeamId":	1,
+			"activityName":	"cj活动",
+			"teamId":	90,
+			"userId":	20025,
+			"mobile":	"13858070555",
+			"school":	"浙江工商大学",
+			"state":	"待审核",
+			"addTime":	1495774800000,
+			"checkTime":1495774800000
+		}
+	}
+}

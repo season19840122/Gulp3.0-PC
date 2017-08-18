@@ -538,7 +538,6 @@
     
     .alert_bound{
         @include alert2(500px,190px);
-        padding: 40px 50px;
         .input_box{
             &>ul{
                 &>li{
@@ -590,7 +589,6 @@
     
     .alert_qrcode{
         @include alert2(500px,350px);
-        padding: 40px 50px;
         p{
             font-size: 14px;
             color: #8d7652;
@@ -632,7 +630,6 @@
     
     .alert_msg{
         @include alert2(480px,193px);
-        padding: 40px 50px;
         text-align: center;
         h1{
             color: #E8B664;
@@ -699,7 +696,6 @@
     
     .alert_bound{
         @include alert2(480px,238px);
-        padding: 40px 50px;
         h1{
             color: #E8B664;
             font-size: 18px;
@@ -750,7 +746,6 @@
     }
     .alert_check,.alert_prizeInfo{
         @include alert2(500px,561px);
-        padding: 40px 50px;
         &>ul{
             &>li{
                 margin-bottom: 23px;
@@ -1264,7 +1259,6 @@
     }
     .alert_add{
         @include alert2(500px,450px);
-        padding: 40px 50px;
         text-align: center;
         h1{
             text-align: left;

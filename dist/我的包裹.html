@@ -80,7 +80,7 @@
           </li>
           <li class="has" v-for="item in pieces">
             <div class="item-wrap">
-              <img :src="item.pic" alt="" class="item">
+              <img :src="item.pic" alt="" class="item sp">
               <p class="name">{{ item.goodsName }}</p>
               <span class="num">{{ item.winCnt }}/{{ item.needCnt }}</span>
               <a href="###" class="exchange" :class=" item.winCnt>=item.needCnt?'':'disable' " @click.prevent="openPiece(item.goodsId)">兑换</a>

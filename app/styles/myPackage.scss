@@ -221,6 +221,12 @@
               top: 4px;
               width: 97px;
               height: 97px;
+              background: url(../images/my/bg-bx.png) no-repeat;
+              // background: red;
+              &.sp {
+                background: url(../images/my/bg-sp.png) no-repeat;
+                // background: red;
+              }
             }
             .name, .num {
               position: absolute;
@@ -410,7 +416,7 @@
                   font-size: 12px;
                   position: absolute;
                   width: 100px;
-                  text-align: left;
+                  text-align: center;
                   left: 35px;
                   top: 140px;
                   color: #ffde00;

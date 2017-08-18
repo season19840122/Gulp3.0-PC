@@ -93,6 +93,5 @@
           value: i
         });
       }
-      console.log(dayObj);
       return dayObj;
     }

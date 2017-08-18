@@ -391,15 +391,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -487,6 +493,12 @@ body {
 
 .smallScroll::-webkit-scrollbar-thumb:active {
   background: #463714;
+}
+
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
 }
 
 html {
@@ -1290,14 +1302,14 @@ html {
   font-size: 12px;
   position: absolute;
   width: 500px;
-  height: 400px;
+  min-height: 400px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -200px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_box h1 {
@@ -1315,9 +1327,9 @@ html {
   position: absolute;
   content: "";
   width: 488px;
-  height: 388px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1384,14 +1396,14 @@ html {
 .box .alert_msg {
   position: absolute;
   width: 500px;
-  height: 193px;
+  min-height: 193px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -96.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
 }
 
@@ -1410,9 +1422,9 @@ html {
   position: absolute;
   content: "";
   width: 488px;
-  height: 181px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1515,14 +1527,14 @@ html {
 .box .alert_join {
   position: absolute;
   width: 780px;
-  height: 375px;
+  min-height: 375px;
   background: #0B0C10;
   left: 50%;
   margin-left: -390px;
   top: 50%;
   margin-top: -187.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_join h1 {
@@ -1540,9 +1552,9 @@ html {
   position: absolute;
   content: "";
   width: 768px;
-  height: 363px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -1775,14 +1787,14 @@ html {
 .box .alert_list {
   position: absolute;
   width: 780px;
-  height: 375px;
+  min-height: 375px;
   background: #0B0C10;
   left: 50%;
   margin-left: -390px;
   top: 50%;
   margin-top: -187.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_list h1 {
@@ -1800,9 +1812,9 @@ html {
   position: absolute;
   content: "";
   width: 768px;
-  height: 363px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2133,14 +2145,14 @@ html {
 .box .alert_add {
   position: absolute;
   width: 500px;
-  height: 450px;
+  min-height: 450px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -225px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   padding: 40px 50px;
   text-align: center;
 }
@@ -2160,9 +2172,9 @@ html {
   position: absolute;
   content: "";
   width: 488px;
-  height: 438px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }
@@ -2319,14 +2331,14 @@ html {
   z-index: 30;
   position: absolute;
   width: 500px;
-  height: 450px;
+  min-height: 450px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -225px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
 }
 
 .box .alert_create h1, .box .alert_accept h1 {
@@ -2344,9 +2356,9 @@ html {
   position: absolute;
   content: "";
   width: 488px;
-  height: 438px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }

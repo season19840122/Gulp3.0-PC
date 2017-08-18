@@ -352,7 +352,6 @@ html {
 
 .alert_msg{
     @include alert2(480px,193px);
-    padding: 40px 50px;
     text-align: center;
     h1{
         color: #E8B664;
@@ -419,7 +418,6 @@ html {
 
 .alert_bound{
     @include alert2(480px,238px);
-    padding: 40px 50px;
     h1{
         color: #E8B664;
         font-size: 18px;
@@ -470,7 +468,6 @@ html {
 }
 .alert_check,.alert_prizeInfo{
     @include alert2(500px,561px);
-    padding: 40px 50px;
     &>ul{
         &>li{
             margin-bottom: 23px;

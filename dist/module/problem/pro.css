@@ -391,15 +391,21 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: linear-gradient(#c49f58, #c49f58);
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
+  /* For Safari 5.1 to 6.0 */
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
 }
 
 /*下拉列表*/
@@ -487,6 +493,12 @@ body {
 
 .smallScroll::-webkit-scrollbar-thumb:active {
   background: #463714;
+}
+
+/** 渐变 **/
+h2, li, a, div {
+  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
+  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
 }
 
 .box {
@@ -652,6 +664,10 @@ body {
   top: 0;
 }
 
+.box .question_right .question_con .scroll_box #shundou {
+  height: 560px;
+}
+
 .box .question_right .question_con .scroll_box .item {
   padding-left: 55px;
 }
@@ -662,7 +678,7 @@ body {
 
 .box .question_right .question_con .scroll_box .item dl dt {
   line-height: 36px;
-  font-size: 12px;
+  font-size: 18px;
   font-weight: 700;
   color: #f0e6d2;
   margin-bottom: 30px;
@@ -681,14 +697,14 @@ body {
   display: none;
   position: absolute;
   width: 500px;
-  height: 295px;
+  min-height: 295px;
   background: #0B0C10;
   left: 50%;
   margin-left: -250px;
   top: 50%;
   margin-top: -147.5px;
   border: 3px solid #5a4729;
-  padding: 40px 50px;
+  padding: 40px 50px 55px 50px;
   text-align: center;
   color: #a09b8c;
 }
@@ -708,9 +724,9 @@ body {
   position: absolute;
   content: "";
   width: 488px;
-  height: 283px;
   left: 3px;
   top: 3px;
+  bottom: 3px;
   border: 1px solid #191614;
   box-shadow: 0px 0px 0px 1px #5a4729;
 }

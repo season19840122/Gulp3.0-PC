@@ -62,41 +62,46 @@
 	});
 	
 	function create(ctrl, options){
-		var $self =$(ctrl);
-		$self.empty();
-		$self.append('<input type="text" readonly="readonly" value="' + options.defaultText + '"/>');
-		$self.append('<input type="hidden" name="' + options.name + '"/>');
-		$self.append('<ul class="smallScroll smallScroll2"></ul>');
-		
-		var $ul = $self.find('ul');
-		if(options.showDefault){
-			var $li = $('<li><a href="javascript:void(0);" rel="'+options.defaultValue+'">' + options.defaultText + '</a></li>');
-			$li.data('data', {});
-			$ul.append($li);
-		}
-		
-		var defaultValue = '';
-		var defaultText = '';
-		var defaultData = [];
-		
-		for (var i = 0, len = options.data.length; i < len; i++) {
-			var $li = $('<li><a href="javascript:void(0);" rel="' + options.data[i][options.valueField] + '">' + options.data[i][options.textField] + '</a></li>');
-			$li.data('data', options.data[i]);
-			$ul.append($li);
-			
-			if(options.data[i][options.valueField] == options.value){
-				defaultValue = options.data[i][options.valueField];
-				defaultText = options.data[i][options.textField];
-				defaultData = options.data[i];
+		var $self =$(ctrl),$ul;
+		if(options.data.length > 0) {
+			$self.empty();
+			$self.append('<input type="text" readonly="readonly" value="' + options.defaultText + '"/>');
+			$self.append('<input type="hidden" name="' + options.name + '"/>');
+			$self.append('<ul class="smallScroll smallScroll2"></ul>');
+			$ul = $self.find('ul');
+			if(options.showDefault){
+				var $li = $('<li><a href="javascript:void(0);" rel="'+options.defaultValue+'">' + options.defaultText + '</a></li>');
+				$li.data('data', {});
+				$ul.append($li);
 			}
+			
+			var defaultValue = '';
+			var defaultText = '';
+			var defaultData = [];
+			
+			for (var i = 0, len = options.data.length; i < len; i++) {
+				var $li = $('<li><a href="javascript:void(0);" rel="' + options.data[i][options.valueField] + '">' + options.data[i][options.textField] + '</a></li>');
+				$li.data('data', options.data[i]);
+				$ul.append($li);
+				
+				if(options.data[i][options.valueField] == options.value){
+					defaultValue = options.data[i][options.valueField];
+					defaultText = options.data[i][options.textField];
+					defaultData = options.data[i];
+				}
+			}
+			
+			if(!defaultValue){
+				defaultValue = $ul.find('li:eq(0) a').attr('rel');
+				defaultText = $ul.find('li:eq(0) a').text();
+				defaultData = $ul.find('li:eq(0)').data('data');
+			}
+			setValue(ctrl, defaultValue, defaultText, defaultData);
+		} else {
+			$ul = $self.find('ul');
+			setValue(ctrl, '', options.defaultText, {});
 		}
 		
-		if(!defaultValue){
-			defaultValue = $ul.find('li:eq(0) a').attr('rel');
-			defaultText = $ul.find('li:eq(0) a').text();
-			defaultData = $ul.find('li:eq(0)').data('data');
-		}
-		setValue(ctrl, defaultValue, defaultText, defaultData);
 		
 		//下拉框div绑定事件
 		$self.on('click', function(e){

@@ -23,31 +23,35 @@
     height: 600px;
     margin: 60px auto 0;
     position: relative;
-    .caption-wrap {
-      position: relative;
-      .ico-arena {
-        background: url(../images/arena/sprite-arena.png) no-repeat;
-        width: 46px;
-        height: 58px;
-        display: inline-block;
-      }
-      .caption {
-        position: absolute;
-        left: 55px;
-        top: 5px;
-        color: #fff;
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .txt {
-        position: absolute;
-        left: 55px;
-        top: 37px;
-        color: #9d9d9d;
-        font-size: 14px;
-      }
-    }
+    // .caption-wrap {
+    //   position: relative;
+    //   .ico-arena {
+    //     background: url(../images/arena/sprite-arena.png) no-repeat;
+    //     width: 46px;
+    //     height: 58px;
+    //     display: inline-block;
+    //   }
+    //   .caption {
+    //     position: absolute;
+    //     left: 55px;
+    //     top: 5px;
+    //     color: #fff;
+    //     font-size: 24px;
+    //     font-weight: bold;
+    //   }
+    //   .txt {
+    //     position: absolute;
+    //     left: 55px;
+    //     top: 37px;
+    //     color: #9d9d9d;
+    //     font-size: 14px;
+    //   }
+    // }
     nav {
+      position: relative;
+      background: url(../images/arena/nav-bg.png) no-repeat;
+      width: 1132px;
+      height: 67px;
       .link-wrap {
         position: absolute;
         right: 0;
@@ -62,6 +66,12 @@
           text-align: center;
           display: inline-block;
           margin-left: 3px;
+          &:hover {
+            background-position: 0 -30px;
+          }
+          &:active {
+            background-position: 0 -30px*2;
+          }
         }
       }
     }
@@ -70,7 +80,6 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: flex;
-      margin-top: 9px;
       border-top: 1px solid  #1d3039;
       padding-top: 13px;
       .winner-wrap {
@@ -177,6 +186,12 @@
               }
               .support {
                 background: url(../images/arena/btn-support.png) no-repeat;
+                &:hover {
+                  background-position: 0 -30px;
+                }
+                &:active {
+                  background-position: 0 -30px*2;
+                }
                 &.disable {
                   display: none;
                 }
@@ -286,14 +301,14 @@
           height: 15px;
           position: relative;
           span {
-            @include line-gradient(#1442a7, #7fa9ff);
+            @include line-gradient(#1442a7, #7ca7fd, left, 1);
             height: 7px;
             width: 49%;
             display: inline-block;
             margin-top: 4px;
             float: left;
             &.two {
-              @include line-gradient(#460000, #ff5b00);
+              @include line-gradient(#460000, #f95800, left, 1);
             }
           }
           p {
@@ -326,7 +341,7 @@
         position: absolute;
         right: 0;
         width: 350px;
-        overflow: hidden;
+        // overflow: hidden;
         > ul {
           width: 100%;
           height: 426px;

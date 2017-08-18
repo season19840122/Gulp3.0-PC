@@ -197,9 +197,9 @@ $w: 500px; $h: 250px;
   }
   &.dialog-result {
     &.s {
-      height: 150px;
+      height: 220px;
       &::before {
-        height: 150px - 10;
+        height: 220px - 10;
       }
     }
     .content-wrap {
@@ -337,8 +337,8 @@ $w: 500px; $h: 250px;
         border-bottom: 1px solid #202125;
       }
       .qrcode_box {
-        position: absolute;
-        top: 80px;
+        position: relative;
+        top: 0;
         width: 150px;
         height: 180px;
         padding: 9px;
@@ -370,6 +370,18 @@ $w: 500px; $h: 250px;
           bottom: 4px;
           text-align: left;
           color: #8d7652;
+        }
+      }
+      .info {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 12px;
+        color: #8d7652;
+        line-height: 28px;
+        .sd {
+          font-size: 14px;
+          color: #e0a119;
+          font-weight: bold;
         }
       }
     }
