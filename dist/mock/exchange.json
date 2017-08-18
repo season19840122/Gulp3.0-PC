@@ -1,0 +1,22 @@
+{
+  "success": true,
+  "code": 0,
+  "message": "null",
+  "data": {
+    "chestGoodsId": 1,
+    "goodsName": "111",
+    "goodsType": 1,
+    "needCnt": 1,
+    "pieceName": "11",
+    "piecePrice": 1.0,
+    "beginTime": 1479436644000,
+    "endTime": null,
+    "pic": "1",
+    "allowBuyCnt": 1,
+    "state": 1,
+    "addTime": 1479436656000,
+    "grantPieceCnt": 10,
+    "dayExchangeCnt": 2,
+    "recommend": true
+  }
+}

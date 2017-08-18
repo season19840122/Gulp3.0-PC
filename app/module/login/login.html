@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="login.css"/>
+		<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<!-- 创建火马账号开始 -->
+			<div class="create_hm hide_">
+				<h1>创建火马账号</h1>
+				<ul>
+					<li class="error">
+						<div class="input_box">
+							<input maxlength="28" type="text" name="account" id="account" autocomplete="off" placeholder="创建属于你的火马账号"/>
+						</div>
+						<span class="error_text">不超过20位数字、字母或符号的组合</span>
+					</li>
+					<li class="right">
+						<div class="input_box">
+							<input maxlength="28" type="password" name="pwd1" id="pwd1" autocomplete="off" placeholder="请输入密码"/>
+						</div>
+						<span class="error_text">不超过20位数字、字母或符号的组合</span>
+					</li>
+					<li>
+						<div class="input_box">
+							<input maxlength="28" type="password" name="pwd2" id="pwd2" autocomplete="off" placeholder="再次输入密码"/>
+						</div>
+						<span class="error_text">保证两次输入的密码一致</span>
+					</li>
+				</ul>
+				<div class="protocol">
+					<span class="iconfont icon-duihao"></span>
+					<span><a href=""><a href="">阅读并同意平台协议</a></span>
+				</div>
+				<a class="confirm active">确定</a>
+				<div class="error_tip">
+					创建失败
+				</div>
+			</div>
+			<!-- 创建火马账号结束 -->
+			
+			<!-- 火马账号登录开始 -->
+			<div class="login_hm">
+				<div class="bottom_bg"></div>
+				<h1>火马账号登录</h1>
+				<ul>
+					<li class="error">
+						<div class="input_box">
+							<input maxlength="28" type="text" name="account" id="account" autocomplete="off" placeholder="请输入火马账号"/>
+						</div>
+						<span class="error_text">不超过20位数字、字母或符号的组合</span>
+					</li>
+					<li>
+						<div class="input_box">
+							<input maxlength="28" type="password" name="pwd1" id="pwd1" autocomplete="off" placeholder="请输入密码"/>
+						</div>
+						<span class="error_text">不超过20位数字、字母或符号的组合</span>
+					</li>
+				</ul>
+				<div class="protocol">
+					<span class="iconfont icon-duihao"></span>
+					<span><a href="">阅读并同意平台协议</a></span>
+				</div>
+				<a class="confirm active">登录</a>
+				<h3>切换至快捷登录</h3>
+				<div class="error_tip">
+					登录失败
+				</div>
+			</div>
+			<!-- 火马账号登录结束 -->
+			
+			<!-- 快捷登录开始 -->
+			<div class="fast_hm hide_">
+				<div class="bottom_bg"></div>
+				<ul class="title nav">
+					<li href="#wechat">微信登录</li>
+					<li class="active" href="#phone">手机号登录</li>
+				</ul>
+				<div class="tab-content">
+				    <div class="tab-pane" id="wechat">
+				    	<div class="qrcode">
+				    		
+				    	</div>
+				    	<div class="protocol">
+							<span class="iconfont icon-duihao"></span>
+							<span><a href="">阅读并同意平台协议</a></span>
+						</div>
+						<h3>火马账号登录</h3>
+				    </div>
+				    <div class="tab-pane active" id="phone">
+				    	<ul>
+				    		<li>
+				    			<div class="input_box">
+									<input maxlength="28" type="text" name="account" id="account" autocomplete="off" placeholder="手机号码（仅支持大陆手机号）"/>
+									<span class="error_text">错误提示</span>
+				    			</div>
+				    		</li>
+				    		<li>
+				    			<div class="code_box">
+									<input maxlength="10" type="text" name="account" id="account" autocomplete="off" placeholder="输入验证码"/>
+									<span class="error_text">错误提示</span>
+									<img src="" class="code_pic"/>
+				    			</div>
+				    		</li>
+				    		<li>
+				    			<div class="code_box">
+									<input maxlength="10" type="text" name="account" id="account" autocomplete="off" placeholder="短信验证码"/>
+				    				<span class="error_text">错误提示</span>
+				    				<div class="ver_code"><a href="">获取验证码</a></div>
+				    			</div>
+				    		</li>
+				    	</ul>
+				    	<div class="protocol">
+							<span class="iconfont icon-duihao"></span>
+							<span><a href="">阅读并同意平台协议</a></span>
+						</div>
+						<a class="confirm active">登录</a>
+						<h3>火马账号登录</h3>
+						<div class="error_tip">
+							登录失败
+						</div>
+				    </div>
+				</div>
+			</div>
+			<!-- 快捷登录结束 -->
+		</div>
+		
+		<!-- 协议开始 -->
+		<div class="protocol_box">
+			<h1>火马电竞平台协议</h1>
+			<div class="content smallScroll">
+				<p>欢迎您(以下简称“用户”或“乙方”)使用杭州顺网科技股份有限公司（以下简称“顺网宇酷”或“甲方”）所开发的火马电竞平台（以下简称“火马电竞”）！请仔细阅读本协议，您继续使用视为您同意本协议。本协议阐述之条款和条件适用于您使用火马电竞的各种功能和服务。</p>
+				<p>1. 服务条款的确认和接纳</p>
+				<p>火马电竞的所有权和运营权归顺网宇酷所有。所提供的服务按照服务条款和操作规则严格执行。用户勾选“阅读并同意平台协议”完成登录，这表示用户与顺网宇酷达成协议并同意接受所有的服务条款。</p>
+				<p>2. 服务条款的确认和接纳</p>
+				<p>火马电竞的所有权和运营权归顺网宇酷所有。所提供的服务按照服务条款和操作规则严格执行。用户勾选“阅读并同意平台协议”完成登录，这表示用户与顺网宇酷达成协议并同意接受所有的服务条款。</p>
+				<p>3. 服务条款的确认和接纳</p>
+				<p>火马电竞的所有权和运营权归顺网宇酷所有。所提供的服务按照服务条款和操作规则严格执行。用户勾选“阅读并同意平台协议”完成登录，这表示用户与顺网宇酷达成协议并同意接受所有的服务条款。</p>
+			</div>
+			<div class="confirm">
+				我已了解
+			</div>
+		</div>
+		<!-- 协议结束-->
+	
+		<!-- 切换账号开始 -->
+		<div class="user_switch">
+		    <p class="">请用手机微信扫描二维码，或点击头像并登录</p>
+		    <div class="account_list">
+		      <ul>
+		        <li class="icon_wx">
+		          <div id="login_container_mini"></div>
+		          <p>微信登录</p>
+		        </li>
+		        <li>
+		          <a href="">
+		          	<img src="" alt="" />
+		          </a>
+		          <p>昵称1</p>
+		        </li>
+		        <li>
+		          <a href="">
+		          	<img src="" alt="" />
+		          </a>
+		          <p>昵称二很多多多多多多多多的</p>
+		        </li>
+		      </ul>
+		    </div>
+		  <div class="footer">
+		    <a href="javascript:showMobileLogin()">手机号登录</a>
+		  </div>
+		</div>
+		<!-- 切换账号结束 -->
+		
+		
+		<!-- 切换账号2 -->
+		<div class="user_switch2">
+			<h2><span>2440663620(皮尔特沃夫-金猫)</span>已绑定过星云帐号，并已报名参赛！</h2>
+			<p>快速切换幸运账号</p>
+			<div class="account_list">
+		      <ul>
+		        <li>
+		          <a href="">
+		          	<img src="" alt="">
+		          </a>
+		          <p>昵称1</p>
+		        </li>
+		      </ul>
+		    </div>
+		    <p><span>或者</span>更换英雄联盟游戏账号，重新登录并报名比赛</p>
+		</div>
+		
+		<!-- 提示框开始 -->
+		<div class="state success">
+			<span class="iconfont"></span>
+			<span>成功登录火马地方地方</span>
+		</div>
+		<!-- 提示框结束 -->
+	</body>
+	<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.login_hm').on('click','h3',function() {
+			$('.create_hm').hide();
+			$('.fast_hm').show();
+			$('.login_hm').hide();
+		})
+		$('.fast_hm .tab-content').on('click','h3',function() {
+			$('.create_hm').hide();
+			$('.fast_hm').hide();
+			$('.login_hm').show();
+		})
+		$('.fast_hm .title').on('click','li',function() {
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			var id = $(this).attr('href');
+			$(id).siblings().removeClass('active');
+			$(id).addClass('active');
+		})
+		
+		//显示接口调用错误的方法
+		function showError(msg) {
+			var createDom = $('.create_hm');
+			var loginDom = $('.login_hm');
+			var fastDom = $('.fast_hm');
+			var phoneDom = $('#phone');
+			if(createDom.css('display') == 'block') {
+				createDom.find('.error_tip').html(msg);
+			} else if(loginDom.css('display') == 'block') {
+				loginDom.find('.error_tip').html(msg);
+			} else if(fastDom.css('display') == 'block' && phoneDom.hasClass('active')) {
+				phoneDom.find('.error_tip').html(msg);
+			}
+		}
+	</script>
+</html>

@@ -1,0 +1,19 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data":[
+		{
+			"applyWay":"Qrcode",
+			"money":5,
+			"qrcodeUrl":"http://www.iconfont.cn/manage/index",
+			"orderId":"11212121212"
+		},
+		{
+			"applyWay":"SwBean",
+			"swbean":"100",
+			"useTimes":9,
+			"totalTimes":10
+		}
+	]
+}

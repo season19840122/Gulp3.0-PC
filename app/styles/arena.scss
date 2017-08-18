@@ -1,0 +1,801 @@
+@import 'base.scss';
+@import 'common.scss';
+@import 'tabBar.scss';
+
+[v-cloak] {
+  display: none;
+}
+
+.box {
+  color: #9d9d9d;
+  font: 12px/1.5 'Microsoft YaHei';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1200px;
+  height: 660px;
+  background: url(../images/arena/bg-arena.jpg) no-repeat;
+  &.nodata {
+    background: url(../images/arena/nodata.jpg) no-repeat;
+  }
+  .main {
+    width: 1132px;
+    height: 600px;
+    margin: 60px auto 0;
+    position: relative;
+    .caption-wrap {
+      position: relative;
+      .ico-arena {
+        background: url(../images/arena/sprite-arena.png) no-repeat;
+        width: 46px;
+        height: 58px;
+        display: inline-block;
+      }
+      .caption {
+        position: absolute;
+        left: 55px;
+        top: 5px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .txt {
+        position: absolute;
+        left: 55px;
+        top: 37px;
+        color: #9d9d9d;
+        font-size: 14px;
+      }
+    }
+    nav {
+      .link-wrap {
+        position: absolute;
+        right: 0;
+        top: 24px;
+        a {
+          width: 100px;
+          height: 30px;
+          line-height: 30px;
+          font-weight: bold;
+          background: url(../images/arena/btn-support.png) no-repeat;
+          color: #b79864;
+          text-align: center;
+          display: inline-block;
+          margin-left: 3px;
+        }
+      }
+    }
+    .content{
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-top: 9px;
+      border-top: 1px solid  #1d3039;
+      padding-top: 13px;
+      .winner-wrap {
+        width: 750px;
+        height: 456px;
+        .video {
+          width: 750px;
+          height: 456px;
+        }
+        .title {
+          height: 40px;
+          line-height: 40px;
+          font-size: 18px;
+          font-weight: bold;
+          color: #b5bbc0;
+          span {
+            width: 100%;
+            color: #638594;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            @extend .eps;
+          }
+          
+        }
+        .content-wrap {
+          margin-top: 57px;
+          .captain {
+            margin-left: 44px;
+            position: relative;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            .name-wrap {
+              background: url(../images/arena/sprite-arena.png) no-repeat 0 -128px;
+              width: 210px;
+              height: 210px;
+              position: relative;
+              .img-wrap {
+                width: 210px;
+                height: 210px;
+                display: -webkit-inline-flex;
+                display: -moz-inline-box;
+                display: -ms-inline-flexbox;
+                display: inline-flex;
+                -webkit-align-items: center;
+                   -moz-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-justify-content: center;
+                   -moz-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
+                -webkit-flex-direction: column;
+                   -moz-box-orient: vertical;
+                   -moz-box-direction: normal;
+                    -ms-flex-direction: column;
+                        flex-direction: column;
+                img {
+                  width: 44px;
+                  height: 44px;
+                  display: block;
+                  border: 2px solid  #7a7a7a;
+                }
+                .name {
+                  font-size: 18px;
+                  font-weight: bold;
+                  color: #997933;
+                  text-align: center;
+                  margin-top: 10px;
+                }
+              }
+              i {
+                background: url('../images/arena/sprite-arena.png') no-repeat 0 -398px;
+                width: 84px;
+                height: 86px;
+                position: absolute;
+                left: -25px;
+                top: -27px;
+              }
+              .already, .support {
+                position: absolute;
+                left: 50%;
+                bottom: -50px;
+                -webkit-transform: translateX(-50%);
+                   -moz-transform: translateX(-50%);
+                    -ms-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                color: #b79864;
+                background: url(../images/arena/btn-already.png) no-repeat;
+              }
+              .support {
+                background: url(../images/arena/btn-support.png) no-repeat;
+                &.disable {
+                  display: none;
+                }
+              }
+            }
+            .vs {
+              background: url('../images/arena/sprite-arena.png') no-repeat 0 -726px;
+              width: 91px;
+              height: 47px;
+              margin-left: 50px;
+              margin-right: 50px;
+            }
+            .btn-watch {
+              width: 90px;
+              height: 26px;
+              line-height: 26px;
+              text-align: center;
+              background: #0b6e98;
+              border: 1px solid  #0e8bc0;
+              color: #fff;
+              font-size: 12px;
+              font-weight: bold;
+              position: absolute;
+              left: 308px;
+              top: 140px;
+              z-index: 10;
+              &:hover {
+                background: #224e75;
+                color: #b3e3ff;
+              }
+              &:active {
+                background: #1b4264;
+                color: #b3e3ff;
+              }
+            }
+          }
+        }
+        /* .big-img {
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          .big-img-wrap {
+            width: 358px;
+            height: 228px;
+            margin-right: 8px;
+            position: relative;
+            img {
+              width: 358px;
+              height: 228px;
+              display: block;
+            }
+            a {
+              position: absolute;
+              left: 50%;
+              bottom: 12px;
+              -webkit-transform: translateX(-50%);
+                 -moz-transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+                      transform: translateX(-50%);
+              width: 160px;
+              height: 34px;
+              -moz-border-radius: 12px;
+                   border-radius: 12px;
+              background: #cd3006;
+              color: #ffe9df;
+              font-size: 16px;
+              line-height: 34px;
+              text-align: center;
+              &.already {
+                border: 2px solid  #a62908;
+                line-height: 30px;
+                background: #101319;
+                color: #fee8de;
+              }
+              &.support {
+                &:hover {
+                  background: #ff3600;
+                }
+                &:active {
+                  background: #e23000;
+                }
+                &.disable {
+                  color: #ff5629;
+                  background: #cd3006;
+                }
+              }
+            }
+            .win {
+                background: url(../images/leitai/sprite-leitai.png) no-repeat 0 -583px;
+                width: 100px;
+                height: 50px;
+                position: absolute;
+                left: 32px;
+                top: -40px;
+                &.right {
+                    left: auto;
+                    right: 32px;
+                }
+            }
+          }
+        } */
+        .count {
+          background: url(../images/arena/bg-progress.png) no-repeat;
+          margin-top: 118px;
+          width: 750px;
+          height: 15px;
+          position: relative;
+          span {
+            @include line-gradient(#1442a7, #7fa9ff);
+            height: 7px;
+            width: 49%;
+            display: inline-block;
+            margin-top: 4px;
+            float: left;
+            &.two {
+              @include line-gradient(#460000, #ff5b00);
+            }
+          }
+          p {
+            position: absolute;
+            left: 121px;
+            top: -55px;
+            color: #2992c4;
+            font-family: Arial;
+            font-weight: bold;
+            font-size: 36px;
+            text-align: center;
+            width: 150px;
+            &.two-txt {
+              color: #bc2e0c;
+              left: auto;
+              right: 78px;
+            }
+          }
+          .progress {
+            background: url(../images/arena/btn-judge.png) no-repeat;
+            width: 25px;
+            height: 29px;
+            position: absolute;
+            left: 0;
+            top: -7px;
+          }
+        }
+      }
+      .guess-wrap {
+        position: absolute;
+        right: 0;
+        width: 350px;
+        overflow: hidden;
+        > ul {
+          width: 100%;
+          height: 426px;
+          display: none;
+          &.block {
+            display: block;
+          }
+          li {
+            width: 350px;
+            height: 130px;
+            margin-bottom: 12px;
+            .guess {
+              width: 100%;
+              height: 100%;
+              position: relative;
+              &.first {
+                .active {
+                  background: url('../images/arena/active.png') no-repeat;
+                  width: 361px;
+                  height: 130px;
+                  position: absolute;
+                  left: -11px;
+                  top: 0;
+                }
+                .title {
+                  padding-left: 8px;
+                  width: 350px - 2;
+                  left: 2px;
+                }
+                .content-wrap {
+                  width: 350px - 1;
+                  height: 100px - 1;
+                  border: 0;
+                }
+              }
+              .title {
+                height: 30px;
+                line-height: 30px;
+                background: #1e3548;
+                color: #a9a9a9;
+                font-size: 12px;
+                padding-left: 10px;
+                border: 1px solid  #2c3944;
+                border-left: none;
+                border-right: none;
+                position: relative;
+                display: -webkit-flex;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-align-items: center;
+                   -moz-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-justify-content: space-between;
+                   -moz-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                span {
+                  width: 230px;
+                  display: inline-block;
+                  @extend .eps;
+                }
+                .btn-watch {
+                  width: 61px;
+                  height: 24px;
+                  line-height: 24px;
+                  color: #fff;
+                  text-align: center;
+                  background: #0b6e98;
+                  font-weight: normal;
+                  cursor: pointer;
+                  position: absolute;
+                  top: 2px;
+                  right: 8px;
+                  z-index: 10;
+                  &:hover {
+                    background: #224e75;
+                  }
+                  &:active {
+                    background: #1b4264;
+                  }
+                }
+              }
+              .content-wrap {
+                border: 1px solid  #14232f;
+                border-top: none;
+                height: 101px;
+                position: relative;
+                .captain {
+                  height: 100%;
+                  display: -webkit-flex;
+                  display: -moz-box;
+                  display: -ms-flexbox;
+                  display: flex;
+                  -webkit-align-items: center;
+                     -moz-box-align: center;
+                      -ms-flex-align: center;
+                          align-items: center;
+                  -webkit-justify-content: center;
+                     -moz-box-pack: center;
+                      -ms-flex-pack: center;
+                          justify-content: center;
+                  .name-wrap {
+                    width: 150px;
+                    .img-wrap {
+                      border: 2px solid  #062d44;
+                      width: 44px + 2 + 2;
+                      height: 44px + 2 + 2;
+                      position: relative;
+                      margin: 0 auto;
+                      img {
+                        width: 44px;
+                        height: 44px;
+                        display: block;
+                      }
+                      i{
+                        background: url('../images/arena/sprite-arena.png') no-repeat 0 -582px;
+                        width: 37px;
+                        height: 38px;
+                        position: absolute;
+                        left: -16px;
+                        top: -16px;
+                      }
+                    }
+                    .name {
+                      font-size: 12px;
+                      color: #5d8fa3;
+                      text-align: center;
+                      .blue {
+                        color: #00a8ff;
+                      }
+                    }
+                  }
+                  .vs {
+                    background: url('../images/arena/sprite-arena.png') no-repeat 0 -844px;
+                    width: 38px;
+                    height: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .page-wrap {
+          width: 350px;
+          text-align: center;
+          ul {
+            li {
+              width: 28px;
+              height: 28px;
+              margin-right: 6px;
+              display: inline-block;
+              &.active {
+                a {
+                  border: 1px solid  #1e3548;
+                  color: #fff;
+                  background: #1e3548;
+                  /* &::after{
+                    content:'';
+                    position: absolute;
+                    left: 50%;
+                    top: -5px;
+                    -webkit-transform: translateX(-50%);
+                       -moz-transform: translateX(-50%);
+                        -ms-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                    width: 0;
+                    height: 0;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    border-bottom: 5px solid #2d3542;
+                  } 
+                  &:hover {
+                    background: #2d3542;
+                  }*/
+                }
+              }
+              a {
+                cursor: pointer;
+                display: inline-block;
+                text-align: center;
+                line-height: 28px;
+                width: 28px;
+                height: 28px;
+                color: #9d9d9d;
+                border: 1px solid  #14232f;
+                position: relative;
+                &:hover {
+                  background: #1e3548;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 弹窗 & 遮罩
+.masklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: none;
+  background: #000;
+  opacity: .6;
+}
+
+$w: 483px; $h: 149px;
+.dialog-wrap {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+  width: $w;
+  height: $h;
+  background: #0b0c10;
+  -moz-box-shadow: 0px 0px 0px 3px #5a4729;
+       box-shadow: 0px 0px 0px 3px #5a4729;
+  padding: 40px 50px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    width: $w - 10;
+    height: $h - 10;
+    -moz-box-shadow: 0px 0px 0px 1px #5a4729;
+         box-shadow: 0px 0px 0px 1px #5a4729;
+  }
+  &::after {
+    content: "";
+    z-index: 5;
+    position: absolute;
+    top: -29px;
+    right: -29px;
+    width: 118px;
+    height: 120px;
+    background: url(../images/modal/close2.png) no-repeat;
+  }
+  &.dialog-result {
+    .content-wrap {
+      text-align: center;
+      .success {
+        font-size: 18px;
+        color: #02f92b;
+        margin-bottom: 10px;
+        img {
+          width: 30px;
+          height: 24px;
+          display: inline-block;
+          margin-top: -10px;
+        }
+      }
+    }
+    .btn-wrap {
+      .btn-sure {
+        min-width: 110px;
+      }
+    }
+  }
+  &.dialog-rule {
+    width: 744px;
+    height: 444px;
+    &::before {
+      width: 744px - 10;
+      height: 444px - 10;
+    }
+    .content-wrap {
+      .p1 {
+        height: 255px;
+        overflow-x: hidden;
+      }
+    }
+  }
+  &.dialog-zan {
+    width: 498px;
+    height: 373px;
+    &::before {
+      width: 498px - 10;
+      height: 373px - 10;
+    }
+    .content-wrap {
+      .p2 {
+        color: #8d7652;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      .swbean{
+        position: relative;
+        width: 420px;
+        margin: 0 auto;
+        list-style: none;
+        li{
+          width: 200px;
+          position: relative;
+          height: 73px;
+          border: 1px solid #5a4729;
+          background: #0f0808;
+          cursor: pointer;
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          h1{
+            font-size: 18px;
+            color: #a09b8c;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 17px;
+          }
+          h2{
+            font-size: 14px;
+            color: #b3b3b3;
+            text-align: center;
+          }
+          &.on{
+            cursor: default;
+            border: 1px solid #c68b27;
+            h1, h2 {
+              color: #c28a2d;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dialog-team {
+    width: 494px;
+    height: 224px;
+    &::before {
+      width: 494px - 10;
+      height: 224px - 10;
+    }
+    .content-wrap {
+      .qrcode {
+        padding: 2px;
+        background: black;
+        border: 3px solid #806d43;
+        width: 110px;
+        height: 110px;
+        display: inline-block;
+      }
+      .p3 {
+        color: #8d7652;
+        width: 264px;
+        font-size: 14px;
+        margin-left: 130px;
+        margin-top: -84px;
+        text-align: left;
+        span {
+          color: #ff9c00;
+        }
+      }
+    }
+  }
+  &.dialog-pay {
+    width: 500px;
+    height: 375px;
+    &::before {
+      width: 500px - 10;
+      height: 375px - 10;
+    }
+    .content-wrap {
+      .caption {
+        font-size: 16px;
+        color: #e8b664;
+        text-align: center;
+      }
+      .qrcode_box {
+        position: absolute;
+        top: 80px;
+        width: 150px;
+        height: 180px;
+        padding: 9px;
+        margin-left: -73px;
+        left: 50%;
+        .alert_img_qrcode {
+          background: white;
+          padding: 5px;
+        }
+        .wechat_logo {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          bottom: 5px;
+          right: 38px;
+        }
+        .alipay_logo {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          bottom: 5px;
+          right: 10px;
+        }
+        span {
+          position: absolute;
+          width: 100px;
+          font-size: 15px;
+          left: 11px;
+          bottom: 4px;
+          text-align: left;
+          color: #8d7652;
+        }
+      }
+    }
+  }
+  .btn-close {
+    z-index: 10;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 48px;
+    height: 48px;
+    background: url(../images/modal/sprite-modal.png) no-repeat;
+    &:hover {
+      background-position: 0 -48px;
+    }
+    &:active {
+      background-position: 0 -48px*2;
+    }
+  }
+  .content-wrap {
+    color: #e8b664;
+    .caption {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .p1 {
+      font-size: 14px;
+      color: #8d7652;
+    }
+  }
+  .btn-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    z-index: 10;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    .btn-sure {
+      display: inline-block;
+      background: url(../images/modal/sprite-modal.png) no-repeat 0 -174px;
+      width: 108px;
+      height: 32px;
+      font-size: 14px;
+      color: #dbb77d;
+      text-align: center;
+      line-height: 30px;
+      &:hover {
+        background-position: 0 (-174px-32);
+      }
+      &:acive {
+        background-position: 0 (-174px-32*2);
+      }
+    }
+  }
+}

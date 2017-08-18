@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>擂台赛</title>
+		<link rel="stylesheet" type="text/css" href="styles/iconfont/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/arena.css"/>
+	</head>
+	<body>
+		<!-- <div class="box" :class="allData.arenaMatch?'':'nodata'" id="app" data-userid="20016" v-cloak> -->
+		<div class="box" id="app" data-userid="20016" v-cloak>
+			<!-- 公用头部开始 -->
+	    <ul class="menu">
+	      <li data-id="vip">战队赛</li>
+	      <li class="active">擂台赛</li>
+	      <li>我的战队</li>
+	    </ul>
+	    <!-- 公用头部结束 -->
+
+      <article class="main">
+      	<div class="caption-wrap">
+      		<span class="ico-arena"></span>
+      		<h2 class="caption">火马擂台赛</h2>
+      		<p class="txt">一血+50RMB；一塔+50RMB；大龙首杀+100RMB；获胜+300RMB</p>
+      	</div>
+        <!-- <nav :style="{ backgroundImage: 'url(' + allData.profile_img_url +')' }"> -->
+        <nav>
+        	<div class="link-wrap">
+						<a href="###" class="rules" @click="openRule">赛事规则</a>
+						<a href="###" class="apply" @click="teamApply">战队报名</a>
+					</div>
+        </nav>
+        <section class="content" v-if="allData.arenaMatch">
+	        <div class="winner-wrap" v-if="video.show">
+						<h3 class="title"><span>{{ nowData.playTime }}</span></h3>
+						<div class="content-wrap">
+							<div class="captain">
+								<div class="name-wrap">
+									<div class="img-wrap">
+										<img :src="nowData.defenceTeamLogo" alt="">
+										<p class="name">{{ nowData.teamName }}</p>
+									</div>
+									<i v-if="nowData.isWin === 0"></i>
+									<a href="###" :data-teamid="nowData.attackTeamId" :class="getBtnClass[2]" @click="supportTeam">{{ getBtnClass[3] }}</a>
+								</div>
+								<div class="vs"></div>
+								<a :href="nowData.videoUrl? nowData.videoUrl: '#'" target="_blank" class="btn-watch">观看直播</a>
+								<div class="name-wrap">
+									<div class="img-wrap">
+										<img :src="nowData.attackTeamLogo" alt="">
+										<p class="name">{{ nowData.attackTeamName }}</p>
+									</div>
+									<i v-if="nowData.isWin === 1"></i>
+									<a href="###" :data-teamid="nowData.attackTeamId" :class="getBtnClass[2]" @click="supportTeam">{{ getBtnClass[3] }}</a>
+								</div>
+							</div>
+							<!-- <div class="big-img">
+								<div class="big-img-wrap">
+									<img :src="nowData.teamPhotoUrl" alt="">
+									<a href="###" :data-teamid="nowData.teamId" :class="getBtnClass[0]" @click="supportTeam">{{ getBtnClass[1] }}</a>
+									<i class="win" v-if="nowData.isWin === 0"></i>
+								</div>
+								<div class="big-img-wrap">
+									<img :src="nowData.attackTeamPhotoUrl" alt="">
+									<a href="###" :data-teamid="nowData.attackTeamId" :class="getBtnClass[2]" @click="supportTeam">{{ getBtnClass[3] }}</a>
+									<i class="win right" v-if="nowData.isWin === 1"></i>
+									<!-- <a href="###" class="support disable">支持该战队</a>
+								</div>
+							</div> -->
+							<div class="count">
+								<i class="progress" :style="{ left: (nowData.count - 1) + '%'}"></i>
+								<span class="one" :style="{ width: nowData.count + '%'}"></span>
+								<span class="two" :style="{ width: (100 - nowData.count) + '%'}"></span>
+								<p class="one-txt">{{ nowData.arenaCnt}}</p>
+								<p class="two-txt">{{ nowData.attackCnt}}</p>
+							</div>
+						</div>
+	        </div>
+	        <div class="winner-wrap" v-else>
+						<iframe class="video" :src="nowData.videoUrl" border="0" marginheight="0" scrolling="no" frameborder="no" allowtransparency="true"></iframe>
+	        </div>
+	        <div class="guess-wrap">
+						<ul v-for="(a, b) in monthData" :class="b === 0? 'block': ''">
+							<li v-for="(item, index) in a">
+								<div class="guess" :class="(b === 0 && index === 0)? 'first': ''">
+									<i class="active" v-if="b === 0 && index === 0"></i>
+									<h3 class="title"><span>{{ item.title }}</span><a :href="item.videoUrl" target="_blank" class="btn-watch" v-if="item.couldGuess">{{ item.couldGuess }}</a></h3>
+									<div class="content-wrap">
+										<div class="captain">
+											<div class="name-wrap">
+												<div class="img-wrap"><img :src="item.defenceTeamLogo" alt=""><i v-if="!item.couldGuess && item.isWin === 0"></i></div>
+												<p class="name">{{ item.teamName }}<span class="blue" v-if="!item.couldGuess &&item.isWin === 0">【胜】</span></p>
+											</div>
+											<div class="vs"></div>
+											<div class="name-wrap">
+												<div class="img-wrap"><img :src="item.attackTeamLogo" alt=""><i v-if="!item.couldGuess && item.isWin === 1"></i></div>
+												<p class="name">{{ item.attackTeamName }}}<span class="blue" v-if="!item.couldGuess && item.isWin === 1">【胜】</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="page-wrap">
+							<!-- <ul>
+								<li><span><</span></li>
+								<li class="active"><span>1<i></i></span></li>
+								<li><span>2</span></li>
+								<li><span>3</span></li>
+								<li><span>4</span></li>
+								<li><span>5</span></li>
+								<li><span>...</span></li>
+								<li><span>11</span></li>
+								<li><span>12</span></li>
+								<li><span>></span></li>
+							</ul> -->
+							<paginate
+						    :page-count="monthData.length"
+						    :prev-text="'&lt;'"
+						    :next-text="'&gt;'"
+						    :click-handler="clickCallback">
+						  </paginate>
+						</div>
+	        </div>
+        </section>
+
+      </article>
+			
+			<!-- 弹窗 -->
+	    <div class="masklayer"></div>
+			<!-- 提示层 -->
+	    <div id="alert_box" class="dialog-wrap dialog-result">
+	      <button class="btn-close ti">关闭</button>
+	      <div class="content-wrap">
+	        <p class="p1"></p>
+	      </div>
+	      <div class="btn-wrap">
+	      	<a class="btn-sure" href="###" v-if="creatTeam.show">确定</a>
+	      	<a class="btn-sure" target="_blank" :href="creatTeam.link" v-else>创建战队</a>
+	      </div>
+	    </div>
+
+			<!-- 规则 -->
+	    <div id="rules_box" class="dialog-wrap dialog-rule">
+	      <button class="btn-close ti">关闭</button>
+	      <div class="content-wrap">
+	      	<h3 class="caption">擂台赛规则</h3>
+	        <p v-html="getRules" class="p1 smallScroll"></p>
+	      </div>
+	      <div class="btn-wrap">
+	      	<a class="btn-sure" href="###">确定</a>
+	      </div>
+	    </div>
+			
+			<!-- 点赞支付 -->
+			<div id="zan_box" class="dialog-wrap dialog-zan">
+	      <button class="btn-close ti">关闭</button>
+	      <div class="content-wrap">
+	      	<p class="p2">顺豆余额：{{ swBean.swBeanCnt }}</p>
+	      	<ul class="swbean">
+	      		<li class="on" :data-bean="swBean.guessSwbean" :data-money="swBean.guessMoney">
+		      		<h1>小小鼓励</h1>
+		      		<h2 >{{ swBean.guessSwbean }}顺豆/¥{{ swBean.guessMoney }}</h2>
+	      		</li>
+	      		<li :data-bean="swBean.guessSwbean" :data-money="swBean.guessMoney">
+							<h1>大力鼓励</h1>
+							<h2>{{ swBean.guessSwbean*5 }}顺豆/¥{{ swBean.guessMoney*5 }}</h2>
+	      		</li>
+	      		<li :data-bean="swBean.guessSwbean" :data-money="swBean.guessMoney">
+							<h1>全力以赴</h1>
+							<h2>{{ swBean.guessSwbean*10 }}顺豆/¥{{ swBean.guessMoney*10 }}</h2>
+	      		</li>
+	      		<li :data-bean="swBean.guessSwbean" :data-money="swBean.guessMoney">
+							<h1>必胜</h1>
+							<h2>{{ swBean.guessSwbean*20 }}顺豆/¥{{ swBean.guessMoney*20 }}</h2>
+	      		</li>
+	      	</ul>
+	      </div>
+	      <div class="btn-wrap">
+	      	<a href="###" class="btn-sure" @click="swBeanSupport">顺豆支持</a>
+          <a href="###" class="btn-sure" @click="qrcodeSupport">扫码支持</a>
+	      </div>
+	    </div>
+			
+			<!-- 提示5人满战队 -->
+			<div id="team_five" class="dialog-wrap dialog-team">
+	      <button class="btn-close ti">关闭</button>
+	      <div class="content-wrap">
+	      	<img src="images/arena/team_info.png" alt="" class="qrcode"/>
+	      	<p class="p3">擂台赛<span>战队队长</span>报名QQ群：<span>375206809</span>加入擂台赛报名专用群，随时了解比赛动向及赛事安排！</p>
+	      </div>
+	      <div class="btn-wrap">
+	      	<a href="###" class="btn-sure">确认</a>
+	      </div>
+	    </div>
+			
+			<!-- 支付二维码 -->
+			<div id="pay_qrcode" class="dialog-wrap dialog-pay">
+	      <button class="btn-close ti">关闭</button>
+	      <div class="content-wrap">
+	      	<h3 class="caption"></h3>
+	      	<div class="qrcode_box">
+            <div class="alert_img_qrcode"></div>
+            <span>请扫码支付</span>
+            <img class="wechat_logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjdCQjM4RjM3RUQ2MTFFNjlBNTI4MjlEMTRCNTZERUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjdCQjM4RjQ3RUQ2MTFFNjlBNTI4MjlEMTRCNTZERUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGN0JCMzhGMTdFRDYxMUU2OUE1MjgyOUQxNEI1NkRFRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGN0JCMzhGMjdFRDYxMUU2OUE1MjgyOUQxNEI1NkRFRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi4qWuIAAA9zSURBVHjazFoJeJTV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"/>
+            <img class="alipay_logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAxCAYAAACYq/ofAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjI5RTJGMTI3RUQ2MTFFNjkxNTU5NjVDQTJEM0Q0MEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjI5RTJGMTM3RUQ2MTFFNjkxNTU5NjVDQTJEM0Q0MEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMjlFMkYxMDdFRDYxMUU2OTE1NTk2NUNBMkQzRDQwRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMjlFMkYxMTdFRDYxMUU2OTE1NTk2NUNBMkQzRDQwRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpLMAwUAAAodSURBVHja3Fp5cFPH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"/>
+      		 </div>
+	      </div>
+	      <div class="btn-wrap">
+	      	<a href="###" class="btn-sure">确认</a>
+	      </div>
+	    </div>
+
+		</div>
+	</body>
+
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/jquery.qrcode.min.js"></script>
+	<!-- <script src="scripts/_vue.js"></script> -->
+	<script src="scripts/vue.min.js"></script>
+	<script src="scripts/vuejs-paginate@0.9.0.js"></script>
+	<script src="scripts/tabBar.js"></script>
+	<script src="scripts/global.js"></script>
+	<script src="scripts/arena.js"></script>
+</html>

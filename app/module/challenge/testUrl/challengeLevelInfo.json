@@ -1,0 +1,43 @@
+{
+	"success": true,
+	"code": 0,
+	"message": "未开放哈哈",
+	"data": [
+		{
+			"awardSwBean" : 100,
+			"levelName" : "普通场",
+			"challengeLevelId" : 111,
+			"countdown" : 33,
+			"levelType" : 3,
+			"applySwBean" : 200,
+			"gameType" : "匹配，排位",
+			"applyWay" : "SwBean",
+			"applyMoney" : 20,
+			"state" : 0
+		},
+		{
+			"awardSwBean" : 200,
+			"levelName" : "贵宾场",
+			"challengeLevelId" : 222,
+			"countdown" : 1800,
+			"levelType" : 2,
+			"applySwBean" : 300,
+			"gameType" : "乱斗，排位",
+			"applyWay" : "SwBean",
+			"applyMoney" : 20,
+			"state" : 1
+		},
+		{
+			"awardSwBean" : 400,
+			"levelName" : "土豪场",
+			"challengeLevelId" : 333,
+			"countdown" : 1800,
+			"levelType" : 1,
+			"applySwBean" : 200,
+			"gameType" : "匹配，乱斗",
+			"applyWay" : "money",
+			"applyMoney" : 20,
+			"state" : 2
+		}
+	]
+}

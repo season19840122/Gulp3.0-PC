@@ -1,0 +1,13 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": {
+		"isLogin" : "1",
+		"matchType" : "1",
+		"allowTeam" : "1",
+		"limitMinute" : "1",
+		"levelLimitMin" : "1",
+		"levelLimitMax" : "1"
+	}
+}

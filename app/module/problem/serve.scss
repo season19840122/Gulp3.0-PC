@@ -1,0 +1,84 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+.box {
+    font-family: "微软雅黑";
+    @include abTopLeft(500px, 265px, 0px, 0px);
+    #pro_box{
+        @include alertMsg(500px,265px);
+        padding: 0px 40px;
+        text-align: center;
+        color: #a09b8c;
+        border-top: 0;
+        &:before{
+            height: 265px;
+            top: auto;
+            bottom: 2px;
+        }
+        &:before{
+            height: 265px;
+            top: auto;
+            bottom: 3px;
+        }
+        .content{
+            position: relative;
+            z-index: 10;
+            text-align: left;
+        }
+        h1{
+            position: relative;
+            font-size: 18px;
+            color: #e8b664;
+            font-weight: bold;
+            border-bottom: 1px solid #192125;
+            padding-bottom: 5px;
+            margin-bottom: 22px;
+        }
+        p{
+            margin-top: 30px;
+            color: #8D7652;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+        
+        input[type='text'],input[type='password']{
+            width: 259px;
+            padding-left: 6px;
+            height: 25px;
+            @include inputStyle;
+        }
+        span{
+            display: block;
+            color: #d61917;
+            margin-top: 20px;
+            padding-left: 50px;
+        }
+        .btn{
+            position: absolute;
+            width: 108px;
+            height: 32px;
+            left: 50%;
+            bottom: 7px;
+            color: #DBB77D;
+            font-size: 14px;
+            z-index: 10;
+            cursor: pointer;
+            line-height: 31px;
+            text-align: center;
+            background: url(../../images/pics/sprite_alert.png) no-repeat;
+            background-position: 0px -261px;
+            &:hover{
+                background-position: 0px -293px;
+            }
+            &:active{
+                background-position: 0px -325px;
+            }
+        }
+        #consult{
+            left: 142px;
+        }
+        #cancel{
+            left: 250px;
+        }
+    }
+    
+}

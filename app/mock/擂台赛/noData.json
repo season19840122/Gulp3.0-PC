@@ -1,0 +1,32 @@
+{
+  "success": true,
+  "code": 0,
+  "message": "data",
+  "data": {
+    "guess_money": "321.21",
+    "matchRole": [
+      "1、常规擂台赛分为擂主和攻擂方，前一天获胜的战队为擂主，挑战的战队为攻擂方，双方由火马组织进行一场自定义5V5的比赛，胜方将成为下一次的擂主，并获得相应的奖励",
+      "2、擂主最多可连续守擂5次，每次守擂成功都会获得额外的奖励，可提前结束守擂",
+      "3、当天无擂主时双方抢擂",
+      "4、报名战队需按照工作人员的安排进行比赛，无故缺席者将失去2个月内参与擂台赛的资格",
+      "一支战队一个自然月内只可报名一次",
+      "5、本活动的最终解释权归杭州顺网宇酷科技有限公司所有。"
+    ],
+    "profile_img_url": "arena/nav-bg.jpg",
+    "rule": "1、常规擂台赛分为擂主和攻擂方，前一天获胜的战队为擂主，挑战的战队为攻擂方，双方由火马组织进行一场自定义5V5的比赛，胜方将成为下一次的擂主，并获得相应的奖励；2、擂主最多可连续守擂5次，每次守擂成功都会获得额外的奖励，可提前结束守擂；3、当天无擂主时双方抢擂；4、报名战队需按照工作人员的安排进行比赛，无故缺席者将失去2个月内参与擂台赛的资格；一支战队一个自然月内只可报名一次；5、本活动的最终解释权归杭州顺网宇酷科技有限公司所有。",
+    "poundage_prop": "10",
+    "isEnd": false,
+    "systemTime": "2017-05-09 09:43:50",
+    "couldLive": false,
+    "allow_money": "1",
+    "combo_award": "100",
+    "isGuessed": false,
+    "guess_switch": "1",
+    "guessedTeamId": null,
+    "guess_swbean": "200",
+    "guess_live_switch": "0",
+    "arenaMatch": null,
+    "live_video_url": "https://v.qq.com/iframe/player.html?vid=h0386fwihma&amp;tiny=0&amp;auto=1",
+    "base_award": "500"
+  }
+}

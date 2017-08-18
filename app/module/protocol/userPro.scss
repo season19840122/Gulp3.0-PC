@@ -1,0 +1,64 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+.box {
+    font-family: "微软雅黑";
+    @include abTopLeft(502px, 402px, 0px, 0px);
+    @include alertMsg(502px,370px);
+    position: absolute;
+    padding: 5px 30px 30px 30px;
+    border-top: 0;
+    &:after{
+        height: 364px;
+        border-top: 0;
+        top: 0px;
+    }
+    &:before{
+        top: 0px;
+        height: 365px;
+        border-top: 0;
+    }
+    @include scroll2;
+    .content{
+        position: relative;
+        z-index: 10;
+        color: #8D7652;
+        font-size: 12px;
+        h1{
+            font-size: 14px;
+            color: #E8B664;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        &>p{
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+        .scroll{
+            @include abTopLeft(440px, 270px, 0px, 0px);
+            position: relative;
+            overflow: auto;
+        }
+    }
+    .close{
+        position: absolute;
+        width: 108px;
+        height: 32px;
+        left: 50%;
+        margin-left: -54px;
+        bottom: 7px;
+        color: #DBB77D;
+        font-size: 14px;
+        z-index: 10;
+        cursor: pointer;
+        line-height: 31px;
+        text-align: center;
+        background: url(../../images/pics/sprite_alert.png) no-repeat;
+        background-position: 0px -261px;
+        &:hover{
+            background-position: 0px -293px;
+        }
+        &:active{
+            background-position: 0px -325px;
+        }
+    }
+}

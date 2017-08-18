@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>challenge</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="challenge.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+	<script data-main="main.js" src="../../scripts/require.min.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li>首页</li>
+			<li>个人赛</li>
+			<li class="active">挑战赛</li>
+			<li>乱斗场</li>
+			<li>现金塞</li>
+			<li>Solo赛</li>
+			<li>战队赛</li>
+			<li>擂台赛</li>
+			<div @click="flush" class="flush"><span>刷新</span></div>
+		</ul>
+		<!-- 公用头部结束 -->
+
+
+		<div class="title" v-show="!flag.records && !flag.alert && !flag.rules" v-cloak>
+			<h1>{{title}}挑战赛，一局定胜负</h1>
+			<h2 @click="flag.rules = true">（任意大区 单人匹配 比拼KDA）</h2>
+		</div>
+
+		<div class="record_btn" @click="showRecords">
+			<span>挑</span>
+			<span>战</span>
+			<span>纪</span>
+			<span>录</span>
+		</div>
+		<div class="rules_btn" @click="flag.rules = true">
+			<span>比</span>
+			<span>赛</span>
+			<span>规</span>
+			<span>则</span>
+		</div>
+
+		<div v-show="flag.rules||flag.records?false:true" class="game_box" v-cloak>
+			<div id="cha1" class="cha">
+				<h1>{{level_3.name}}</h1>
+				<h2>{{level_3.type}}</h2>
+				<h3 v-show="flag.shun3">{{level_3.awardSwBean}}<span>顺豆</span></h3>
+				<h5 v-show="!flag.shun3">{{timeBackStr}}</h5>
+				<h4 v-html="level_3.joinStr"></h4>
+				<a @click="beginAction(3)" :class="level_3.className">{{level_3.aName}}</a>
+			</div>
+			<div id="cha2" class="cha">
+				<h1>{{level_2.name}}</h1>
+				<h2>{{level_2.type}}</h2>
+				<h3 v-show="flag.shun2">{{level_2.awardSwBean}}<span>顺豆</span></h3>
+				<h5 v-show="!flag.shun2">{{timeBackStr}}</h5>
+				<h4 v-html="level_2.joinStr"></h4>
+				<a @click="beginAction(2)" :class="level_2.className">{{level_2.aName}}</a>
+			</div>
+			<div id="cha3" class="cha">
+				<h1>{{level_1.name}}</h1>
+				<h2>{{level_1.type}}</h2>
+				<h3 v-show="flag.shun1">{{level_1.awardSwBean}}<span>顺豆</span></h3>
+				<h5 v-show="!flag.shun1">{{timeBackStr}}</h5>
+				<h4 v-html="level_1.joinStr"></h4>
+				<a @click="beginAction(1)" :class="level_1.className">{{level_1.aName}}</a>
+			</div>
+		</div>
+
+		<div v-show="flag.switch ||flag.records || flag.alert || flag.rules || flag.pay" class="alert_bg"></div>
+		<!-- 规则开始 -->
+		<div v-show="flag.records?false:flag.rules" class="rules_box" v-cloak>
+			<i @click="flag.rules = false"></i>
+			<h1>详细规则</h1>
+			<h2>1. 挑战流程</h2>
+			<p>1.1 参赛说明：完成挑战报名后，系统会根据战力值匹配与您实力均等的玩家组成 三人场 ，随后根据挑战规则在
+				<font color="#15e2e4">1分钟内</font>完成一场游戏（不允许组队），游戏结束后可查看该场游戏评分，排名第一即可获得奖励 （若三人评分都为0，则都以失败计算） 。
+			</p>
+			<p>1.2 注意事项：</p>
+			<p class="text_indent28">1) 评分只统计报名挑战赛后的首场游戏，中途退出火马、游戏或超时未完成，评分为0；</p>
+			<p class="text_indent28">2) 参与挑战赛的游戏记录不影响同时报名的火马平台其他比赛，战绩依然有效；</p>
+			<p class="text_indent28">3) 只计算5v5玩家对战地图下的成绩，单人参赛，不允许组队。</p>
+			<h2>2. 评分计算规则</h2>
+			<p>评分主要影响因素：</p>
+			<p class="text_indent28">击杀死亡助攻，KDA=(K+A)/D，D为0时，以D=1计算；</p>
+			<p class="text_indent28">经济贡献指数，ECI=个人经济/（我方总经济+敌方总经济）×100；</p>
+			<p class="text_indent28">参战贡献分数，CT=（个人击杀+个人助攻）/我方总击杀×100；</p>
+			<p class="text_indent28">输赢系数：W，胜利时W=1，失败时W=0.5。</p> <br>
+			<p>注意：评分以报名挑战后开始的首场游戏为准，中途退出游戏或超时未完成，评分为 0。</p>
+		</div>
+		<!-- 规则结束 -->
+		
+		<!-- 列表开始 -->
+		<div v-show="flag.rules?false:flag.records" class="records_box" @click="showDetail($event)" v-cloak>
+			<i @click="flag.records = false"></i>
+			<table id="tab_rooms"></table>
+		</div>
+		<!-- 列表结束 -->
+
+		<!-- 弹框开始 -->
+		<div v-show="flag.alert" class="alert_box" id="alert_msg" v-cloak>
+			<i @click="flag.alert = false"></i>
+			<h1>{{alert_title}}</h1>
+			<p v-html="alert_msg"></p>
+			<div v-if="flag.noLogin" @click="loginGame" class="confirm">确认登录</div>
+		</div>
+		<!-- 弹框结束 -->
+		
+		<!-- 弹框开始 -->
+		<div v-show="flag.alert?false:flag.switch" class="alert_box" id="alert_switch" v-cloak>
+			<i @click="flag.switch = false"></i>
+			<h1>账号<span>{{account}}</span>已经绑定过火马账号，您可以：</h1>
+			<h2>快速更换火马账号</h2>
+			<img :src="loginPic"/>
+			<h2><span>或者</span>更换英雄联盟游戏账号，重新登录并报名比赛</h2>
+		</div>
+		<!-- 弹框结束 -->
+		
+		<div v-show="flag.alert?false:flag.pay" class="pay_box" v-cloak>
+			<i @click="closePay"></i>
+			<h1>挑战报名</h1>
+			<ul @click="switchLi($event)">
+				<li class="active" data-type="qrcode" v-show="flag.onlyQ">快捷支付报名</li>
+				<li data-type="sd" v-show="flag.onlyS">使用顺豆报名</li>
+			</ul>
+			<!-- 二维码box开始 -->
+			<div class="qrcode_box" v-show="flag.qrcode">
+	      		<div class="img_box">
+		            <div class="img_qrcode"></div>
+		            <span class="iconfont icon-zhifu"></span>
+		            <span class="iconfont icon-weixin"></span>
+	      		</div>
+	      		<p class="qrcode_status">
+		      		本场报名费：<span>{{pay.money}}元</span>
+		      	</p>
+			</div>
+			<!-- 二维码box结束 -->
+			<div class="sd_box" v-show="flag.sd">
+			  	<div :class="flag.noSd?'sd_pay off':'sd_pay'" @click="goPay('sd')">{{sd_word}}</div>
+				<h1 v-show="flag.fastTip">请选择快捷支付报名</h1>
+				<h2 v-show="flag.lastSd">今日顺豆报名挑战赛已用次数（{{sd_last}}）</h2>
+				<h1 v-show="flag.vipTip"><span>购买VIP</span>，提升每日挑战次数</h1>
+			</div>
+		</div>
+		
+		
+	</div>
+</body>
+</html>

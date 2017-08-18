@@ -1,0 +1,327 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+
+html{overflow: hidden;}
+body{overflow: hidden;}
+.box {
+    color: #9d9d9d;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/team/team_bg.webp');
+    .alert_bg {
+        @include abTopLeft(1200px,
+        660px,
+        0px,
+        0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .team_game {
+        @include abTopLeft(1200px, 583px, 79px, 0px);
+        .hide {
+            display: none;
+        }
+        .team_header {
+            .team_nav {
+                float: right;
+                height: 42px;
+                line-height: 42px;
+                padding-right: 20px;
+                .banner_title {
+                    position: relative;
+                    z-index: 10;
+                    text-decoration: underline;
+                    a {
+                        color: #00a2ff;
+                        text-decoration: underline;
+                    }
+                }
+                li {
+                    height: 100%;
+                    box-sizing: border-box;
+                    text-align: left;
+                    float: left;
+                    a {
+                        color: #b1b1b3;
+                        font-size: 12px;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        .game_title{
+            width: 1076px;
+            height: 170px;
+            position: absolute;
+            top: 0px;
+            left: 30px;
+            color: #e2ebfd;
+            font-weight: bold;
+            li{
+                padding: 1px;
+                display: block;
+                margin-bottom: 5px;
+            }
+            .title_name{
+                font-size: 48px;
+                line-height: 46px;
+                -webkit-text-stroke: 1px #293b56;
+                letter-spacing: 2px;
+                span{
+                    color: #ffea00;
+                }
+            }
+            .start_time{
+                font-size: 23px;
+                margin-top: 0px;
+                display: block;
+            }
+            .btn_list{
+               padding-top: 35px;
+               .game_btn{
+                    font-weight: normal;
+                    font-size: 12px;
+                    width: 100px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    float: left;
+                    margin-right: 1px;
+                    cursor: pointer;
+                    background: url(../../images/team/sprite_game_btn.jpg) 0 0;
+                    &:hover{background-position-x: -200px;}
+                    &:active{background-position-x: -100px;}
+                }
+                .active,.active:hover,.active:active{
+                    background-position-x: -300px;
+                    color: #738fc7;
+                }
+            }
+        }
+        .hide{display: none;}
+        #game_line{
+            width: 1116px;
+            height: 278px;
+            position: absolute;
+            left: 30px;
+            top: 230px;
+            &.team_8{background: url(../../images/team/game_line.png);}
+            &.team_4{background: url(../../images/team/game_line2.png);}
+            &.team_2{background: url(../../images/team/game_line3.png);}
+            &.team_1{background: url(../../images/team/game_line4.png);}
+            div{
+                position: absolute;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100px;
+                height: 20px;
+                color:#364461;
+                font-size: 12px;
+            }
+            .team_8_1,
+            .team_8_2,
+            .team_8_3,
+            .team_8_4,
+            .team_8_5,
+            .team_8_6,
+            .team_8_7,
+            .team_8_8{
+                left: 0px;
+            }
+            .team_8_1{top: -18px;}
+            .team_8_2{top: 22px;}
+            .team_8_3{top: 62px;}
+            .team_8_4{top: 102px;}
+            .team_8_5{top: 140px;}
+            .team_8_6{top: 180px;}
+            .team_8_7{top: 220px;}
+            .team_8_8{top: 260px;}
+            
+            .team_8_9,
+            .team_8_10,
+            .team_8_11,
+            .team_8_12,
+            .team_8_13,
+            .team_8_14,
+            .team_8_15,
+            .team_8_16{
+                text-align: right;
+                right: 0px;
+            }
+            .team_8_9{top: -18px;}
+            .team_8_10{top: 22px;}
+            .team_8_11{top: 62px;}
+            .team_8_12{top: 102px;}
+            .team_8_13{top: 140px;}
+            .team_8_14{top: 180px;}
+            .team_8_15{top: 220px;}
+            .team_8_16{top: 260px;}
+            
+            .team_4_1,
+            .team_4_2,
+            .team_4_3,
+            .team_4_4{
+                left: 143px;
+            }
+            .team_4_1{top: 2px;}
+            .team_4_2{top: 82px;}
+            .team_4_3{top: 158px;}
+            .team_4_4{top: 238px;}
+            
+            .team_4_5,
+            .team_4_6,
+            .team_4_7,
+            .team_4_8{
+                text-align: right;
+                right: 145px;
+            }
+            .team_4_5{top: 2px;}
+            .team_4_6{top: 82px;}
+            .team_4_7{top: 158px;}
+            .team_4_8{top: 238px;}
+            
+            .team_2_1,
+            .team_2_2{
+                left: 306px;
+            }
+            .team_2_1{top: 42px;}
+            .team_2_2{top: 200px;}
+            
+            .team_2_3,
+            .team_2_4{
+                text-align: right;
+                right: 306px;
+            }
+            .team_2_3{top: 42px;}
+            .team_2_4{top: 200px;}
+            
+            .team_1_1{
+                left: 382px;
+                top: 130px;
+                text-align: right;
+            }
+            .team_1_2{
+                right: 382px;
+                top: 130px;
+            }
+            .game_cup{
+                position: absolute;
+                left: 532px;
+                top: 60px;
+            }
+            .cup_box{
+                position: absolute;
+                left: 498px;
+                top: 117px;
+                line-height: 40px;
+                text-align: center;
+                width: 120px;
+                height: 40px;
+                background: #2288b9;
+                color: #4ca8e6;
+            }
+            .cup_box.active{color: white;font-weight: bold;}
+            div.active{
+                color: #a7b7d8;
+            }
+            div.win{
+                color: #2cbafe;
+            }
+            .game_remind{
+                color: #86b1ce;
+                position: absolute;
+                width: 240px;
+                height: 20px;
+                font-size: 14px;
+                left: 440px;
+                top: 200px;
+                text-align: center;
+            }
+            .count_back{
+                position: absolute;
+                width: 189px;
+                height: 52px;
+                left: 466px;
+                top: 233px;
+                color: #8fc6e5;
+                font-size: 30px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 51px;
+                background: url(../../images/team/count_back_bg.png);
+                span{
+                    display: inline-block;
+                    width: 30px;
+                }
+            }
+        }
+        
+        #game_rule{
+            width: 1130px;
+            height: 278px;
+            position: absolute;
+            left: 30px;
+            top: 215px;
+            .rule_title{
+                font-size: 18px;
+                font-weight: bold;
+                color: #a1ddff;
+            }
+            .blue{
+                font-size: 12px;
+                color: #358ec0;
+            }
+            .left_rule{
+                float: left;
+                width: 870px;
+                p{
+                    margin-bottom: 5px;
+                    color: #5b7d9b;
+                    line-height: 1.4;
+                }
+                .mb10{margin-bottom: 10px;}
+            }
+            .right_rule{
+                margin-left: 25px;
+                margin-top: -12px;
+                float: left;
+                width: 232px;
+                .cash_list{
+                    margin-top: 15px;
+                    li{
+                        width: 230px;
+                        height: 30px;
+                        font-size: 14px;
+                        color: white;
+                        background: rgba(18,68,100,0.8);
+                        text-indent: 8px;
+                        color: #d5dbdf;
+                        line-height: 30px;
+                        margin: 3px 0px 10px 0px;
+                    }
+                }
+                p{
+                    color: #86b1ce;
+                    font-size: 14px;
+                    margin-top: 12px;
+                }
+                .count_back_right{
+                    margin-top: 8px;
+                    margin-left: -2px;
+                    width: 189px;
+                    height: 52px;
+                    color: #8fc6e5;
+                    font-size: 30px;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 51px;
+                    background: url(../../images/team/count_back_bg.png);
+                    span{
+                        display: inline-block;
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

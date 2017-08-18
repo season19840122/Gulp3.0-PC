@@ -1,0 +1,49 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+html {
+    background: black;
+}
+
+.box {
+    color: #576970;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    background: url(../../images/my/noLogin.webp);
+    text-align: center;
+    .alert_bg {
+        z-index: 100;
+        display: none;
+        @include abTopLeft(1200px, 660px, 0px, 0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    img{
+        display: inline-block;
+        margin-top: 130px;
+    }
+    p{
+        font-size: 14px;
+        font-weight: bold;
+        color: #eeb643;
+        margin-top: 25px;
+    }
+    a{
+        margin-top: 20px;
+        color: #CAA260;
+        cursor: pointer;
+        font-size: 14px;
+        width: 205px;
+        height: 50px;
+        display: inline-block;
+        text-align: center;
+        line-height: 50px;
+        background: url(../../images/my/btn1.png);
+        &:hover{
+            background-position: 0px -50px;
+            color: #febf57;
+        }
+        &:active{
+            background-position: 0px -100px;
+            color: #dead5b;
+        }
+    }
+}

@@ -1,0 +1,345 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+html {
+    background: black;
+}
+
+.box {
+    color: #576970;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    .hide_ {
+        display: none;
+    }
+    .go_back{
+        font-size: 12px;
+        color: #9D9D9D;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        top:10px;
+        z-index: 50;
+        &:hover{
+            color:#d39818;
+        }
+        &:active{
+            color:white;
+        }
+    }
+    .alert_bg {
+        display: none;
+        z-index: 100;
+        @include abTopLeft(1200px, 660px, 0px, 0px);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    @mixin liWidth {
+        &:nth-child(1) {
+            width: 5%;
+        }
+        &:nth-child(2) {
+            width: 15%;
+        }
+        &:nth-child(3) {
+            width: 30%;
+        }
+        &:nth-child(4) {
+            width: 15%;
+        }
+        &:nth-child(5) {
+            width: 15%;
+        }
+        &:nth-child(6) {
+            width: 10%;
+        }
+        &:nth-child(7) {
+            width: 10%;
+        }
+    }
+    .content_box {
+        z-index: 10;
+        @include abTopLeft(1200px, 660px, 0px, 0px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        .content {
+            @include bg('../../images/activity/mj_bg.webp');
+            @include abTopLeft(1200px, 1500px, 0px, 0px);
+            &>img {
+                position: absolute;
+                right: 30px;
+                top: 20px;
+            }
+            .btn_rule {
+                @include abTopLeft(117px, 34px, 345px, 50%);
+                margin-left: -58px;
+                cursor: pointer;
+                @include bg('../../images/activity/btn.png');
+                &:hover {
+                    background-position: 0px -34px;
+                }
+                &:active {
+                    background-position: 0px -68px;
+                }
+            }
+            .btn_apply {
+                @include abTopLeft(250px, 73px, 430px, 50%);
+                margin-left: -125px;
+                cursor: pointer;
+                @include bg('../../images/activity/btn.png');
+                background-position: 0px -102px;
+                &:hover {
+                    background-position: 0px -175px;
+                }
+                &:active {
+                    background-position: 0px -248px;
+                }
+            }
+            .list_box {
+                @include abTopLeft(966px, 445px, 750px, 50%);
+                margin-left: -483px;
+                border-bottom: 1px solid #352e1b;
+                ul.ul_title {
+                    @include abTopLeft(966px, 40px, 0px, 0px);
+                    overflow: hidden;
+                    position: relative;
+                    font-size: 14px;
+                    color: #d29a54;
+                    line-height: 50px;
+                    border-bottom: 1px solid #675533;
+                    li {
+                        float: left;
+                        margin: 0px;
+                        display: inline-block;
+                        height: 56px;
+                        @include dian();
+                        text-align: center;
+                        @include liWidth;
+                    }
+                }
+                .ul_box {
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    height: 398px;
+                    position: relative;
+                    ul.ul_content {
+                        @include abTopLeft(966px, 40px, 0px, 0px);
+                        position: relative;
+                        margin-top: 0px;
+                        color: #a38e74;
+                        font-size: 12px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #201c14;
+                        &:last-child {
+                            border: 0;
+                        }
+                        li {
+                            text-align: center;
+                            float: left;
+                            display: inline-block;
+                            height: 44px;
+                            @include dian();
+                            text-align: center;
+                            line-height: 44px;
+                            @include liWidth;
+                        }
+                    }
+                }
+                ul.my_content {
+                    @include abTopLeft(966px, 40px, 8px, 0px);
+                    position: relative;
+                    background: url(../../images/activity/mj_ul.png) no-repeat;
+                    background-position-x: 3px;
+                    margin-top: 0px;
+                    color: #f3641e;
+                    font-size: 12px;
+                    overflow: hidden;
+                    border-bottom: 1px solid #201c14;
+                    &:last-child {
+                        border: 0;
+                    }
+                    li {
+                        text-align: center;
+                        float: left;
+                        display: inline-block;
+                        height: 40px;
+                        @include dian();
+                        text-align: center;
+                        line-height: 39px;
+                        @include liWidth;
+                    }
+                }
+            }
+            .bottom_box {
+                @include abBottomLeft(1041px, 100px, 100px, 50%);
+                margin-left: -520px;
+                img{
+                    @include abBottomLeft(100px, 100px, 0px, 0px);
+                }
+                h1{
+                    font-size: 18px;
+                    color: #d29a54;
+                    margin-top: 15px;
+                    line-height: 25px;
+                    margin-left: 110px;
+                }
+                h2{
+                    margin-top: 5px;
+                    font-size: 12px;
+                    color: #a38e74;
+                    margin-left: 110px;
+                }
+            }
+        }
+    }
+    .alert_box {
+        display: none;
+        z-index: 100;
+        @include alert2(750px, 450px);
+    }
+    .alert_word {
+        .content {
+            padding: 0px 10px;
+            position: relative;
+            z-index: 10;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 290px;
+            p {
+                font-size: 14px;
+                color: #8d7652;
+                &.padding {
+                    padding-left: 24px;
+                }
+            }
+        }
+    }
+    .alert_msg {
+        @include alert2(480px, 193px);
+        padding: 40px 50px;
+        text-align: center;
+        h1 {
+            color: #E8B664;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            border: 0;
+            &:before {
+                @include iconfont;
+                font-size: 35px;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            &.success:before {
+                content: "\e666";
+            }
+            &.fail:before {
+                content: "\e640";
+            }
+        }
+        h2 {
+            font-size: 14px;
+            color: #8d7652;
+        }
+        p {
+            font-size: 14px;
+            color: #8d7652;
+            span {
+                color: #e0a119;
+            }
+        }
+    }
+    .alert_apply {
+        @include alert2(500px, 310px);
+        top: 330px;
+        .type_select {
+            @include select(280px, 22px, 80px, 0px, 135px);
+        }
+        &>ul {
+            position: relative;
+            z-index: 20;
+            height: 22px;
+            width: 100%;
+            &>li {
+                position: relative;
+                min-height: 22px;
+                margin-bottom: 8px;
+                &>label {
+                    float: left;
+                    font-size: 12px;
+                    color: #8d7652;
+                    text-align: left;
+                    width: 80px;
+                    display: inline-block;
+                }
+                &>input[type='text'],
+                input[type='password'] {
+                    float: left;
+                    width: 280px;
+                    padding-left: 6px;
+                    height: 22px;
+                    @include inputStyle;
+                }
+                input[readonly="readonly"] {
+                    background: #241f1b;
+                    &:focus{border-color: #5A4729;color: #8d7652;}
+                }
+                .radio_box {
+                    position: absolute;
+                    width: 280px;
+                    left: 80px;
+                    overflow: hidden;
+                    height: 22px;
+                    p {
+                        position: absolute;
+                        width: 80px;
+                        right: -80px;
+                        top: -5px;
+                        padding-left: 8px;
+                        height: 22px;
+                    }
+                    &>input[type='radio'] {
+                        display: none;
+                    }
+                    &>label {
+                        float: left;
+                        cursor: pointer;
+                        margin-top: 5px;
+                        margin-right: 80px;
+                        width: 12px;
+                        height: 12px;
+                        -webkit-appearance: none;
+                        background-color: #0f0808;
+                        border: 1px solid #93712e;
+                        border-radius: 50px;
+                        position: relative;
+                        display: inline-block;
+                        position: relative;
+                    }
+                    &>input[type='radio']:checked+label {
+                        border: 1px solid #e9db9c;
+                        span {
+                            color: #a09b8c;
+                        }
+                    }
+                    &>input[type='radio']:checked+label:after {
+                        box-sizing: border-box;
+                        content: ' ';
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50px;
+                        position: absolute;
+                        top: 1px;
+                        background: #e9db9c;
+                        left: 1px;
+                    }
+                }
+                span.error {
+                    @include abTopLeft(280px, 24px, 0px, 80px);
+                    color: #ac2f2f;
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

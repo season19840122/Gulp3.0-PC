@@ -1,0 +1,141 @@
+extends _layouts
+block title
+  title 上荣耀榜，抢 CJ 门票
+block style
+  link(rel='stylesheet', href='styles/bootstrap.min.css')
+  link(rel='stylesheet', href='styles/cj.css')
+block main
+  article.main
+    a(href="###").back 返回
+    section.caption
+      p.date 活动时间：即日起至
+        span 2017.7.20 23:59:59
+      a(href="https://shop315654388.taobao.com/shop/view_shop.htm?spm=a230r.1.14.4.MyVn1W&user_number_id=3045230369&qq-pf-to=pcqq.c2c").tb 电竞椅>>
+    section.content
+      .tbl-wrap
+        table.fix
+          thead
+            tr
+              th(style="width: 15%;") 排名
+              th(style="width: 25%;") 召唤师
+              th(style="width: 20%;") 区服
+              th(style="width: 20%;") 段位
+              th(style="width: 20%;") 荣耀值
+               i.que(data-toggle="tooltip", title="2017.6.1至7.20，玩家（胜场有你+乱斗场）参与次数*段位系数")
+          tbody
+            tr
+              td 520+
+              td 呦呦最美大ffdd+
+              td 皮尔沃特夫
+              td 最强王者
+              td 898.5
+        .scr-wrap.tableScroll
+          table.scr
+            tbody
+              tr
+                td(style="width: 15%;") 1
+                td(style="width: 25%;") 呦呦最美大
+                td(style="width: 20%;") 皮尔沃特夫
+                td(style="width: 20%;") 最强王者
+                td(style="width: 20%;") 898.5
+              - for(var i=1; i<12; i++)
+                tr
+                  td=i+1
+                  td 呦呦最美大
+                  td 皮尔沃特夫
+                  td 最强王者
+                  td 898.5
+      .info-wrap
+        p.tips 注：排行榜每日24点刷新
+        .line
+        .btn-wrap
+          ul
+            li
+              .info
+                p.num 1&sim;20
+                  span 名
+                p.ticket 2017 ChinaJoy门票*1
+                i.logo
+            li
+              .info
+                p.num 21&sim;520
+                  span 名
+                p.ticket 10,000顺豆
+          a(href="###").rule.ti 活动规则
+          a(href="###").apply.ti 我要上榜
+block dialog
+  .masklayer
+  .dialog-wrap.toast
+    p.modal-c
+      img(src="images/cj/loading.gif", alt="")
+      | 报名中，请稍后...
+  .dialog-wrap.dialog-rule
+    button.btn-close.ti 关闭
+    .content-wrap
+      h3.caption 活动规则
+      p.p1
+        | 1、活动期间，所有用户均可报名参加
+        br
+        | 2、荣耀榜按玩家的“荣耀值”进行排序(活动期间每日24时更新)，最终以7月20日 23:59:59活动截止时榜单成绩为准，7个工作日内发放奖励；
+        br
+        | 3、荣耀值计算方法：2017.6.1至7.20内，玩家(胜场有你+乱斗场)参与次数*段位系数；
+        br
+        | 4、段位系数分布：最强王者(5.5)；超凡大师(5.0)；钻石(4.5)；铂金(4.0)；黄金(3.5)；白银及以下(1)；
+        br
+        | 5、活动最终解释权归杭州顺网宇酷科技有限公司
+    .btn-wrap
+      a(href="javascript:void(0);", class="btn-sure") 我已了解
+  .dialog-wrap.dialog-result
+    button.btn-close.ti 关闭
+    .content-wrap
+      h4.success
+        img(src="images/modal/success.png", alt="")
+        | 恭喜，报名成功！
+      p.p2 当前排名
+        span 309
+        | 位，榜单每日
+        span 24点
+        | 刷新哦~
+    .btn-wrap
+      a(href="javascript:void(0);", class="btn-sure") 确定
+block script
+  script(src='scripts/jquery-3.1.1.min.js')
+  script(src='scripts/bootstrap.min.js')
+  //- script(src="scripts/_vue.js")
+  //- script(src="scripts/vue.min.js")
+  script(src='scripts/global.js')
+  script.
+    (function($){
+      $('[data-toggle="tooltip"]').tooltip();
+
+      // 显示、隐藏弹出层
+      var GLOBAL = {
+        show: function($obj){
+          $obj.fadeIn(200);
+          $('.masklayer').fadeIn(200);
+        },
+        hide: function($obj){
+          $obj.fadeOut(200);
+          $('.masklayer').fadeOut(200);
+        }
+      };
+
+      // 隐藏弹层
+      $('body').on('click', '.masklayer, .btn-sure, .btn-cancel, .btn-close', function(event){
+        event.preventDefault();
+        GLOBAL.hide($('.dialog-wrap'));
+        $(".dialog1").removeClass('up').addClass('down');
+      });
+
+      $('body').on('click', '.upBang', function(event){
+        event.preventDefault();
+        GLOBAL.show($('.dialog-result'));
+        $('.toast').fadeIn(800).delay(1000).fadeOut(800);
+      });
+
+      $('body').on('click', '.rule', function(event){
+        event.preventDefault();
+        GLOBAL.show($('.dialog-rule'));
+      });
+    })(jQuery);
+      

@@ -1,0 +1,310 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+html {
+    background: black;
+}
+.box {
+    color: #9d9d9d;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/my/module_bg.png');
+    .hide_{display: none;}
+    .alert_bg {
+        display: none;
+        @include abTopLeft(1200px,
+        660px,
+        0px,
+        0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .left_menu{
+        @include abTopLeft(180px, 120px, 98px, 35px);
+        ul{
+            padding-left: 2px;
+            li {
+                color: #9D9D9D;
+                margin-bottom: 20px;
+                &:before {
+                    content: "";
+                    margin-right: 10px;
+                    width: 16px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    height: 16px;
+                    background: url('../../images/pics/sprite.png');
+                    background-position: 0px 0px;
+                }
+                cursor: pointer;
+                &:hover {
+                    color: #d39818;
+                }
+                &:active {
+                    color: #d39818;
+                }
+                &.active {
+                    &:before {
+                        background-position: -21px 0px;
+                    }
+                    cursor: default;
+                    color:#d6d6d6;
+                }
+            }
+        }
+    }
+    @mixin myGuess{
+        &:nth-child(1) {
+            width: 15%;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:nth-child(3) {
+            width: 25%;
+        }
+        &:nth-child(4) {
+            width: 12%;
+        }
+        &:nth-child(5) {
+            width: 12%;
+        }
+        &:nth-child(6) {
+            width: 11%;
+        }
+    }
+    @mixin myGame{
+        &:nth-child(1) {
+            width: 15%;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:nth-child(3) {
+            width: 25%;
+        }
+        &:nth-child(4) {
+            width: 18%;
+        }
+        &:nth-child(5) {
+            width: 17%;
+        }
+    }
+    @mixin myChallengeMatch{
+        &:nth-child(1) {
+            width: 15%;
+        }
+        &:nth-child(2) {
+            width: 21%;
+        }
+        &:nth-child(3) {
+            width: 21%;
+        }
+        &:nth-child(4) {
+            width: 8%;
+        }
+        &:nth-child(5) {
+            width: 8%;
+        }
+        &:nth-child(6) {
+            width: 9%;
+        }
+        &:nth-child(7) {
+            width: 8%;
+        }
+        &:nth-child(8) {
+            width: 10%;
+        }
+    }
+    .data_box{
+        display: none;
+        color: #c1c1c1;
+        font-size: 14px;
+        &.active{
+            display: block;
+        }
+        @include abTopRight(980px, 590px, 70px, 50px);
+        .content_box{
+           h1{
+                font-size: 24px;
+                text-align: center;
+                color: #979696;
+                margin: 0 auto;
+                margin-top: 100px;
+           }
+        }
+        .list_box{
+            @include abTopRight(980px, 496px, 0px, 0px);
+            border-bottom: 1px solid #352e1b;
+            ul.ul_title{
+                @include abTopLeft(980px, 56px, 0px, 0px);
+                overflow: hidden;
+                line-height: 60px;
+                position: relative;
+                border-bottom: 1px solid #363522;
+                li{
+                    float: left;
+                    margin: 0px;
+                    display: inline-block;
+                    height: 56px;
+                    @include dian();
+                    text-align: center;
+                }
+            }
+            ul.ul_content{
+                @include abTopLeft(980px, 44px, 0px, 0px);
+                position: relative;
+                color: #979696;
+                font-size: 12px;
+                overflow: hidden;
+                border-bottom: 1px solid #1d282b;
+                &:last-child{border: 0;}
+                li{
+                    float: left;
+                    display: inline-block;
+                    height: 40px;
+                    @include dian();
+                    text-align: center;
+                    line-height: 40px;
+                    &.l_blue{
+                       color: #04ffb1; 
+                    }
+                    &.red{
+                       color: #d4060a; 
+                    }
+                    &.gold{
+                       color: #bfa644; 
+                    }
+                    &.blue{
+                        cursor: pointer;
+                       color: #017ab3;
+                       text-decoration: underline; 
+                    }
+                }
+            }
+        }
+        .pageBox{
+            @include abBottomLeft(890px, 24px, 36px, 0px);
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+                line-height: 24px;
+                cursor: pointer;
+                color: #6c552d;
+                text-align: center;
+                margin-right: 7px;
+                box-shadow: 0px 0px 0px 1px #6c552d;
+                &:hover{
+                    background: #232123;
+                }
+                &.pageCur{
+                    color: #050204;
+                    background: #6c552d;
+                }
+            }
+        }
+        &#myChallengeMatch{
+            ul.ul_title{
+                li{@include myChallengeMatch;}
+            }
+            ul.ul_content{
+                li{@include myChallengeMatch;}
+            }
+        }
+        &#myGuess{
+            ul.ul_title{
+                li{@include myGuess;}
+            }
+            ul.ul_content{
+                li{@include myGuess;}
+            }
+        }
+        &#myGame{
+            ul.ul_title{
+                li{@include myGame;}
+            }
+            ul.ul_content{
+                li{@include myGame;}
+            }
+        }
+        &#myMelee{
+            ul.ul_title{
+                li{@include myGuess;}
+            }
+            ul.ul_content{
+                li{@include myGuess;}
+            }
+        }
+    }
+    #loading_box{    
+        display: none;
+        width: 350px;
+        height: 80px;
+        position: absolute;
+        left: 50%;
+        margin-left: -165px;
+        top: 50%;
+        margin-top: -40px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #b8c1cb;
+        line-height: 80px;
+        text-align: center;
+        .icon-loading{ 
+            margin-right: 5px;
+          display: inline-block;
+          -webkit-animation: loading 1s linear infinite;
+          animation: loading 1s linear infinite;
+          }
+        &.active{display: block;}
+        }
+    #check_box{
+        display: none;
+        @include alert2(480px,226px);
+        .code_box{
+            position: relative;
+            z-index: 20;
+            .code{
+                width: 140px;
+                height: 55px;
+                display: inline-block;
+                img{
+                    width: 140px;
+                    height: 55px;
+                }
+                vertical-align: middle;
+            }
+            &>input[type='text'],input[type='password']{
+                display: inline-block;
+                vertical-align: top;
+                width: 220px;
+                margin-left: 10px;
+                padding-left: 6px;
+                height: 22px;
+                @include inputStyle;
+            }
+            p{
+                color: #c40000;
+                margin-top: -20px;
+                padding-left: 155px;
+            }
+        }
+    }
+}
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

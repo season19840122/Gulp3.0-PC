@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>ldNew</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="ldNew.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+	<script data-main="main.js" src="../../scripts/require.min.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li>首页</li>
+			<li>个人赛</li>
+			<li>挑战赛</li>
+			<li class="active">乱斗场</li>
+			<li>现金塞</li>
+			<li>Solo赛</li>
+			<li>战队赛</li>
+			<li>擂台赛</li>
+			<div @click="flush" class="flush"><span>刷新</span></div>
+		</ul>
+		<!-- 公用头部结束 -->
+
+		<div class="box_left" v-cloak>
+			<ul class="smallScroll">
+				<li @click="getTime(n,v.period)" v-for="(v,n) in time_list.list" :class="now_n==n?'active':'normal'">
+					<span>{{v.period}}</span>
+					<span v-if="v.nowWord" class="nowP"></span>
+				</li>
+			</ul>
+			<div class="game_box">
+				<p>支持游戏</p>
+				<game_list v-for="v in support_game" :img_url="v.img_url" :game_name="v.game_name"></game_list>
+			</div>
+		</div>
+
+		<div v-if="!flag.noInfo" class="right_top" :class="{off:com_circle}" v-cloak>
+			<div class="inset">
+
+				<!-- 初始信息展示开始 -->
+				<div v-show="flag.circle" class="circle_box">
+					<div class="bigCircle"></div>
+					<div class="smallCircle"></div>
+					<h1>{{list_obj.ruleTitle}}</h1>
+					<h2>{{list_obj.ruleSubTitle}}的玩家平分奖池</h2>
+					<div @click="showRules" class="rules_btn">详细规则</div>
+					<div class="rewardPool">{{list_obj.rewardPool}}</div>
+					<div class="rewardType">本时段总奖池（顺豆）</div>
+				</div>
+				<!-- 初始信息展示结束 -->
+				
+				<!-- 达成列表开始 -->
+				<div v-show="flag.records" class="records_box">
+					<i @click="closeRecords"></i>
+					<table id="tab_rooms"></table>
+				</div>
+				<!-- 达成列表结束 -->
+				
+				<!-- 规则开始 -->
+				<div v-show="flag.rules" class="rules_box">
+					<i @click="closeRules"></i>
+					<h1>详细规则</h1>
+					<p>1、本时段乱斗规则为：{{list_obj.ruleSubTitle+list_obj.ruleDetail}}</p>
+					<p>2、战绩只统计报名比赛后的首场游戏（游戏中途报名比赛将直接判负），完成一场游戏后可再次报名参加；</p>
+					<p>3、玩家在报名时可选择要报名的份数，最后的奖励将按照所有达成乱斗规则条件的玩家的报名总份数平分；</p>
+					<p>4、玩家需在{{list_obj.calculateTime}}之前完成{{com_gameList}}的游戏，{{list_obj.gameTypeRemark}}，{{com_team}}；</p>
+					<p>5、奖励将在本时段结束后1小时结算，单份奖励顺豆＝本时段总奖池/奖励份数，报名X份的得奖玩家将获得X份奖励，奖励将以顺豆形式发放到玩家的火马账号；</p>
+					<p>6、本活动的最终解释权归火马电竞所有。</p>
+				</div>
+				<!-- 规则结束 -->
+
+			</div>
+		</div>
+
+		<div v-if="!flag.noInfo" class="right_bottom" v-cloak>
+			<div class="count">
+				<p>本时段已达成人数：<span @click="listRecords">{{list_obj.achieveUserCnt}}</span></p>
+				<p>已达成奖励份数：<span @click="listRecords">{{list_obj.achieveCnt}}</span></p>
+			</div>
+			<h1>奖池顺豆累积来自于本时段所有报名玩家，<span>同时段内可多次报名参加。</span>{{list_obj.applyEndTime}}结束报名，{{list_obj.calculateTime}}结算</h1>
+			<div @click="apply" :class="{off:flag.notBtn}" id="btn">{{btn_name}}</div>
+			<div id="btn_status">{{btn_status}}</div>
+		</div>
+
+
+		<!-- 没有赛事开始 -->
+		<div v-show="flag.noInfo" class="info_box" v-cloak>
+			<h1>{{no_msg}}</h1>
+			<h2>{{no_title}}</h2>
+			<h3>{{no_remind}}</h3>
+		</div>
+		<!-- 没有赛事结束 -->
+
+
+		<div v-show="flag.apply || flag.alert || flag.pay" class="alert_bg"></div>
+		<div v-show="flag.alert" class="alert_box" v-cloak>
+			<i @click="flag.alert = false"></i>
+			<h1>{{alert_title}}</h1>
+			<p v-html="alert_msg"></p>
+			<div v-show="flag.switch" class="confirm">登录</div>
+			<div v-show="!flag.switch" @click="flag.alert = false" class="confirm">确定</div>
+		</div>
+		
+		<div v-show="flag.pay" class="pay_box" v-cloak>
+			<i @click="closePay"></i>
+			<h1>乱斗报名</h1>
+			<ul @click="switchLi($event)">
+				<li class="active" data-type="qrcode" v-show="flag.onlyQ">快捷支付报名</li>
+				<li data-type="sd" v-show="flag.onlyS">使用顺豆报名</li>
+			</ul>
+			<!-- 二维码box开始 -->
+			<div class="qrcode_box" v-show="flag.qrcode">
+	      		<div class="img_box">
+		            <div class="img_qrcode"></div>
+		            <span class="iconfont icon-zhifu"></span>
+		            <span class="iconfont icon-weixin"></span>
+	      		</div>
+	      		<p class="qrcode_status">
+		      		本场报名费：<span>{{pay.money}}元</span>
+		      	</p>
+			</div>
+			<!-- 二维码box结束 -->
+			<div class="sd_box" v-show="flag.sd">
+				<div :class="flag.noSd?'sd_pay off':'sd_pay'" @click="goPay('sd')">{{sd_word}}</div>
+			</div>
+		</div>
+		
+		<div v-show="flag.apply" class="apply_box" v-cloak>
+			<i @click="{flag.apply = false}"></i>
+
+			<h1>乱斗报名</h1>
+
+			<div class="form-group">
+				<label class="">报名账号：</label>
+				<div class="drop-select">
+					<input v-model="game_info" type="text" readonly="readonly"  name="gameInfo" placeholder="请选择账号" class="gameInfo">
+					<ul class="smallScroll" id="gameInfo"></ul>
+				</div>
+			</div>
+			<div class="form-group" id="joinNum">
+				<label class="">单份报名费：</label>
+				<span>{{single_num}}</span>
+			</div>
+			<input type="hidden" name="applySwBean" id="applySwBean" value="" />
+			<input type="hidden" name="applyMoney" id="applyMoney" value="" />
+			<div class="form-group">
+				<label class="">报名份数：</label>
+				<ul class="limitEachCnt">
+					<li class="fix active">1</li>
+					<li class="fix">5</li>
+					<li class="fix">6</li>
+					<li class="auto">7</li>
+				</ul>
+			</div>
+			<div class="form-group">
+				<label class=""></label>
+				<input id="limitInput" data-slider-id='ex1Slider' type="text" />
+				<span> max</span>
+			</div>
+			<div class="form-group">
+				<label class="">合计：</label>
+				<span class="orange all">{{all_num}}</span>
+			</div>
+			<div class="form-group">
+				<div @click="getPayWay" class="go_pay">去支付</div>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+</html>

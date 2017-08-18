@@ -1,0 +1,95 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": {
+		"total": 226,
+		"totalRewardCnt": 1211,
+		"pageNo": 1,
+		"applyUniqueCnt": 226,
+		"pageSize": 10,
+		"Records": [
+			{
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "约德尔人丶约定",
+				"serverName": "男爵领域",
+				"achieveDateTime": "2017-06-20 15:36:56",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "何松是美男",
+				"serverName": "裁决之地",
+				"achieveDateTime": "2017-06-20 15:36:28",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "沿着卑鄙往下流o",
+				"serverName": "裁决之地",
+				"achieveDateTime": "2017-06-20 15:36:15",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "Tristana灬火焰",
+				"serverName": "均衡教派",
+				"achieveDateTime": "2017-06-20 15:35:35",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "张少开着拖拉机",
+				"serverName": "裁决之地",
+				"achieveDateTime": "2017-06-20 15:34:03",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "罪恶王冠丶TaLon",
+				"serverName": "祖安",
+				"achieveDateTime": "2017-06-20 15:33:20",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "丨LPL丨第一狐狸",
+				"serverName": "班德尔城",
+				"achieveDateTime": "2017-06-20 15:33:10",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "黑白是非",
+				"serverName": "艾欧尼亚",
+				"achieveDateTime": "2017-06-20 15:32:05",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "喂喂喂丶嘿嘿嘿",
+				"serverName": "水晶之痕",
+				"achieveDateTime": "2017-06-20 15:29:31",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}, {
+				"meleeMatchId": 147,
+				"meleeMatchTimesId": 583,
+				"roleName": "酒吧1998",
+				"serverName": "黑色玫瑰",
+				"achieveDateTime": "2017-06-20 15:26:06",
+				"rewardCnt": "50",
+				"rewardSwbean": "0"
+			}
+		]
+	}
+}

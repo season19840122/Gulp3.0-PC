@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>sdDetail</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="sdDetail.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+</head>
+
+<body>
+	<div class="box">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li data-id="vip">我的VIP</li>
+			<li data-id="game">我的比赛</li>
+			<li data-id="prize">我的奖品</li>
+			<li data-id="package">我的包裹</li>
+			<li class="active">顺豆明细</li>
+		</ul>
+		<!-- 公用头部结束 -->
+
+		<div class="data_box">
+			<div class="list_box">
+				<ul class="ul_title">
+					<li>时间</li>
+					<li>项目</li>
+					<li>收入</li>
+					<li>支出</li>
+					<li>余额</li>
+				</ul>
+
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+				<ul class="ul_content">
+					<li>2016-10-15 19：06</li>
+					<li>彭嫣芸是我女神</li>
+					<li class="l_blue">8888888</li>
+					<li class="red">1111111</li>
+					<li>99999999</li>
+				</ul>
+			</div>
+
+			<div class="pageBox">
+				<a href="javascript:void(0)" class="pageCur">1</a>
+				<a href="javascript:void(0)">2</a>
+				<a href="javascript:void(0)">3</a>
+				<a href="javascript:void(0)">...</a>
+				<a href="javascript:void(0)">4</a>
+			</div>
+		</div>
+
+		<div class="sd_box">
+			<h1>99999999</h1>
+			<h3>我的顺豆</h3>
+			<div class="sd_bottom">
+				<a class="btn_ex">兑换礼品</a>
+
+				<div class="sd_middle">
+					<h1>时间</h1>
+					<div class="calendarWarp">
+						<input type="text" readonly="readonly" id="startTime" value="点击选择开始时间" />
+					</div>
+					<div class="calendarWarp">
+						<input type="text" readonly="readonly" id="endTime" value="点击选择结束时间" />
+					</div>
+					<div class="type_select" id="changeTypesSelectId">
+					</div>
+				</div>
+				<a class="btn_se">筛选</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/Ecalendar.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tabBar.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var pageObj = {
+		selectAction: function() {
+			$("#changeTypesSelectId").select({
+				name: "type",
+				defaultText : "你",
+				defaultValue:"我",
+				showDefault : true,
+				data:[
+					{text:1,value:2},
+					{text:"你",value:"我"},
+					{text:13,value:24}
+				]
+			});
+
+		},
+		timeAction: function() {
+			$("#startTime").ECalendar({
+				type: "date",
+				skin: "#171f24",
+				box: "0px 0px 0px 1px #96741d",
+				offset: [-30, 5]
+			});
+			$("#endTime").ECalendar({
+				type: "date",
+				skin: "#171f24",
+				box: "0px 0px 0px 1px #96741d",
+				offset: [-30, 5]
+			});
+		},
+		documentDis: function() {
+			document.onselectstart = function() {
+				return false;
+			}
+		}
+	}
+	pageObj.selectAction();
+	pageObj.timeAction();
+	pageObj.documentDis();
+</script>
+
+</html>

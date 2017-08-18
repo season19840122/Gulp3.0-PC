@@ -1,0 +1,103 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": {
+		"total": 226,
+		"totalRewardCnt": 1211,
+		"pageNo": 1,
+		"applyUniqueCnt": 226,
+		"pageSize": 10,
+		"Records": [
+			{
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": true
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "成功",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "111",
+				"score": "50",
+				"finished": false
+			}, {
+				"challengeRoomId": 147,
+				"challengeDateTime": "2017-06-20 15:36:56",
+				"challengeType": "男爵领域",
+				"serverName": "男爵领域",
+				"rank": "成功",
+				"score": "50",
+				"finished": false
+			}
+		]
+	}
+}

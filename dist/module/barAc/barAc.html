@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="barAc.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+</head>
+
+<body>
+	<div class="box lol">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li class="active" data-id="lol">英雄联盟</li>
+			<li data-id="over">守望先锋</li>
+			<div @click="flush" class="flush"><span>刷新</span></div>
+		</ul>
+		<!-- 公用头部结束 -->
+
+		<div class="rank clearfix">
+
+			<!-- lol start -->
+			<div class="lol_box">
+				<!--杀神榜-->
+				<div class="tableW rankB">
+					<div class="tabTitle">
+						杀神榜
+					</div>
+					<div class="m-hd">
+						<div class="game_menu_box">
+							<ul id="tab2" class="clearfix">
+								<li class="wk active">
+									<a href="#wkRankB" data-toggle="tab">周榜单</a>
+								</li>
+								<li class="mt">
+									<a href="#mtRankB" data-toggle="tab">月榜单</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="m-bt">
+
+						<div class="tab-content">
+							<div class="tab tab-pane fade active in" id="wkRankB">
+								<div class="prizeBox">
+									<ul>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/lol_t1.png" /></div>
+											<h3>一等奖·1名</h3>
+											<span>5万点英雄联盟点券</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t2.png" /></div>
+											<h3>二等奖·2名</h3>
+											<span>500元Q币</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t3.png" /></div>
+											<h3>三等奖·3名</h3>
+											<span>100元三网话费</span>
+										</li>
+									</ul>
+								</div>
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="13%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="name">召唤师</span></th>
+											<th width="20%"><span class="fwq">服务器</span></th>
+											<th><span class="num">累计人头</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar2 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="13%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="name">什看对面看什么看</span></td>
+												<td width="20%"><span class="fwq">备警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="name">eeeeeeeeeeeee</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="name">baba巴巴</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">4</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="name">一杯白开水</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="tab tab-pane fade " id="mtRankB">
+								<div class="prizeBox">
+									<ul>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/lol_t1.png" /></div>
+											<h3>一等奖·1名</h3>
+											<span>5万点英雄联盟点券</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t2.png" /></div>
+											<h3>二等奖·2名</h3>
+											<span>500元Q币</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t3.png" /></div>
+											<h3>三等奖·3名</h3>
+											<span>100元三网话费</span>
+										</li>
+									</ul>
+								</div>
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="13%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="name">召唤师</span></th>
+											<th width="20%"><span class="fwq">服务器</span></th>
+											<th><span class="num">累计人头</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar2 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="13%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="name">对面的看什么看对面的看什么看</span></td>
+												<td width="20%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="name">eeeeeeeeeeeeeeeeeeee</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="name">baba巴巴</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="name">一杯白开水</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">8</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+						<!--tab-content-->
+
+					</div>
+				</div>
+				<!--rankB end-->
+				<!--胜场榜-->
+				<div class="tableW rankA">
+					<div class="tabTitle">
+						胜场榜
+					</div>
+					<div class="m-hd">
+						<div class="game_menu_box">
+							<ul id="tab1" data-opr-tab="#tab-conA">
+								<li class="wk active">
+									<a href="#wkRankA" data-toggle="tab">周榜单</a>
+								</li>
+								<li class="mt">
+									<a href="#mtRankA" data-toggle="tab">月榜单</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="m-bt">
+						<div class="tab-content">
+							<div class="tab tab-pane fade active in" id="wkRankA" dir="right">
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="15%"><span class="icon">排名</span></th>
+											<th width="44%"><span class="name">召唤师</span></th>
+											<th width="21%"><span class="fwq">服务器</span></th>
+											<th><span class="num">累计胜场</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar1 smallScroll">
+									<table class="ddd">
+										<tbody>
+											<tr>
+												<td width="15%"><span class="icon top3">1</span></td>
+												<td width="44%"><span class="name">对面的看什么看对面的看什么看</span></td>
+												<td width="21%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="name">eeeeeeeeeeeeeeeeeeee</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="name">baba巴巴</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="name">一杯白开水</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">8</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">9</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">10</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">11</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">12</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">13</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">14</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">15</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">16</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">17</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="tab tab-pane fade" id="mtRankA" dir="right">
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="15%"><span class="icon">排名</span></th>
+											<th width="44%"><span class="name">召唤师</span></th>
+											<th width="21%"><span class="fwq">服务器</span></th>
+											<th><span class="num">累计胜场</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar1 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="15%"><span class="icon top3">1</span></td>
+												<td width="44%"><span class="name">对面的看什么看对面的看什么看</span></td>
+												<td width="21%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108123456</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="name">eeeeeeeeeeeeeeeeeeee</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="name">baba巴巴</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="name">DT、阿猫 利</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="name">一杯白开水</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">8</span></td>
+												<td><span class="name">最强王八1</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">9</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--rankA end-->
+			</div>
+			<!-- lol end -->
+
+			<!-- over start -->
+			<div class="over_box hide">
+				<!--杀神榜-->
+				<div class="tableW rankB">
+					<div class="tabTitle">
+						金牌榜
+					</div>
+					<div class="m-hd">
+						<div class="game_menu_box">
+							<ul id="tab2" class="clearfix">
+								<li class="wk active">
+									<a href="#wkRankB_over" data-toggle="tab">周榜单</a>
+								</li>
+								<li class="mt">
+									<a href="#mtRankB_over" data-toggle="tab">月榜单</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="m-bt">
+
+						<div class="tab-content">
+							<div class="tab tab-pane fade active in" id="wkRankB_over">
+								<div class="prizeBox">
+									<ul>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t1.png" /></div>
+											<h3>一等奖·1名</h3>
+											<span>50000战网点数</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t2.png" /></div>
+											<h3>二等奖·2名</h3>
+											<span>200元Q币</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t3.png" /></div>
+											<h3>三等奖·3名</h3>
+											<span>100元话费</span>
+										</li>
+									</ul>
+								</div>
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="20%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="name">角色</span></th>
+											<th width="40%"><span class="fwq">声场累计金牌</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar2 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="20%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">8</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">9</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">10</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="tab tab-pane fade " id="mtRankB_over">
+								<div class="prizeBox">
+									<ul>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t1.png" /></div>
+											<h3>一等奖·1名</h3>
+											<span>5万点英雄联盟点券</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t2.png" /></div>
+											<h3>二等奖·2名</h3>
+											<span>500元Q币</span>
+										</li>
+										<li>
+											<div class="prize_ico"><img src="../../images/barAc/over_t3.png" /></div>
+											<h3>三等奖·3名</h3>
+											<span>100元三网话费</span>
+										</li>
+									</ul>
+								</div>
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="20%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="name">角色</span></th>
+											<th width="40%"><span class="fwq">胜场累计金牌</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar2 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="20%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">8</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+						<!--tab-content-->
+
+					</div>
+				</div>
+				<!--rankB end-->
+				<!--胜场榜-->
+				<div class="tableW rankA">
+					<div class="tabTitle">
+						胜场榜
+					</div>
+					<div class="m-hd">
+						<div class="game_menu_box">
+							<ul id="tab1" data-opr-tab="#tab-conA">
+								<li class="wk active">
+									<a href="#wkRankA_over" data-toggle="tab">周榜单</a>
+								</li>
+								<li class="mt">
+									<a href="#mtRankA_over" data-toggle="tab">月榜单</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="m-bt">
+						<div class="tab-content">
+							<div class="tab tab-pane fade active in" id="wkRankA_over" dir="right">
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="20%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="name">昵称</span></th>
+											<th><span class="num">胜场累计</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar1 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="20%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108111</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="fwq">影流</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="fwq">钢铁烈阳</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">7</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">8</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">9</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">10</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">11</span></td>
+												<td><span class="fwq">裁决之地</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div class="tab tab-pane fade" id="mtRankA_over" dir="right">
+								<table class="tab-t">
+									<thead>
+										<tr>
+											<th width="20%"><span class="icon">排名</span></th>
+											<th width="40%"><span class="fwq">昵称</span></th>
+											<th><span class="num">累计胜场</span></th>
+										</tr>
+									</thead>
+								</table>
+								<div class="scrollbar1 smallScroll">
+									<table>
+										<tbody>
+											<tr>
+												<td width="20%"><span class="icon top3">1</span></td>
+												<td width="40%"><span class="fwq">皮城警备皮城警备皮城警备</span></td>
+												<td><span class="num">1108123456</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">2</span></td>
+												<td><span class="fwq">裁决之地地</span></td>
+												<td><span class="num">865</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon top3">3</span></td>
+												<td><span class="fwq">皮城警备</span></td>
+												<td><span class="num">855</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">4</span></td>
+												<td><span class="fwq">艾欧尼亚</span></td>
+												<td><span class="num">846</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">5</span></td>
+												<td><span class="name">一杯白开水</span></td>
+												<td><span class="num">726</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">6</span></td>
+												<td><span class="name">你爹泤强总</span></td>
+												<td><span class="num">720</span></td>
+											</tr>
+											<tr class="my">
+												<td><span class="icon">7</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">8</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+											<tr>
+												<td><span class="icon">9</span></td>
+												<td><span class="name">最强王八</span></td>
+												<td><span class="num">685</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--rankA end-->
+			</div>
+			<!-- over end -->
+
+		</div>
+
+		<div class="actToday">
+			<div class="act_title_bg">
+				今日活动
+			</div>
+			<div class="rblock">
+				<div class="rblock_bd smallScroll">
+					<div class="actList">
+						<h3>
+                			连胜：今日LOL连胜5局<span class="state_checking">规则</span>
+              			</h3>
+						<div class="checkTips">
+							活动规则：<br> 1. 如需使用插件，建议使用TGP或多玩盒子，其它插件将有可能无法统计活动数据；<br> 2. 只有“玩家对战 - 经典对战模式 - 召唤师峡谷”地图下的排位赛才计算成绩；<br> 3. 活动期间单场击杀20人头即可领奖；<br> 4. 每个QQ号活动期间限领一次。
+						</div>
+						<table class="act_tab">
+							<tr>
+								<td class="td_center" rowspan="2" width="24%"><img src="../../images/barAc/lol_menu_logo.png" /></td>
+								<td class="pl12">20元话费（限前10名、限30级） </td>
+							</tr>
+							<tr>
+								<td class="pl12">每日0:00 - 23:59（1月20日-1月31日)</td>
+							</tr>
+							<tr>
+								<td colspan='2'>
+									<p>
+										<span class="myScore">我的成绩 ：已连胜X局 </span>
+									</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="actList">
+						<h3>杀神：今日单击击杀30人头<span class="state_checking">规则</span></h3>
+						<div class="checkTips">
+							活动规则：<br> 1. 如需使用插件，建议使用TGP或多玩盒子，其它插件将有可能无法统计活动数据；<br> 2. 只有“玩家对战 - 经典对战模式 - 召唤师峡谷”地图下的排位赛才计算成绩；<br> 3. 活动期间单场击杀20人头即可领奖；<br> 4. 每个QQ号活动期间限领一次。
+						</div>
+						<div class="act_tab">
+							<table>
+								<tr>
+									<td class="td_center" rowspan="2" width="24%"><img src="../../images/barAc/lol_menu_logo.png" /></td>
+									<td class="pl12">20元话费（限前10名、限青铜及以上段位） </td>
+								</tr>
+								<tr>
+									<td class="pl12">每日0:00 - 23:59（1月20日-1月31日)</td>
+								</tr>
+								<tr>
+									<td colspan='2'>
+										<p>
+											<span class="reach">恭喜，今日活动已达成！</span>
+										</p>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="actList">
+						<h3>连胜：今日LOL连胜5局<span class="state_checking">规则</span></h3>
+						<div class="checkTips">
+							活动规则：<br> 1. 如需使用插件，建议使用TGP或多玩盒子，其它插件将有可能无法统计活动数据；<br> 2. 只有“玩家对战 - 经典对战模式 - 召唤师峡谷”地图下的排位赛才计算成绩；<br> 3. 活动期间单场击杀20人头即可领奖；<br> 4. 每个QQ号活动期间限领一次。
+						</div>
+						<table class="act_tab">
+							<tr>
+								<td class="td_center" rowspan="2" width="24%"><img src="../../images/barAc/over_menu_logo.png" /></td>
+								<td class="pl12">20元话费（限前10名、限青铜及以上段位） </td>
+							</tr>
+							<tr>
+								<td class="pl12">每日0:00-23:59（限周一、二、三、四、五）</td>
+							</tr>
+							<tr>
+								<td class="normal_remind" colspan='2'>今日你还未参加此活动</td>
+							</tr>
+						</table>
+					</div>
+					<div class="actList">
+						<h3>连胜：今日LOL连胜5局<span class="state_checking">规则</span></h3>
+						<div class="checkTips">
+							活动规则：<br> 1. 如需使用插件，建议使用TGP或多玩盒子，其它插件将有可能无法统计活动数据；<br> 2. 只有“玩家对战 - 经典对战模式 - 召唤师峡谷”地图下的排位赛才计算成绩；<br> 3. 活动期间单场击杀20人头即可领奖；<br> 4. 每个QQ号活动期间限领一次。
+						</div>
+						<table class="act_tab">
+							<tr>
+								<td class="td_center" rowspan="2" width="24%"><img src="../../images/barAc/lol_menu_logo.png" /></td>
+								<td class="pl12">20元话费（限前10名、限青铜及以上段位） </td>
+							</tr>
+							<tr>
+								<td class="pl12">每日0:00-23:59（限周一、二、三、四、五）</td>
+							</tr>
+							<tr>
+								<td class="normal_remind" colspan='2'>今日你还未参加此活动</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div style="display:none;" class="rblock_bd no_act">
+					本吧暂无活动
+				</div>
+			</div>
+			<div class="cafe" style="display:none ;"></div>
+
+			<div class="float_layer" style="visibility:hidden; ">
+				<a class="btn_close" href="javascript:void(0);"></a>
+				<div class="float_con">
+					<!--<p class="white">请登录英雄联盟并绑定火马账号，启动游戏后便可参加本吧活动~</p>-->
+					<!--<p class="white">请登录火马并绑定火马账号，便可参加本吧活动~</p>-->
+					<!--<p class="white">恭喜，<span class="blue">2440663620(皮尔特沃夫-金猫)</span>成功绑定到火马账号！</p>-->
+					<p>绑定失败，每个游戏帐号仅能绑定一个火马帐号~<br> 号
+						<span class="blue">2440663620( 皮尔特沃夫-金猫）</span>已被其他火马账户绑定。</p>
+				</div>
+				<div class="modal-btns">
+					<!--<a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure">登录游戏</a>-->
+					<!--<a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure">登录火马</a>-->
+					<!--<a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure">立即开始游戏</a>-->
+					<a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure">关闭</a>
+				</div>
+			</div>
+			<div class="float_layer h200" style="visibility:hidden ;">
+				<a class="btn_close" href="javascript:void(0);"></a>
+				<div class="c_modal c_modal-md">
+					<div class="modal-body">
+						<p><span class="blue">2440663620(皮尔特沃夫-金猫)</span>已绑定过火马帐号，您可以：</p>
+						<span>快速更换火马账号：</span>
+						<div class="list_pics">
+							<a href=""><img src="pic/img01.jpg" alt="" width="64"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="float_layer h200" style="visibility: ;">
+				<a class="btn_close" href="javascript:void(0);"></a>
+				<div class="c_modal c_modal-md">
+					<div class="modal-body ptb15 h127 text-left">
+						<p>确认绑定英雄联盟帐号<span class="blue">2440663620</span>吗，绑定后？</p>
+						<ul class="mt20">
+							<li class="white">● 顺豆(首次绑定账号)、参赛、获奖记录也将同步转入火马账号。</li>
+							<li class="white">● 可直接报名参加火马平台的相关比赛活动。</li>
+						</ul>
+					</div>
+					<div class="modal-btns">
+						<a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure">确定</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!--rank end-->
+		<p class="bottom_reminder">温馨提醒：每个用户在每个榜单活动中，只能领取1份奖励，按照成绩最高的召唤师计算。</p>
+
+	</div>
+</body>
+<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	//计算下方轮播指标的li宽度
+	var indexObj = {
+		documentDis: function() {
+			document.onselectstart = function() {
+				return false;
+			}
+			$.fn.show_ = function() {
+				$(this).show();
+				$('.alert_bg').show();
+			}
+			$.fn.hide_ = function() {
+				$(this).hide();
+				$('.alert_bg').hide();
+			}
+		},
+		domAction:function() {
+			$(".float_layer").delay(500).slideDown(1000);
+			$(".btn_close").click(function() {
+				$(this).parents(".float_layer").hide();
+			});
+	
+			$(".game_menu_box").on('click','ul li a',function() {
+				var id = $(this).attr('href');
+				$(id).siblings('div').hide();
+				$(id).show();
+				$(this).parent().siblings().removeClass('active');
+				$(this).parent().addClass('active');
+			});
+	
+			//复核中
+			$(".state_checking").hover(function() {
+				var checkTips = $(this).parents(".actList").find(".checkTips");
+				if(570 - $(this).offset().top < checkTips.height() + 34) {
+					checkTips.addClass("top");
+				} else {
+					checkTips.removeClass("top");
+				}
+				checkTips.show();
+			}, function() {
+				$(this).parents(".actList").find(".checkTips").hide();
+			});
+			
+			//切换
+			$(document).on('click','.menu li',function(e) {
+				$(this).siblings('li').removeClass('active');
+				$(this).addClass('active');
+				var actionName = $(this).attr('data-id');
+				typeof actionObj[actionName] == 'function' && actionObj[actionName]();
+			})
+			var actionObj = {
+				lol:function() {
+					$('.box').attr('class','box lol');
+					$(".over_box").hide();
+					$(".lol_box").show();
+				},
+				over:function() {
+					$('.box').attr('class','box over');
+					$(".over_box").show();
+					$(".lol_box").hide();
+				}
+			}
+		},
+		scrollAction:function() {
+			var topInit = {}//每个有浮动my的对象，存放初始高度位置等元素
+			var initFlag = true;//鉴定滚动的标识符，只需要开始绑定一次
+			var initTopFlag = {//由于不能静态确定，用来初始化每个tab的初始高度
+					mtRankB:true,
+					wkRankB:true,
+					wkRankA:true,
+					mtRankA:true,
+					wkRankB_over:true,
+					mtRankB_over:true,
+					wkRankA_over:true,
+					mtRankA_over:true
+				}
+			//设置自己排名浮动
+			function setFloat(parentId_) {
+				$('.tableW td').each(function() {
+					var k = $(this).find('span').html();
+					$(this).find('span').attr('title',k);
+				})
+				
+				var floatWidth = {
+					mtRankB:['42.9px','132px','66px','89px'],
+					wkRankB:['42.9px','132px','66px','89px'],
+					wkRankA:['49.5px','145.2px','69.3px','66px'],
+					mtRankA:['49.5px','145.2px','69.3px','66px'],
+					wkRankB_over:['66px','132px','132px'],
+					mtRankB_over:['66px','132px','132px'],
+					wkRankA_over:['66px','132px','132px'],
+					mtRankA_over:['66px','132px','132px']
+				}
+				
+				var myTr = parentId_?$('#'+parentId_+' .my'):$('.my');
+				
+				myTr.each(function(e) {
+					var this_ = $(this);
+					var parentId = $(this).parent().parent().parent().parent().attr('id');
+					var parentPrize = $(this).parent().parent().parent().parent().find('.prizeBox');
+					var myNum = $(this).find('td:first-child span').html();
+					var myPrev = $(this).closest('table').parent();
+					var myTabTop = $(this).closest('table').offset().top;
+					
+					
+					function eventScroll() {
+						if(!initFlag) return;
+						topInit[parentId] = {};
+						topInit[parentId]['initFlag'] = false;
+						topInit[parentId]['my'] = this_;
+						topInit[parentId]['pos'] = myNum;
+						topInit[parentId]['l'] = parentPrize.length == 0?10:7;
+						$(myPrev).scroll(function(event){
+							var parentId_ = $(this).parent().attr('id');
+							var nowTop = $(event.target).find('table').offset().top;
+							if(initTopFlag[parentId_]) {
+								topInit[parentId_]['top'] = nowTop;
+								initTopFlag[parentId_] = false;
+							}
+							var numTop = Math.round((topInit[parentId_]['top']-nowTop)/38);
+							console.log(nowTop+"---"+parentId_);
+							
+							function tabTyle() {
+								if(topInit[parentId_]['l'] == 7 && topInit[parentId_]['pos']>7) {
+									return 7;
+								} else if(topInit[parentId_]['l'] == 10 && topInit[parentId_]['pos']>10) {
+									return 10;
+								}
+							}
+							
+							if(numTop > (topInit[parentId_]['pos']-(tabTyle()+1))) {
+								topInit[parentId_]['initFlag'] = true;
+								topInit[parentId_]['my'].css('position','static');
+							} else if(numTop < (topInit[parentId_]['pos']-tabTyle()) && topInit[parentId_]['initFlag']) {
+								setFloat(parentId_);
+								topInit[parentId_]['initFlag'] = false;
+							}
+						});
+					}
+					eventScroll();
+					
+					console.log(parentId+"---"+parentPrize+"---"+myTabTop);
+					if((myNum > 7 && parentPrize.length != 0) || (myNum > 10 && parentPrize.length == 0)) {
+						if($('#'+parentId+' .smallScroll table #appendTr').length == 0) {
+							$('#'+parentId+' .smallScroll table').append("<tr id='appendTr' style='height:40px'></tr>");
+						}
+						$(this).css({'position':'absolute','bottom':'0px','width':'340px'});
+						$(this).find('td').each(function(index) {
+							$(this).css('width',floatWidth[parentId][index]);
+						})
+					}
+				})
+				initFlag = false;
+			}
+			setFloat();
+		}
+	}
+	indexObj.documentDis();
+	indexObj.domAction();
+	indexObj.scrollAction();
+</script>
+
+</html>

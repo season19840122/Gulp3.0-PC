@@ -1,0 +1,580 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+html {
+    background: black;
+}
+
+.box {
+    color: #576970;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    &.lol{
+        background: url(../../images/barAc/bar_lol.webp);
+    }
+    &.over{
+        background: url(../../images/barAc/bar_over.webp);
+    }
+    .alert_bg {
+        z-index: 100;
+        display: none;
+        @include abTopLeft(1200px, 660px, 0px, 0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    @include scroll2();
+    /*本吧活动*/
+    .actToday {
+        position: absolute;
+        width: 350px;
+        height: 540px;
+        bottom: 47px;
+        right: 29px;
+    }
+    .rblock {
+        padding-top: 62px;
+    }
+    .rblock .actList {
+        background: #1b2028;
+        margin: 0 9px 10px;
+        position: relative;
+    }
+    .rblock .actList h3 {
+        font-size: 14px;
+        height: 30px;
+        line-height: 30px;
+        color: #e4c340;
+        text-align: center;
+    }
+    .rblock_bd {
+        height: 455px;
+        overflow-y: auto;
+        position: relative;
+    }
+    .rblock .actList table {
+        position: relative;
+        left: -1px;
+        width: 324px;
+    }
+    .rblock .actList td {
+        border: 1px solid #12171c;
+        height: 30px !important;
+        line-height: 22px;
+        white-space: normal;
+    }
+    .rblock .actList td.pl12 {
+        padding-left: 12px;
+    }
+    .rblock .actList td p {
+        line-height: 20px;
+        text-align: center;
+    }
+    .rblock .actList td .myScore {
+        color: #bd5a02;
+        margin-right: 12px;
+    }
+    .rblock .actList td .reach {
+        color: #107c0a;
+        padding-left: 18px;
+        &:before{
+            content: "\e666";
+            @include iconfont;
+        }
+    }
+    .no_act {
+        font-size: 16px;
+        color: #636973;
+        padding-top: 195px;
+        text-align: center;
+        background-position: 70px 120px;
+    }
+    /*排行榜*/
+    .rank {
+        font-size: 12px;
+        width: 788px;
+        height: 597px;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        &:after {
+            content: "";
+            @include abBottomRight(1px, 660px, 70px, 0px);
+            background: #10161e;
+        }
+    }
+    .rblock dl .icon,
+    .rblock dd b {}
+    .rank .tableW {
+        position: absolute;
+        width: 340px;
+        height: 470px;
+        top: 54px;
+    }
+    .rank .m-hd {
+        position: relative;
+        z-index: 100;
+        width: 100%;
+        z-index: 3;
+    }
+    .rank .m-hd ul {
+        width: 340px;
+        height: 42px;
+    }
+    .rank .m-hd ul li {
+        float: left;
+        cursor: pointer;
+        height: 40px;
+    }
+    .rank .m-hd ul a {
+        border-top: 5px solid #1e2329;
+        font-size: 16px;
+        display: inline-block;
+        width: 170px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #828282;
+        line-height: 33px;
+    }
+    .rank .m-hd ul li.active a {
+        color: white;
+        font-weight: bold;
+        border-top: 4px solid #96732f;
+        width: 170px;
+        height: 38px;
+        position: relative;
+        &:after{
+            content: "";
+            background: url(../../images/barAc/bar_biao.png);
+                position: absolute;
+    bottom: -6px;
+    left: 75px;
+    width: 18px;
+    height: 9px;
+        }
+    }
+    .rank .m-hd ul li a:hover {
+        border-top: 4px solid rgba(233, 192, 95, 0.25);
+    }
+    .rank .m-hd ul li.active a:hover {
+        border-top: 4px solid #96732f;
+    }
+    .tableW .tabTitle {
+        position: absolute;
+        width: 340px;
+        left: 0px;
+        top: -37px;
+        color: #cdb88d;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .rankA {
+        right: 17px;
+    }
+    .rankB {
+        left: 17px;
+    }
+    .rank .rankA .m-hd {
+        background: url(img/rankT_A.png) no-repeat 131px 16px;
+    }
+    .rank .rankB .m-hd {
+        background: url(img/rankT_B.png) no-repeat 131px 16px;
+    }
+    .tableW .m-hd .game_menu_box {
+        height: 55px;
+    }
+    .tableW .m-hd ul {
+        background-position: 0 0;
+    }
+    .rankA .m-hd ul.on1,
+    .rankB .m-hd ul.on1 {
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+    }
+    .rank .m-bt {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        z-index: 2;
+        font: 12px/20px '微软雅黑';
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    .rank .top40 {
+        top: 40px;
+    }
+    .rank .top54 {
+        top: 54px;
+    }
+    .rank .tab-m .tab {
+        display: none;
+    }
+    .rank table {
+        width: 100%;
+        table-layout: fixed;
+        color: #8d8d8d;
+    }
+    .rank .tab-t {
+        tr {
+            border-bottom: 1px solid #1a1f24;
+        }
+    }
+    .rank .tab-t thead td {
+        white-space: nowrap;
+    }
+    .rank th {
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        font-weight: normal;
+    }
+    .rank td .ico_player {
+        vertical-align: middle;
+        margin-right: 12px;
+        border-radius: 4px;
+    }
+    .tableW td {
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        height: 38px;
+        line-height: 38px;
+        word-break: break-all;
+    }
+    .rank td:first-child {
+        text-align: left;
+        text-indent: 5px;
+    }
+    .rank .icon {
+        display: inline-block;
+        width: 96%;
+        text-align: left;
+        text-indent: 5px;
+    }
+    .rank .num {
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .rank tr {
+        position: relative;
+    }
+    .rank .my td .icon {
+        text-indent: 0px;
+        min-width: 14px;
+        width: auto;
+        max-width: 96%;
+        padding: 0 10px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        background: #101318;
+        border-radius: 12px;
+    }
+    .rank td .num {
+        color: #efd66c;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    .rank .my td {
+        color: white;
+    }
+    .rank tr.my {
+        background: #051826;
+    }
+    .rank .m-bt .tab-content .tab {
+        display: none;
+    }
+    .rank .m-bt .tab-content .tab.active {
+        display: block;
+    }
+    .rank .m-bt td .icon {
+        font-size: 14px;
+        font-family: Arial;
+        color: white;
+    }
+    .rank .m-bt td .icon.top3 {
+        color: #ffcc00
+    }
+    /*未安装提示*/
+    .cafe {
+        margin: 0 auto;
+        margin-top: 130px;
+        width: 217px;
+        height: 145px;
+        background: url(../../images/barAc/no_act.png) no-repeat;
+    }
+    .cafe p {
+        padding-top: 155px;
+        line-height: 38px;
+        text-align: center;
+        color: #8d8d8d;
+        font-size: 20px;
+    }
+    .cafe p a {
+        color: #dab932;
+    }
+    /*胜场榜奖品*/
+    .prizeBox {
+        height: 105px;
+        line-height: 18px;
+    }
+    .prizeBox li {
+        position: relative;
+        display: inline-block;
+        width: 93px;
+        height: 93px;
+        border: 1px solid #252825;
+        float: left;
+        margin-left: 15px;
+        text-align: center;
+    }
+    .prizeBox li img {
+        width: 92px;
+        margin: 0;
+        padding: 0;
+        vertical-align: top;
+    }
+    .prizeBox li h3 {
+        margin-top: 60px;
+        line-height: 10px;
+        color: #bca441;
+    }
+    .prizeBox li span {
+        color: #8d8d8d;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .prizeBox .prize_ico {
+        position: absolute;
+        width: 93px;
+        height: 93px;
+    }
+    .scrollbar1 {
+        height: 386px;
+        overflow: auto;
+    }
+    .scrollbar2 {
+        height: 274px;
+        overflow: auto;
+    }
+    .bottom_reminder {
+        color: #4d4c4c;
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -200px;
+        line-height: 24px;
+    }
+    .float_layer {
+        display: none;
+        box-shadow: 0 0 10px #000;
+        position: absolute;
+        text-align: center;
+        bottom: 0px;
+        width: 338px;
+        height: 155px;
+        background: rgba(27,32,40,0.9);
+        color: #fff;
+    }
+    .h200 {
+        height: 200px;
+    }
+    .float_con {
+        width: 280px;
+        margin: 36px auto 0;
+        height: 72px;
+    }
+    .modal-body {
+        width: 280px;
+        margin: 36px auto 0;
+    }
+    .modal-body .list_pics {
+        margin: 10px auto;
+    }
+    .float_layer p {
+        text-align: left;
+        span.blue{
+            color: #c49f58;
+        }
+    }
+    .float_layer ul {
+        width: 275px;
+        margin: 10px auto 20px;
+        li{
+            text-align: left;
+        }
+    }
+    .btn_close {
+        width: 16px;
+        height: 16px;
+        float: right;
+        margin: 5px;
+        &:before{
+            color: grey;
+            content: "\e640";
+            @include iconfont;
+        }
+    }
+    .float_layer .modal-btns a {
+        font-size: 16px;
+    }
+    .modal-btns a {
+        margin: 0 auto;
+        display: inline-block;
+        color: #00b2ff;
+        font-size: 14px;
+        text-align: center;
+        width: 112px;
+        height: 36px;
+        line-height: 36px;
+    }
+    .modal-btns a.btn_cancel {
+        background-position-x: -112px;
+    }
+//  .modal-btns a:hover {
+//      background-position-y: -36px;
+//  }
+//  .modal-btns a:active {
+//      background-position-y: -72px;
+//  }
+    /*复核中*/
+    .checkTips {
+        position: absolute;
+        display: none;
+        width: 300px;
+        background: #010a13;
+        z-index: 20;
+        border: 2px solid #785a28;
+        padding: 10px;
+        top: 33px;
+        left: 10px;
+        &:before{
+            content: "";
+            left: 155px;
+          position: absolute;
+          top: -16px;
+          right: 24px;
+          width: 0px;
+          height: 0px;
+          border: 8px solid;
+          border-color: transparent transparent #785a28 transparent;
+        }
+        &:after{
+            content: "";
+            left: 155px;
+          position: absolute;
+          top: -14px;
+          right: 24px;
+          width: 0px;
+          height: 0px;
+          border: 8px solid;
+          border-color: transparent transparent #010a13 transparent;
+        }
+    }
+    .checkTips.top {
+        top: auto;
+        bottom: 170px;
+         &:before{
+          top: auto;
+          bottom: -16px;
+          border-color: #785a28 transparent transparent transparent;
+        }
+        &:after{
+          top: auto;
+          bottom: -14px;
+          border-color: #010a13 transparent transparent transparent;
+        }
+    }
+    /** 20160830 minxing **/
+    .lol_box,
+    .over_box {
+        position: absolute;
+        left: 38px;
+        top: 0px;
+        width: 734px;
+        height: 537px;
+    }
+    .lol_box {}
+    .over_box {}
+    .game_menu {
+        position: absolute;
+        background: -webkit-linear-gradient(bottom, #091319, #132635);
+        background: linear-gradient(bottom, #091319, #132635);
+        width: 70px;
+        height: 100%;
+    }
+    .game_menu li {
+        position: relative;
+        width: 70px;
+        height: 95px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .game_menu img {
+        position: absolute;
+        width: 37px;
+        left: 50%;
+        margin-left: -18px;
+        top: 20%;
+    }
+    .game_menu p {
+        position: absolute;
+        bottom: 15px;
+        text-align: center;
+        width: 70px;
+    }
+    .game_menu_on {
+        background: #12171c;
+        color: white;
+        font-weight: bold;
+    }
+    .hide {
+        display: none;
+    }
+    .act_title_bg {
+        text-align: center;
+        width: 350px;
+        position: absolute;
+        top: 0px;
+        border-bottom: 4px solid #96732f;
+        height: 48px;
+        line-height: 47px;
+        color: #cdb88d;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .act_title_bg img {
+        margin-top: 5px;
+    }
+    .td_center {
+        text-align: center;
+        padding: 28px 4px;
+    }
+    .game_menu .style {
+        position: absolute;
+        width: 70px;
+        height: 95px;
+    }
+    .rblock {
+        color: #8d8d8d;
+    }
+    .rblock .normal_remind {
+        text-align: center;
+    }
+    .rblock .state_checking {
+        background: none;
+        padding-left: 15px;
+        color: white;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}

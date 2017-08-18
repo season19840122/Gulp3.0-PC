@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>我的包裹</title>
+  <link rel="stylesheet" href="styles/iconfont/iconfont.css">
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/tabBar.css">
+  <link rel="stylesheet" href="styles/myPackage.css">
+</head>
+
+<body>
+  <div class="box">
+    <!-- 公用头部开始 -->
+    <ul class="menu">
+      <li data-id="vip">我的VIP</li>
+      <li>我的比赛</li>
+      <li>我的奖品</li>
+      <li class="active">我的包裹</li>
+      <li>顺豆明细</li>
+      <a href="###" class="flush"><span>刷新</span></a>
+    </ul>
+    <!-- 公用头部结束 -->
+    
+    <div class="myPackage-wrap">
+      <div class="shadow"></div>
+      
+      <!-- 轮播 -->
+	  	<div class="show-box">
+        <section id="dg-container" class="dg-container">
+	  		 <h3 class="title">宝物推荐</h3>
+					<div class="dg-wrapper">
+						<a>
+							<img src="images/my/vip_login_on.png" alt="">
+							<div>十六个字的宝箱好难描述太难描述了</div>
+						</a>
+						<a>
+							<img src="images/my/vip_login_on.png" alt="">
+							<div>2</div>
+						</a>
+            <a>
+              <img src="images/my/vip_login_on.png" alt="">
+              <div>3</div>
+            </a>
+					</div>
+					<nav>
+						<span class="dg-prev"></span>
+						<span class="dg-next"></span>
+					</nav>
+				</section>
+
+	  		<div class="ad-wrap">
+  	  		<a href="#">
+  	  			<img src="" alt="">
+  	  		</a>
+  	  		<a href="#">
+  	  			<img src="" alt="">
+  	  		</a>
+        </div>
+	  	</div>
+
+      <!-- 宝箱 -->
+      <div class="myPackage liScroll" v-cloak>
+        <input type="hidden" id="userChestId" value="1">
+        <ul>
+          <li class="has" v-for="item in chests">
+            <div class="item-wrap">
+              <img :src=" item.imgName?'images/my/'+item.imgName+'.png':item.imgName" alt="" class="item">
+              <p class="name">{{ item.chestName }}</p>
+              <span class="num">数量x{{ item.count }}</span>
+              <a href="###" class="open" @click="openChest(item.chestName)">打开</a>
+              <!-- <div class="tips-wrap" style=" display: block; "> -->
+              <div class="tips-wrap">
+                <h4 class="title1">{{ item.chestName }}</h4>
+                <p class="content">宝箱来源：{{ item.sources.join('、') }}</p>
+                <h5 class="title2">可开出以下物品的碎片：</h5>
+                <p :class="a.class" v-for="a in item.pieces">{{ a.goodsName }}</p>
+              </div>
+            </div>
+          </li>
+          <li class="has" v-for="item in pieces">
+            <div class="item-wrap">
+              <img :src="item.pic" alt="" class="item">
+              <p class="name">{{ item.goodsName }}</p>
+              <span class="num">{{ item.winCnt }}/{{ item.needCnt }}</span>
+              <a href="###" class="exchange" :class=" item.winCnt>=item.needCnt?'':'disable' " @click.prevent="openPiece(item.goodsId)">兑换</a>
+              <div class="tips-wrap">
+                <h4 class="title1">{{ item.goodsName }}</h4>
+                <p class="b1">价值：{{ item.price }}元</p>
+                <p class="b2">兑换所需碎片数量：{{ item.needCnt }}</p>
+                <p class="b2" v-if=" item.endTime ">有效期至：{{ item.endTime }}</p>
+                <p class="content mt10">宝箱来源：{{ item.sources.join('、') }}</p>
+              </div>
+            </div>
+          </li>
+          <li v-for="n in num">
+            <div class="item-wrap">
+              <img src="images/my/tb.png" alt="" class="item">
+              <!-- <a href="###" class="n">暂无</a> -->
+            </div>
+          </li>
+          <!-- <li>
+            <div class="item-wrap">
+              <span class="num">11/15</span>
+              <img src="images/treasure/mouse.png" alt="" class="item">
+              <a href="#" class="exchange">兑换</a> 
+              <div class="tips-wrap">
+                <h4 class="title1">新手宝箱</h4>
+                <p class="content">宝箱来源：新注册用户赠送新注册用户赠送新注册用户赠送新注册用户赠送新注册用户赠送新注册用户赠送.</p>
+                <h5 class="title2">可开出以下物品的碎片：</h5>
+                <p class="p1">88顺豆*1<br>88顺豆*1<br>大宝剑*1</p>
+                <p class="p2">马栏山绝世栅栏*1<br>超级脑残片*1<br>智障级队友*1</p>
+                <p class="p3">杀杀杀魔术手<br>鬼见愁需求屏蔽器<br>杀杀杀魔术手</p>
+                <p class="p4">鬼见愁需求屏蔽器<br>臣臣珍藏版写真<br>臣臣典藏版写真</p>
+                <p class="p5">臣臣？？？写真<br>臣臣？？？写真<br>臣臣？？？写真</p>
+              </div>
+            </div>
+          </li>-->
+        </ul>
+      </div>
+      
+    	<!-- 宝箱动画 -->
+    	<div class="animate_box hide_">
+    		<img class="rotate_pic rotateInitial" src="images/my/treasure_scale.png">
+    		<div class="bg fadeIn"></div>
+    		<img class="flash_pic flashInto" src="images/my/treasure_flash.png">
+    		<img class="line_left pt-page-moveFromLeft" src="images/my/treasure_line.png">
+    		<img class="line_right pt-page-moveFromRight" src="images/my/treasure_line.png">
+    		<img class="tresure_word" src="images/my/treasure_word.png">
+    		<img class="tresure_content scaleWidth" src="images/my/treasure_box.png">
+    		<div class="tresure_div">
+    			<ul></ul>
+    		</div>
+    		<div class="confirm">确定</div>
+    	</div>
+    </div>
+    
+    <!-- 弹窗 -->
+    <div class="masklayer"></div>
+
+    <div id="alert_box" class="dialog-wrap dialog-result">
+      <button class="btn-close ti">关闭</button>
+      <div class="content-wrap">
+        <p class="p1"></p>
+      </div>
+      <div class="btn-wrap">
+        <a class="btn-sure" href="###">确定</a>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="scripts/jquery-3.1.1.min.js"></script>
+  <script src="scripts/bootstrap.min.js"></script>
+  <script src="scripts/jquery.gallery.js"></script>
+  <!-- <script src="scripts/_vue.js"></script> -->
+  <script src="scripts/vue.min.js"></script>
+  <script src="scripts/tabBar.js"></script>
+  <script src="scripts/global.js"></script>
+  <script src="scripts/treasure_action1.js"></script>
+  <script src="scripts/treasure_main.js"></script>
+  <script>    (function($) {
+      $("body").on("mouseenter", ".myPackage .item", function() {
+        if ($(this).siblings(".tips-wrap").length > 0) {
+          $(this).siblings(".tips-wrap").show();
+        }
+      }).on("mouseleave", ".myPackage .item", function() {
+        $(".tips-wrap").hide();
+      });
+    })(jQuery)</script>
+</body>
+</html>

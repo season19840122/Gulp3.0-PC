@@ -1,0 +1,445 @@
+*{
+  box-sizing: border-box;
+}
+
+img{
+    vertical-align: middle;
+}
+a{
+  text-decoration: none;
+  &:hover, &:active{
+    text-decoration: none;
+  }
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+// 去除选中虚线框
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active { 
+  -moz-outline-style: none;
+  outline:none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.box{overflow: hidden;}
+body {
+    font: 12px/1.5 'microsoft yahei';
+}
+
+@mixin border-radius($bd:5px){
+  border-radius: $bd;
+}
+
+@mixin line-gradient($startColor, $endColor){
+  background: $startColor;
+  background: linear-gradient($startColor, $endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+}
+
+@mixin btn-comm($w:240px, $h:40px){
+  max-width: $w;
+  min-width: $w;
+  height: $h;
+  line-height: $h;
+  display: inline-block;
+  text-align: center;
+  font-family: "Microsoft YaHei";
+}
+
+@mixin txt-comm($w:240px, $h:35px){
+  @include border-radius;
+  padding: 0 5px;
+  min-width: $w - 5*2;
+  height: $h - 2;
+  line-height: $h - 2;
+  font-size: 12px;
+  font-family: 'SimSun';
+  border: 1px solid  #363d46;
+  outline: none;
+}
+
+.button-sure, .button-no{
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  @include line-gradient(#c49f58, #c49f58);
+}
+.button-no{
+  color: #271708;
+  @include line-gradient(#c49f58, #c49f58);
+}
+
+/*下拉列表*/
+.drop-select{display:inline-block; vertical-align:middle; position:relative;}
+.drop-select ul{width:100%; margin-top:2px; border:1px solid #212a36; position:absolute; display:none; z-index:10; overflow:auto;}
+.drop-select ul li{height:24px; line-height:24px; text-indent:10px}
+.drop-select ul li a{display:block; text-decoration:none;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.drop-select ul li a:hover{background:#1d232a;}
+
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar{
+  width: 10px;
+  height:10px;
+  border-radius: 5px;
+}
+.mainScroll::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 5px;
+  background: #000;
+}
+.mainScroll::-webkit-scrollbar-thumb{
+  -webkit-box-shadow: inset 0 0 5px rgba(45,58,72,1);
+  border-radius: 5px;
+  background: #33383e;
+}
+.mainScroll::-webkit-scrollbar-thumb:hover{
+  background: #5b626c;
+}
+.mainScroll::-webkit-scrollbar-thumb:active{
+  background: #4d525a;
+}
+
+/* 列表自定义 webkit 滚动条 */
+.smallScroll::-webkit-scrollbar{
+  width: 6px;
+  height: 66px;
+  border-radius: 5px;
+}
+// 轨道
+.smallScroll::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background: none;
+}
+// 滚动条
+.smallScroll::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: #785a28;
+  &:hover {
+    background: #c8aa6e;
+  }
+  &:active {
+    background: #463714;
+  }
+}
+
+@mixin abTopRight($width: auto, $height: auto, $top: 0px, $right: 0px) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    width: $width;
+    height: $height;
+}
+
+@mixin abTopLeft($width: auto, $height: auto, $top: 0px, $left: 0px) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin abBottomRight($width: auto, $height: auto, $bottom: 0px, $right: 0px) {
+    position: absolute;
+    bottom: $bottom;
+    right: $right;
+    width: $width;
+    height: $height;
+}
+
+@mixin abBottomLeft($width: auto, $height: auto, $bottom: 0px, $left: 0px) {
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin overDian {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin textCenter($height) {
+    text-align: center;
+    line-height: $height;
+}
+
+@mixin bg($pic) {
+    background: url($pic);
+}
+
+@mixin dian {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@mixin hide_ {
+    display: none;
+}
+
+@mixin iconfont{
+    font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+@mixin alertMsg($width,$height){
+    $bigW :10px;
+    $smallW :12px;
+    width: $width;
+    height: $height;
+    position: relative;
+    border: 3px solid #5a4729;
+    background: #0b0c10;
+    &:before {
+        box-sizing: border-box;
+        position: absolute;
+        content: "";
+        width: ($width - $bigW);
+        height: ($height - $bigW);
+        left: 2px;
+        top: 2px;
+        border: 1px solid #5a4729;
+    }
+    &:after {
+        box-sizing: border-box;
+        position: absolute;
+        content: "";
+        width: ($width - $smallW);
+        height: ($height - $smallW);
+        left: 3px;
+        top: 3px;
+        border: 1px solid #191614;
+    }
+    .icon-tianjia {
+        position: absolute;
+        right: 2px;
+        top: -1px;
+        color: #a09a8c;
+        font-size: 20px;
+        cursor: pointer;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        z-index: 100;
+    }
+}
+
+@mixin alert2($width,$height, $url:'../../images/pics/sprite_alert.png') {
+    position: absolute;
+    width: $width;
+    height: $height;
+    background: #0B0C10;
+    left: 50%;
+    margin-left: -($width/2);
+    top: 50%;
+    margin-top: -($height/2);
+    border: 3px solid #5a4729;
+    padding: 40px 50px;
+    h1{
+        position: relative;
+        font-size: 18px;
+        color: #e8b664;
+        font-weight: bold;
+        border-bottom: 1px solid #192125;
+        padding-bottom: 5px;
+        margin-bottom: 22px;
+    }
+    &:before {
+        box-sizing: border-box;
+        position: absolute;
+        content: "";
+        width: ($width - 12px);
+        height: ($height - 12px);
+        left: 3px;
+        top: 3px;
+        border: 1px solid #191614;
+        box-shadow: 0px 0px 0px 1px #5a4729;
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        width: 118px;
+        height: 117px;
+        right: -29px;
+        top: -29px;
+        cursor: pointer;
+        background: url($url) no-repeat;
+        background-position: 0px 0px;
+    }
+    i{
+        position: absolute;
+        width: 48px;
+        height: 48px;
+        right: -25px;
+        top: -25px;
+        z-index: 10;
+        cursor: pointer;
+        background: url($url) no-repeat;
+        background-position: 0px -117px;
+        &:hover{
+            background-position: 0px -165px;
+        }
+        &:active{
+            background-position: 0px -213px;
+        }
+    }
+    div.confirm{
+        position: absolute;
+        width: 108px;
+        height: 32px;
+        left: 50%;
+        margin-left: -54px;
+        bottom: 7px;
+        color: #dbb77d;
+        font-size: 14px;
+        z-index: 10;
+        cursor: pointer;
+        line-height: 31px;
+        text-align: center;
+        background: url($url) no-repeat;
+        background-position: 0px -261px;
+        &:hover{
+            color: #ffbd53;
+            background-position: 0px -293px;
+        }
+        &:active{
+            color: #dbb77d;
+            background-position: 0px -325px;
+        }
+    }
+}
+
+@mixin scroll2 {
+    .smallScroll::-webkit-scrollbar{
+      width: 6px !important;
+      height:6px !important;
+    }
+    .smallScroll::-webkit-scrollbar-track{
+      border-radius: 3px !important;
+      background: transparent !important;
+    }
+    .smallScroll::-webkit-scrollbar-thumb{
+        cursor: pointer;
+      border-radius: 3px !important;
+      background:#1f2e38 !important;
+    }
+    .smallScroll::-webkit-scrollbar-thumb:hover{
+      background:#5b6e7b !important;
+    }
+    .smallScroll::-webkit-scrollbar-thumb:active{
+      background:#405564 !important;
+    }
+}
+
+@mixin select($width,$height,$left,$top,$ulHeight,$url:'../../images/pics/sprite.png') {
+    @include abTopLeft($width, $height, $top, $left);
+    background: #171f24;
+    &>input[type='text']{
+        border: 1px solid #5A4729;
+        width: $width;
+        padding-left: 6px;
+        height: $height;
+        font-size: 12px;
+        color: #8d7652;
+        background: #0f0808;
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        margin-top: -7px;
+        background-image: url($url);
+        background-position: 0px -21px;
+        width:11px;
+        height:15px;
+    }
+    &:hover{
+        input[type='text']{
+            border: 1px solid #96741d;
+            color: #fafafa;
+        }
+    }
+    &.open{
+        background: #0b0c10;
+        &:before{
+           background-position: -16px -21px;
+        }
+        input[type='text']{
+            color: #fafafa;
+            border: 1px solid #96741d;
+        }
+    }
+    @include scroll2;
+    ul{
+        display: none;
+        z-index: 15;
+        position: absolute;
+        top: $height;
+        left: 0px;
+        max-height: $ulHeight;
+        overflow-y: auto;
+        overflow-x: hidden;
+        width: $width;
+        background: #0b0c10;
+        border: 1px solid #96741d;
+        li{
+            text-align: left;
+            height: $height;
+            width: $width;
+            color: #fafafa;
+            font-size: 12px;
+            cursor: pointer;
+            line-height: $height;
+            margin-bottom: 0 !important;
+            &:hover{
+                background: #242424;
+            }
+            a{
+                padding-left: 6px;
+                display: inline-block;
+                width: 100%;
+                text-decoration: none;
+                height: 100%;
+                color: #fafafa;
+            }
+        }
+    }
+}
+@mixin inputStyle{
+    border: 1px solid #5A4729;
+    font-size: 12px;
+    color: #8d7652;
+    background: #0f0808;
+    &:focus{border-color: #96732f;color: #fafafa;}
+}

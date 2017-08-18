@@ -1,0 +1,152 @@
+{
+  "success": true,
+  "code": 0,
+  "message": null,
+  "data": {
+    "pieces": [
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      }
+    ],
+    "userChestId": null,
+    "chests": [
+      {
+        "userChestId": 1,
+        "userId": 21121,
+        "chestId": 1,
+        "state": 0,
+        "chestName": "新手宝箱",
+        "count": 1,
+        "pieces": [
+          {
+            "goodsName": "1112",
+            "goodsType": 1,
+            "price": 1.0
+          },
+          {
+            "goodsName": "xxx",
+            "goodsType": 1,
+            "price": 1.0
+          },
+          {
+            "goodsName": "罗技鼠标",
+            "goodsType": 5,
+            "price": 100.0
+          },
+          {
+            "goodsName": "手机碎片",
+            "goodsType": 1,
+            "price": 500.0
+          }
+        ],
+        "sources": [
+          "新用户赠送"
+        ]
+      },
+      {
+        "userChestId": 3,
+        "userId": 21121,
+        "chestId": 2,
+        "state": 0,
+        "chestName": "初级补给箱",
+        "count": 2,
+        "pieces": [
+          {
+            "goodsName": "111",
+            "goodsType": 1,
+            "price": 1.0
+          },
+          {
+            "goodsName": "xxx",
+            "goodsType": 1,
+            "price": 1.0
+          }
+        ],
+        "sources": [
+          "每日登陆赠送1",
+          "每日登陆赠送"
+        ]
+      },
+      {
+        "userChestId": 13,
+        "userId": 21121,
+        "chestId": 3,
+        "state": 0,
+        "chestName": "中级补给箱",
+        "count": 4,
+        "pieces": [
+          {
+            "goodsName": "111",
+            "goodsType": 1,
+            "price": 1.0
+          }
+        ],
+        "sources": [
+          "购买vip赠送",
+          "PC端VIP用户日首登"
+        ]
+      }
+    ]
+  }
+}

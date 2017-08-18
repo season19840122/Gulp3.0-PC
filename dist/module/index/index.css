@@ -1,0 +1,1227 @@
+@charset "UTF-8";
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+*:focus, *:active, a:active, a:focus, input:focus, input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+}
+
+/*-- 文字排版 --*/
+.fb {
+  font-weight: bold;
+}
+
+.fn {
+  font-weight: normal;
+}
+
+.unl {
+  text-decoration: underline;
+}
+
+.no-unl {
+  text-decoration: none;
+}
+
+.ti {
+  text-indent: -9999px;
+}
+
+.eps {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.w {
+  width: 100%;
+}
+
+.h {
+  height: 100%;
+}
+
+/*-- 定位 --*/
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+.fr {
+  float: right;
+  display: inline;
+}
+
+.cb {
+  clear: both;
+}
+
+.cl {
+  clear: left;
+}
+
+.cr {
+  clear: right;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+
+.zoom {
+  zoom: 1;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.box {
+  overflow: hidden;
+}
+
+body {
+  font: 12px/1.5 'microsoft yahei';
+}
+
+.button-sure, .button-no {
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  background: #c49f58;
+  background: linear-gradient(#c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+}
+
+.button-no {
+  color: #271708;
+  background: #c49f58;
+  background: linear-gradient(#c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=$startColor, endColorStr=$endColor);
+}
+
+/*下拉列表*/
+.drop-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.drop-select ul {
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #212a36;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+}
+
+.drop-select ul li {
+  height: 24px;
+  line-height: 24px;
+  text-indent: 10px;
+}
+
+.drop-select ul li a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.drop-select ul li a:hover {
+  background: #1d232a;
+}
+
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #000;
+}
+
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px #2d3a48;
+  border-radius: 5px;
+  background: #33383e;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+
+/* 列表自定义 webkit 滚动条 */
+.smallScroll::-webkit-scrollbar {
+  width: 6px;
+  height: 66px;
+  border-radius: 5px;
+}
+
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: none;
+}
+
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #785a28;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:hover {
+  background: #c8aa6e;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:active {
+  background: #463714;
+}
+
+html {
+  background: black;
+}
+
+.box {
+  color: #576970;
+  font-family: "微软雅黑";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 1200px;
+  height: 570px;
+  background: url("../../images/index/index_bg.webp");
+}
+
+.box .alert_bg {
+  z-index: 100;
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 1200px;
+  height: 660px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.box .carousel_box {
+  position: absolute;
+  top: 60px;
+  left: 32px;
+  width: 700px;
+  height: 232px;
+}
+
+.box .carousel_box .carousel-inner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 700px;
+  height: 200px;
+}
+
+.box .carousel_box .carousel-inner a {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 700px;
+  height: 200px;
+}
+
+.box .carousel_box .carousel-inner a img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 700px;
+  height: 200px;
+}
+
+.box .carousel_box .carousel-inner a.active {
+  display: block;
+}
+
+.box .carousel_box .carousel-indicators {
+  position: absolute;
+  top: 200px;
+  left: 0px;
+  width: 700px;
+  height: 32px;
+  background: #080a0c;
+  border-bottom: 1px solid #2a1d0e;
+  overflow: hidden;
+}
+
+.box .carousel_box .carousel-indicators li {
+  display: none;
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  position: relative;
+  height: 32px;
+  cursor: pointer;
+  line-height: 32px;
+  text-align: center;
+}
+
+.box .carousel_box .carousel-indicators li.active {
+  background: #13222c;
+  cursor: default;
+}
+
+.box .carousel_box .carousel-indicators li.active span {
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #695736;
+}
+
+.box .carousel_box .carousel-indicators li.active:before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent  transparent #695736 transparent;
+}
+
+.box .carousel_box .carousel-indicators li.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 0px;
+  height: 0px;
+  margin-left: -6px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: transparent  transparent #13222c transparent;
+}
+
+.box .msg_box {
+  position: absolute;
+  top: 300px;
+  left: 32px;
+  width: 425px;
+  height: 250px;
+}
+
+.box .msg_box .icon-gengduo {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 30px;
+  height: 34px;
+  cursor: pointer;
+  line-height: 34px;
+  z-index: 10;
+}
+
+.box .msg_box .icon-gengduo:hover {
+  color: #445f6d;
+}
+
+.box .msg_box .icon-gengduo:active {
+  color: #2c3f49;
+}
+
+.box .msg_box .banner {
+  z-index: 5;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 425px;
+  height: 34px;
+  border-bottom: 1px solid #4f4427;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.box .msg_box .banner li {
+  float: left;
+  position: relative;
+  width: 70px;
+  height: 34px;
+  text-align: center;
+  line-height: 34px;
+  cursor: pointer;
+}
+
+.box .msg_box .banner li:hover {
+  color: #c6b477;
+}
+
+.box .msg_box .banner li.active {
+  cursor: default;
+  color: #c6b477;
+}
+
+.box .msg_box .banner li.active:before {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  width: 7px;
+  height: 4px;
+  margin-left: -4px;
+  background: url(../../images/index/banner_top.png);
+}
+
+.box .msg_box .banner li.active:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: #c6b477;
+}
+
+.box .msg_box .banner_content {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 0px;
+  width: 425px;
+  height: 216px;
+  background: #0e1112;
+  padding: 14px;
+}
+
+.box .msg_box .banner_content.active {
+  display: block;
+}
+
+.box .msg_box .banner_content > h1 {
+  font-weight: normal;
+  text-align: center;
+  width: 400px;
+  height: 50px;
+  color: #978d7f;
+  line-height: 50px;
+  font-size: 14px;
+  background: #1c1e1e;
+}
+
+.box .msg_box .banner_content > h1 a {
+  color: #6d655a;
+  cursor: pointer;
+}
+
+.box .msg_box .banner_content > h1 a:hover {
+  color: #e0a119;
+}
+
+.box .msg_box .banner_content > h1 a:active {
+  color: #7d5a0e;
+}
+
+.box .msg_box .banner_content ul li {
+  font-size: 12px;
+  color: #6d655a;
+  padding-left: 15px;
+  position: relative;
+  width: 100%;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #161b1e;
+}
+
+.box .msg_box .banner_content ul li:first-child {
+  margin-top: 5px;
+}
+
+.box .msg_box .banner_content ul li a {
+  color: #6d655a;
+  cursor: pointer;
+}
+
+.box .msg_box .banner_content ul li a:hover {
+  color: #e0a119;
+}
+
+.box .msg_box .banner_content ul li a:active {
+  color: #7d5a0e;
+}
+
+.box .msg_box .banner_content ul li span {
+  float: right;
+}
+
+.box .msg_box .banner_content ul li:before {
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: transparent  transparent #354c58 transparent;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.box .msg_box .banner_content ul li:after {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: transparent  transparent #213038 transparent;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.box .more_box {
+  position: absolute;
+  top: 60px;
+  right: 32px;
+  width: 424px;
+  height: 232px;
+}
+
+.box .more_box h1 {
+  width: 100%;
+  height: 40px;
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  line-height: 40px;
+  padding: 0px 15px;
+  color: #A2A2A2;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+.box .more_box h1 a {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.box .more_box h1 a:hover {
+  color: #e0a119;
+}
+
+.box .more_box h1 a:active {
+  color: #7d5a0e;
+}
+
+.box .more_box > a {
+  display: block;
+  width: 100%;
+  height: 94px;
+  position: relative;
+  margin-top: 1px;
+  background: rgba(0, 0, 0, 0.8);
+  line-height: 40px;
+  color: #A2A2A2;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  cursor: pointer;
+  color: #a2a2a2;
+}
+
+.box .more_box > a:hover h2 {
+  color: #d3981a;
+}
+
+.box .more_box > a img {
+  position: absolute;
+  top: 16px;
+  left: 24px;
+  width: 60px;
+  height: 60px;
+}
+
+.box .more_box > a h2 {
+  text-align: left;
+  margin-top: 27px;
+  margin-left: 100px;
+  font-size: 18px;
+  color: #cfcfcf;
+}
+
+.box .more_box > a h3 {
+  text-align: left;
+  margin-top: 5px;
+  margin-left: 100px;
+  font-size: 12px;
+  color: #454f56;
+}
+
+.box .more_box > a i {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  width: 50px;
+  height: 60px;
+  font-size: 40px;
+  color: #252728;
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
+.box .game_box {
+  position: absolute;
+  top: 300px;
+  right: 32px;
+  width: 700px;
+  height: 250px;
+}
+
+.box .game_box > div a {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.box .game_box > div a:hover:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 15px 2px #00fbff;
+}
+
+.box .game_box > div a:active:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0px 0px 5px 1px #00fbff;
+}
+
+.box .game_box .left {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 264px;
+  height: 250px;
+}
+
+.box .game_box .left a > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 264px;
+  height: 250px;
+}
+
+.box .game_box .left a .info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 264px;
+  height: 70px;
+  overflow: hidden;
+}
+
+.box .game_box .left a .info > img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 264px;
+  height: 250px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  filter: blur(3px);
+}
+
+.box .game_box .left a .info h1 {
+  position: relative;
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ececec), to(#8e9b9c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .game_box .left a .info h2 {
+  position: relative;
+  text-align: center;
+  color: #6d747f;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.box .game_box .left a .info:before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}
+
+.box .game_box .middle_top {
+  position: absolute;
+  top: 0px;
+  left: 276px;
+  width: 244px;
+  height: 120px;
+}
+
+.box .game_box .middle_top a > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 244px;
+  height: 120px;
+}
+
+.box .game_box .middle_top a .info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 244px;
+  height: 39px;
+  overflow: hidden;
+}
+
+.box .game_box .middle_top a .info > img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 244px;
+  height: 250px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  filter: blur(3px);
+}
+
+.box .game_box .middle_top a .info h1 {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ececec), to(#8e9b9c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .game_box .middle_top a .info:before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}
+
+.box .game_box .middle_bottom {
+  position: absolute;
+  bottom: 0px;
+  left: 276px;
+  width: 244px;
+  height: 120px;
+}
+
+.box .game_box .middle_bottom a > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 244px;
+  height: 120px;
+}
+
+.box .game_box .middle_bottom a .info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 244px;
+  height: 39px;
+  overflow: hidden;
+}
+
+.box .game_box .middle_bottom a .info > img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 244px;
+  height: 250px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  filter: blur(3px);
+}
+
+.box .game_box .middle_bottom a .info h1 {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ececec), to(#8e9b9c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .game_box .middle_bottom a .info:before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}
+
+.box .game_box .right_top {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 170px;
+  height: 120px;
+}
+
+.box .game_box .right_top a > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 170px;
+  height: 120px;
+}
+
+.box .game_box .right_top a .info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 170px;
+  height: 39px;
+  overflow: hidden;
+}
+
+.box .game_box .right_top a .info > img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 170px;
+  height: 250px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  filter: blur(3px);
+}
+
+.box .game_box .right_top a .info h1 {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ececec), to(#8e9b9c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .game_box .right_top a .info:before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}
+
+.box .game_box .right_bottom {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 170px;
+  height: 120px;
+}
+
+.box .game_box .right_bottom a > img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 170px;
+  height: 120px;
+}
+
+.box .game_box .right_bottom a .info {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 170px;
+  height: 39px;
+  overflow: hidden;
+}
+
+.box .game_box .right_bottom a .info > img {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 170px;
+  height: 250px;
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  filter: url(blur.svg#blur);
+  filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  filter: blur(3px);
+}
+
+.box .game_box .right_bottom a .info h1 {
+  position: relative;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#ececec), to(#8e9b9c));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .game_box .right_bottom a .info:before {
+  content: "";
+  z-index: 10;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}

@@ -1,0 +1,278 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+@import '../../styles/_calendar';
+html {
+    background: black;
+}
+.box {
+    color: #9d9d9d;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/my/module_bg.png');
+    .alert_bg {
+        @include abTopLeft(1200px,
+        660px,
+        0px,
+        0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    @mixin liWidth{
+        &:nth-child(1) {
+            width: 15%;
+        }
+        &:nth-child(2) {
+            width: 31%;
+        }
+        &:nth-child(3) {
+            width: 18%;
+        }
+        &:nth-child(4) {
+            width: 18%;
+        }
+        &:nth-child(5) {
+            width: 18%;
+        }
+    }
+    .data_box{
+        color: #c1c1c1;
+        font-size: 14px;
+        @include abTopLeft(790px, 590px, 70px, 50px);
+        .list_box{
+            @include abTopRight(790px, 496px, 0px, 0px);
+            border-bottom: 1px solid #352e1b;
+            ul.ul_title{
+                @include abTopLeft(790px, 56px, 0px, 0px);
+                overflow: hidden;
+                position: relative;
+                line-height: 60px;
+                border-bottom: 1px solid #363522;
+                li{
+                    float: left;
+                    margin: 0px;
+                    display: inline-block;
+                    height: 56px;
+                    @include dian();
+                    text-align: center;
+                    @include liWidth;
+                }
+            }
+            ul.ul_content{
+                @include abTopLeft(790px, 44px, 0px, 0px);
+                position: relative;
+                color: #979696;
+                font-size: 12px;
+                overflow: hidden;
+                border-bottom: 1px solid #1d282b;
+                &:last-child{border: 0;}
+                li{
+                    float: left;
+                    display: inline-block;
+                    height: 40px;
+                    @include dian();
+                    text-align: center;
+                    line-height: 44px;
+                    @include liWidth;
+                    &.l_blue{
+                       color: #04ffb1; 
+                    }
+                    &.red{
+                       color: #d4060a; 
+                    }
+                }
+            }
+        }    
+        .pageBox{
+            @include abBottomLeft(790px, 24px, 36px, 0px);
+            text-align: center;
+            a{
+                display: inline-block;
+                width: 24px;
+                height: 24px;
+                font-size: 12px;
+                line-height: 24px;
+                cursor: pointer;
+                color: #6c552d;
+                text-align: center;
+                margin-right: 7px;
+                box-shadow: 0px 0px 0px 1px #6c552d;
+                &:hover{
+                    background: #232123;
+                }
+                &.pageCur{
+                    color: #050204;
+                    background: #6c552d;
+                }
+            }
+        }
+    }
+    .sd_box{
+        @include abTopRight(180px, 600px, 60px, 80px);
+        @include bg('../../images/my/sd_box.png');
+        background-repeat: no-repeat;
+        text-align: center;
+        &:before{
+            content: "";
+            z-index: 0;
+            @include abTopLeft(2px, 16px, 180px, 80px);
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#795b27), to(#2d2c1f));
+        }
+        &:after{
+            z-index: 0;
+            content: "";
+            @include abTopLeft(2px, 16px, 180px, 96px);
+            background: -webkit-gradient(linear, 0 0, 0 bottom, from(#795b27), to(#2d2c1f));
+        }
+        &>h1{
+            width: 90%;
+            font-size: 24px;
+            color: #c5ac73;
+            @include dian();
+            margin: 0 auto;
+            margin-top: 73px;
+        }
+        &>h3{
+            font-size: 14px;
+            color: #AEAEAE;
+            margin-top: 19px;
+        }
+        .sd_bottom{
+            z-index: 10;
+            @include abTopLeft(180px, 245px, 195px, 0px);
+            &>a{
+                display: block;
+                width: 180px;
+                height: 32px;
+                font-size: 12px;
+                cursor: pointer;
+                background: #171F24;
+                line-height: 31px;
+                border: 1px solid #96741d;
+                color: #e0a119;
+                &:hover{
+                    background: #262607;
+                }
+                &:active{
+                    background: #202005;
+                }
+            }
+            .sd_middle{
+                @include abBottomLeft(180px, 165px, 32px, 0px);
+                border: 1px solid #3b3118;
+                h1{
+                    @include abTopLeft(180px, 32px, 0px, 0px);
+                    border-bottom: 1px solid #3b3118;
+                    padding-left: 30px;
+                    line-height: 31px;
+                    color: #9d9d9d;
+                    text-align: left;
+                    font-size: 12px;
+                }
+                .calendarWarp{
+                    @include abTopLeft(178px, 32px, 32px, 0px);
+                    background: #171f24;
+                    margin-bottom: 7px;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        right: 12px;
+                        top: 9px;
+                        background-image: url(../../images/pics/sprite.png);
+                        background-position: 0px -21px;
+                        width:11px;
+                        height:15px;
+                    }
+                    &:hover{
+                        box-shadow: 0px 0px 0px 1px #5A4729;
+                        background: #0b0c10;
+                        input{color: #fafafa;}
+                    }
+                    &.open{
+                        box-shadow: 0px 0px 0px 1px #5A4729;
+                        background: #0b0c10;
+                        input{color: #fafafa;}
+                        &:before{
+                           background-position: -16px -21px;
+                        }
+                    }
+                }
+                input{
+                    @include abTopLeft(178px, 32px, 0px, 0px);
+                    background: transparent;
+                    padding-left: 30px;
+                    font-size: 12px;
+                    color: #9D9D9D;
+                    border: 0;
+                }
+                .type_select{
+                    @include abTopLeft(178px, 32px, 119px, 0px);
+                    background: #171f24;
+                    @include scroll2();
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        right: 12px;
+                        top: 9px;
+                        background-image: url(../../images/pics/sprite.png);
+                        background-position: 0px -21px;
+                        width:11px;
+                        height:15px;
+                    }
+                    &:hover{
+                        box-shadow: 0px 0px 0px 1px #5A4729;
+                        background: #0b0c10;
+                        input{
+                            box-shadow: 0px 0px 0px 1px #96741d; 
+                            color: #fafafa;
+                        }
+                    }
+                    &.open{
+                        background: #0b0c10;
+                        &:before{
+                           background-position: -16px -21px;
+                        }
+                        input{
+                           color: #fafafa;
+                           box-shadow: 0px 0px 0px 1px #96741d; 
+                        }
+                    }
+                    ul{
+                        display: none;
+                        z-index: 15;
+                        position: absolute;
+                        top: 32px;
+                        left: -1px;
+                        max-height: 133px;
+                        overflow-y: auto;
+                        width: 180px;
+                        background: #0b0c10;
+                        border: 1px solid #96741d;
+                        li{
+                            text-align: left;
+                            height: 32px;
+                            color: #fafafa;
+                            font-size: 12px;
+                            cursor: pointer;
+                            line-height: 31px;
+                            &:hover{
+                                background: #242424;
+                            }
+                            a{
+                                padding-left: 30px;
+                                display: inline-block;
+                                width: 100%;
+                                text-decoration: none;
+                                height: 100%;
+                                color: #fafafa;
+                            }
+                        }
+                    }
+                }
+            }
+            a.btn_se{
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+    }
+}

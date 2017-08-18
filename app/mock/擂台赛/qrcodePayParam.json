@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "code": 0,
+  "message": "qrcodePayParam",
+  "data": {
+    "rechargeSwBean": 10.0,
+    "money": 0.01,
+    "orderId": "AM20170419164941795PPCMN8",
+    "applyWay": "Qrcode",
+    "success": true,
+    "message": "",
+    "qrcodeUrl": "https://client.huoma.cn/recharge/qrcode?id=AM20170419164941795PPCMN8"
+  }
+}

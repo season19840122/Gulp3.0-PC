@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "code": 0,
+  "message": "swBeanCnt",
+  "data": {
+    "guessMoney": "0.01",
+    "swBeanCnt": 998940,
+    "guessSwbean": 200
+  }
+}

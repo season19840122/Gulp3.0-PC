@@ -1,0 +1,145 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": {
+        "phone": "18768122782",
+        "rankList": [
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 1,
+                "nickName": "镊子",
+                "playerName": "只吃肉的和尚",
+                "serverName": "皮城警备",
+                "totalCnt": 4,
+                "winRate": "8",
+                "score": "10.5"
+            },
+            {
+                "rank": 2,
+                "nickName": "ME014391",
+                "playerName": "慕容雪村",
+                "serverName": "皮城警备",
+                "totalCnt": null,
+                "winRate": "0",
+                "score": "null"
+            }
+        ],
+        "userRank": {
+            "rank": 2,
+            "nickName": "ME014391",
+            "playerName": "慕容雪村",
+            "serverName": "皮城警备",
+            "totalCnt": null,
+            "winRate": "0",
+            "score": "null"
+        }
+    }
+}

@@ -1,0 +1,105 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": [
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 586,
+			"period": "12:00-15:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 583,
+			"period": "15:00-18:00",
+			"onMelee": true,
+			"activated": true
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 584,
+			"period": "18:00-21:00",
+			"onMelee": false,
+			"activated": false
+		}, 
+		{
+			"meleeMatchId": 147,
+			"meleeMatchTimesId": 585,
+			"period": "21:00-23:59",
+			"onMelee": false,
+			"activated": false
+		}
+	]
+}

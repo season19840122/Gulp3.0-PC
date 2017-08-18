@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>mj</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="mj.css" />
+	<script data-main="main.js" src="../../scripts/require.min.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<a @click="goBack" class="go_back">返回</a>
+		<div class="content_box smallScroll">
+			<div class="content">
+				<img src="../../images/activity/mj_logo.png"/>
+				<div class="btn_rule"></div>
+				<div class="btn_apply" @click="goApply" v-cloak></div>
+				
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>排名</li>
+						<li>昵称</li>
+						<li>游戏昵称</li>
+						<li>大区</li>
+						<li>已完成场次</li>
+						<li>胜率</li>
+						<li>积分</li>
+					</ul>
+					
+					<div class="ul_box smallScroll">
+						<tem_ul v-for="(v,n) in list_arr" :ul_obj="v"></tem_ul>
+					</div>
+					<ul class="my_content" v-show="flag.myList">
+						<li>{{my_arr.rank}}</li>
+						<li>{{my_arr.nickName}}</li>
+						<li>{{my_arr.playerName}}</li>
+						<li>{{my_arr.serverName}}</li>
+						<li>{{my_arr.totalCnt}}</li>
+						<li>{{my_arr.winRate}}</li>
+						<li>{{my_arr.score}}</li>
+					</ul>
+				</div>
+				
+				<!-- 底部二维码 -->
+				<div class="bottom_box">
+					<img src=""/>
+					<h1>魔杰电竞馆，“地表最强”娱乐空间！设有专业的电竞赛事比赛专区、直播专区、狼人杀等桌游专区、王者荣耀皮肤专区、私人影厅以及餐饮水吧。</h1>
+					<h2>扫描微信二位码，关注更多的杰伦和JTeam的最新动态</h2>
+				</div>
+				
+			</div>
+		</div>
+		
+		<div class="alert_bg"></div>
+		<!-- 规则弹窗 -->
+		<div id="alert_rules" class="alert_box alert_word">
+			<i></i>
+			<h1>详细规则：</h1>
+			<div class="content smallScroll">
+				<p>1、游戏等级满30级，且能够参加单双排位；</p>
+				<p>2、单人参赛，不允许组队；</p>
+				<p>3、参赛选手需满16周岁；</p>
+				<p>4、排名计算规则：胜利场次*段位系数*服务器系数*（1+净胜率）；段位系数：最强王者(6)；超凡大师(5.5)；钻石(5)；铂金(4.0)；黄金(3.5)；白银及以下(1) ；服务器系数：艾欧尼亚 1.2  其他服务器：1。</p>
+				<p>5、比赛场次：规定时间内完成的前50场的排位比赛成绩。</p>
+				<p>6、奖励说明：前20名每人获得2000元的差旅补助，21-50名获得8000顺豆，51-100名获得5000顺豆，101-200名获得3000顺豆，201-500名获得1000顺豆。</p>
+				<p>6、恶意刷榜者一经发现，永久取消参赛资格；获奖名单中如发现恶意刷榜者，奖励取消，其之后玩家的名次递进1名；恶意刷榜包含但不限于以下行为：</p>
+				   <p class="padding">(1) 利用程序漏洞或外挂进行刷榜的（非游戏官方白名单的功能性插件都属外挂）；</p>
+				   <p class="padding">(2) 试图用Q币、点券等利益贿赂对手或队友的；</p>
+				   <p class="padding">(3) 辱骂对手或队友的；</p>
+				   <p class="padding">(4) 以搞活动、录视频、参加比赛、直播等为由（超过三次）要求队友或对手协助的；</p>
+				   <p class="padding">(5) 请代练刷榜的；5、比赛成绩以火马电竞平台为准；</p>
+				<p>5、获得现场资格的玩家将获得2000元的差旅补助并统一安排酒店，其他费用自理；</p>
+				<p>6.本赛事的最终解释权归杭州顺网科技股份有限公司所有。</p>
+			</div>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<!-- 须知弹窗 -->
+		<div id="alert_know" class="alert_box alert_word">
+			<i></i>
+			<h1>详细协议：</h1>
+			<div class="content smallScroll">
+				<p>1、游戏等级满30级，且能够参加单双排位；</p>
+				<p>2、参赛选手需满16周岁；单人参赛，不允许组队；</p>
+				<p>3、排名计算规则：胜利场次*段位系数*服务器系数*（1+净胜率）；段位系数：最强王者(6)；超凡大师(5.5)；钻石(5)；铂金(4.0)；黄金(3.5)；白银及以下(1) ；服务器系数：艾欧尼亚 1.2  其他服务器：1。</p>
+				<p>4、比赛场次：规定时间内完成的前50场的排位比赛成绩。</p>
+				<p>5、奖励说明：前20名每人获得2000元的差旅补助，21-50名获得8000顺豆，51-100名获得5000顺豆，101-200名获得3000顺豆，201-500名获得1000顺豆。</p>
+				<p>6、排名前20名的玩家弃权或因自身原因无法联系到，名次顺延且无任何奖励，下一名次玩家获得差旅奖励。</p>
+				<p>7、恶意刷榜者一经发现，永久取消参赛资格；获奖名单中如发现恶意刷榜者，奖励取消，其之后玩家的名次递进1名；恶意刷榜包含但不限于以下行为：</p>
+				   <p>(1) 利用程序漏洞或外挂进行刷榜的（非游戏官方白名单的功能性插件都属外挂）；</p>
+				   <p>(2) 试图用Q币、点券等利益贿赂对手或队友的；</p>
+				   <p>(3) 辱骂对手或队友的；</p>
+				   <p>(4) 以搞活动、录视频、参加比赛、直播等为由（超过三次）要求队友或对手协助的；</p>
+				   <p>(5) 请代练刷榜的；</p>
+				<p>8、获得现场资格的玩家将获得2000元的差旅补助并统一安排酒店，其他费用自理，差旅补助在到达决赛现场后由魔杰电竞支付；</p>
+				<p>9、比赛成绩数据以火马电竞平台为准；</p>
+				<p>10、本赛事的最终解释权归杭州顺网科技股份有限公司所有。</p>
+			</div>
+			<div class="confirm">
+				我已了解
+			</div>
+		</div>
+		
+		<!-- 报名信息 -->
+		<div id="alert_apply" class="alert_box alert_apply" v-cloak>
+			<i></i>
+			<h1>报名信息：</h1>
+			<ul>
+				<li>
+					<label>姓名：</label>
+					<input v-model="input.userName" @blur="checkNull" type="text"/>
+				</li>
+				<li>
+					<label>联系电话：</label>
+					<input v-model="input.phone" @blur="checkNull" type="text"/>
+				</li>
+				<li>
+					<label>参赛账号：</label>
+					<input v-model="input.subAccount" type="text" readonly="readonly" />
+				</li>
+				<li>
+					<label>参赛大区：</label>
+					<input v-model="input.serverName" type="text" readonly="readonly"/>
+				</li>
+				<li>
+					<span class="error">{{error_tip}}</span>
+				</li>
+			</ul>
+			<div class="confirm">
+				立即报名
+			</div>
+		</div>
+		
+		<!-- 成功失败提示框 -->
+		<div id="alert_msg" class="alert_box alert_msg" v-cloak>
+			<i></i>
+			<h1 :class="statusName"><span>{{alert_title}}</span></h1>
+			<p v-html="alert_msg"></p>
+			<h2>{{detial_tip}}</h2>
+			<div @click="applyConfirm" class="confirm">{{alert_confirm}}</div>
+		</div>
+	</div>
+</body>
+</html>

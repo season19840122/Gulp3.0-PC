@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>myPrize</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="myTeam.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+</head>
+
+<body>
+	<div class="box">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li>战队赛</li>
+			<li>擂台赛</li>
+			<li class="active">我的战队</li>
+		</ul>
+		<!-- 公用头部结束 -->
+
+		<div class="content_box">
+			<div class="content">
+				<div class="title">
+					<span>我的战队</span>
+					<div class="type_select" id="myTeamSe">
+						<input type="text" readonly="readonly" id="type" value="全部游戏" />
+						<input type="hidden" name="type" value="全部游戏" />
+						<ul class="smallScroll">
+							<li><a>梦三国</a></li>
+							<li><a>lol</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="teamName">
+					<div class="have_team ">
+						<img class="info_left" />
+						<div class="info_center">
+							<h3>LGD-For Young</h3>
+							<p>
+								<span>站点：122</span>
+								<span>排名：33</span>
+							</p>
+						</div>
+						<img class="info_right" src="../../images/team/area1.png"/>
+					</div>
+					
+					<!-- 没有队伍的显示 -->
+					<div class="no_team active">
+						<span>您还没有战队</span>
+						<div class="create_team">
+							创建战队
+						</div>
+					</div>
+					
+				</div>
+
+				<h2 class="subtitle">战队成员 (5)
+	          		<a class="diss" href="#">
+	          			<span>解散</span>
+	          			<div class="diss_tip hide_">
+		          			战队成员多于三人不允许解散
+		          		</div>
+	          		</a>
+		          	<a class="invite hide__" href="#">
+		          		<span>邀请队友</span>
+		          	</a>
+		          	
+		          	<!--<a class="out"><span>申请退队</span></a>-->
+	          	</h2>
+	          	
+	          	<!-- 没有比赛的显示 -->
+				<div class="noData hide_">比赛火热进行中，你还没有战队成员哦~</div>
+				<div id="myCombatTeamMember" class="">
+					<!-- 我的战队-队长 -->
+					<ul class="member smallScroll">
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">
+										<span>
+											马栏山一枝花哈哈哈哈哈哈dfdfdffddfdfdfdfdf
+										</span>
+									</h3>
+									<p>
+										<span class="num_qq">66666666 </span>
+										<span class="nick">依旧不知所谓</span>
+										<span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li class="my">
+							<div class="team_info">
+								<div class="member_option">
+									<span>申请退出</span>
+									<span>
+				            			<a class="yes" href="">同意</a>
+				            			<a class="no" href="">拒绝</a>
+				            		</span>
+								</div>
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p>
+										<span class="num_qq">66666666 </span>
+										<span class="nick">依旧不知所谓</span>
+										<span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="team_info">
+								<img class="info_left" src="../../images/team/btn.png" alt="">
+								<div class="info_center">
+									<h3 class="name">马栏山一枝花</h3>
+									<p><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+
+			</div>
+
+			<div class="content">
+				<div class="title">
+					我的战绩
+				</div>
+				<div class="noData hide_">暂无战队成绩</div>
+				<ul class="score_list">
+					<li>
+						<div class="score_left">
+							<p>2016.5.10 10:25</p>
+							<p>2016S1第五轮赛场1-艾欧尼亚</p>
+							<p>战队奖励：+100战点 +500元现金</p>
+						</div>
+						<div class="score_right">
+							<p>22</p>
+							<a href="#" class="btn_assign">分配奖励</a>
+						</div>
+					</li>
+					<li>
+						<div class="score_left">
+							<p>2016.5.10 10:25</p>
+							<p>2016S1第五轮赛场1-艾欧尼亚</p>
+							<p>战队奖励：+100战点 +500元现金</p>
+						</div>
+						<div class="score_right">
+							<span>十八强</span>
+						</div>
+					</li>
+					<li>
+						<div class="score_left">
+							<p>2016.5.10 10:25</p>
+							<p>2016S1第五轮赛场1-艾欧尼亚</p>
+							<p>战队奖励：+100战点 +500元现金</p>
+						</div>
+						<div class="score_right">
+							<a href="#" class="btn_assign">分配奖励</a>
+						</div>
+					</li>
+					<li>
+						<div class="score_left">
+							<p>2016.5.10 10:25</p>
+							<p>2016S1第五轮赛场1-艾欧尼亚</p>
+							<p>战队奖励：+100战点 +500元现金</p>
+						</div>
+						<div class="score_right">
+							<a href="#" class="btn_assign">分配奖励</a>
+						</div>
+					</li>
+					<li>
+						<div class="score_left">
+							<p>2016.5.10 10:25</p>
+							<p>2016S1第五轮赛场1-艾欧尼亚</p>
+							<p>战队奖励：+100战点 +500元现金</p>
+						</div>
+						<div class="score_right">
+							<a href="#" class="btn_assign">分配奖励</a>
+						</div>
+					</li>
+				</ul>
+				<div class="pageBox">
+					<a href="javascript:void(0)" class="pageCur">1</a>
+					<a href="javascript:void(0)">2</a>
+					<a href="javascript:void(0)">3</a>
+					<a href="javascript:void(0)">...</a>
+					<a href="javascript:void(0)">4</a>
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="title">
+					战队消息
+				</div>
+				<div class="noData hide_">暂无战队成绩</div>
+				<ul class="news_list smallScroll">
+					<li>
+						<p>有<span class="yellow">20</span>人申请加入你的战队
+							<a href="" class="blue">查看详情>></a>
+						</p>
+					</li>
+					<li>
+						<p>欢迎新队员“<span class="yellow">云一样的男子</span>”加入战队 <span class="time">09:35</span></p>
+					</li>
+					<li>
+						<p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>， 房间密码
+							<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+					</li>
+					<li>
+						<p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>， 房间密码
+							<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+					</li>
+					<li>
+						<p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>， 房间密码
+							<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+					</li>
+					<li>
+						<p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>， 房间密码
+							<span class="yellow">88763343</span>，请尽快进入房间开始比赛请尽快进入房间开始比赛请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+					</li>
+
+					<li>
+						<p>有<span class="yellow">20</span>人申请加入你的战队
+							<a href="" class="blue">查看详情>></a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+					<li>
+						<p>有<span class="yellow">20</span>人申请加入你的战队
+							<a href="" class="blue">查看详情>></a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+					<li>
+						<p>有<span class="yellow">20</span>人申请加入你的战队
+							<a href="" class="blue">查看详情>></a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+					<li>
+						<p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚
+							<a class="blue" href="">接受</a>
+							<a class="orange" href="">拒绝</a>
+						</p>
+					</li>
+				</ul>
+				
+				<div class="pageBox">
+					<a href="javascript:void(0)" class="pageCur">1</a>
+					<a href="javascript:void(0)">2</a>
+					<a href="javascript:void(0)">3</a>
+					<a href="javascript:void(0)">...</a>
+					<a href="javascript:void(0)">4</a>
+				</div>
+				
+			</div>
+		</div>
+		
+		
+		
+		<div class="alert_bg"></div>
+		<div id="alert_message" class="alert_box alert_msg">
+			<i></i>
+			<p>确定为召唤师<span>“依旧不知所谓（皮城警备）”</span>报名吗？</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<!-- 申请加入 -->
+		<div id="alert_join" class="alert_box alert_join">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>段位</li>
+						<li>申请位置</li>
+						<li>真实姓名</li>
+						<li>联系方式</li>
+						<li>状态</li>
+					</ul>
+					
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>13545458888</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="pageBox">
+		          <a href="javascript:void(0)" class="pageCur">1</a>
+		          <a href="javascript:void(0)">2</a>
+		          <a href="javascript:void(0)">3</a>
+		          <a href="javascript:void(0)">...</a>
+		          <a href="javascript:void(0)">4</a>
+		        </div>
+			</div>
+			
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<!-- 奖励分配-队长分配 -->
+		<div id="alert_assign_1" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+							<div class="tip_box">
+								<span>参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</span>
+							</div>
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>同意</span>
+								</a>
+								<a href="#">
+									<span>不同意</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="green">
+								<span>已同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="orange">
+								<span>不同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+				<span>
+					*全部队员“同意”奖励分配方案后，方可进入领奖流程。
+		        </span>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		<!-- 奖励分配-队员分配 -->
+		<div id="alert_assign_2" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+							<div class="tip_box">
+								<span>参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</span>
+							</div>
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>同意</span>
+								</a>
+								<a href="#">
+									<span>不同意</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="orange">
+								<span>不同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+				<span>
+					*全部队员“同意”奖励分配方案后，方可进入领奖流程。
+		        </span>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		
+		<!-- 奖励分配-发放奖金 -->
+		<div id="alert_assign_3" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>领取</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		<!-- 邀请队员 -->
+		<div id="alert_add" class="alert_box alert_add">
+			<i></i>
+			<h1>邀请队员</h1>
+			<p>请填写队员的参战QQ号：</p>
+			<div class="member_box smallScroll">
+				<ul>
+					<li>
+						<input type="text" name="" id="" value="" /><a href="#">删除</a>
+					</li>
+				</ul>
+			</div>
+			<h2>+添加更多 （<span>1</span>）</h2>
+			<p>*邀请队友的人数上限为8人</p>
+			<p>*战队赛区为英雄联盟-黑色玫瑰，确保参战QQ在该服务器有满级的召唤师</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		
+		<div id="create_box" class="alert_box alert_create">
+			<i></i>
+			<form action="" method="post">
+			<h1>创建战队</h1>
+			<ul>
+				<li>
+					<label>请选择战区：</label>
+					<div class="type_select" id="se_left">
+						<input type="text" class="selectInput" name="game_type" readonly="readonly" id="game_type" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+						</ul>
+					</div>
+					<div class="type_select" id="se_right">
+						<input type="text" class="selectInput" name="game_area" readonly="readonly" id="game_area" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型41</a></li>
+							<li><a href="#">类型5</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>战队名称：</label>
+					<input type="text" name="teamName" id="teamName" value="" />
+				</li>
+				<li>
+					<label>火马昵称：</label>
+					<input type="text" name="nickname" id="nickname" value="" />
+				</li>
+				<li>
+					<label>参战游戏账号：</label>
+					<div class="type_select" id="se_long">
+						<input type="text" class="selectInput" name="game_account" readonly="readonly" id="game_account" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型4</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>真实姓名：</label>
+					<input type="text" name="name" id="name" value="" />
+				</li>
+				<li>
+					<label>身份证号码：</label>
+					<input type="text" name="card" id="card" value="" />
+				</li>
+				<li>
+					<label>手机号：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<div class="get_code disabled">获取验证码</div>
+				</li>
+				<li>
+					<p id="create_tip_error">错误信息</p>
+				</li>
+			</ul>
+			<p>友情提示：<span>身份证上的姓名和正式姓名必须保证一致</span>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+			</form>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<div id="accept_box" class="alert_box alert_accept">
+			<i></i>
+			<form action="" method="post">
+			<h1>接受邀请</h1>
+			<ul>
+				<li>
+					<label>参战游戏账号：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>火马昵称：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>真实姓名：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>身份证号码：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>手机号：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<a href="#" class="get_code disabled">获取验证码</a>
+				</li>
+				<li>
+					<p class="error">错误信息</p>
+				</li>
+				<li>
+					<p class="remind">错误信息</p>
+				</li>
+			</ul>
+			<p>友情提示：<span>身份证上的姓名和正式姓名必须保证一致</span>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+			</form>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_message').show_()">普通提示框</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_join').show_()">申请加入-查看详情</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_assign_1').show_()">奖励分配-队长</button>
+		<button style="top: 40px; position: relative;z-index: 100;" onclick="$('#alert_assign_2').show_()">奖励分配-队员</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_assign_3').show_()">奖励分配-发放奖金</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_add').show_()">邀请队员</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#create_box').show_()">创建战队</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#accept_box').show_()">接受邀请</button>
+	</div>
+</body>
+<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tabBar.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var pageObj = {
+		documentDis: function() {
+			document.onselectstart = function() {
+				return false;
+			}
+		},
+		selectAction: function() {
+			$("#myTeamSe").select({
+				name: "type",
+				defaultText : "全部区服",
+				showDefault : true
+			});
+			$("#se_left").select({
+				name: "game_type",
+				defaultText : "全部",
+				showDefault : true,
+				data:[
+					{text:1,value:2},
+					{text:12,value:3},
+					{text:13,value:24}
+				]
+			});
+			$("#se_right").select({
+				name: "game_area",
+				defaultText : "全部",
+				showDefault : true
+			});
+			$("#se_long").select({
+				name: "game_account",
+				defaultText : "全部",
+				showDefault : true
+			});
+		},
+		tipAction:function() {
+			$('.diss,.diss .diss_tip').hover(function() {
+				$('.diss_tip').show();
+			},function() {
+				$('.diss_tip').hide();
+			})
+		},
+		domAction:function() {
+			$('.alert_list').on('mouseover','li .tip_box',function() {
+				$(this).find('span').show();
+			})
+			$('.alert_list').on('mouseout','li .tip_box',function() {
+				$(this).find('span').hide();
+			})
+			//添加队员
+			$('#alert_add').on('click','h2',function() {
+				var inputDom = "<li><input type='text' name='' id='' value='' /><a href='#'>删除</a></li>"
+				var liNum = $('#alert_add .member_box ul li').length;
+				if(liNum >= 8) return;
+				$('#alert_add .member_box ul').append(inputDom);
+				$('#alert_add h2 span').html(liNum+1);
+			})
+			$('#alert_add .member_box ul').on('click','li a',function() {
+				$(this).parent().remove();
+				var liNum = $('#alert_add .member_box ul li').length;
+				$('#alert_add h2 span').html(liNum);
+			})
+		}
+	}
+	pageObj.documentDis();
+	pageObj.selectAction();
+	pageObj.tipAction();
+	pageObj.domAction();
+</script>
+
+</html>

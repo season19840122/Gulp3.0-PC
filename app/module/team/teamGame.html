@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>myPrize</title>
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="teamGame.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/tabBar.css" />
+</head>
+
+<body>
+	<div class="box">
+		<!-- 公用头部开始 -->
+		<ul class="menu">
+			<li>首页</li>
+			<li>个人赛</li>
+			<li>挑战赛</li>
+			<li>乱斗场</li>
+			<li>现金赛</li>
+			<li>solo赛</li>
+			<li class="active">战队联赛</li>
+			<li>擂台赛</li>
+		</ul>
+		<!-- 公用头部结束 -->
+
+		<a class="create_team">创建战队</a>
+		<div class="left_menu">
+			<ul>
+				<li class="active" data-id="#banner1">全部</li>
+				<li data-id="#banner2">常规赛</li>
+				<li data-id="#banner3">邀请赛</li>
+			</ul>
+		</div>
+
+		<div class="data_box active" id="banner1">
+			<div class="list_box">
+				<ul class="ul_title">
+					<li>
+						<div class="type_select" id="all_area">
+							<input type="text" class="selectInput" readonly="readonly" id="type1" value="" />
+							<input type="hidden" name="type1"/>
+							<ul class="smallScroll">
+								<li>
+									<a href="#" rel="1">艾欧尼亚</a>
+								</li>
+								<li>
+									<a href="#" rel="2">翡翠之城</a>
+								</li>
+								<li>
+									<a href="#" rel="3">地方地方</a>
+								</li>
+								<li>
+									<a href="#" rel="4">额鹅鹅鹅</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li>赛事名称</li>
+					<li>
+						总奖金￥
+						<div class="tip_box">
+							<span>温馨提醒：以下各项现金奖励均为税前金额，敬请知晓</span>
+						</div>
+					</li>
+					<li>比赛时间</li>
+					<li>参赛名额</li>
+					<li>赛事状态</li>
+					<li>战队状态</li>
+				</ul>
+				<div class="content_box">
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="blue">预告</li>
+						<li>
+							<span class="gray">17.09.08开始报名</span>
+							<span class="blue">（报名提醒）</span>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="red">报名中</li>
+						<li class="apply">
+							<a href="">战队报名</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="green">进行中</li>
+						<li class="green">
+							已报名
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="green">进行中</li>
+						<li class="going">
+							<a href="">进入比赛</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="green">进行中</li>
+						<li class="">
+							<span class="orange2">四强赛</span>
+							<span class="gray">（等待开赛）</span>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>奥欧尼亚</li>
+						<li>chinaJoy高校复活组</li>
+						<li>1,000</li>
+						<li>2012:00:00-1029:00:00</li>
+						<li>1/8</li>
+						<li class="gray">已结束</li>
+						<li class="">
+							<span class="orange2">四强赛</span>
+							<span class="gray">（等待开赛）</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			
+			<div class="pageBox">
+	          <a href="javascript:void(0)" class="pageCur">1</a>
+	          <a href="javascript:void(0)">2</a>
+	          <a href="javascript:void(0)">3</a>
+	          <a href="javascript:void(0)">...</a>
+	          <a href="javascript:void(0)">4</a>
+	        </div>
+		</div>
+
+		<div class="data_box" id="banner2">
+			banner2
+		</div>
+		<div class="data_box" id="banner3">
+			banner3
+		</div>
+		
+		<!-- 弹窗 -->
+		<div class="alert_bg"></div>
+		
+		<div id="alert_msg" class="alert_box alert_msg">
+			<i></i>
+			<h1 class="fail"><span>信息提交成功</span></h1>
+			<p>点券已自动发放，请刷新“我的奖品”页面查看。</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_message" class="alert_box alert_msg">
+			<i></i>
+			<p>确定为召唤师<span>“依旧不知所谓（皮城警备）”</span>报名吗？</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="create_box" class="alert_box alert_create">
+			<form action="" method="post">
+			<i></i>
+			<h1>创建战队</h1>
+			<ul>
+				<li>
+					<label>请选择战区：</label>
+					<div class="type_select" id="se_left">
+						<input type="text" class="selectInput" name="game_type" readonly="readonly" id="game_type" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+						</ul>
+					</div>
+					<div class="type_select" id="se_right">
+						<input type="text" class="selectInput" readonly="readonly" value="全部" />
+						<input type="hidden" name="game_area"/>
+						<ul class="smallScroll">
+							<li><a href="#" rel="22">类型1</a></li>
+							<li><a href="#" rel="33">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型41</a></li>
+							<li><a href="#">类型5</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>战队名称：</label>
+					<input type="text" name="teamName" id="teamName" value="" />
+				</li>
+				<li>
+					<label>火马昵称：</label>
+					<input type="text" name="nickname" id="nickname" value="" />
+				</li>
+				<li>
+					<label>参战游戏账号：</label>
+					<div class="type_select" id="se_long">
+						<input type="text" class="selectInput" name="game_account" readonly="readonly" id="game_account" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型4</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>真实姓名：</label>
+					<input type="text" name="name" id="name" value="" />
+				</li>
+				<li>
+					<label>身份证号码：</label>
+					<input type="text" name="card" id="card" value="" />
+				</li>
+				<li>
+					<label>手机号：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<div class="get_code disabled">获取验证码</div>
+				</li>
+				<li>
+					<p id="create_tip_error">错误信息</p>
+				</li>
+			</ul>
+			<p>友情提示：<span>身份证上的姓名和正式姓名必须保证一致</span>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+			<div class="confirm">确定</div>
+			</form>
+		</div>
+		
+		
+		<div id="alert_pay" class="alert_box alert_pay">
+			<i></i>
+			<p>为帐号<span>2440663620</span>需报名费￥3（或3000顺豆），你可以</p>
+			<ul>
+				<li data-id="#qrcode_box" class="active">扫码下载APP，免费报名</li>
+				<li data-id="#sd_box">免费报名</li>
+			</ul>
+			<!-- 二维码box开始 -->
+			<div id="qrcode_box" class="qrcode_box active">
+	      		<div class="img_box">
+		            <div class="img_qrcode"></div>
+		            <span class="iconfont icon-zhifu"></span>
+		            <span class="iconfont icon-weixin"></span>
+	      		</div>
+	      		<!--<p class="qrcode_status">本场报名费：<span>100元</span></p>-->
+		      	<span>仅限已完成微信、手机认证的火马电竞用户(点击右上角头像完成认证)</span>
+			</div>
+			<!-- 二维码box结束 -->
+			<div id="sd_box" class="sd_box">
+				<!-- 顺豆支付 -->
+				<div class="content_sd">
+					<!--<div class="sd_pay off"><a href="#">支付1000顺豆</a></div>-->
+					<div class="sd_pay"><a href="#">支付1000顺豆</a></div>
+					<p>· 请网吧安装顺网网吧管家，免费报名</p>
+					<div class="protocol">
+						<span class="iconfont icon-duihao"></span>
+						<span><a href=""><a href="">阅读并同意平台协议</a></span>
+					</div>
+				</div>
+				
+				<!-- 二维码支付 -->
+				<div class="content_pic hide_">
+					<div class="img_box">
+			            <div class="img_qrcode"></div>
+			            <span class="iconfont icon-zhifu"></span>
+			            <span class="iconfont icon-weixin"></span>
+		      		</div>
+		      		<p class="qrcode_status">本场报名费：<span>100元</span></p>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div id="alert_apply" class="alert_box alert_apply">
+			<i></i>
+			<h1>报名费：<span class="line">1000顺豆</span>  <span>免费</span></h1>
+			<p>确定为召唤师<span>“依旧不知所谓（皮城警备）”</span>报名吗？</p>
+			<div class="protocol">
+				<span class="iconfont icon-duihao"></span>
+				<span><a href=""><a href="">阅读并同意平台协议</a></span>
+			</div>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_message').show_()">普通提示框</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#create_box').show_()">创建战队</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_msg').show_();$('#alert_msg h1').attr('class','success')">成功提示</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_msg').show_();$('#alert_msg h1').attr('class','fail')">失败提示</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_apply').show_()">免费确认报名</button>
+		<button style="top: 40px; ;position: relative;z-index: 100;" onclick="$('#alert_pay').show_()">支付框</button>
+	</div>
+</body>
+<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tools.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tabBar.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var pageObj = {
+		documentDis: function() {
+			document.onselectstart = function() {
+				return false;
+			}
+		},
+		domAction:function() {
+			$('.tip_box').hover(function() {
+				$('.tip_box span').show();
+			},function() {
+				$('.tip_box span').hide();
+			})
+			//切换支付框
+			$('.alert_pay').on('click','ul li',function() {
+				var id = $(this).attr('data-id');
+				$(this).siblings('li').removeClass('active');
+				$(this).addClass('active');
+				$('.alert_pay > div').hide();
+				$('.alert_pay').find(id).show();
+			})
+		},
+		selectAction: function() {
+			$("#all_area").select({
+				name: "type1",
+				defaultText : "全部区服",
+				showDefault : true
+			});
+			$("#se_left").select({
+				name: "game_type",
+				defaultText : "全部",
+				showDefault : true,
+				data:[
+					{text:1,value:2},
+					{text:12,value:3},
+					{text:13,value:24}
+				]
+			});
+			$("#se_right").select({
+				name: "game_area",
+				defaultText : "全部",
+				value:"222",
+				showDefault : true
+			});
+			$("#se_long").select({
+				name: "game_account",
+				defaultText : "全部",
+				showDefault : true
+			});
+		},
+		leftAction:function() {
+			$('.left_menu').on('click','li',function() {
+				if($(this).hasClass('active')) return;
+				$(this).siblings('li').removeClass('active');
+				$(this).addClass('active');
+			})
+		}
+	}
+	pageObj.documentDis();
+	pageObj.leftAction();
+	pageObj.selectAction();
+	pageObj.domAction();
+</script>
+
+</html>

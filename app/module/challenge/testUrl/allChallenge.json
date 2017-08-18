@@ -1,0 +1,12 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": [
+		{
+			"challengeMatchId": 147,
+			"limitApply": 2,
+			"matchType": 3
+		}
+	]
+}

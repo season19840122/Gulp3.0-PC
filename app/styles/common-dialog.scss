@@ -1,0 +1,518 @@
+@import 'common.scss';
+
+// 弹窗 & 遮罩
+.masklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: none;
+  background: #000;
+  opacity: .6;
+}
+
+$w: 500px; $h: 250px;
+.dialog-wrap {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+  width: $w;
+  height: $h;
+  background: #0b0c10;
+  -moz-box-shadow: 0px 0px 0px 3px #5a4729;
+       box-shadow: 0px 0px 0px 3px #5a4729;
+  padding: 40px 50px 0;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: -1;
+    width: $w - 10;
+    height: $h - 10;
+    -moz-box-shadow: 0px 0px 0px 1px #5a4729;
+         box-shadow: 0px 0px 0px 1px #5a4729;
+  }
+  &::after {
+    content: "";
+    z-index: 5;
+    position: absolute;
+    top: -29px;
+    right: -29px;
+    width: 118px;
+    height: 120px;
+    background: url(../images/modal/close2.png) no-repeat;
+  }
+  &.dialog-result {
+    &.s {
+      height: 150px;
+      &::before {
+        height: 150px - 10;
+      }
+    }
+    .content-wrap {
+      .caption {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #E8B664;
+        margin-bottom: 10px;
+        &::before {
+          font-family: "iconfont" !important;
+          font-size: 16px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 35px;
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: 5px;
+        }
+        &.success {
+          &::before {
+            content: "\e666";
+          }
+        }
+        &.fail {
+          &::before {
+            content: "\e640";
+          }
+        }
+      }
+      .p1 {
+        &.center {
+          text-align: center;
+        }
+        .c1 {
+          color: #00a9ec;
+        }
+        .c2 {
+          color: #ac2f2f;
+        }
+      }
+    }
+    .btn-wrap {
+      .btn-sure {
+        min-width: 110px;
+      }
+    }
+  }
+  &.dialog-exchange {
+    width: 412px;
+    height: 290px;
+    &::before {
+      width: 412px - 10;
+      height: 290px - 10;
+    }
+    &.o1 {
+      height: 385px;
+      &::before {
+        width: 412px - 10;
+        height: 385px - 10;
+      }
+      .tips {
+        top: 85px;
+      }
+    }
+    &.o2 {
+      width: 570px;
+      height: 385px;
+      &::before {
+        width: 570px - 10;
+        height: 385px - 10;
+      }
+      .tips {
+        top: 85px;
+      }
+    }
+    .content-wrap {
+      .row-bg {
+        background: #0f0808;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+      .caption {
+        border-bottom: 1px solid #202125;
+      }
+      .caption1 {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #E8B664;
+        &::before {
+          font-family: "iconfont" !important;
+          font-size: 16px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: 35px;
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: 5px;
+        }
+        &.success {
+          &::before {
+            content: "\e666";
+          }
+        }
+        &.fail {
+          &::before {
+            content: "\e640";
+          }
+        }
+      }
+    }
+    .small-title {
+      clear: both;
+      color: #e8b664;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .ml {
+      margin-left: 4px;
+    }
+  }
+  &.dialog-rule {
+    width: 744px;
+    height: 444px;
+    &::before {
+      width: 744px - 10;
+      height: 444px - 10;
+    }
+    .content-wrap {
+      .p1 {
+        height: 255px;
+        overflow-x: hidden;
+      }
+    }
+  }
+  &.dialog-zan {
+    width: 498px;
+    height: 373px;
+    &::before {
+      width: 498px - 10;
+      height: 373px - 10;
+    }
+    .content-wrap {
+      .p2 {
+        color: #8d7652;
+        font-size: 14px;
+        margin-bottom: 16px;
+      }
+      .swbean{
+        position: relative;
+        width: 420px;
+        margin: 0 auto;
+        list-style: none;
+        li{
+          width: 200px;
+          position: relative;
+          height: 73px;
+          border: 1px solid #5a4729;
+          background: #0f0808;
+          cursor: pointer;
+          float: left;
+          margin-right: 10px;
+          margin-bottom: 10px;
+          h1{
+            font-size: 18px;
+            color: #a09b8c;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+            margin-top: 17px;
+          }
+          h2{
+            font-size: 14px;
+            color: #b3b3b3;
+            text-align: center;
+          }
+          &.on{
+            cursor: default;
+            border: 1px solid #c68b27;
+            h1, h2 {
+              color: #c28a2d;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.dialog-team {
+    width: 494px;
+    height: 224px;
+    &::before {
+      width: 494px - 10;
+      height: 224px - 10;
+    }
+    .content-wrap {
+      .qrcode {
+        padding: 2px;
+        background: black;
+        border: 3px solid #806d43;
+        width: 110px;
+        height: 110px;
+        display: inline-block;
+      }
+      .p3 {
+        color: #8d7652;
+        width: 264px;
+        font-size: 14px;
+        margin-left: 130px;
+        margin-top: -84px;
+        text-align: left;
+        span {
+          color: #ff9c00;
+        }
+      }
+    }
+  }
+  &.dialog-pay {
+    width: 500px;
+    height: 375px;
+    &::before {
+      width: 500px - 10;
+      height: 375px - 10;
+    }
+    .content-wrap {
+      .caption {
+        border-bottom: 1px solid #202125;
+      }
+      .qrcode_box {
+        position: absolute;
+        top: 80px;
+        width: 150px;
+        height: 180px;
+        padding: 9px;
+        margin-left: -73px;
+        left: 50%;
+        .alert_img_qrcode {
+          background: white;
+          padding: 5px;
+        }
+        .wechat_logo {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          bottom: 5px;
+          right: 38px;
+        }
+        .alipay_logo {
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          bottom: 5px;
+          right: 10px;
+        }
+        span {
+          position: absolute;
+          width: 100px;
+          font-size: 15px;
+          left: 11px;
+          bottom: 4px;
+          text-align: left;
+          color: #8d7652;
+        }
+      }
+    }
+  }
+  .row-wrap {
+    // width: 650px;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 14px;
+    position: relative;
+    label {
+      float: left;
+      color: #8d7652;
+      width: 80px;
+    }
+    input, textarea {
+      float: left;
+      border: 1px solid #5a4729;
+      width: 238px - 10;
+      padding: 5px;
+      height: 24px;
+      line-height: 14px;
+      color: #8d7652;
+      background: #0f0808;
+      &:focus {
+        border-color: #96732f;
+      }
+      &.s{
+        width: 138px;
+      }
+    }
+    textarea {
+      height: 82px;
+      margin-bottom: 14px;
+    }
+    button {
+      display: inline-block;
+      width: 86px;
+      height: 24px;
+      line-height: 24px;
+      background: url('../images/modal/btn-cert.png') no-repeat;
+      &.hover {
+        background-position: 0 -24px;
+      }
+      &.active {
+        background-position: 0 -24px*2;
+      }
+      &.disable {
+        background-position: 0 -24px*3;
+      }
+    }
+    .txt {
+      display: inline-block;
+      line-height: 14px;
+      color: #8d7652;
+      .red {
+        color: #b43709;
+      }
+    }
+    .type_select {
+      // width: 228px;
+      // height: 24px;
+      // border: 1px solid #5a4729;
+      // background: #0f0808;
+      @include select(228px,24px,80px,0,135px, '../images/pics/sprite.png');
+      color: #8d7652;
+    }
+    .tips {
+      position: absolute;
+      left: 80px;
+      top: 30px;
+      color: #3d4146;
+      &.error {
+        color: #b43709;
+      }
+    }
+  }
+  .btn-close {
+    z-index: 10;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 48px;
+    height: 48px;
+    background: url(../images/modal/sprite-modal.png) no-repeat;
+    &:hover {
+      background-position: 0 -48px;
+    }
+    &:active {
+      background-position: 0 -48px*2;
+    }
+  }
+  .content-wrap {
+    color: #e8b664;
+    .caption {
+      font-size: 18px;
+      line-height: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      .iconfont {
+        width: 28px;
+        height: 28px;
+        display: inline-block;
+        cursor: pointer;
+        font-size: 18px;
+      }
+      .t-tip {
+        display: none;
+        padding: 8px;
+        position: absolute;
+        left: 102px;
+        top: 71px;
+        width: 300px;
+        z-index: 30;
+        font-weight: normal;
+        border: 2px solid #785a28;
+        font-size: 12px;
+        line-height: 2;
+        color: #fae9ae;
+        background: #010a13;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -16px;
+          left: 24px;
+          width: 0px;
+          height: 0px;
+          border: 8px solid;
+          border-color: transparent transparent #785a28 transparent;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: -14px;
+          left: 24px;
+          width: 0px;
+          height: 0px;
+          border: 8px solid;
+          border-color: transparent transparent #010a13 transparent;
+        }
+        a {
+          color: #ac2f2f;
+        }
+        p {
+          .a1 {
+            color: #00a9ec;
+          }
+          .a2 {
+            color: #d17b01;
+          }
+        }
+      }
+      .fr {
+        font-size: 12px;
+        color: #8d7652;
+        line-height: 28px;
+        .sd {
+          font-size: 14px;
+          color: #e0a119;
+          font-weight: bold;
+        }
+      }
+    }
+    .p1 {
+      font-size: 14px;
+      color: #8d7652;
+    }
+  }
+  .btn-wrap {
+    position: absolute;
+    left: 50%;
+    bottom: 8px;
+    z-index: 10;
+    -webkit-transform: translateX(-50%);
+       -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    .btn-sure {
+      display: inline-block;
+      background: url(../images/modal/sprite-modal.png) no-repeat 0 -174px;
+      width: 108px;
+      height: 32px;
+      font-size: 14px;
+      color: #dbb77d;
+      text-align: center;
+      line-height: 30px;
+      &:hover {
+        background-position: 0 (-174px-32);
+      }
+      &:acive {
+        background-position: 0 (-174px-32*2);
+      }
+    }
+  }
+}

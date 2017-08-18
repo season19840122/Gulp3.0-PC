@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>alert</title>
+	<!-- 此处 3 个css不需要添加到需要页面-->
+	<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="../../styles/base.css" />
+	<link rel="stylesheet" type="text/css" href="../../styles/alert.css" />
+	<!-- 此处 3 个css不需要添加到需要页面-->
+</head>
+
+<body>
+	<div class="box">
+		<!-- 弹框开始 -->
+		<div class="alert_bg"></div>
+		<div id="alert_message" class="alert_box alert_msg">
+			<i></i>
+			<p>确定为召唤师<span>“依旧不知所谓（皮城警备）”</span>报名吗？</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_success" class="alert_box alert_msg">
+			<i></i>
+			<h1 class="success"><span>恭喜，报名成功</span></h1>
+			<p>特别提醒，本场比赛有如下限制：<span>[击杀赛]、[匹配]、[排位]、[大乱斗]、[限单人]、[限段位(2)]、[限时间]、[限英雄(3)]</span></p>
+			<div class="confirm">
+				开始游戏
+			</div>
+		</div>
+		
+		<div id="alert_error" class="alert_box alert_msg">
+			<i></i>
+			<h1 class="fail"><span>报名失败</span></h1>
+			<p>吧啦吧啦吧啦吧啦吧啦吧啦吧啦吧啦</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_bound" class="alert_box alert_bound">
+			<i></i>
+			<div class="input_box">
+				<ul>
+					<li>
+						<label>手机号：</label>
+						<input type="text" name="code" id="code" value="" />
+						<div class="get_code">获取验证码</div>
+						<div class="get_code disabled">60秒</div>
+					</li>
+					<li>
+						<label>手机验证码：</label>
+						<input type="text" name="phone" id="phone" value="" />
+						<span class="error">错误信息</span>
+					</li>
+				</ul>
+			</div>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		
+		<div id="alert_qrcode" class="alert_box alert_qrcode">
+			<i></i>
+			<p>请用微信扫描此二维码，完成微信绑定！</p>
+			<div class="qrcode_box">
+				<img src=""/>
+			</div>
+		</div>
+		
+		<div id="alert_boundC" class="alert_box alert_boundC">
+			<i></i>
+			<h2>确认绑定帐号<span>2440663620(皮尔特沃夫-金猫)</span>并为其报名参赛吗？</span></h2>
+			<h3>● 顺豆(首次绑定账号)、参赛、获奖记录也将同步转入星云账号。</h3>
+			<h3>● 绑定后，可直接报名参加星云平台的相关比赛活动。</h3>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_switch" class="alert_box alert_switch">
+			<i></i>
+			<h2><span>2440663620(皮尔特沃夫-金猫)</span>已绑定过星云帐号，并已报名参赛！</h2>
+			<div class="account_list">
+		      <ul>
+		        <li class="icon_wx">
+		          <div id="login_container_mini"></div>
+		          <p>微信登录</p>
+		        </li>
+		        <li>
+		          <a href="">
+		          	<img src="" alt="">
+		          </a>
+		          <p>昵称1</p>
+		        </li>
+		        <li>
+		          <a href="">
+		          	<img src="" alt="">
+		          </a>
+		          <p>昵称二很多多多多多多多多的</p>
+		        </li>
+		      </ul>
+		    </div>
+		</div>
+		
+		
+		<div id="alert_apply" class="alert_box alert_apply">
+			<i></i>
+			<h1>报名费：<span class="line">1000顺豆</span>  <span>免费</span></h1>
+			<p>确定为召唤师<span>“依旧不知所谓（皮城警备）”</span>报名吗？</p>
+			<div class="protocol">
+				<span class="iconfont icon-duihao"></span>
+				<span><a href=""><a href="">阅读并同意平台协议</a></span>
+			</div>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_pay" class="alert_box alert_pay">
+			<i></i>
+			<p>为帐号<span>2440663620</span>需报名费￥3（或3000顺豆），你可以</p>
+			<ul>
+				<li data-id="#qrcode_box" class="active">扫码下载APP，免费报名</li>
+				<li data-id="#sd_box">免费报名</li>
+			</ul>
+			<!-- 二维码box开始 -->
+			<div id="qrcode_box" class="qrcode_box active">
+	      		<div class="img_box">
+		            <div class="img_qrcode"></div>
+		            <span class="iconfont icon-zhifu"></span>
+		            <span class="iconfont icon-weixin"></span>
+	      		</div>
+	      		<!--<p class="qrcode_status">本场报名费：<span>100元</span></p>-->
+		      	<span>仅限已完成微信、手机认证的火马电竞用户(点击右上角头像完成认证)</span>
+			</div>
+			<!-- 二维码box结束 -->
+			<div id="sd_box" class="sd_box">
+				<!-- 顺豆支付 -->
+				<div class="content_sd">
+					<!--<div class="sd_pay off"><a href="#">支付1000顺豆</a></div>-->
+					<div class="sd_pay"><a href="#">支付1000顺豆</a></div>
+					<p>· 请网吧安装顺网网吧管家，免费报名</p>
+					<div class="protocol">
+						<span class="iconfont icon-duihao"></span>
+						<span><a href=""><a href="">阅读并同意平台协议</a></span>
+					</div>
+				</div>
+				
+				<!-- 二维码支付 -->
+				<div class="content_pic hide_">
+					<div class="img_box">
+			            <div class="img_qrcode"></div>
+			            <span class="iconfont icon-zhifu"></span>
+			            <span class="iconfont icon-weixin"></span>
+		      		</div>
+		      		<p class="qrcode_status">本场报名费：<span>100元</span></p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="alert_ticket" class="alert_box alert_ticket">
+			<i></i>
+			<h1>我要招募</h1>
+			<ul>
+				<li>
+					<label>QQ：</label>
+					<input type="text" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<label>联系电话：</label>
+					<input type="text" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<label>充值服务器：</label>
+					<div class="type_select" id="se_server_in">
+					</div>
+				</li>
+				<li>
+					<label>安全密码：</label>
+					<input type="password" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<span class="error">
+						*手机验证后将不可修改，请使用常用手机号
+					</span>
+				</li>
+			</ul>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<div id="alert_goods" class="alert_box alert_goods">
+			<i></i>
+			<h1>领取信息</h1>
+			<ul>
+				<li>
+					<label>QQ：</label>
+					<input type="text" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<label>联系电话：</label>
+					<input type="text" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<label>收货人姓名：</label>
+					<div class="type_select" id="se_name">
+					</div>
+				</li>
+				<li>
+					<label>收货地址：</label>
+					<textarea name="" class="smallScroll"></textarea>
+				</li>
+				<li>
+					<label>安全密码：</label>
+					<input type="password" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<span class="error">
+						*手机验证后将不可修改，请使用常用手机号
+					</span>
+				</li>
+			</ul>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		
+		<div id="alert_cash" class="alert_box alert_cash">
+			<i></i>
+			<h1>领取信息</h1>
+			<ul>
+				<li>
+					<label>QQ：</label>
+					<input type="text" name="qq" id="qq" value="" />
+				</li>
+				<li>
+					<label>联系电话：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>收款方式：</label>
+					<div class="radio_box">
+						<input type="radio" id="radio1" name="type" value="1" checked="checked"/>
+						<label for="radio1"><p>支付宝</p></label>
+						<input type="radio" id="radio2" name="type" value="2"/>
+						<label for="radio2"><p>银行卡</p></label>
+					</div>
+				</li>
+				<li>
+					<label>支付宝姓名：</label>
+					<input type="text" name="aliName" id="aliName" value="" />
+				</li>
+				<li>
+					<label>支付宝账号：</label>
+					<input type="text" name="aliAcount" id="aliAcount" value="" />
+				</li>
+			</ul>
+			<div class="confirm">确定</div>
+		</div>
+		
+		<!-- 提示信息弹框，成功失败 h1  class（success/fail） -->
+		<div id="" class="alert_box alert_msg">
+			<i></i>
+			<h1 class="success"><span>信息提交成功</span></h1>
+			<p>点券已自动发放，请刷新“我的奖品”页面查看。</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<!-- 认证提示 -->
+		<div id="alert_bound_remind" class="alert_box alert_bound_remind">
+			<i></i>
+			<h1>认证火马电竞账号，立即领取赛事奖励！</h1>
+			<h2>此外，你还享有以下权力：</h2>
+			<h3>参与火马电竞各种特权活动，兑换平台奖品</h3>
+			<h4>*同一个微信或手机最多可认证同游戏的1个账号</h4>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<div id="alert_check" class="alert_box alert_check">
+			<i></i>
+			<h1>审核信息</h1>
+			<ul>
+				<li>
+					<label>姓名：</label>
+					<input type="text" name="name" id="name" value="" />
+				</li>
+				<li>
+					<label>身份证号：</label>
+					<input type="text" name="card" id="card" value="" />
+					<span class="error">
+						姓名、身份证号绑定后将不可修改，请认证核对信息
+					</span>
+				</li>
+				<li>
+					<label>收款方式：</label>
+					<div class="radio_box">
+						<input type="radio" id="check_radio1" name="check_type" value="1" checked="checked"/>
+						<label for="check_radio1"><p>支付宝<span>（即时）</span></p></label>
+						<input type="radio" id="check_radio2" name="check_type" value="2"/>
+						<label for="check_radio2"><p>银行卡<span>（7个工作日）</span></p></label>
+					</div>
+				</li>
+				<li>
+					<label>支付宝账号：</label>
+					<input type="text" name="aliAcount" id="aliAcount" value="" />
+					<span class="error">
+						确保支付宝、银行卡号与姓名对应，否则将无法发放
+					</span>
+				</li>
+				<li>
+					<label>手持身份证照片：</label>
+					<div class="card_box">
+						<img class="id_pic" src="images/id_normal.jpg">
+						<div class="file-upload">
+							上传照片
+							<input type="file" id="uploadBtn" name="file" style="left:-9999px;position:absolute;">
+						</div>
+						<span class="error">
+							支持jpg、png大小500k以下
+						</span>
+						<span class="right">
+							上传成功
+						</span>
+					</div>
+				</li>
+				<li>
+					<label>手机号码：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<div class="get_code disabled">获取验证码</div>
+					<span class="error">
+						验证码错误
+					</span>
+				</li>
+			</ul>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<div id="alert_prizeInfo" class="alert_box alert_prizeInfo">
+			<i></i>
+			<h1>领奖信息
+				<span class="iconfont icon-zhuyi"></span>
+				<div class="tip">
+      				税法规定，取得偶然所得的个人为个人所得税的纳税义务人，应依法纳税；向个人支付偶然所得的单位为个人所得税的扣缴义务人。不论在何地兑奖或颁奖，偶然所得应纳的个人所得税一律由支付单位扣缴。偶然所得以收入金额为应纳税所得额，纳税率以20%计算。
+				</div>
+			</h1>
+			<ul>
+				<li>
+					<label>姓名：</label>
+					<input type="text" name="name" id="name" value="" />
+				</li>
+				<li>
+					<label>身份证号：</label>
+					<input type="text" name="card" id="card" value="" />
+					<span class="error">
+						姓名、身份证号绑定后将不可修改，请认证核对信息
+					</span>
+				</li>
+				<li>
+					<label>收款方式：</label>
+					<div class="radio_box">
+						<input type="radio" id="prize_radio1" name="prize_type" value="1" checked="checked"/>
+						<label for="prize_radio1"><p>支付宝</p></label>
+						<input type="radio" id="prize_radio2" name="prize_type" value="2"/>
+						<label for="prize_radio2"><p>银行卡</p></label>
+					</div>
+				</li>
+				<li>
+					<label>支付宝账号：</label>
+					<input type="text" name="aliAcount" id="aliAcount" value="" />
+					<span class="error">
+						确保支付宝、银行卡号与姓名对应，否则将无法发放
+					</span>
+				</li>
+				<li>
+					<label>手机号码：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<div class="get_code disabled">获取验证码</div>
+					<span class="error">
+						验证码错误
+					</span>
+				</li>
+			</ul>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<div id="pay_error" class="alert_box pay_error">
+			<i></i>
+			<h1>购买XXX
+				<p>支付<span>￥7.00</span></p>
+			</h1>
+			<h2>
+				<p>购买账号：10000022</p>
+				<p>订单编号：10000022</p>
+			</h2>
+			<h2>
+				<p>购买时间：2012-09-09</p>
+				<p>付费方式：<span class="wechat"></span></p>
+				<!--<p>付费方式：<span class="alipay"></span></p>-->
+			</h2>
+			<h3>支付失败</h3>
+			<p>支付过程似乎遇到一些小问题（错误代码x1162）</p>
+			<p>请查看 <span>常见问题</span> 或拨打客服电话：400-555-888</p>
+		</div>
+		
+		<div id="pay_success" class="alert_box pay_success">
+			<i></i>
+			<h1>购买XXX
+				<p>支付<span>￥7.00</span></p>
+			</h1>
+			<h2>
+				<p>购买账号：10000022</p>
+				<p>订单编号：10000022</p>
+			</h2>
+			<h2>
+				<p>购买时间：2012-09-09</p>
+				<p>付费方式：<span class="wechat"></span></p>
+				<!--<p>付费方式：<span class="alipay"></span></p>-->
+			</h2>
+			<h3>支付成功</h3>
+			<p>支付过程似乎遇到一些小问题（错误代码x1162）</p>
+		</div>
+		
+		
+		<div id="pay_box" class="alert_box pay_box">
+			<i></i>
+			<h1>购买XXX
+				<p>支付<span>￥7.00</span></p>
+			</h1>
+			<div class="qrcode_box">
+	        	<div class="alert_img_qrcode"></div>
+		        <span>请扫码支付</span>
+		        <img class="wechat_logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjdCQjM4RjM3RUQ2MTFFNjlBNTI4MjlEMTRCNTZERUUiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjdCQjM4RjQ3RUQ2MTFFNjlBNTI4MjlEMTRCNTZERUUiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGN0JCMzhGMTdFRDYxMUU2OUE1MjgyOUQxNEI1NkRFRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGN0JCMzhGMjdFRDYxMUU2OUE1MjgyOUQxNEI1NkRFRSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pi4qWuIAAA9zSURBVHjazFoJeJTV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">
+		        <img class="alipay_logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAxCAYAAACYq/ofAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RjI5RTJGMTI3RUQ2MTFFNjkxNTU5NjVDQTJEM0Q0MEYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RjI5RTJGMTM3RUQ2MTFFNjkxNTU5NjVDQTJEM0Q0MEYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpGMjlFMkYxMDdFRDYxMUU2OTE1NTk2NUNBMkQzRDQwRiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGMjlFMkYxMTdFRDYxMUU2OTE1NTk2NUNBMkQzRDQwRiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpLMAwUAAAodSURBVHja3Fp5cFPH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">
+	        </div>
+		</div>
+		
+		
+		<!-- 申请加入 -->
+		<div id="alert_join" class="alert_box alert_join">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>段位</li>
+						<li>申请位置</li>
+						<li>真实姓名</li>
+						<li>联系方式</li>
+						<li>状态</li>
+					</ul>
+					
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>13545458888</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_content">
+						<li>2016-10-15 19：06</li>
+						<li>抢顺豆活动赠送</li>
+						<li>英雄联盟-皮城警备-短腿小胖子丶-客户机WB-024</li>
+						<li>英雄联盟500点券</li>
+						<li>2016-07-27 19：01</li>
+						<li>
+							<a href="#">
+								<span>同意</span>
+							</a>
+							<a href="#">
+								<span>拒绝</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="pageBox">
+		          <a href="javascript:void(0)" class="pageCur">1</a>
+		          <a href="javascript:void(0)">2</a>
+		          <a href="javascript:void(0)">3</a>
+		          <a href="javascript:void(0)">...</a>
+		          <a href="javascript:void(0)">4</a>
+		        </div>
+			</div>
+			
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		<!-- 奖励分配-队长分配 -->
+		<div id="alert_assign_1" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+							<div class="tip_box">
+								<span>参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</span>
+							</div>
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>同意</span>
+								</a>
+								<a href="#">
+									<span>不同意</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="green">
+								<span>已同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="orange">
+								<span>不同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								<input type="text" name="" id="" value="" />
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+				<span>
+					*全部队员“同意”奖励分配方案后，方可进入领奖流程。
+		        </span>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		<!-- 奖励分配-队员分配 -->
+		<div id="alert_assign_2" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+							<div class="tip_box">
+								<span>参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</span>
+							</div>
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>同意</span>
+								</a>
+								<a href="#">
+									<span>不同意</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="orange">
+								<span>不同意</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+				<span>
+					*全部队员“同意”奖励分配方案后，方可进入领奖流程。
+		        </span>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		
+		<!-- 奖励分配-发放奖金 -->
+		<div id="alert_assign_3" class="alert_box alert_list">
+			<i></i>
+			<div class="list">
+				<div class="list_box">
+					<ul class="ul_title">
+						<li>召唤师</li>
+						<li>本轮参与场次</li>
+						<li>奖励分配（元）</li>
+						<li>
+							状态
+						</li>
+					</ul>
+					<div class="ul_scroll smallScroll">
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="option">
+								<a href="#">
+									<span>领取</span>
+								</a>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="green">
+								<span>已领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待领取</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+						<ul class="ul_content">
+							<li>2016-10-15 19：06</li>
+							<li>抢顺豆活动赠送</li>
+							<li>
+								111
+							</li>
+							<li class="wait">
+								<span>待确认</span>
+							</li>
+						</ul>
+					</div>
+					
+				</div>
+				
+				<p>
+					<span>本轮奖励：500元现金</span>分配合计：500
+		        </p>
+			</div>
+			<div class="confirm">
+				提交
+			</div>
+		</div>
+		
+		<!-- 邀请队员 -->
+		<div id="alert_add" class="alert_box alert_add">
+			<i></i>
+			<h1>邀请队员</h1>
+			<p>请填写队员的参战QQ号：</p>
+			<div class="member_box smallScroll">
+				<ul>
+					<li>
+						<input type="text" name="" id="" value="" /><a href="#">删除</a>
+					</li>
+				</ul>
+			</div>
+			<h2>+添加更多 （<span>1</span>）</h2>
+			<p>*邀请队友的人数上限为8人</p>
+			<p>*战队赛区为英雄联盟-黑色玫瑰，确保参战QQ在该服务器有满级的召唤师</p>
+			<div class="confirm">
+				确定
+			</div>
+		</div>
+		
+		
+		<div id="create_box" class="alert_box alert_create">
+			<i></i>
+			<form action="" method="post">
+			<h1>创建战队</h1>
+			<ul>
+				<li>
+					<label>请选择战区：</label>
+					<div class="type_select" id="se_left">
+						<input type="text" class="selectInput" name="game_type" readonly="readonly" id="game_type" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+						</ul>
+					</div>
+					<div class="type_select" id="se_right">
+						<input type="text" class="selectInput" name="game_area" readonly="readonly" id="game_area" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型41</a></li>
+							<li><a href="#">类型5</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>战队名称：</label>
+					<input type="text" name="teamName" id="teamName" value="" />
+				</li>
+				<li>
+					<label>火马昵称：</label>
+					<input type="text" name="nickname" id="nickname" value="" />
+				</li>
+				<li>
+					<label>参战游戏账号：</label>
+					<div class="type_select" id="se_long">
+						<input type="text" class="selectInput" name="game_account" readonly="readonly" id="game_account" value="全部" />
+						<ul class="smallScroll">
+							<li><a href="#">类型1</a></li>
+							<li><a href="#">类型2</a></li>
+							<li><a href="#">类型3</a></li>
+							<li><a href="#">类型4</a></li>
+						</ul>
+					</div>
+				</li>
+				<li>
+					<label>真实姓名：</label>
+					<input type="text" name="name" id="name" value="" />
+				</li>
+				<li>
+					<label>身份证号码：</label>
+					<input type="text" name="card" id="card" value="" />
+				</li>
+				<li>
+					<label>手机号：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<div class="get_code disabled">获取验证码</div>
+				</li>
+				<li>
+					<p id="create_tip_error">错误信息</p>
+				</li>
+			</ul>
+			<p>友情提示：<span>身份证上的姓名和正式姓名必须保证一致</span>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+			</form>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<div id="accept_box" class="alert_box alert_accept">
+			<i></i>
+			<form action="" method="post">
+			<h1>接受邀请</h1>
+			<ul>
+				<li>
+					<label>参战游戏账号：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>火马昵称：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>真实姓名：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>身份证号码：</label>
+					<input type="text" name="" id="" value="" />
+				</li>
+				<li>
+					<label>手机号：</label>
+					<input type="text" name="phone" id="phone" value="" />
+				</li>
+				<li>
+					<label>手机验证码：</label>
+					<input type="text" name="code" id="code" value="" />
+					<a href="#" class="get_code disabled">获取验证码</a>
+				</li>
+				<li>
+					<p class="error">错误信息</p>
+				</li>
+				<li>
+					<p class="remind">错误信息</p>
+				</li>
+			</ul>
+			<p>友情提示：<span>身份证上的姓名和正式姓名必须保证一致</span>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+			</form>
+			<div class="confirm">确定</div>
+		</div>
+		
+		
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_message').show_()">普通提示框</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_bound').show_()">手机绑定</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_qrcode').show_()">扫码绑定</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_success').show_()">报名成功</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_error').show_()">报名失败</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_boundC').show_()">报名绑定</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_switch').show_()">切换账号</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_apply').show_()">确定报名？</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_pay').show_()">支付框</button>
+		<span>---详情页</span><br/>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_ticket').show_()">点券</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_goods').show_()">实物</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_cash').show_()">现金</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_check').show_()">审核信息</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_prizeInfo').show_()">领奖信息</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_bound_remind').show_()">认证提示</button>
+		<span>---我的-奖品</span><br/>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#pay_error').show_()">失败</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#pay_success').show_()">成功</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#pay_box').show_()">支付</button>
+		<span>---我的-vip</span><br/>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_join').show_()">申请加入-查看详情</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_assign_1').show_()">奖励分配-队长</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_assign_2').show_()">奖励分配-队员</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_assign_3').show_()">奖励分配-发放奖金</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#alert_add').show_()">邀请队员</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#create_box').show_()">创建战队</button>
+		<button style="margin:2px;position:relative;z-index:100;color:black;border:1px solid black" onclick="$('#accept_box').show_()">接受邀请</button>
+		<span>---战队-我的战队</span>
+	</div>
+</body>
+<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/jquery.uploadify.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="../../scripts/tools.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var pageObj = {
+		domAction:function() {
+			$('#alert_prizeInfo .icon-zhuyi,#alert_prizeInfo .tip').hover(function() {
+				$('#alert_prizeInfo .tip').show();
+			},function() {
+				$('#alert_prizeInfo .tip').hide();
+			})
+			
+			/**
+			 * 如果不调用此方法，则点击关闭按钮会自行关闭
+			 * 参数1 function--关闭弹出框后的回调方法
+			 */
+			$('#alert_message').close_(function() {
+				console.log("调用关闭后的方法");
+			});
+			
+			/**
+			 * 如果不调用此方法，则点击确定按钮会自行关闭
+			 * 参数1 boolean--是否关闭弹出框
+			 * 参数2 funciton--关闭弹出框后的回调方法
+			 */
+			$('#alert_message').confirm_(false,function() {
+				console.log("调用确定后的方法");
+			});
+			
+			/**
+			 * 如果不调用此方法，则点击确定或者关闭按钮会自行关闭，调用此方法后confirm_和colose_方法将失效
+			 * 参数1 funciton--关闭弹出框后的回调方法
+			 */
+			$('#alert_message').closeAll_(function() {
+				console.log("调用确定或者关闭后的方法");
+			});
+			
+			
+			$('#uploadBtn').uploadify({
+				swf:"../../scripts/uploadify.swf",
+				uploader		: "http://localhost:8080/resteasyDemo/rest/echo/upload",
+				height			: 24,
+				width         	: 135,
+				fileTypeExts    : '*.jpg; *.png',
+				multi			: false,
+				fileObjName		: "fileData",
+				fileSizeLimit	: "3MB",
+				queueSizeLimit	: 1,
+				onUploadStart:function() {
+					$('.alert_check').find('.card_box span.right').html("上传中...").show();
+				},
+				onUploadSuccess : function(file, data, response,dom) {
+					var id = file.id;
+					var num = id.substring(id.indexOf('_')+1,id.indexOf('_')+2);
+					var resdata = $.parseJSON(data);
+					var fileName = resdata.fileName;
+					$('.alert_check').find('.card_box span.right').html("上传成功").show();
+				}
+			});
+			
+			//切换支付框
+			$('.alert_pay').on('click','ul li',function() {
+				var id = $(this).attr('data-id');
+				$(this).siblings('li').removeClass('active');
+				$(this).addClass('active');
+				$('.alert_pay > div').hide();
+				$('.alert_pay').find(id).show();
+			})
+		},
+		selectAction:function() {
+			$("#se_server_in").select({
+				name: "server_in",
+				defaultText : "全部",
+				showDefault : true,
+				data:[
+					{text:1,value:2},
+					{text:12,value:3},
+					{text:13,value:24}
+				]
+			});
+			$("#se_name").select({
+				name: "se_name",
+				defaultText : "全部",
+				showDefault : true,
+				data:[
+					{text:1,value:2},
+					{text:12,value:3},
+					{text:13,value:24}
+				]
+			});
+		},
+	}
+	pageObj.domAction();
+	pageObj.selectAction();
+</script>
+</html>

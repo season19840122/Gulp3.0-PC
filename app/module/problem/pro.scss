@@ -1,0 +1,177 @@
+@import '../../styles/base.scss';
+@import '../../styles/common.scss';
+.box {
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/pro/pro_bg.webp');
+    h2 {
+        color: #f0e6d2;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+    .alert_bg {
+        display: none;
+        @include abTopLeft(1200px,
+        660px,
+        0px,
+        0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .question_list {
+        @include abBottomLeft(1200px, 567px, 0px, 0px);
+        overflow: hidden;
+    }
+    .question_left {
+        position: absolute;
+        top: 0;
+        z-index: 3;
+        float: left;
+        width: 171px;
+        height: 567px;
+        li {
+            height: 30px;
+            margin-bottom: 28px;
+            a {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                width: 171px;
+                color: #f0e6d2;
+                padding-left: 20px;
+                font-size: 12px;
+                line-height: 30px;
+                &:hover {
+                    background: #1e2328;
+                }
+                &.active {
+                    &:before {
+                        content: "";
+                        @include abTopLeft(3px, 30px, 0px, 0px);
+                        background: #c89b3c;
+                    }
+                    background: #161a20;
+                }
+            }
+        }
+        .service {
+            @include abBottomLeft(171px, 214px, 0px, 0px);
+            h3 {
+                background: #1f323e;
+                cursor: pointer;
+                font-size: 16px;
+                line-height: 30px;
+                padding-left: 20px;
+                font-weight: bold;
+                @include abTopLeft(171px, 30px, 0px, 0px);
+                position: relative;
+                color: #f0e6d2;
+                margin-bottom: 16px;
+                &:hover{
+                    background: #396078;
+                }
+            }
+            p{
+                color: #dcd3c1;
+                padding-left: 20px;
+                position: relative;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+        }
+    }
+    @include scroll2;
+    .question_right {
+        @include abTopLeft(1029px, 567px, 0px, 171px);
+        .question_con {
+            @include abTopLeft(1029px, 567px, 0px, 0px);
+            overflow: auto;
+            .scroll_box {
+                position: relative;
+                top: 0;
+                .item{
+                    padding-left: 55px;
+                    dl {
+                        margin-bottom: 20px;
+                        dt {
+                            line-height: 36px;
+                            font-size: 12px;
+                            font-weight: 700;
+                            color: #f0e6d2;
+                            margin-bottom: 30px;
+                        }
+                        dd {
+                            width: 940px;
+                            margin-top: 5px;
+                            margin-left: 0px;
+                            color: #777979;
+                            line-height: 20px;
+                            color: #a09b8c;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    #pro_box{
+        display: none;
+        @include alert2(500px,295px);
+        text-align: center;
+        color: #a09b8c;
+        .content{
+            position: relative;
+            z-index: 10;
+            text-align: left;
+        }
+        h1{padding-bottom:5px;}
+        p{
+            margin-top: 30px;
+            color: #8D7652;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+        
+        input[type='text'],input[type='password']{
+            width: 259px;
+            padding-left: 6px;
+            height: 25px;
+            @include inputStyle;
+        }
+        span{
+            display: block;
+            color: #d61917;
+            margin-top: 20px;
+            padding-left: 50px;
+        }
+        .btn{
+            position: absolute;
+            width: 108px;
+            height: 32px;
+            left: 50%;
+            bottom: 7px;
+            color: #DBB77D;
+            font-size: 14px;
+            z-index: 10;
+            cursor: pointer;
+            line-height: 31px;
+            text-align: center;
+            background: url(../../images/pics/sprite_alert.png) no-repeat;
+            background-position: 0px -261px;
+            &:hover{
+                background-position: 0px -293px;
+            }
+            &:active{
+                background-position: 0px -325px;
+            }
+        }
+        #consult{
+            left: 142px;
+        }
+        #cancel{
+            left: 250px;
+        }
+    }
+    
+}
