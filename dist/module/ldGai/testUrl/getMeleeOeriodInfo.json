@@ -1,0 +1,51 @@
+{
+	"success": true,
+	"code": 0,
+	"message": null,
+	"data": {
+		"meleeMatchId": 147,
+		"meleeMatchTimesId": 583,
+		"period": "15:00-18:00",
+		"ruleTitle": "大富翁",
+		"ruleSubTitle": "打钱最多的玩家在本方",
+		"ruleDetail": "；",
+		"rewardPool": "1257120",
+		"achieveCnt": "0",
+		"applyBeginTime": "15:00",
+		"applyEndTime": "18:00",
+		"calculateTime": "19:00",
+		"applySwBean": "200",
+		"applyMoney": "0.2",
+		"achieveSwBean": null,
+		"rewardCnt": null,
+		"gameType": 7,
+		"gameTypeRemark": "仅限匹配赛、排位赛(包括单双排、灵活组排)、大乱斗",
+		"state": 1,
+		"limitMinute": 60,
+		"limitEachCnt": 50,
+		"panelState": 1,
+		"nextOpenTime": "中午12：00",
+		"nextNotice": "",
+		"hasSucc": false,
+		"hasUserApply": false,
+		"hasUserGameFinished": false,
+		"hasUserCalculated": false,
+		"hasUserAchieved": false,
+		"allowTeamState": 1,
+		"achieveUserCnt": 121,
+		"regUserCnt": 1133,
+		"supportGames": [
+			13216,17049
+		],
+		"limitGroups": [
+			10,
+			20,
+			50
+		],
+		"panelLimitGroups": [
+			1,
+			10,
+			50
+		]
+	}
+}

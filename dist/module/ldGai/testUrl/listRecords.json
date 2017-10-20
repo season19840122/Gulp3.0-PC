@@ -1,0 +1,118 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": {
+    	"codeKey": "check_code_melee_20016",
+        "total": 20,
+        "pageNo": 1,
+        "pageSize": 10,
+        "Records": [
+            {
+            	"meleeRoomUserId": 1,
+                "applyTime": "2017-07-19 09:44",
+                "period": "00:00-12:00",
+                "rule": "屠龙勇士（龙的地方）",
+                "achieveCnt": 111,
+                "reward": "9",
+                "state": "已达成",
+                "odds":1.23
+            },
+            {
+                "applyTime": "2017-04-19 16:41",
+                "period": "16:00-23:59",
+                "meleeRoomUserId": 2,
+                "rule": "我有基友",
+                "achieveCnt": 0,
+                "reward": "等待结算",
+                "state": "尚未完成游戏"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "meleeRoomUserId": 3,
+                "achieveCnt": 230,
+                "reward": "等待结算",
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "meleeRoomUserId": 4,
+                "achieveCnt": 0,
+                "reward": "等待结算",
+                "rewardPool": 1239,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "meleeRoomUserId": 1,
+                "achieveCnt": 0,
+                "reward": "等待结算",
+                "rewardPool": 9,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "achieveCnt": 0,
+                "meleeRoomUserId": 1,
+                "reward": "等待结算",
+                "rewardPool": 9,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "achieveCnt": 0,
+                "meleeRoomUserId": 1,
+                "reward": "等待结算",
+                "rewardPool": 9,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "achieveCnt": 0,
+                "reward": "等待结算",
+                "rewardPool": 9,
+                "meleeRoomUserId": 1,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "achieveCnt": 0,
+                "meleeRoomUserId": 1,
+                "reward": "等待结算",
+                "rewardPool": 9,
+                "playingCnt": 0,
+                "state": "未达成"
+            },
+            {
+                "applyTime": "2017-03-01 10:23",
+                "period": "00:00-12:00",
+                "rule": "团团圆圆",
+                "achieveCnt": 0,
+                "meleeRoomUserId": 1,
+                "reward": "等待结算",
+                "state": "未达成",
+                "rewardPool": 9,
+                "playingCnt": 0
+            }
+        ]
+    }
+}

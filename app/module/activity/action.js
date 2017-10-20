@@ -39,7 +39,7 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 		ulStr.push('<li>{{ul_obj.nickName}}</li>');
 		ulStr.push('<li>{{ul_obj.playerName}}</li>');
 		ulStr.push('<li>{{ul_obj.serverName}}</li>');
-		ulStr.push('<li>{{ul_obj.totalCnt}}</li>');
+		ulStr.push('<li>{{ul_obj.totalCnt+"/50"}}</li>');
 		ulStr.push('<li>{{ul_obj.winRate}}</li>');
 		ulStr.push('<li>{{ul_obj.score}}</li>');
 		ulStr.push('</ul>');
@@ -93,7 +93,15 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 				}
 			}
 		},
+		computed: {
+			tem_subAccount:function() {
+				return this.input.subAccount.substring(this.input.subAccount.indexOf("_")+1);
+			}
+		},
 		methods: {
+			flush:function() {
+				this.listRank();
+			},
 			domAction:function() {
 				var t = this;
 				$('.btn_rule').on('click',function() {
@@ -111,6 +119,10 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 					}
 					t.apply();
 				})
+				
+				$('#alert_apply').close_(function() {
+					t.error_tip = "";
+				});
 			},
 			getServerName:function(gameId) {
 				var game =  ClientAPI.getLoginGame(gameId);
@@ -135,7 +147,7 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 			},
 			goApply:function() {
 				var t = this;
-				if(this.btn_name.indexOf('disable') != -1) return;
+				if(this.btn_name.indexOf('disable') != -1 || this.btn_name.indexOf('close') != -1 ) return;
 				this.do_challengeValidate(function() {
 					$('#alert_know').show_();
 					//设置电话、账号、大区
@@ -184,11 +196,18 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 						if (obj['success'] && obj['code'] == 0 && obj['data']) {
 							var data = obj.data;
 							t.input.phone = data.phone || "";
-							t.list_arr = obj.data.rankList;
+							var rankList_ = obj.data.rankList.map(function(v) {
+								v.nickName = COMMONS.checkName(v.nickName);
+								return v;
+							})
+							t.list_arr = rankList_;
 							if(obj.data.userRank) {
+								obj.data.userRank.nickName = COMMONS.checkName(obj.data.userRank.nickName);
 								t.btn_name = "btn_apply disable";
 								t.flag.myList = true;
 								t.my_arr = obj.data.userRank;
+							} else if(!obj.data.allowApply) {
+								t.btn_name = "btn_apply close";
 							}
 						} else if (!obj['success']) {
 							t.showAlert("友情提示","获取列表失败");
@@ -225,8 +244,9 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 						if (obj['success'] && obj['code'] == 0 && obj['data']) {
 							t.showResponse(true,"请在比赛阶段完成<span>50场</span>个人排位赛");
 							t.mjUrl = obj.data;
+							t.listRank();
 						} else if (!obj['success']) {
-							t.showResponse(false,obj.message);
+							t.error_tip = "报名失败："+obj.message;
 						}
 					}
 				});

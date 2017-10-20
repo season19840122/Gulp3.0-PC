@@ -1,5 +1,5 @@
-@import 'base.scss';
-@import 'common.scss';
+@import '_base.scss';
+@import '_common.scss';
 @import 'tabBar.scss';
 
 .box {
@@ -85,7 +85,7 @@
             .vip {
               width: 51px;
               color: #ab5338;
-              @include line-gradient(#fce547, #f8cf28)
+              @include linear-gradient(#fce547, #f8cf28)
             }
           }
           .money {

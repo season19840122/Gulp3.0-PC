@@ -13,10 +13,9 @@
 		<a @click="goBack" class="go_back">返回</a>
 		<div class="content_box smallScroll">
 			<div class="content">
-				<img src="../../images/activity/mj_logo.png"/>
 				<div class="btn_rule"></div>
 				<div :class="btn_name" @click="goApply" v-cloak></div>
-				
+				<div @click="flush" class="flush"><span>刷新</span></div>
 				<div class="list_box">
 					<ul class="ul_title">
 						<li>排名</li>
@@ -36,7 +35,7 @@
 						<li>{{my_arr.nickName}}</li>
 						<li>{{my_arr.playerName}}</li>
 						<li>{{my_arr.serverName}}</li>
-						<li>{{my_arr.totalCnt}}</li>
+						<li>{{my_arr.totalCnt+'/50'}}</li>
 						<li>{{my_arr.winRate}}</li>
 						<li>{{my_arr.score}}</li>
 					</ul>
@@ -126,7 +125,7 @@
 				</li>
 				<li>
 					<label>参赛账号：</label>
-					<input v-model="input.subAccount" type="text" readonly="readonly" />
+					<input v-model="tem_subAccount" type="text" readonly="readonly" />
 				</li>
 				<li>
 					<label>参赛大区：</label>

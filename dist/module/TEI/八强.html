@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ewg</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="tei.css" />
+	</head>
+	<body>
+		<div class="box">
+			<a class="go_back">返回</a>
+			<div class="box_banner">
+				<ul>
+					<li><a href="index.html"><span>线上报名</span></a></li>
+					<li class="now"><span>线上选拔</span></li>
+					<li class="lock"><span>入围战队</span></li>
+					<li class="lock"><span>在线直播</span></li>
+				</ul>
+			</div>
+			
+			<div class="box_content">
+				<div class="title8">
+					<span>火马赛事直播间LIVE</span>
+				</div>
+				<!-- 详情页对阵图开始 -->
+				<div class="game_box team_8" id="game_line">
+					<div class="team_8_1 active">SKT</div>
+					<div class="team_8_2">SKT</div>
+					<div class="team_8_3">SKT</div>
+					<div class="team_8_4">SKT</div>
+					<div class="team_8_5">SKT</div>
+					<div class="team_8_6">SKT</div>
+					<div class="team_8_7">SKT</div>
+					<div class="team_8_8">SKT</div>
+					<div class="team_8_9">SKT</div>
+					<div class="team_8_10">SKT</div>
+					<div class="team_8_11">SKT</div>
+					<div class="team_8_12">SKT</div>
+					<div class="team_8_13">SKT</div>
+					<div class="team_8_14">SKT</div>
+					<div class="team_8_15">SKT</div>
+					<div class="team_8_16">SKT</div>
+					
+					<div class="team_4_1 win">SKT</div>
+					<div class="team_4_2">SKT</div>
+					<div class="team_4_3">SKT</div>
+					<div class="team_4_4">SKT</div>
+					<div class="team_4_5">SKT</div>
+					<div class="team_4_6">SKT</div>
+					<div class="team_4_7">SKT</div>
+					<div class="team_4_8">SKT</div>
+					
+					<div class="team_2_1 active">SKT</div>
+					<div class="team_2_2">SKT</div>
+					<div class="team_2_3">SKT</div>
+					<div class="team_2_4">SKT</div>
+					
+					<div class="team_1_1 active">半决赛</div>
+					<div class="team_1_2">半决赛</div>
+					
+					<img src="../../images/team/game_cup.png" class="game_cup"/>
+					<div class="cup_box active">冠军</div>
+				</div>
+				<!-- 详情页对阵图结束 -->
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.go_back').on('click',function() {
+				ClientAPI.showMainFramePage(ClientPage.Iss);
+			})
+			
+			$('.title8 span').on('click',function() {
+				
+			})
+			
+			$('.tip, .tip_content').hover(function() {
+				$('.tip_content').show();
+			}, function() {
+				$('.tip_content').hide();
+			})
+			$('input').focus(function() {
+				$(this).addClass('on');
+			})
+			$('input').blur(function() {
+				$(this).removeClass('on');
+			})
+		})
+	</script>
+</html>

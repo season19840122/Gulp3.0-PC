@@ -1,0 +1,9 @@
+{
+	"success": false,
+	"code": 0,
+	"message": "未开放哈哈",
+	"data": {
+		"nextOpenTime":"12:33",
+		"nextNotice":"撒旦法地方是对方的身份"
+	}
+}

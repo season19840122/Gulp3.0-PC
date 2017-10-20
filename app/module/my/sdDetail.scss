@@ -1,5 +1,5 @@
-@import '../../styles/base.scss';
-@import '../../styles/common.scss';
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
 @import '../../styles/_calendar';
 html {
     background: black;
@@ -106,7 +106,7 @@ html {
         }
     }
     .sd_box{
-        @include abTopRight(180px, 600px, 60px, 80px);
+        @include abTopRight(182px, 600px, 60px, 80px);
         @include bg('../../images/my/sd_box.png');
         background-repeat: no-repeat;
         text-align: center;

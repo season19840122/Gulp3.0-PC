@@ -1,0 +1,14 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": {
+		"award":{
+			"awardProductId":"1003",
+			"productName":"1",
+			"pieceName":"1",
+			"catalog":"1",
+			"pic":"1"
+		}
+	}
+}

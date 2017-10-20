@@ -99,7 +99,8 @@ figure {
 
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -145,7 +146,9 @@ input {
 }
 
 input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -328,7 +331,9 @@ li {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -391,21 +396,25 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
-  /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
-  /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 /*下拉列表*/
@@ -447,18 +456,21 @@ body {
 .mainScroll::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .mainScroll::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #000;
 }
 
 .mainScroll::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 5px #2d3a48;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #33383e;
 }
 
@@ -474,16 +486,19 @@ body {
 .smallScroll::-webkit-scrollbar {
   width: 6px;
   height: 66px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .smallScroll::-webkit-scrollbar-track {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: none;
 }
 
 .smallScroll::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #785a28;
 }
 
@@ -495,12 +510,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 .menu {
   position: absolute;
   width: 1200px;
@@ -715,7 +725,8 @@ h2, li, a, div {
   color: #fff;
   background: #009ddf;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   font-size: 12px;
   font-weight: normal;
   min-width: 44px;
@@ -729,11 +740,13 @@ h2, li, a, div {
   width: 51px;
   color: #ab5338;
   background: #fce547;
-  background: -webkit-linear-gradient(to bottom, #fce547, #f8cf28);
-  /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#fce547), to(#f8cf28));
+  background: -webkit-linear-gradient(top, #fce547, #f8cf28);
+  background: -moz-linear-gradient(top, #fce547, #f8cf28);
   background: linear-gradient(to bottom, #fce547, #f8cf28);
   /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 .box .exchange-wrap ul li .exchange .money {
@@ -820,7 +833,8 @@ h2, li, a, div {
   height: 250px;
   background: #0b0c10;
   -moz-box-shadow: 0px 0px 0px 3px #5a4729;
-  box-shadow: 0px 0px 0px 3px #5a4729;
+  -webkit-box-shadow: 0px 0px 0px 3px #5a4729;
+          box-shadow: 0px 0px 0px 3px #5a4729;
   padding: 40px 50px 0;
 }
 
@@ -833,7 +847,8 @@ h2, li, a, div {
   width: 490px;
   height: 240px;
   -moz-box-shadow: 0px 0px 0px 1px #5a4729;
-  box-shadow: 0px 0px 0px 1px #5a4729;
+  -webkit-box-shadow: 0px 0px 0px 1px #5a4729;
+          box-shadow: 0px 0px 0px 1px #5a4729;
 }
 
 .dialog-wrap::after {
@@ -1177,13 +1192,15 @@ h2, li, a, div {
 }
 
 .dialog-wrap .row-wrap .type_select .smallScroll::-webkit-scrollbar-track {
-  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+          border-radius: 3px !important;
   background: transparent !important;
 }
 
 .dialog-wrap .row-wrap .type_select .smallScroll::-webkit-scrollbar-thumb {
   cursor: pointer;
-  border-radius: 3px !important;
+  -webkit-border-radius: 3px !important;
+          border-radius: 3px !important;
   background: #1f2e38 !important;
 }
 

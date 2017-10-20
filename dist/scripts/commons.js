@@ -92,9 +92,9 @@ define(['jquery'],function($) {
 				data:this_.getData(obj),
 				timeout: this.options.ajaxTimeout,
 				success: obj.success,
-				error: obj.error || function() {
+				error: obj.error || function(e) {
 					obj.urlObj.again = false;
-					this_.alertMsg('友情提示',obj.name+RETURN_MSG.EX);
+					this_.alertMsg('友情提示',obj.name+'：'+JSON.stringify(e));
 				}
 			});
 		};

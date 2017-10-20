@@ -1,0 +1,101 @@
+extends _layouts
+block title
+  title 计算弹窗
+block style
+  //- link(rel="stylesheet", href="styles/element-ui.css")
+  link(rel="stylesheet", href="styles/bootstrap.min.css")
+  link(rel="stylesheet", href="styles/iconfont/iconfont.css")
+  link(rel="stylesheet", href="styles/clearing.css")
+block main
+  #clearing(v-cloak)
+    com-clearing
+      .head(slot="head")
+        button.btn-close
+        .mybean-wrap
+          p.mybean
+            | 我的顺豆：
+            span 658700
+            i.iconfont.icon-topjian
+            button.btn-exchange 兑换礼物
+      .jctz(slot="jctz")
+        h3.title 精彩挑战:
+        .info-wrap
+          p <span>获得胜利</span><br><span class="success">达成</span><!--<span class="fail">未达成</span>-->
+          p.w1
+            span.tips(data-toggle="tooltip", title="多行信息第二行信息多行信息第二行信息多行信息第二行信息") 击杀10人击杀10人
+            //- <el-tooltip effect="dark" placement="top-start">
+            //-   <span slot="content">多行信息第二行信息</span>
+            //-   <span class="tips">击杀10人击杀10人</span>
+            //- </el-tooltip>
+            | <br><span class="success">达成</span><!--<span class="fail">未达成</span>-->
+          p
+            a(href="#", target="_blank").dq-tips 去领取
+            span.success.big +5000
+              i.dou
+              | <!--<i class="quan"></i>-->
+            span.success.wa (VIP+1200)
+        // <div class="info-wrap no">
+            <p>重开局，报名费用已退还到您的账户重开局，报名费用已退还到您的账户</p>
+          </div>
+      .jctz(slot="ldc")
+        h3.title 乱斗场/百人乱斗:
+        .info-wrap
+          p
+            //- el-tooltip(effect="dark", placement="top-start")
+            //-   span(slot="content") 多行信息<br>第二行信息
+            //-   span 团队击杀一条土龙团土龙团
+            span.t(data-toggle="tooltip", title="多行信息第二行信息") 团队击杀一条土龙团土龙团
+            | <br><span class="success">达成</span><!--<span class="fail">未达成</span>-->
+          p
+            span.success.big 等待结算
+        // <div class="info-wrap no">
+            <p>重开局，报名费用已退还到您的账户</p>
+          </div>
+      .foot(slot="foot")
+        h4.title 活动
+        a(href="#", target="_blank").link 就在就在就在就在就在就在就在就在就在
+
+  template#tem-clearing
+    .app
+      slot(name="head")
+      slot(name="jctz")
+      slot(name="ldc")
+      slot(name="foot")
+
+block script
+  script(src="scripts/jquery-3.1.1.min.js")
+  script(src="scripts/bootstrap.min.js")
+  //- script(src="scripts/_vue.js")
+  script(src="scripts/vue.min.js")
+  //- script(src="scripts/element-ui.js")
+  script.
+    Vue.component('com-clearing', {
+      template: '#tem-clearing'
+    });
+
+    var clearvm = new Vue({
+      el: '#clearing',
+      //- data: function(){
+      //-   return { visible: false }
+      //- },
+      //- data: {
+      //-   flag: true,
+      //-   no: true,
+      //-   success: {
+      //-     cln: 'success',
+      //-     text: '达成'
+      //-   },
+      //-   fail: {
+      //-     cln: 'fail',
+      //-     text: '未达成'
+      //-   }
+      //- },
+      mounted: function(){
+        this.init();
+      },
+      methods: {
+        init: function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        }
+      }
+    });

@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 html {
   background: black;
 }
@@ -537,7 +532,7 @@ html {
   top: 73px;
   left: 35px;
   width: 180px;
-  height: 120px;
+  height: 155px;
 }
 
 .box .left_menu ul {
@@ -617,7 +612,7 @@ html {
 
 .box .type_select {
   position: absolute;
-  top: 215px;
+  top: 245px;
   left: 35px;
   width: 180px;
   height: 32px;
@@ -625,7 +620,7 @@ html {
 }
 
 .box .type_select#city {
-  top: 265px;
+  top: 290px;
 }
 
 .box .type_select:before {
@@ -984,7 +979,7 @@ html {
   cursor: pointer;
 }
 
-.box .content_box > ul > li > a:hover {
+.box .content_box > ul > li:hover > a {
   box-shadow: inset 0px 0px 5px 0px #d39818;
 }
 
@@ -1044,6 +1039,53 @@ html {
   background-position: 0px 0px;
 }
 
+.box .content_box > ul > li .btn_box .btn_download {
+  width: 150px;
+  background: url(../../images/single/btn_download.png);
+}
+
+.box .content_box > ul > li .btn_box .btn_download:hover {
+  background-position: 0px -30px;
+}
+
+.box .content_box > ul > li .btn_box .btn_download:hover:before, .box .content_box > ul > li .btn_box .btn_download:hover:after {
+  display: block;
+}
+
+.box .content_box > ul > li .btn_box .btn_download:active {
+  background-position: 0px -60px;
+}
+
+.box .content_box > ul > li .btn_box .btn_download:before {
+  display: none;
+  content: "";
+  z-index: 20;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  width: 148px;
+  height: 148px;
+  border: 1px solid #67501f;
+  color: #c8a451;
+  background: #100403;
+}
+
+.box .content_box > ul > li .btn_box .btn_download:after {
+  display: none;
+  content: "";
+  z-index: 20;
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  width: 148px;
+  height: 148px;
+  border: 1px solid #67501f;
+  color: #c8a451;
+  background: url(../../images/single/app_img.png) no-repeat;
+  background-size: 140px 140px;
+  background-position: 4px 4px;
+}
+
 .box .content_box > ul > li .btn_box .btn_list {
   background: url(../../images/single/btn3.png);
 }
@@ -1090,6 +1132,14 @@ html {
 
 .box .content_box > ul > li.lol .title:after {
   background: url(../../images/pics/lol_logo.png);
+}
+
+.box .content_box > ul > li.wz {
+  background: url(../../images/single/wz_bg.png);
+}
+
+.box .content_box > ul > li.wz .title:after {
+  background: url(../../images/pics/wzry_logo.png);
 }
 
 .box .content_box > ul > li.meng3 {

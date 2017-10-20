@@ -517,7 +517,11 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 				var t = this;
 				if (t.flag.notBtn) return;
 				this.do_challengeValidate(this.now_obj.now_gameList,function() {
-					t.flag.apply = true;
+					if(ClientAPI.isProccessExist(Proccess.LOL)) {
+						t.showAlert("友情提示", "您已在游戏中，不可报名");
+					} else {
+						t.flag.apply = true;
+					}
 				})
 			},
 			getPayWay: function () {

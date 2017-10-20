@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 html {
   background: black;
 }
@@ -526,6 +521,10 @@ html {
 
 .box.lol #game_bg {
   background: url(../../images/detail/detail_lol.webp);
+}
+
+.box.wz #game_bg {
+  background: url(../../images/detail/wz_bg.webp);
 }
 
 .box.meng3 #game_title {
@@ -956,6 +955,10 @@ html {
 .box .rules_box .rules_left > p {
   font-size: 12px;
   color: #9b9788;
+}
+
+.box .rules_box .rules_left > p span {
+  color: #ffb100;
 }
 
 .box .rules_box .rules_left > p.padding {
@@ -1399,6 +1402,34 @@ html {
   padding-left: 5px;
   display: inline-block;
   vertical-align: middle;
+}
+
+.box .list_box.wz > ul.title li:nth-child(1), .box .list_box.wz > .subTitle ul li:nth-child(1), .box .list_box.wz > .list_middle ul li:nth-child(1), .box .list_box.wz > .my li:nth-child(1) {
+  width: 5%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(2), .box .list_box.wz > .subTitle ul li:nth-child(2), .box .list_box.wz > .list_middle ul li:nth-child(2), .box .list_box.wz > .my li:nth-child(2) {
+  width: 20%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(3), .box .list_box.wz > .subTitle ul li:nth-child(3), .box .list_box.wz > .list_middle ul li:nth-child(3), .box .list_box.wz > .my li:nth-child(3) {
+  width: 15%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(4), .box .list_box.wz > .subTitle ul li:nth-child(4), .box .list_box.wz > .list_middle ul li:nth-child(4), .box .list_box.wz > .my li:nth-child(4) {
+  width: 15%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(5), .box .list_box.wz > .subTitle ul li:nth-child(5), .box .list_box.wz > .list_middle ul li:nth-child(5), .box .list_box.wz > .my li:nth-child(5) {
+  width: 15%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(6), .box .list_box.wz > .subTitle ul li:nth-child(6), .box .list_box.wz > .list_middle ul li:nth-child(6), .box .list_box.wz > .my li:nth-child(6) {
+  width: 20%;
+}
+
+.box .list_box.wz > ul.title li:nth-child(7), .box .list_box.wz > .subTitle ul li:nth-child(7), .box .list_box.wz > .list_middle ul li:nth-child(7), .box .list_box.wz > .my li:nth-child(7) {
+  width: 10%;
 }
 
 .box .alert_box {

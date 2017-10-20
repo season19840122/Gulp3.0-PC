@@ -4,6 +4,8 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync').create(),
   $ = require('gulp-load-plugins')(),
   postcss = require('gulp-postcss'),
+  sourcemaps = require('gulp-sourcemaps'),
+  autoprefixer = require('autoprefixer'),
   px2rem = require('postcss-px2rem'),
   imageResize = require('gulp-image-resize');
 
@@ -50,16 +52,17 @@ gulp.task('less', function() {
     ])
     .pipe($.plumber())
     .pipe($.less())
+    .pipe(postcss([ autoprefixer() ]))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('m-less', function() {
-  var processors = [px2rem({remUnit: 75})];
+  var processors = px2rem({ remUnit: 75 });
   return gulp.src('app/styles/m-*.less')
     .pipe($.plumber())
     .pipe($.less())
-    .pipe(postcss(processors))
+    .pipe(postcss([ processors, autoprefixer() ]))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
@@ -72,36 +75,39 @@ gulp.task('sass', function() {
     ])  
     .pipe($.plumber())
     .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
+    // .pipe(sourcemaps.init())
+    .pipe(postcss([ autoprefixer() ]))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
 
-//module-sass
-gulp.task('module-sass', function() {
-    gulp.src('./app/module/*/*.scss',function(err,files) {
-        err && console.log("module-sass ERROR: "+err);
-        files.map(function (entry) {
-            var destUrl = entry.substring(0,entry.lastIndexOf('/'));
-            return gulp.src(entry)
-                .pipe($.plumber())
-						    .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
-						    .pipe(gulp.dest(destUrl))
-						    .pipe(browserSync.stream());
-        })
-    })
-});
-
-
 gulp.task('m-sass', function() {
-	var processors = [px2rem({remUnit: 75})];
+	var processors = px2rem({ remUnit: 75 });
   return gulp.src([
       'app/styles/m-*.scss'
     ])
     .pipe($.plumber())
     .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
-		.pipe(postcss(processors))
+    .pipe(postcss([ processors, autoprefixer() ]))
+		// .pipe(postcss([  ]))
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
+});
+
+// module-sass
+gulp.task('module-sass', function() {
+  gulp.src('./app/module/*/*.scss',function(err,files) {
+    err && console.log("module-sass ERROR: "+err);
+    files.map(function (entry) {
+      var destUrl = entry.substring(0,entry.lastIndexOf('/'));
+      return gulp.src(entry)
+        .pipe($.plumber())
+        .pipe($.sass({outputStyle: 'expanded'}).on('error', $.sass.logError))
+        .pipe(gulp.dest(destUrl))
+        .pipe(browserSync.stream());
+    })
+  })
 });
 
 // es6+ 转为 es5
@@ -287,30 +293,6 @@ gulp.task('csso', ['copy', 'extra'], function () {
 gulp.task('cleantmp', require('del').bind(null, ['.tmp']));
 gulp.task('clean', require('del').bind(null, ['dist']));
 
-
-// 启动服务监听module
-gulp.task('module-serve', ['module-sass'], function(){
-  var port = Math.floor(Math.random()*10000);
-  port = (port>1024? port: Math.floor(Math.random()*10000));
-  // 固定端口 3000
-  port = 3333;
-  browserSync.init({
-    server: {
-      baseDir: './app'
-      ,directory: true
-    },
-    port: port,
-    ui: {
-      port: port + 1
-    }
-  });
-
-  gulp.watch('./app/module/*/*.scss', ['module-sass']);
-  gulp.watch('./app/style/*.scss', ['sass']);
-  gulp.watch(['./app/module/*/*.js','./app/module/*/*.html'])
-  .on('change', browserSync.reload);
-});
-
 // 启一个 Browser-sync 服务器并监听文件改动
 gulp.task('serve', ['sass', 'm-sass', 'script', 'pug', 'html'], function(){
   var port = Math.floor(Math.random()*10000);
@@ -336,6 +318,29 @@ gulp.task('serve', ['sass', 'm-sass', 'script', 'pug', 'html'], function(){
     'app/images/**',
     'app/mock/**'
   ]).on('change', browserSync.reload);
+});
+
+// 启动服务监听 module
+gulp.task('module-serve', ['module-sass'], function(){
+  var port = Math.floor(Math.random()*10000);
+  port = (port>1024? port: Math.floor(Math.random()*10000));
+  // 固定端口 3000
+  port = 3333;
+  browserSync.init({
+    server: {
+      baseDir: './app'
+      ,directory: true
+    },
+    port: port,
+    ui: {
+      port: port + 1
+    }
+  });
+
+  gulp.watch('./app/module/*/*.scss', ['module-sass']);
+  gulp.watch('./app/style/*.scss', ['sass']);
+  gulp.watch(['./app/module/*/*.js','./app/module/*/*.html'])
+  .on('change', browserSync.reload);
 });
 
 // 生产环境

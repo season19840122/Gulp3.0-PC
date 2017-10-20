@@ -42,9 +42,17 @@
 		},
 		showMainFramePage:function(page,url) {
 			console.log('page: '+page+'--url: '+url);
+		},
+		isProccessExist:function(id) {
+			return false;
+		},
+		setBeanGift:function(userId, vcParamJson) {
+			console.log(userId+'----'+vcParamJson);
 		}
 	}
-	
+	var Proccess = {
+		LOL:111
+	}
 	var ClientPage = {
 		Iss :'url-Iss',
 		TeamsLeague:'url-TeamsLeague'

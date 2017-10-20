@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>lol升窗</title>
+		<link rel="stylesheet" type="text/css" href="lol_sc.css"/>
+		<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css"/>
+	</head>
+	<body>
+		<div class="alert_box">
+			<i></i>
+			
+			<!-- 上部分开始  -->
+			<div class="top">
+			   <ul>
+					<li class="yes">
+						<span>获得胜利：</span>
+						<span>达成</span>
+					</li>
+					<li class="no">
+						<span>击杀8人：</span>
+						<span>未达成</span>
+					</li>
+					<li class="no">
+						<span>乱斗场：</span>
+						<span>未达成</span>
+					</li>
+			   </ul>
+			   <p>（乱斗场按规则整点结算）</p>
+			</div>
+			
+			<!--<div class="top single">
+			   <ul>
+					<li class="yes">
+						<span>-获得胜利：</span>
+						<span>达成</span>
+					</li>
+			   </ul>
+			</div>-->
+			
+			<!-- 上部分结束 -->
+			
+			<!-- 中部分开始 -->
+			<div class="middle">
+				<!--<div class="dq_box hide_">
+					<img src="../../images/meng3/m3_dq.jpg"/>
+					<p>有<span>999</span>通过火马APP为您本局打气，您为他们赢得了1024顺豆</p>
+					<h3>返回</h3>
+				</div>-->
+				<div class="dq_box hide_">
+					<h1>当前等级 LV30</h1>
+					<h2>经验 :1200 / 6000</h2>
+					<h3>返回</h3>
+				</div>
+				
+				
+				
+				
+				
+				<!--<div class="sd_box">
+					<span>5000</span>
+					<i class="tip"></i>
+					<i class="tip_have"></i>
+				</div>-->
+				
+				<div class="sd_box">
+					<p>精彩挑战失败，别气馁再来一局地方地方大幅度分</p>
+					<i class="gift"></i>
+					<!--<i class="gift_have"></i>-->
+				</div>
+			</div>
+			<!-- 中部分结束 -->
+			
+			<!-- 下部分开始-->
+			<div class="bottom">
+				<h1>
+					<span>我的顺豆：10000</span>
+					<span class="iconfont icon-topjian"></span>
+				</h1>
+				<a>兑换礼物</a>
+			</div>
+			<!-- 下部分结束 -->
+			
+			<!-- 广告开始 -->
+			<a class="ad_box">
+				<img src=""/>
+			</a>
+			<!-- 广告结束 -->
+			
+		</div> 
+	</body>
+	<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			$(function() {
+				$('.dq_box h3').on('click',function() {
+					$('.dq_box').hide();
+					$('.sd_box').show();
+				})
+				$('.sd_box i').on('click',function() {
+					$('.dq_box').show();
+					$('.sd_box').hide();
+				})
+				
+				
+				//关闭按钮
+				$('.alert_box i').on('click',function() {
+					
+				})
+				
+				//兑换礼物
+				$('.bottom a').on('click',function() {
+					
+				})
+				
+			})
+	</script>
+</html>

@@ -1,0 +1,55 @@
+@import '_base.scss';
+@import '_common.scss';
+
+/* 背景和内容分离写法 */
+$w: 1200px; $h: 660px;
+body {
+  background: #000;
+  font: 12px/1.5 'Microsoft YaHei', SimSun;
+  width: $w;
+  overflow: hidden;
+  @extend .mainScroll;
+}
+.bg_box {
+  min-width: $w;
+  height: $h;
+}
+.bg_box div {
+  width: 100%;
+}
+.bg_box i {
+  display: block;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  width: $w;
+  margin: 0 auto;
+}
+.bg1 {
+  background: url(../images/active/bg-wzry.jpg) no-repeat center 0;
+  height: 660px;
+}
+.wrap_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.wrap {
+  width: $w;
+  height: $h;
+  margin: 0 auto;
+  position: relative;
+}
+/* 背景和内容分离写法 end */
+
+.back {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 60px;
+  height: 20px;
+  color: #cccdce;
+  line-height: 20px;
+  text-align: center;
+}

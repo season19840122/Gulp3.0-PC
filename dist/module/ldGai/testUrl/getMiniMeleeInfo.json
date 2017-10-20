@@ -1,0 +1,28 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": {
+        "meleeMatchId": 189,
+        "meleeMatchTimesId": 999,
+        "ruleTitle": "击杀无双",
+        "ruleSubTitle": "全场击杀数总和为奇数",
+        "ruleDetail": "，全场击杀数=我方击杀数+敌方击杀数；",
+        "applySwBean": "1",
+        "applyMoney": "1.0",
+        "gameTypeRemark": "英雄联盟限匹配赛",
+        "state": 1,
+        "hasSucc": false,
+        "hasUserApply": false,
+        "hasUserGameFinished": false,
+        "hasUserCalculated": false,
+        "hasUserAchieved": false,
+        "allowTeamState": 1,
+        "limitEachCnt": 3,
+        "limitGroups": [
+            1,
+            2,
+            3
+        ]
+    }
+}

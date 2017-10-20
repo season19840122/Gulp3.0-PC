@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="UTF-8">
+		<title>ewg</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="ewg.css" />
+	</head>
+	<body>
+		<div class="box">
+			<a class="go_back">返回</a>
+			<div class="box_banner">
+				<ul>
+					<li class="tip">
+						<span>EWG介绍</span>
+						<div class="tip_content">
+							<p>EWG女子电竞运动会是专门为女子量身搭建的一个国际性赛事平台，</p>
+							<p>是目前亚洲规模最大、参赛人数最多、赛事水平最高的专业性女子电</p>
+							<p>竞赛事，赛事覆盖全国多个地区和城市；协助阿里体育做好WESG中</p>
+							<p>国区女子选拔赛的相关事宜，打造世界顶尖女子赛事平台。</p>
+						</div>
+					</li>
+					<li><a href="index.html"><span>线上报名</span></a></li>
+					<li><a href="八强.html"><span>八强赛</span></a></li>
+					<li class="now"><span>入围战队</span></li>
+					<li class="lock"><span>线下赛程</span></li>
+				</ul>
+			</div>
+			
+			<div class="box_content">
+				<div class="title8">
+					<span>火马赛事直播间LIVE</span>
+				</div>
+				<div class="left_box">
+					<img src="../../images/ewg/left_girls.png"/>
+					<p>YWG俱乐部位于浙江省义乌市，作为新兴成立的女子战队，战队选手们环抱着各自的电竞梦想共同为冠军而战，她们在EWG电竞运动会上有怎样的表现，让我们共同期待。</p>
+				</div>
+				<div class="right_box">
+					<img src="../../images/ewg/right_girls.png"/>
+					<p>GHG女子电竞战队成立于2017年5月，由甜美可爱的六个女孩子组成，她们都热爱电竞，有着共同电竞梦想，希望她们的热爱能让他们快乐地参与比赛，并取得好成绩。</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.go_back').on('click',function() {
+				ClientAPI.showMainFramePage(ClientPage.Iss);
+			})
+			
+			$('.tip, .tip_content').hover(function() {
+				$('.tip_content').show();
+			}, function() {
+				$('.tip_content').hide();
+			})
+		})
+	</script>
+</html>

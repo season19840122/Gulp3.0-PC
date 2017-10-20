@@ -1,0 +1,107 @@
+@import '_base.scss';
+@import '_common.scss';
+
+/* 背景和内容分离写法 */
+$w: 1200px; $h: 2509px;
+body {
+  background: #000;
+  font: 12px/1.5 'Microsoft YaHei', SimSun;
+  width: $w;
+  overflow-x: hidden;
+  @extend .mainScroll;
+}
+.bg_box {
+  min-width: $w;
+  height: $h;
+}
+.bg_box div {
+  width: 100%;
+}
+.bg_box i {
+  display: block;
+  height: 1px;
+  font-size: 0;
+  line-height: 0;
+  width: $w;
+  margin: 0 auto;
+}
+.bg1 {
+  background: url(../images/active/bg-01.jpg) no-repeat center 0;
+  height: 600px;
+}
+.bg2 {
+  background: url(../images/active/bg-02.jpg) no-repeat center 0;
+  height: 446px;
+}
+.bg3 {
+  background: url(../images/active/bg-03.jpg) no-repeat center 0;
+  height: 475px;
+}
+.bg4 {
+  background: url(../images/active/bg-04.jpg) no-repeat center 0;
+  height: 462px;
+}
+.bg5 {
+  background: url(../images/active/bg-05.jpg) no-repeat center 0;
+  height: 526px;
+}
+.wrap_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.wrap {
+  width: $w;
+  height: $h;
+  margin: 0 auto;
+  position: relative;
+}
+/* 背景和内容分离写法 end */
+
+.back {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  width: 60px;
+  height: 20px;
+  color: #cccdce;
+  line-height: 20px;
+  text-align: center;
+}
+.anchors-wrap {
+  position: fixed;
+  left: 33px;
+  top: 85px;
+  background: url(../images/active/a-bg.png) no-repeat;
+  width: 140px;
+  height: 370px;
+  .a1, .a2, .a3, .a4 {
+    position: absolute;
+    left: 0;
+    top: 75px;
+    width: 140px;
+    height: 70px;
+    &.sel {
+      background: url(../images/active/a-sel.png) no-repeat;
+      &:hover, &:active {
+        background: url(../images/active/a-sel.png) no-repeat;
+      }
+    }
+    &:hover {
+      background: url(../images/active/a-hover.png) no-repeat;
+    }
+    &:active {
+      background: url(../images/active/a-active.png) no-repeat;
+    }
+  }
+  .a2 {
+    top: 144px;
+  }
+  .a3 {
+    top: 213px;
+  }
+  .a4 {
+    top: 282px;
+  }
+}

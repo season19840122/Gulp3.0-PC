@@ -1,5 +1,5 @@
-@import '../../styles/base.scss';
-@import '../../styles/common.scss';
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
 
 .box1 {
     color: #576970;
@@ -53,7 +53,7 @@
 .box2 {
     color: #576970;
     font-family: "微软雅黑";
-    @include abTopLeft(406px, 253px, 0px, 0px);
+    @include abTopLeft(306px, 233px, 0px, 0px);
     position: relative;
     background: black;
     border-top: 0;
@@ -62,6 +62,6 @@
     border-bottom: 3px solid black;
     text-align: center;
     img{
-        @include abBottomLeft(400px, 250px, 0px, 0px);
+        @include abBottomLeft(300px, 230px, 0px, 0px);
     }
 }

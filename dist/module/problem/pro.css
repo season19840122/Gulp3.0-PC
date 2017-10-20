@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 .box {
   font-family: "微软雅黑";
   position: absolute;
@@ -616,6 +611,46 @@ h2, li, a, div {
   position: relative;
   font-size: 12px;
   margin-bottom: 15px;
+}
+
+.box .question_left .service1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 170px;
+  height: 70px;
+  cursor: pointer;
+  background: url(../../images/pro/btn-service.png) no-repeat;
+}
+
+.box .question_left .service1:hover {
+  background-position: 0 -70px;
+}
+
+.box .question_left .service1:active {
+  background-position: 0 -140px;
+}
+
+.box .question_left .service1 h3 {
+  font-size: 16px;
+  line-height: 30px;
+  padding-left: 20px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 171px;
+  height: 30px;
+  position: relative;
+  color: #f0e6d2;
+  margin-bottom: 10px;
+}
+
+.box .question_left .service1 p {
+  position: relative;
+  color: #4d6b7e;
+  padding-left: 20px;
+  font-size: 12px;
 }
 
 .box .smallScroll::-webkit-scrollbar {

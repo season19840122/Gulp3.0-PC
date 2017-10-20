@@ -1,0 +1,769 @@
+@charset "UTF-8";
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, progress, video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active, a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+pre {
+  overflow: auto;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+button {
+  overflow: visible;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input {
+  line-height: normal;
+}
+
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+}
+
+optgroup {
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td, th {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+*:focus, *:active, a:active, a:focus, input:focus, input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+}
+
+/*-- 文字排版 --*/
+.fb {
+  font-weight: bold;
+}
+
+.fn {
+  font-weight: normal;
+}
+
+.unl {
+  text-decoration: underline;
+}
+
+.no-unl {
+  text-decoration: none;
+}
+
+.ti {
+  text-indent: -9999px;
+}
+
+.eps, .box #clearing .app .jctz .info-wrap > p span {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.w {
+  width: 100%;
+}
+
+.h {
+  height: 100%;
+}
+
+/*-- 定位 --*/
+.tl {
+  text-align: left;
+}
+
+.tc {
+  text-align: center;
+}
+
+.tr {
+  text-align: right;
+}
+
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.fl {
+  float: left;
+  display: inline;
+}
+
+.fr {
+  float: right;
+  display: inline;
+}
+
+.cb {
+  clear: both;
+}
+
+.cl {
+  clear: left;
+}
+
+.cr {
+  clear: right;
+}
+
+.cf:before, .cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.vm {
+  vertical-align: middle;
+}
+
+.pr {
+  position: relative;
+}
+
+.pa {
+  position: absolute;
+}
+
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+
+.zoom {
+  zoom: 1;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active {
+  -moz-outline-style: none;
+  outline: none;
+  outline: 0;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+.box {
+  overflow: hidden;
+}
+
+body {
+  font: 12px/1.5 'microsoft yahei';
+}
+
+.button-sure, .button-no {
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  background: #c49f58;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+.button-no {
+  color: #271708;
+  background: #c49f58;
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background: linear-gradient(to bottom, #c49f58, #c49f58);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
+}
+
+/*下拉列表*/
+.drop-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+
+.drop-select ul {
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #212a36;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+}
+
+.drop-select ul li {
+  height: 24px;
+  line-height: 24px;
+  text-indent: 10px;
+}
+
+.drop-select ul li a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.drop-select ul li a:hover {
+  background: #1d232a;
+}
+
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #000;
+}
+
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px #2d3a48;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #33383e;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+
+/* 列表自定义 webkit 滚动条 */
+.smallScroll::-webkit-scrollbar {
+  width: 6px;
+  height: 66px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+}
+
+.smallScroll::-webkit-scrollbar-track {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: none;
+}
+
+.smallScroll::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  background: #785a28;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:hover {
+  background: #c8aa6e;
+}
+
+.smallScroll::-webkit-scrollbar-thumb:active {
+  background: #463714;
+}
+
+/** 线性渐变 **/
+[v-cloak] {
+  display: none;
+}
+
+.box {
+  color: #9d9d9d;
+  font: 12px/1.5 'Microsoft YaHei';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  overflow: hidden;
+  /* height: $h;*/
+  border: 1px solid  #000;
+}
+
+.box #clearing {
+  content: '';
+  border: 1px solid  #113743;
+  width: 298px;
+  /* height: $h - 2;*/
+  overflow: hidden;
+}
+
+.box #clearing .app {
+  width: 296px;
+  margin: 0 auto;
+  background: #0c222c;
+  position: relative;
+}
+
+.box #clearing .app .head {
+  width: 100%;
+  height: 106px;
+  background: url(../images/clearing/head.png) no-repeat;
+}
+
+.box #clearing .app .head .btn-close {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 15px;
+  height: 15px;
+  background: url(../images/clearing/sprite-clearing.png) no-repeat -4px -100px;
+}
+
+.box #clearing .app .head .btn-close:hover {
+  background-position: -4px -124px;
+}
+
+.box #clearing .app .head .btn-close:active {
+  background-position: -5px -149px;
+}
+
+.box #clearing .app .head .mybean-wrap {
+  padding-top: 55px;
+}
+
+.box #clearing .app .head .mybean-wrap .mybean {
+  background: #071822;
+  width: 264px;
+  height: 45px;
+  line-height: 45px;
+  margin: 0 auto;
+  font-size: 14px;
+  padding-left: 12px;
+  color: #fff;
+  position: relative;
+}
+
+.box #clearing .app .head .mybean-wrap .mybean i {
+  color: #00ff5a;
+}
+
+.box #clearing .app .head .mybean-wrap .mybean .btn-exchange {
+  font-size: 14px;
+  line-height: 32px;
+  text-align: center;
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 94px;
+  height: 32px;
+  background: url(../images/clearing/sprite-clearing.png) no-repeat;
+}
+
+.box #clearing .app .head .mybean-wrap .mybean .btn-exchange:hover {
+  background-position: 0 -32px;
+}
+
+.box #clearing .app .head .mybean-wrap .mybean .btn-exchange:active {
+  background-position: 0 -64px;
+}
+
+.box #clearing .app .jctz {
+  width: 100%;
+  height: 92px;
+  padding: 0 17px;
+}
+
+.box #clearing .app .jctz .title {
+  color: #184857;
+  font-size: 14px;
+  line-height: 32px;
+  font-weight: bold;
+}
+
+.box #clearing .app .jctz .info-wrap {
+  width: 264px;
+  height: 58px;
+  background: #0b1d25;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.box #clearing .app .jctz .info-wrap.no {
+  -webkit-box-pack: start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.box #clearing .app .jctz .info-wrap.no p {
+  color: #ba9d5e;
+  margin-left: 15px;
+}
+
+.box #clearing .app .jctz .info-wrap > p {
+  position: relative;
+  color: #fff;
+  margin-left: 12px;
+}
+
+.box #clearing .app .jctz .info-wrap > p.w1 {
+  width: 60px;
+  -ms-flex-preferred-size: 60px;
+  flex-basis: 60px;
+}
+
+.box #clearing .app .jctz .info-wrap > p span {
+  width: 66px;
+  display: inline-block;
+}
+
+.box #clearing .app .jctz .info-wrap > p .success {
+  color: #c4f250;
+}
+
+.box #clearing .app .jctz .info-wrap > p .fail {
+  color: #174452;
+}
+
+.box #clearing .app .jctz .info-wrap > p .t {
+  width: 120px;
+}
+
+.box #clearing .app .jctz .info-wrap > p .tips {
+  line-height: 18px;
+}
+
+.box #clearing .app .jctz .info-wrap > p .big {
+  width: auto;
+  display: block;
+  font-size: 22px;
+}
+
+.box #clearing .app .jctz .info-wrap > p .wa {
+  width: auto;
+}
+
+.box #clearing .app .jctz .info-wrap > p .dou, .box #clearing .app .jctz .info-wrap > p .quan {
+  vertical-align: bottom;
+  margin-left: 2px;
+  display: inline-block;
+  width: 23px;
+  height: 22px;
+  background: url(../images/clearing/sprite-clearing.png) no-repeat 0 -183px;
+}
+
+.box #clearing .app .jctz .info-wrap > p .quan {
+  background-position: 0 -213px;
+}
+
+.box #clearing .app .jctz .info-wrap > p .dq-tips {
+  font-size: 12px;
+  color: #000;
+  text-decoration: underline;
+  background: #fff;
+  display: inline-block;
+  padding: 1px 3px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(0, -100%);
+     -moz-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+
+.box #clearing .app .jctz .info-wrap > p .dq-tips::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+}
+
+.box #clearing .app .foot {
+  width: 100%;
+  height: 70px;
+  padding: 8px 17px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.box #clearing .app .foot .title {
+  font-size: 12px;
+  color: #e0760f;
+  background: #2d2f2b;
+  border: 1px solid  #815228;
+  width: 30px;
+  height: 18px;
+  line-height: 16px;
+  text-align: center;
+  display: inline-block;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: 15px;
+}
+
+.box #clearing .app .foot .link {
+  vertical-align: top;
+  display: inline-block;
+  width: 205px;
+  color: #9fa2ac;
+  margin-left: 12px;
+}
+
+.box #clearing .app .foot .link:hover {
+  color: #fff;
+  text-decoration: underline;
+}

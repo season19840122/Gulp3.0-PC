@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "code": 0,
+    "message": "获取按钮状态",
+    "data": {
+    	"sate":10002,
+    	"btnText":"抽吧"
+    }
+}

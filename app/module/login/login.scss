@@ -1,5 +1,5 @@
-@import '../../styles/base.scss';
-@import '../../styles/common.scss';
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
 .hide_ {
     display: none;
 }
@@ -375,6 +375,9 @@
             text-align: center;
             text-decoration: underline;
             cursor: pointer;
+            &:hover{
+                color: #fff9dc;
+            }
         }
     }
     .fast_hm {
@@ -582,6 +585,9 @@
                 text-align: center;
                 text-decoration: underline;
                 cursor: pointer;
+                &:hover{
+                    color: #fff9dc;
+                }
             }
         }
         #wechat {
@@ -638,6 +644,9 @@
                 text-align: center;
                 text-decoration: underline;
                 cursor: pointer;
+                &:hover{
+                    color: #fff9dc;
+                }
             }
         }
     }

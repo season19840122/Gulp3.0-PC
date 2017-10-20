@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 [v-cloak] {
   display: none !important;
 }
@@ -580,7 +575,7 @@ h2, li, a, div {
   width: 28px;
   height: 17px;
   margin-left: -14px;
-  background: url("../../images/ewg/tel_tip.png");
+  background: url("../../images/ewg/tip.png");
 }
 
 .box .box_banner ul li.lock {
@@ -1077,17 +1072,25 @@ h2, li, a, div {
   top: 215px;
   left: 50%;
   width: 1154px;
-  height: 61px;
+  height: 66px;
   margin-left: -577px;
   text-align: center;
-  background: url(../../images/ewg/8title.png);
+  background: url(../../images/ewg/btn3.png);
+}
+
+.box .box_content > .title8:hover {
+  background-position-y: -66px;
+}
+
+.box .box_content > .title8:active {
+  background-position-y: -132px;
 }
 
 .box .box_content > .title8 span {
   display: inline-block;
   height: 40px;
   width: 170px;
-  margin-top: 22px;
+  margin-top: 27px;
   line-height: 38px;
   font-size: 12px;
   color: #FFFFFF;
@@ -1361,6 +1364,34 @@ h2, li, a, div {
 .box .box_content #game_line .count_back span {
   display: inline-block;
   width: 30px;
+}
+
+.box .box_content .left_box {
+  position: absolute;
+  top: 320px;
+  left: 72px;
+  width: 490px;
+  height: 208px;
+}
+
+.box .box_content .left_box p {
+  font-size: 12px;
+  color: #6c7d81;
+  margin-top: 18px;
+}
+
+.box .box_content .right_box {
+  position: absolute;
+  top: 320px;
+  right: 72px;
+  width: 505px;
+  height: 207px;
+}
+
+.box .box_content .right_box p {
+  font-size: 12px;
+  color: #6c7d81;
+  margin-top: 18px;
 }
 
 .box .provinceSchool {

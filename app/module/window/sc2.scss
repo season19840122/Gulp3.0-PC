@@ -1,0 +1,177 @@
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
+.hide_ {
+    display: none;
+}
+//body{overflow: hidden;}
+//html{overflow: hidden;padding: 0px;margin: 0px;}
+
+.state {
+    width: 340px;
+    height: 189px;
+    position: relative;
+    background: #0B0C10;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    overflow: hidden;
+    color: #E8B664;
+    border: 0;
+    border-top:1px solid #111111; 
+    padding:80px 20px;
+    &.success {
+        span:first-child:before {
+            @include iconfont;
+            display: inline-block;
+                vertical-align: middle;
+            content: "\e666";
+            font-size: 28px;
+        }
+    }
+    &.error {
+        span:first-child:before {
+            @include iconfont;
+            content: "\e640";
+            display: inline-block;
+                vertical-align: middle;
+            font-size: 28px;
+        }
+    }
+    span {
+        text-align: left;
+        line-height: 20px;
+    }
+    
+}
+
+.user_switch2{
+    @include alertMsg(340px,189px);
+    overflow: hidden;
+    padding: 5px 40px 30px 12px;
+    border: 0;
+    border-top:1px solid #111111; 
+    &:before {
+        display: none;
+        height: 520px;
+        bottom: 2px;
+        top: auto;
+        border-top: 0;
+    }
+    &:after {
+        display: none;
+        height: 520px;
+        top: auto;
+        bottom: 3px;
+        border-top: 0;
+    }
+    h1{
+        color: #E8B664;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 0px;
+        border: 0;
+        &:before{
+            @include iconfont;
+            font-size: 35px;
+            vertical-align: middle;
+            display: inline-block;
+            margin-right: 5px;
+        }
+        &.success:before{
+            content: "\e666";
+        }
+        &.fail:before{
+            content: "\e640";
+        }
+    }
+    h2{
+        font-size: 12px;
+        color: #8d7652;
+        margin-top: 5px;
+        span{
+            color: #e0a119;
+        }
+        strong{
+            font-weight: normal !important;
+            color: #e83131;
+        }
+    }
+    h3{
+        font-size: 12px;
+        margin-top: 5px;
+        color: #e0a119;
+    }
+    .account_list{
+        @include abTopLeft(340px,127px,62px,0px);
+        p{
+            position: relative;
+            text-align: center;
+            margin-bottom: 5px;
+            color: #d6a95e;
+            span{
+                color: #8d7652;
+            }
+            a{
+                color: #d6a95e;
+            }
+        }
+        ul {
+            z-index: 10;
+            position: relative;
+            text-align: center;
+            width: 100%;
+            li {
+                display: inline-block;
+                width: 100px;
+                height: 71px;
+                text-align: center;
+                position: relative;
+                &:hover {
+                    a {
+                        box-shadow: 0px 0px 0px 2px #d3c78b;
+                    }
+                    p {
+                        color: #e7da98;
+                    }
+                }
+                p {
+                    position: relative;
+                    margin: 0 auto;
+                    top: 10px;
+                    width: 90px;
+                    color: #916915;
+                    text-align: center;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                #login_container_mini {
+                    margin: 0 auto;
+                    position: relative;
+                    width: 90px;
+                    height: 90px;
+                    iframe {
+                        width: 90px;
+                        height: 90px;
+                        margin: 0px;
+                    }
+                }
+                a {
+                    margin: 0 auto;
+                    display: block;
+                    position: relative;
+                    width: 71px;
+                    height: 71px;
+                    box-shadow: 0px 0px 0px 2px #916915;
+                }
+                img {
+                    width: 71px;
+                    height: 71px;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,379 @@
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
+html {
+    background: black;
+}
+.box {
+    overflow: hidden;
+    color: #9d9d9d;
+    font-family: "微软雅黑";
+    @include abTopLeft(1200px, 660px, 0px, 0px);
+    @include bg('../../images/my/vip_bg.webp');
+    .alert_bg {
+        display: none;
+        @include abTopLeft(1200px,
+        660px,
+        0px,
+        0);
+        background: rgba(0, 0, 0, 0.6);
+    }
+    .hide_{display: none;}
+    .left_box{
+        @include abTopLeft(550px, 170px, 76px, 0px);
+        .login_box{
+            @include abTopLeft(151px, 150px, 0px, 33px);
+            &:before{
+                content: "";
+                @include abTopLeft(151px, 150px, 0px, 0px);
+                background: url(../../images/my/huan.png) no-repeat;
+                z-index: 20;
+            }
+            &:after{
+                content: "";
+                @include abTopLeft(140px, 140px, 5px, 5px);
+                background: #0b0905;
+                border-radius: 100px;
+                z-index: 10;
+            }
+            h2{
+                @include abTopLeft(100%, 20px, 115px, 0px);
+                text-align: center;
+                font-size: 12px;
+                color: #cabc8e;
+                z-index: 30;
+                cursor: pointer;
+                span:hover{
+                    color: #FFFFFF;
+                }
+                ul{
+                    display: none;
+                    @include abTopLeft(800px, auto, -26px, 110px);
+                    border: 2px solid #785a28;
+                    padding: 10px;
+                    text-align: left;
+                    font-size: 12px;
+                    z-index: 10;
+                    background: #010a13;
+                    li{
+                        color: #8d897d;
+                        margin-bottom: 8px;
+                        line-height: 17px;
+                        &:first-child{
+                            color: #ca9b54;
+                        }
+                    }
+                    &:before{
+                      content: "";
+                      position: absolute;
+                      top: 23px;
+                      left: -17px;
+                      width: 0px;
+                      height: 0px;
+                      border: 8px solid;
+                      border-color: transparent #785a28 transparent  transparent;
+                    }
+                    &:after{
+                      content: "";
+                      position: absolute;
+                      top: 23px;
+                      left: -14px;
+                      width: 0px;
+                      height: 0px;
+                      border: 8px solid;
+                      border-color: transparent #010a13 transparent  transparent;
+                    }
+                }
+            }
+            .ex_box{
+                @include abTopLeft(370px, 25px, 93px, 134px);
+                color: white;
+                font-weight: bold;
+                border: 2px solid #513f1c;
+                font-size: 12px;
+                &>p{
+                    background: #17dfd1;
+                    @include abTopLeft(0%, 21px, 0px, 0px);
+                    border: 1px solid #222525;
+                }
+                &>span{
+                    @include abTopRight(auto, 21px, 1px, 10px);
+                    color: #ffeed1;
+                }
+            }
+            .status_box{
+                z-index: 30;
+                @include abTopLeft(98px, 87px, 25px, 50%);
+                margin-left: -49px;
+                p{
+                    
+                }
+                &.login_on{
+                    background: url(../../images/my/logo.png) no-repeat;
+                    background-size: 98px 87px;
+                    p{
+                        @include abTopLeft(337px, 25px, 28px, 139px);
+                        font-size: 14px;
+                        @include dian;
+                        color: #ffeed1;
+                        font-weight: bold;
+                        span{color: #dd971e;}
+                    }
+                }
+                &.login_off{
+                    background: url(../../images/my/logo2.png) no-repeat;
+                    background-size: 98px 87px;
+                    a{
+                        @include abTopLeft(337px, 25px, 28px, 139px);
+                        font-size: 14px;
+                        @include dian;
+                        color: #ffeed1;
+                        font-weight: bold;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+                &.noVip{
+                    background: url(../../images/my/logo2.png) no-repeat;
+                    background-size: 98px 87px;
+                }
+            }
+        }
+    }
+    .right_box{
+        overflow: hidden;
+        @include abTopRight(605px, 178px, 80px, 0px);
+        text-align: left;
+        &>h1{
+            color: #ca9b54;
+            font-weight: bold;
+            font-size: 15px;
+            margin-bottom: 23px;
+        }
+        p{
+            margin-bottom: 2px;
+            color: #60533e;
+            font-size: 12px;
+            padding-left: 15px;
+            position: relative;
+            &:before{
+                content: "";
+                @include abTopLeft(5px, 5px, 7px, 4px);
+                background: #60533e;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        }
+    }
+    .bottom_box{
+        @include abTopLeft(100%, auto, 257px, 4px);
+        padding-left: 46px;
+        h1{
+            font-size: 15px;
+            font-weight: bold;
+            position: relative;
+            width: 360px;
+            color: #ca9b54;
+            &:before{
+                content: "";
+                @include abTopLeft(360px, 1px, 25px, 0px);
+                @include gradient(right ,#372e27,#1a1510);
+            }
+        }
+    }
+    .alert_box{
+        z-index: 100;
+        display: none;
+        font-size: 12px;
+        @include alert2(500px,400px);
+    }
+    .pay_error,.pay_success,#pay_error,#pay_success{
+        @include alert2(480px,340px);
+        display: none;
+        h1{
+            p{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                font-size: 12px;
+                color: #8d7652;
+                span{
+                    display: inline-block;
+                    color: #E0A119;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+        h2{
+            position: relative;
+            color: #8D7652;
+            height: 30px;
+            font-size: 12px;
+            p{display: inline-block;position:relative;text-align: left;height: 30px;}
+            p:first-child{float: left;}
+            p:last-child{float: right;}
+            p{
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                    @include iconfont;
+                    &.wechat:before{
+                        content: "\e632";
+                        color: #08cb13;
+                    }
+                    &.alipay:before{
+                        content: "\e641";
+                        color: #00aaec;
+                        margin-top: -5px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        h3{
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f4463d;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+        &>p{
+            text-align: center;
+            margin: 10px;
+            font-size: 12px;
+            span{color: #f4463d;}
+        }
+    }
+    .pay_success,#pay_success{
+        @include alert2(480px,350px);
+        &>p,h3{color: #c5f44c;}
+        h3{
+            margin-top: 0px;
+        }
+        .treasure_pic {
+            margin: 3px auto;
+            position: relative;
+            width: 100px;
+            height: 100px;
+            img{
+                width: 100px;
+                height: 100px;
+                z-index: 20;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+        }
+    }
+    .pay_box,#pay_box{
+        @include alert2(480px,340px);
+        display: none;
+         h1{
+            p{
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                font-size: 12px;
+                color: #8d7652;
+                span{
+                    display: inline-block;
+                    color: #E0A119;
+                    font-weight: bold;
+                    font-size: 20px;
+                }
+            }
+        }
+        .qrcode_box{
+            background: #121518;
+            position: absolute;
+            top: 105px;
+            width: 150px;
+            height: 180px;
+            padding: 9px;
+            margin-left: -73px;
+            left: 50%;
+            .alert_img_qrcode {
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: 146px;
+                height: 146px;
+                background: white;
+            }
+            .wechat_logo {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                bottom: 5px;
+                right: 25px;
+            }
+            .alipay_logo {
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                bottom: 5px;
+                right: 5px;
+            }
+            span {
+                position: absolute;
+                width: 100px;
+                font-size: 12px;
+                left: 11px;
+                bottom: 4px;
+                text-align: left;
+                color: #8d7652;
+            }
+        
+        }
+    }
+    .alert_msg{
+        @include alert2(500px,193px);
+        text-align: center;
+        h1{
+            color: #E8B664;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 0px;
+            border: 0;
+            &:before{
+                @include iconfont;
+                font-size: 35px;
+                vertical-align: middle;
+                display: inline-block;
+                margin-right: 5px;
+            }
+            &.success:before{
+                content: "\e666";
+            }
+            &.fail:before{
+                content: "\e640";
+            }
+        }
+        p{
+            color: #8d7652;
+            span{
+                color: #e0a119;
+            }
+        }
+    }
+}
+@keyframes show_ {
+    from {
+        opacity: 0.1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes show_ {
+    from {
+        -webkit-opacity: 0.1;
+    }
+    to {
+        -webkit-opacity: 1;
+    }
+}

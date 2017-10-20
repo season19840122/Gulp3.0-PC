@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 .box1 {
   color: #576970;
   font-family: "微软雅黑";
@@ -567,8 +562,8 @@ h2, li, a, div {
   position: absolute;
   top: 0px;
   left: 0px;
-  width: 406px;
-  height: 253px;
+  width: 306px;
+  height: 233px;
   position: relative;
   background: black;
   border-top: 0;
@@ -582,6 +577,6 @@ h2, li, a, div {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  width: 400px;
-  height: 250px;
+  width: 300px;
+  height: 230px;
 }

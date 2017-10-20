@@ -20,7 +20,6 @@
 			<li>solo赛</li>
 			<li class="hot">战队联赛</li>
 			<li>擂台赛</li>
-			<div @click="flush" class="flush"><span>刷新</span></div>
 		</ul>
 		<!-- 公用头部结束 -->
 
@@ -157,6 +156,130 @@
 			</div>
 		</div>
 		<!-- 赛事结束 -->
+		
+		<!-- 用户激励 -->
+		<div class="stimulate">
+			<div class="btn tip">
+				<p>日常任务</p>
+			</div>
+			<div class="content">
+				<h1>每日任务<span>规则</span></h1>
+				<div class="rules">
+					<p>1.在火马电竞平台参加精彩挑战、乱斗场、挑战赛活动可获得活跃值</p>
+					<p>2.每参加一次平台活动可获得10~20点活跃值（与报名费有关）</p>
+					<p>3.活跃值的增长会带来丰厚的奖励，顺豆奖励将自动发放，虚拟货币、实物等奖励请在我的奖品页领取</p>
+					<p>4.活跃值将在每周日24:00刷新清零</p>
+					<p>5.完成每日任务可获得任务宝箱，获得后可点击头像在我的包裹中查看</p>
+				</div>
+				<div class="list_box smallScroll">
+					<ul>
+						<li>
+							<div class="left">
+								<h2>参加<span>2</span>次乱斗</h2>
+								<div>
+									<h3><span style="width: 100%;"><span></h3>
+									<h4><span>1</span>/2</h4>
+								</div>
+							</div>
+							<div class="middle">
+								初级宝箱哈哈哈哈
+							</div>
+							<div class="right state1">
+								<a href="">领取奖励</a>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<h2>参加<span>2</span>次乱斗</h2>
+								<div>
+									<h3><span style="width: 90%;"><span></h3>
+									<h4><span>1</span>/2</h4>
+								</div>
+							</div>
+							<div class="middle">
+								初级宝箱哈哈哈哈
+							</div>
+							<div class="right state2">
+								<a href="">去参加>></a>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<h2>参加<span>2</span>次乱斗</h2>
+								<div>
+									<h3><span style="width: 50%;"><span></h3>
+									<h4><span>1</span>/2</h4>
+								</div>
+							</div>
+							<div class="middle">
+								初级宝箱哈哈哈哈
+							</div>
+							<div class="right state3">
+								<a>已完成</a>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<h2>参加<span>2</span>次乱斗</h2>
+								<div>
+									<h3><span><span></h3>
+									<h4><span>1</span>/2</h4>
+								</div>
+							</div>
+							<div class="middle">
+								初级宝箱哈哈哈哈
+							</div>
+							<div class="right state1">
+								<a href="">领取奖励</a>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<h2>参加<span>2</span>次乱斗</h2>
+								<div>
+									<h3><span><span></h3>
+									<h4><span>1</span>/2</h4>
+								</div>
+							</div>
+							<div class="middle">
+								初级宝箱哈哈哈哈
+							</div>
+							<div class="right state1">
+								<a href="">领取奖励</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="ac_box">
+					<h3>每周活跃</h3>
+					<div>
+						<h4>
+							<span></span>
+						</h4>
+						<ul>
+							<li>
+								<a href="#" class="yes">500豆</a>
+								<h2>15</h2>
+							</li>
+							<li>
+								<a href="#" class="yes">500豆</a>
+								<h2>200</h2>
+							</li>
+							<li>
+								<a href="#" class="no">500豆</a>
+								<h2>400</h2>
+							</li>
+							<li>
+								<a href="#" class="no">500豆</a>
+								<h2>600</h2>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 	</div>
 </body>
 <script src="../../scripts/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -182,6 +305,11 @@
 				$(parent).find('a').eq($(this).index()).stop(true,true).fadeIn(speed);
 			})
 			
+			$('.stimulate .btn').on('click',function() {
+				$(this).toggleClass('open');
+				$('.stimulate .content').toggle();
+			})
+			
 			function loop(num) {
 				liDom.eq(num).click();
 			}
@@ -200,11 +328,29 @@
 				connentId.siblings('div').removeClass('active');
 				connentId.addClass('active');
 			})
+		},
+		domAction:function() {
+			$('.stimulate .content h1 span,.stimulate .content .rules').hover(function() {
+				$('.stimulate .content .rules').show();
+			},function() {
+				$('.stimulate .content .rules').hide();
+			})
+		},
+		setAc:function(p) {
+			$('.stimulate .ac_box h4 span').css('width',(100-p)+"%");
+			[14,38,62,86].map(function(v,n) {
+				if(p>=v) {
+					$('.stimulate .ac_box li').eq(n).addClass('on');
+					$('.stimulate .ac_box li').eq(n).find('a').show();
+				}
+			})
 		}
 	}
 	indexObj.setLiAuto(700, 5, '.carousel-indicators li');
 	indexObj.setClick('.carousel-indicators','.carousel-inner',500);
 	indexObj.setBanner('.msg_box .banner');
+	indexObj.domAction();
+	indexObj.setAc(80);
 
 </script>
 </html>

@@ -1,0 +1,67 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": [
+    	{
+    		"needCnt":"200",
+    		"winCnt":"90",
+    		"userId":"100",
+    		"awardProductId":"描述1",
+    		"productName":"描述1",
+    		"catalog":"描述1",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":true
+    	},
+    	{
+    		"needCnt":"100",
+    		"winCnt":"100",
+    		"userId":"100",
+    		"awardProductId":"描述2",
+    		"productName":"描述2",
+    		"catalog":"描述2",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":false
+    	},
+    	{
+    		"needCnt":"100",
+    		"winCnt":"90",
+    		"userId":"100",
+    		"awardProductId":"描述3",
+    		"productName":"描述3",
+    		"catalog":"描述3",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":false
+    	},
+    	{
+    		"needCnt":"100",
+    		"winCnt":"90",
+    		"userId":"100",
+    		"awardProductId":"描述3",
+    		"productName":"描述3",
+    		"catalog":"描述3",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":false
+    	},
+    	{
+    		"needCnt":"100",
+    		"winCnt":"90",
+    		"userId":"100",
+    		"awardProductId":"描述3",
+    		"productName":"描述3",
+    		"catalog":"描述3",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":false
+    	},
+    	{
+    		"needCnt":"100",
+    		"winCnt":"90",
+    		"userId":"100",
+    		"awardProductId":"描述3",
+    		"productName":"描述3",
+    		"catalog":"描述3",
+    		"pic":"prize_no2.png",
+    		"entityPrizeHasGet":false
+    	}
+    ]
+}

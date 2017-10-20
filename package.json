@@ -9,6 +9,7 @@
   "author": "Season",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^7.1.5",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-polyfill": "^6.23.0",
@@ -32,11 +33,20 @@
     "gulp-postcss": "^6.3.0",
     "gulp-pug": "^3.2.0",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemap": "^1.0.1",
     "gulp-uglify": "^3.0.0",
     "gulp.spritesmith": "^6.2.1",
     "jstransformer-babel": "^2.1.0",
     "postcss-px2rem": "^0.3.0"
   },
+  "browserslist": [
+    "last 2 version",
+    "> 10%",
+    "> 5% in CN",
+    "iOS < 7",
+    "Firefox < 20",
+    "ie >= 8"
+  ],
   "eslintConfig": {
     "env": {
       "es6": true,

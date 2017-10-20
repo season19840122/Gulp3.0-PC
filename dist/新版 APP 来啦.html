@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>新版 APP 来啦 V2.0.0</title>
+    <link rel="stylesheet" href="styles/app.css">
+  </head>
+  <body>
+    <div class="box">
+      <div class="bg_box">
+        <div class="bg1"><i></i></div>
+        <div class="bg2"><i></i></div>
+        <div class="bg3"><i></i></div>
+        <div class="bg4"><i></i></div>
+        <div class="bg5"><i></i></div>
+      </div>
+      <div class="wrap_box">
+        <div class="wrap"><a class="back" href="###">返回</a>
+          <div class="anchors-wrap"><a class="a1 ti sel" href="###">“老友”升级专享</a><a class="a2 ti" href="###">“新友”首登赠礼</a><a class="a3 ti" href="###">每日签到豪送</a><a class="a4 ti" href="###">App专享赛事</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/jquery.scrollTo.min.js"></script>
+    <script>    (function($) {
+      $("body").on("click", ".anchors-wrap a", function(e) {
+        $(this).addClass("sel").siblings().removeClass("sel");
+      });
+      $("body").on("click", ".a1", function(e) {
+        $.scrollTo($(".bg2"), 600);
+      });
+      $("body").on("click", ".a2", function(e) {
+        $.scrollTo($(".bg3"), 600);
+      });
+      $("body").on("click", ".a3", function(e) {
+        $.scrollTo($(".bg4"), 600);
+      });
+      $("body").on("click", ".a4", function(e) {
+        $.scrollTo($(".bg5"), 600);
+      });
+    })(jQuery)</script>
+  </body>
+</html>

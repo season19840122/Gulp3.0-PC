@@ -99,7 +99,8 @@ figure {
 
 hr {
   -moz-box-sizing: content-box;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -145,7 +146,9 @@ input {
 }
 
 input[type=checkbox], input[type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -328,7 +331,9 @@ li {
 }
 
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
@@ -391,21 +396,25 @@ body {
   color: #271708;
   border: 0;
   background: #c49f58;
-  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
-  /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 .button-no {
   color: #271708;
   background: #c49f58;
-  background: -webkit-linear-gradient(to bottom, #c49f58, #c49f58);
-  /* For Safari 5.1 to 6.0 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#c49f58), to(#c49f58));
+  background: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background: -moz-linear-gradient(top, #c49f58, #c49f58);
   background: linear-gradient(to bottom, #c49f58, #c49f58);
   /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=$type, startColorStr=$startColor, endColorStr=$endColor);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+  /* IE6-9 */
 }
 
 /*下拉列表*/
@@ -447,18 +456,21 @@ body {
 .mainScroll::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .mainScroll::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #000;
 }
 
 .mainScroll::-webkit-scrollbar-thumb {
   -webkit-box-shadow: inset 0 0 5px #2d3a48;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #33383e;
 }
 
@@ -474,16 +486,19 @@ body {
 .smallScroll::-webkit-scrollbar {
   width: 6px;
   height: 66px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .smallScroll::-webkit-scrollbar-track {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: none;
 }
 
 .smallScroll::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #785a28;
 }
 
@@ -495,12 +510,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 [v-cloak] {
   display: none;
 }
@@ -509,16 +519,19 @@ h2, li, a, div {
 .liScroll::-webkit-scrollbar {
   width: 6px;
   height: 66px;
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
 }
 
 .liScroll::-webkit-scrollbar-track {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: none;
 }
 
 .liScroll::-webkit-scrollbar-thumb {
-  border-radius: 5px;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
   background: #1f2e38;
 }
 
@@ -592,8 +605,6 @@ h2, li, a, div {
   top: 85px;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
@@ -605,8 +616,6 @@ h2, li, a, div {
 .box .myPackage-wrap .show-box .dg-wrapper a.dg-transition {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -670,7 +679,9 @@ h2, li, a, div {
 .box .myPackage-wrap .show-box .dg-wrapper a img {
   width: 128px;
   height: 128px;
-  border-radius: 50%;
+  -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+          border-radius: 50%;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -720,18 +731,18 @@ h2, li, a, div {
   float: left;
   width: 297px;
   height: 109px;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: -moz-box;
+  display: -webkit-box;
   display: flex;
-  -webkit-justify-content: center;
   -moz-box-pack: center;
   -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   -moz-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   border: 2px solid  #463714;
   margin-right: 11px;
   margin-bottom: 10px;
@@ -1024,7 +1035,8 @@ h2, li, a, div {
   height: 149px;
   background: #0b0c10;
   -moz-box-shadow: 0px 0px 0px 3px #5a4729;
-  box-shadow: 0px 0px 0px 3px #5a4729;
+  -webkit-box-shadow: 0px 0px 0px 3px #5a4729;
+          box-shadow: 0px 0px 0px 3px #5a4729;
   padding: 40px 50px 0;
 }
 
@@ -1037,7 +1049,8 @@ h2, li, a, div {
   width: 473px;
   height: 139px;
   -moz-box-shadow: 0px 0px 0px 1px #5a4729;
-  box-shadow: 0px 0px 0px 1px #5a4729;
+  -webkit-box-shadow: 0px 0px 0px 1px #5a4729;
+          box-shadow: 0px 0px 0px 1px #5a4729;
 }
 
 .dialog-wrap::after {

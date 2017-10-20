@@ -1,5 +1,5 @@
-@import 'base.scss';
-@import 'common.scss';
+@import '_base.scss';
+@import '_common.scss';
 @import 'tabBar.scss';
 
 [v-cloak] {
@@ -301,14 +301,14 @@
           height: 15px;
           position: relative;
           span {
-            @include line-gradient(#1442a7, #7ca7fd, left, 1);
+            @include linear-gradient(#1442a7, #7ca7fd, to right);
             height: 7px;
             width: 49%;
             display: inline-block;
             margin-top: 4px;
             float: left;
             &.two {
-              @include line-gradient(#460000, #f95800, left, 1);
+              @include linear-gradient(#460000, #f95800, to right);
             }
           }
           p {

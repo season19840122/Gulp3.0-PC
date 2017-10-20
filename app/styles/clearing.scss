@@ -1,0 +1,214 @@
+@import '_base.scss';
+@import '_common.scss';
+
+[v-cloak] {
+  display: none;
+}
+
+$w: 300px; $h: 362px;
+.box {
+  color: #9d9d9d;
+  font: 12px/1.5 'Microsoft YaHei';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: $w;
+  overflow: hidden;
+  /* height: $h;*/
+  border: 1px solid  #000;
+  #clearing {
+  	content: '';
+		border: 1px solid  #113743;
+		width: $w - 2;
+		/* height: $h - 2;*/
+		overflow: hidden;
+  	.app {
+  		width: 296px;
+			margin: 0 auto;
+			background: #0c222c;
+			position: relative;
+  		.head {
+  			width: 100%;
+				height: 106px;
+  			background: url(../images/clearing/head.png) no-repeat;
+  			.btn-close {
+  				position: absolute;
+  				right: 8px;
+    			top: 8px;
+  				width: 15px;
+    			height: 15px;
+			    background: url(../images/clearing/sprite-clearing.png) no-repeat -4px -100px;
+			    &:hover {
+						background-position: -4px -124px;
+			    }
+			    &:active {
+			    	background-position: -5px -149px;
+			    }
+  			}
+  			.mybean-wrap {
+  				padding-top: 55px;
+  				.mybean {
+  					background: #071822;
+  					width: 264px;
+  					height: 45px;
+  					line-height: 45px;
+  					margin: 0 auto;
+  					font-size: 14px;
+  					padding-left: 12px;
+  					color: #fff;
+  					position: relative;
+  					i {
+  						color: #00ff5a;
+  					}
+  					.btn-exchange {
+  						font-size: 14px;
+  						line-height: 32px;
+  						text-align: center;
+  						position: absolute;
+  						right: 6px;
+  						top: 6px;
+					    width: 94px;
+    					height: 32px;
+  						background: url(../images/clearing/sprite-clearing.png) no-repeat;
+  						&:hover {
+								background-position: 0 -32px;
+  						}
+  						&:active {
+  							background-position: 0 -32px*2;
+  						}
+  					}
+  				}
+  			}
+  		}
+  		.jctz {
+  			width: 100%;
+  			height: 92px;
+  			padding: 0 17px;
+  			.title {
+					color: #184857;
+  				font-size: 14px;
+  				line-height: 32px;
+  				font-weight: bold;
+  			}
+  			.info-wrap {
+  				width: 264px;
+  				height: 58px;
+  				background: #0b1d25;
+  				display: flex;
+          align-items: center;
+    			justify-content: space-around;
+    			&.no {
+            justify-content: flex-start;
+    				p {
+    					color: #ba9d5e;
+    					margin-left: 15px;
+    				}
+    			}
+  				> p {
+            position: relative;
+						color: #fff;
+						margin-left: 12px;
+						&.w1 {
+							width: 60px;
+							-ms-flex-preferred-size: 60px;
+							    flex-basis: 60px;
+						}
+						span {
+							width: 66px;
+							display: inline-block;
+							@extend .eps;
+						}
+						.success {
+							color: #c4f250;
+						}
+						.fail {
+							color: #174452;
+						}
+						.t{
+							width: 120px;
+						}
+						.tips {
+							line-height: 18px;
+						}
+						.big {
+							width: auto;
+							display: block;
+							font-size: 22px;
+						}
+						.wa {
+							width: auto;
+						}
+						.dou, .quan {
+              vertical-align: bottom;
+							margin-left: 2px;
+							display: inline-block;
+							width: 23px;
+							height: 22px;
+							background: url(../images/clearing/sprite-clearing.png) no-repeat 0 -183px;
+						}
+            .quan {
+              background-position: 0 -213px;
+            }
+            .dq-tips {
+              font-size: 12px;
+              color: #000;
+              text-decoration: underline;
+              background: #fff;
+              display: inline-block;
+              padding: 1px 3px;
+              position: absolute;
+              left: 50%;
+              transform: translate(0, -100%);
+              &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-top: -1px;
+                margin-left: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: #fff transparent transparent transparent;
+              }
+            }
+  				}
+  			}
+  		}
+  		.foot {
+  			width: 100%;
+  			height: 70px;
+  			padding: 8px 17px 0;
+  			display: -webkit-box;
+  			display: -moz-box;
+  			display: -ms-flexbox;
+  			display: flex;
+  			.title {
+  				font-size: 12px;
+  				color: #e0760f;
+  				background: #2d2f2b;
+  				border: 1px solid  #815228;
+  				width: 30px;
+  				height: 18px;
+  				line-height: 16px;
+  				text-align: center;
+  				display: inline-block;
+  				-moz-border-radius: 2px;
+  				     -webkit-border-radius: 2px;
+  				        border-radius: 2px;
+  				margin-left: 15px;
+  			}
+  			.link {
+  				vertical-align: top;
+  				display: inline-block;
+  				width: 205px;
+  				color: #9fa2ac;
+  				margin-left: 12px;
+  				&:hover {
+  					color: #fff;
+  					text-decoration: underline;
+  				}
+  			}
+  		}
+  	}
+  }
+}

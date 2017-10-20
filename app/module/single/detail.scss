@@ -1,5 +1,5 @@
-@import '../../styles/base.scss';
-@import '../../styles/common.scss';
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
 html {
     background: black;
 }
@@ -20,6 +20,11 @@ html {
     &.lol {
         #game_bg {
             background: url(../../images/detail/detail_lol.webp);
+        }
+    }
+    &.wz {
+        #game_bg {
+            background: url(../../images/detail/wz_bg.webp);
         }
     }
     &.meng3 {
@@ -312,6 +317,9 @@ html {
             &>p {
                 font-size: 12px;
                 color: #9b9788;
+                span{
+                    color: #ffb100;
+                }
                 &.padding {
                     padding-left: 12px
                 }
@@ -613,6 +621,31 @@ html {
                     padding-left: 5px;
                     display: inline-block;
                     vertical-align: middle;
+                }
+            }
+        }
+        &.wz{
+            &>ul.title li,&>.subTitle ul li,&>.list_middle ul li,&>.my li{
+                &:nth-child(1) {
+                    width: 5%;
+                }
+                &:nth-child(2) {
+                    width: 20%;
+                }
+                &:nth-child(3) {
+                    width: 15%;
+                }
+                &:nth-child(4) {
+                    width: 15%;
+                }
+                &:nth-child(5) {
+                    width: 15%;
+                }
+                &:nth-child(6) {
+                    width: 20%;
+                }
+                &:nth-child(7) {
+                    width: 10%;
                 }
             }
         }

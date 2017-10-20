@@ -1,5 +1,5 @@
-@import '../../styles/base.scss';
-@import '../../styles/common.scss';
+@import '../../styles/_base.scss';
+@import '../../styles/_common.scss';
 html {
     background: black;
 }
@@ -20,7 +20,7 @@ html {
     }
     .left_menu{
         border-bottom: 1px solid #1c2e35;
-        @include abTopLeft(180px, 120px, 73px, 35px);
+        @include abTopLeft(180px, 155px, 73px, 35px);
         ul{
             padding-left: 2px;
             li {
@@ -63,10 +63,10 @@ html {
     }
     @include scroll2();
     .type_select{
-        @include abTopLeft(180px, 32px, 215px, 35px);
+        @include abTopLeft(180px, 32px, 245px, 35px);
         border: 1px solid #463723;
         &#city{
-            top: 265px;
+            top: 290px;
         }
         &:before{
             content: "";
@@ -342,7 +342,9 @@ html {
                     @include abTopLeft(290px, 300px, 0px, 0px);
                     z-index: 15;
                     cursor: pointer;
-                    &:hover{
+                }
+                &:hover{
+                    &>a{
                         box-shadow:inset 0px 0px 5px 0px #d39818;
                     }
                 }
@@ -389,6 +391,50 @@ html {
                             background-position: 0px 0px;
                         }
                     }
+                    .tip_qrcode{
+                        
+                    }
+                    .btn_download{
+                        width: 150px;
+                        background: url(../../images/single/btn_download.png);
+                        &:hover{
+                            &:before,&:after{
+                                display: block;
+                            }
+                            background-position: 0px -30px;
+                        }
+                        &:active{
+                            background-position: 0px -60px;
+                        }
+                        &:before{
+                            display: none;
+                            content: "";
+                            z-index: 20;
+                            position: absolute;
+                            bottom: 30px;
+                            left: 0px;
+                            width: 148px;
+                            height: 148px;
+                            border: 1px solid #67501f;
+                            color: #c8a451;
+                            background: #100403;
+                        }
+                        &:after{
+                            display: none;
+                            content: "";
+                            z-index: 20;
+                            position: absolute;
+                            bottom: 30px;
+                            left: 0px;
+                            width: 148px;
+                            height: 148px;
+                            border: 1px solid #67501f;
+                            color: #c8a451;
+                            background: url(../../images/single/app_img.png) no-repeat;
+                            background-size: 140px 140px;
+                            background-position: 4px 4px;
+                        }
+                    }
                     .btn_list{
                         background: url(../../images/single/btn3.png);
                     }
@@ -433,6 +479,12 @@ html {
                     background: url(../../images/single/lol_bg.png);
                     .title:after{
                         background: url(../../images/pics/lol_logo.png);
+                    }
+                }
+                &.wz{
+                    background: url(../../images/single/wz_bg.png);
+                    .title:after{
+                        background: url(../../images/pics/wzry_logo.png);
                     }
                 }
                 &.meng3{

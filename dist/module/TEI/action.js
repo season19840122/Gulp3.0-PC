@@ -114,7 +114,7 @@ define(['jquery', 'vue', 'commons'], function($, Vue, COMMONS) {
 		methods: {
 			goPage:function(num) {
 				if(COMMONS.checkLogin()) { //已登录，初始化信息
-					if(num == 3) location.href = "八强.html";
+					if(num == 2) location.href = "八强.html";
 				} else {
 					this.showMsg('noLogin');
 				}
@@ -224,6 +224,9 @@ define(['jquery', 'vue', 'commons'], function($, Vue, COMMONS) {
 									isLeader = data.isLeader,
 									teamName = data.teamName,
 									isHasCombatTeam = data.isHasCombatTeam;
+									
+								this_.showMsg('msg', "报名已结束");
+								return;
 								//status 1 没战队
 								if(!isHasCombatTeam) {
 									this_.showMsg('noTeam');

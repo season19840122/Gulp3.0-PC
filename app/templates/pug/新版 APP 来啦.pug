@@ -1,0 +1,52 @@
+extends _layouts
+block title
+  title 新版 APP 来啦 V2.0.0
+block style
+  link(rel='stylesheet', href='styles/app.css')
+block main
+  .bg_box
+    .bg1
+      i
+    .bg2
+      i
+    .bg3
+      i
+    .bg4
+      i
+    .bg5
+      i
+  .wrap_box
+    .wrap
+      a(href="###").back 返回
+      .anchors-wrap
+        a(href="###").a1.ti.sel “老友”升级专享
+        a(href="###").a2.ti “新友”首登赠礼
+        a(href="###").a3.ti 每日签到豪送
+        a(href="###").a4.ti App专享赛事
+block script
+  script(src='scripts/jquery-3.1.1.min.js')
+  script(src='scripts/jquery.scrollTo.min.js')
+  script.
+    (function($){
+      $('body').on("click", '.anchors-wrap a', function(e){
+        $(this).addClass('sel').siblings().removeClass('sel');
+      });
+
+      $('body').on("click", '.a1', function(e){
+        $.scrollTo($('.bg2'), 600);
+      });
+
+      $('body').on("click", '.a2', function(e){
+        $.scrollTo($('.bg3'), 600);
+      });
+
+      $('body').on("click", '.a3', function(e){
+        $.scrollTo($('.bg4'), 600);
+      });
+
+      $('body').on("click", '.a4', function(e){
+        $.scrollTo($('.bg5'), 600);
+      });
+
+    })(jQuery);
+      

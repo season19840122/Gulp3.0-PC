@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 .hide_ {
   display: none;
 }
@@ -906,6 +901,10 @@ h2, li, a, div {
   cursor: pointer;
 }
 
+.box .login_hm h3:hover {
+  color: #fff9dc;
+}
+
 .box .fast_hm {
   position: absolute;
   width: 100%;
@@ -1154,6 +1153,10 @@ h2, li, a, div {
   cursor: pointer;
 }
 
+.box .fast_hm #phone h3:hover {
+  color: #fff9dc;
+}
+
 .box .fast_hm #wechat {
   text-align: center;
 }
@@ -1226,6 +1229,10 @@ h2, li, a, div {
   text-align: center;
   text-decoration: underline;
   cursor: pointer;
+}
+
+.box .fast_hm #wechat h3:hover {
+  color: #fff9dc;
 }
 
 .state {

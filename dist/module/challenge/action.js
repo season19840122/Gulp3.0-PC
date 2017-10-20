@@ -568,6 +568,15 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 				clearTimeout(this.pay.timeBack);
 				this.pay.timeNum = 300;
 			},
+			getUserId:function() {
+				var user = ClientAPI.getLoginXingYun();
+				if(!user.hasOwnProperty("userId") || user.userId == 0) {
+					//调起登陆窗
+					return 0;
+				} else {
+					return user.userId;
+				}
+			},
 			goPay: function (type) {
 				var URLOBJ = urlObj.enterRoom;
 				if (this.flag.noSd && type == 'sd') return;//如果没有顺豆，不允许点击
@@ -587,6 +596,7 @@ define(['jquery', 'vue', 'commons'], function ($, Vue, COMMONS) {
 							var retSwbean = data.retSwbean;
 							if("sd" == type) {
 								t.showAlert("支付成功", retSwbean>0?"本次现金报名已返还<span>"+retSwbean+"</span>顺豆<br>正在为您启动游戏...":"正在为您启动游戏...");
+								ClientAPI.setBeanGift(t.getUserId(), data.vcParamJson);
 							} else {
 								t.showAlert("支付成功", "正在为您启动游戏...");
 							}

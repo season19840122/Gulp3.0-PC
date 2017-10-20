@@ -3,10 +3,11 @@
     "code": 0,
     "message": null,
     "data": {
+    	"allowApply":true,
         "rankList": [
             {
                 "rank": 1,
-                "nickName": "镊子",
+                "nickName": "镊子dfdfdfdfdf",
                 "playerName": "只吃肉的和尚",
                 "serverName": "皮城警备",
                 "totalCnt": 4,

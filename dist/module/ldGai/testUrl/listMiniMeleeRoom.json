@@ -1,0 +1,124 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": [
+        {
+            "meleeMatchRoomId": 65,
+            "regCnt": 122,
+            "regLimitCnt": 200,
+            "rewardPool":14240,
+            "hasClosed":false,
+            "hasCalculated":true,
+            "odds": "0.00"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasClosed":true,
+            "hasCalculated":false,
+            "odds": "0.00"
+        },
+        {
+            "meleeMatchRoomId": 63,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 44410,
+            "hasClosed":true,
+            "hasCalculated":false,
+            "odds": "1.67"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "hasCalculated":false,
+            "rewardPool": 12130,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "hasClosed":true,
+            "hasCalculated":false,
+            "rewardPool": 12130,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "hasClosed":true,
+            "rewardPool": 12130,
+            "hasCalculated":false,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "hasCalculated":false,
+            "rewardPool": 12130,
+            "hasClosed":true,
+            "odds": "1.31"
+        },
+        {
+            "meleeMatchRoomId": 64,
+            "regCnt": 200,
+            "regLimitCnt": 200,
+            "hasClosed":true,
+            "hasCalculated":false,
+            "rewardPool": 12130,
+            "odds": "1.31"
+        }
+    ]
+}

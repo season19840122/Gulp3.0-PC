@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>计算弹窗</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/iconfont/iconfont.css">
+    <link rel="stylesheet" href="styles/clearing.css">
+  </head>
+  <body>
+    <div class="box">
+      <div id="clearing" v-cloak>
+        <com-clearing>
+          <div class="head" slot="head">
+            <button class="btn-close"></button>
+            <div class="mybean-wrap">
+              <p class="mybean">我的顺豆：<span>658700</span><i class="iconfont icon-topjian"></i>
+                <button class="btn-exchange">兑换礼物</button>
+              </p>
+            </div>
+          </div>
+          <div class="jctz" slot="jctz">
+            <h3 class="title">精彩挑战:</h3>
+            <div class="info-wrap">
+              <p><span>获得胜利</span><br><span class="success">达成</span><!--<span class="fail">未达成</span>--></p>
+              <p class="w1"><span class="tips" data-toggle="tooltip" title="多行信息第二行信息多行信息第二行信息多行信息第二行信息">击杀10人击杀10人</span><br><span class="success">达成</span><!--<span class="fail">未达成</span>--></p>
+              <p><a class="dq-tips" href="#" target="_blank">去领取</a><span class="success big">+5000<i class="dou"></i><!--<i class="quan"></i>--></span><span class="success wa">(VIP+1200)</span></p>
+            </div>
+            <!-- <div class="info-wrap no">
+              <p>重开局，报名费用已退还到您的账户重开局，报名费用已退还到您的账户</p>
+            </div>
+            -->
+          </div>
+          <div class="jctz" slot="ldc">
+            <h3 class="title">乱斗场/百人乱斗:</h3>
+            <div class="info-wrap">
+              <p><span class="t" data-toggle="tooltip" title="多行信息第二行信息">团队击杀一条土龙团土龙团</span><br><span class="success">达成</span><!--<span class="fail">未达成</span>--></p>
+              <p><span class="success big">等待结算</span></p>
+            </div>
+            <!-- <div class="info-wrap no">
+              <p>重开局，报名费用已退还到您的账户</p>
+            </div>
+            -->
+          </div>
+          <div class="foot" slot="foot">
+            <h4 class="title">活动</h4><a class="link" href="#" target="_blank">就在就在就在就在就在就在就在就在就在</a>
+          </div>
+        </com-clearing>
+      </div>
+      <template id="tem-clearing">
+        <div class="app">
+          <slot name="head"></slot>
+          <slot name="jctz"></slot>
+          <slot name="ldc"></slot>
+          <slot name="foot"></slot>
+        </div>
+      </template>
+    </div>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/vue.min.js"></script>
+    <script>    Vue.component("com-clearing", {
+      template: "#tem-clearing"
+    });
+
+    var clearvm = new Vue({
+      el: "#clearing",
+      mounted: function() {
+        this.init();
+      },
+      methods: {
+        init: function() {
+          $('[data-toggle="tooltip"]').tooltip();
+        }
+      }
+    })</script>
+  </body>
+</html>

@@ -115,6 +115,7 @@ define(['jquery', 'vue', 'commons'], function($, Vue, COMMONS) {
 			goPage:function(num) {
 				if(COMMONS.checkLogin()) { //已登录，初始化信息
 					if(num == 3) location.href = "八强.html";
+					if(num == 4) location.href = "入围.html";
 				} else {
 					this.showMsg('noLogin');
 				}

@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 html {
   background: black;
 }
@@ -1248,4 +1243,527 @@ html {
   width: 100%;
   height: 1px;
   background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 51%, rgba(255, 255, 255, 0) 100%);
+}
+
+.box .stimulate {
+  position: absolute;
+  top: 17px;
+  right: 31px;
+  width: 94px;
+  height: 30px;
+}
+
+.box .stimulate .btn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 94px;
+  height: 30px;
+  background: url(../../images/index/btn3.png);
+}
+
+.box .stimulate .btn p {
+  background: #101a21;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 90px;
+  height: 26px;
+  text-align: center;
+  line-height: 25px;
+  text-indent: -12px;
+  color: #f0e6d2;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.box .stimulate .btn.tip:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border-radius: 4px;
+}
+
+.box .stimulate .btn:before {
+  content: "\e63c";
+  color: #f0e6d2;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  z-index: 2;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box .stimulate .btn.open:before {
+  content: "\e63d";
+  color: #f0e6d2;
+  cursor: pointer;
+  position: absolute;
+  top: 3px;
+  right: 20px;
+  width: 8px;
+  height: 8px;
+  z-index: 2;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box .stimulate .btn:hover {
+  background-position-y: -30px;
+}
+
+.box .stimulate .btn:hover p {
+  color: #ffd88b;
+}
+
+.box .stimulate .btn:hover:before {
+  color: #ffd88b;
+}
+
+.box .stimulate .btn:active {
+  background-position-y: -60px;
+}
+
+.box .stimulate .btn:active p {
+  color: #c2a978;
+}
+
+.box .stimulate .btn:active:before {
+  color: #c2a978;
+}
+
+.box .stimulate .content {
+  display: none;
+  position: absolute;
+  top: 43px;
+  right: 0px;
+  width: 620px;
+  height: 424px;
+  background: #010a13;
+  z-index: 10;
+  border: 2px solid #69511e;
+}
+
+.box .stimulate .content:before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  right: 0px;
+  width: 65px;
+  height: 9px;
+  background: url(../../images/index/btn4.png);
+}
+
+.box .stimulate .content > h1 {
+  color: #F0E6D2;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  width: 100%;
+  height: 41px;
+  border-bottom: 1px solid #69511e;
+  line-height: 40px;
+  padding-left: 26px;
+}
+
+.box .stimulate .content > h1 span {
+  position: absolute;
+  top: 9px;
+  right: 17px;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+  text-align: right;
+  line-height: 20px;
+  font-weight: normal;
+  color: #cdbe91;
+}
+
+.box .stimulate .content > h1 span:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -5px;
+  width: 18px;
+  height: 14px;
+  background: url(../../images/index/btn_rules.png);
+}
+
+.box .stimulate .content .rules {
+  display: none;
+  z-index: 10;
+  background: rgba(51, 39, 17, 0.8);
+  position: relative;
+  padding: 25px;
+  top: 41px;
+}
+
+.box .stimulate .content .rules p {
+  font-size: 12px;
+  color: #cdbe91;
+  margin-bottom: 5px;
+}
+
+.box .stimulate .content .rules:after {
+  content: "\e60d";
+  position: absolute;
+  top: -2px;
+  right: 43px;
+  width: 10px;
+  height: 10px;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 0px;
+  font-size: 30px;
+  color: rgba(51, 39, 17, 0.8);
+}
+
+.box .stimulate .content .list_box {
+  position: absolute;
+  top: 44px;
+  right: 2px;
+  width: 100%;
+  height: 280px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.box .stimulate .content .list_box ul {
+  width: 100%;
+  position: relative;
+}
+
+.box .stimulate .content .list_box ul li {
+  overflow: hidden;
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid #1e282d;
+}
+
+.box .stimulate .content .list_box ul li > div {
+  float: left;
+  height: 70px;
+  display: inline-block;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) {
+  width: 285px;
+  padding-left: 25px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div {
+  margin-top: 10px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div h3 {
+  float: left;
+  vertical-align: middle;
+  position: relative;
+  width: 200px;
+  height: 6px;
+  border: 1px solid #785a28;
+  overflow: hidden;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div h3:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 200px;
+  height: 6px;
+  background-image: -webkit-linear-gradient(to right, #094045, #069d94);
+  background-image: linear-gradient(to right, #094045, #069d94);
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div h3 span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto;
+  height: 6px;
+  background: #010a13;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div h4 {
+  padding-left: 10px;
+  font-size: 14px;
+  color: #A09B8C;
+  font-weight: bold;
+  letter-spacing: 5px;
+  margin-top: -5px;
+  vertical-align: middle;
+  float: left;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) > div h4 span {
+  color: #0bc8db;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) h2 {
+  margin-top: 18px;
+  color: #A09B8C;
+  font-size: 14px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(1) h2 span {
+  padding: 0px 5px;
+  color: white;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(2) {
+  width: 190px;
+  line-height: 69px;
+  color: #959595;
+  font-size: 12px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3) {
+  width: 120px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3) a {
+  text-align: center;
+  line-height: 29px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 94px;
+  height: 30px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3).state1 a {
+  color: #f0e6d2;
+  background: url(../../images/index/btn3.png);
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3).state1 a:hover {
+  background-position-y: -30px;
+  color: #ffd88b;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3).state1 a:active {
+  background-position-y: -60px;
+  color: #c2a978;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3).state2 a {
+  color: #01ccb2;
+  font-size: 14px;
+}
+
+.box .stimulate .content .list_box ul li > div:nth-child(3).state3 a {
+  cursor: default;
+  color: #a09b8c;
+  font-size: 14px;
+}
+
+.box .stimulate .content .ac_box {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+  height: 97px;
+  z-index: 10;
+  background: url(../../images/index/sim_bg.png);
+  border-top: 1px solid #463714;
+  padding-top: 48px;
+  padding-left: 25px;
+}
+
+.box .stimulate .content .ac_box > div {
+  float: left;
+  width: 500px;
+  height: 6px;
+  position: relative;
+  vertical-align: middle;
+}
+
+.box .stimulate .content .ac_box > div ul {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 550px;
+  height: 6px;
+}
+
+.box .stimulate .content .ac_box > div ul li {
+  position: relative;
+  float: left;
+  height: 10px;
+  width: 120px;
+}
+
+.box .stimulate .content .ac_box > div ul li:before {
+  position: absolute;
+  top: -13px;
+  left: 59px;
+  width: 15px;
+  height: 15px;
+  content: "\e60f";
+  color: #b79b61;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+.box .stimulate .content .ac_box > div ul li.on:before {
+  position: absolute;
+  top: -16px;
+  left: 57px;
+  width: 15px;
+  height: 15px;
+  content: "\e60d";
+  color: #b79b61;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.box .stimulate .content .ac_box > div ul li a {
+  display: none;
+  color: #b79b61;
+  position: absolute;
+  top: -35px;
+  left: 30px;
+  width: 70px;
+  height: 20px;
+  font-size: 12px;
+  cursor: default;
+  text-align: center;
+  line-height: 19px;
+}
+
+.box .stimulate .content .ac_box > div ul li a.no {
+  cursor: pointer;
+  background: url(../../images/index/lq_btn.png);
+}
+
+.box .stimulate .content .ac_box > div ul li a.no:hover {
+  background-position: 0px -20px;
+}
+
+.box .stimulate .content .ac_box > div ul li a.no:active {
+  background-position: 0px -40px;
+}
+
+.box .stimulate .content .ac_box > div ul li a.yes {
+  cursor: default;
+  background: none;
+}
+
+.box .stimulate .content .ac_box > div ul li a.yes:after {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 20px;
+  height: 20px;
+  content: "\e601";
+  color: #28b211;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+}
+
+.box .stimulate .content .ac_box > div ul li a.yes:before {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: white;
+  border-radius: 10px;
+}
+
+.box .stimulate .content .ac_box > div ul li:nth-child(4) h1 {
+  color: #ff5a00;
+}
+
+.box .stimulate .content .ac_box > div ul li h2 {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  width: 130px;
+  height: 10px;
+  font-size: 12px;
+  color: #b79b61;
+  text-align: center;
+  line-height: 10px;
+}
+
+.box .stimulate .content .ac_box > div h4 {
+  position: relative;
+  width: 500px;
+  height: 6px;
+  border: 1px solid #785a28;
+  overflow: hidden;
+}
+
+.box .stimulate .content .ac_box > div h4:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 500px;
+  height: 6px;
+  background-image: -webkit-linear-gradient(to right, #094045, #069d94);
+  background-image: linear-gradient(to right, #094045, #069d94);
+}
+
+.box .stimulate .content .ac_box > div h4 span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: auto;
+  height: 6px;
+  background: #1e2327;
+}
+
+.box .stimulate .content .ac_box h3 {
+  font-size: 14px;
+  color: #069a91;
+  font-weight: bold;
+  margin-top: -5px;
+  margin-right: 10px;
+  vertical-align: middle;
+  float: left;
+}
+
+.box .stimulate .content .ac_box h3 span {
+  color: #0bc8db;
 }

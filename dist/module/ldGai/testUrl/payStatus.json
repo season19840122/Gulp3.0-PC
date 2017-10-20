@@ -1,0 +1,25 @@
+{
+	"success": true,
+	"code": 0,
+	"message": "",
+	"data": {
+		"orderRechargeId": "ML20170804104506197UYL0L5",
+		"userId": 30554,
+		"gameId": 13216,
+		"account": "822855271",
+		"subAccount": "2561_822855271",
+		"barId": 1211,
+		"money": 0.01,
+		"state": 1,
+		"addTime": "2017-08-04 10:45:16",
+		"outId": "YLZS201708041043039216684",
+		"payTime": "2017-08-04 10:45:24",
+		"callTime": "2017-08-04 10:45:25",
+		"remark": "{\"account\":\"822855271\",\"applyCnt\":1,\"barId\":1211,\"gameId\":13216,\"meleeMatchId\":316,\"meleeMatchTimesId\":2679,\"meleePeriod\":\"9:00-11:00\",\"playerAccount\":\"2561_822855271\",\"userId\":30554}",
+		"type": 8,
+		"sourceId": 0,
+		"source": 1,
+		"blendSwBean": 0,
+		"addTimeFmt": "2017-08-04 10:45:16"
+	}
+}

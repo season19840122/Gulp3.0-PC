@@ -132,6 +132,7 @@
                 "score": "null"
             }
         ],
+        "allowApply":false,
         "userRank": {
             "rank": 2,
             "nickName": "ME014391",

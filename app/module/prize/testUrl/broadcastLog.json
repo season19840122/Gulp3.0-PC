@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "code": 0,
+    "message": null,
+    "data": {
+    	"userNickName":"...",
+		"productName":"描述1"
+    }
+}

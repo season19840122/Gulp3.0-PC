@@ -1,5 +1,5 @@
-@import 'base.scss';
-@import 'common.scss';
+@import '_base.scss';
+@import '_common.scss';
 
 .box {
   font: 12px/1.5 'Microsoft YaHei';
@@ -202,9 +202,65 @@
     #info {
       ul {
         li {
+          clear: both;
           position: relative;
           min-height: 24px;
           margin-bottom: 22px;
+        }
+      }
+      .level-wrap {
+        float: left;
+        margin-top: 10px;
+        width: 294px;
+        height: 6px;
+        padding: 1px;
+        background: #1a1d26;
+        i {
+          width: 0;
+          height: 4px;
+          background: #c89b3c;
+          display: block;
+        }
+        .info {
+          color: #8d7652;
+        }
+      }
+      .q-wrap {
+        position: absolute;
+        left: 350px;
+        top: 5px;
+        .q {
+          background: url(../images/modal/Q.png) no-repeat;
+          width: 16px;
+          height: (48px/3);
+          cursor: pointer;
+          &:hover {
+            background-position: 0 -16px;
+          }
+          &:active {
+            background-position: 0 -16px*2;
+          }
+        }
+        .q-info {
+          display: none;
+          font-size: 14px;
+          background: #010a13;
+          color: #fae9ae;
+          border: 2px solid  #785a28;
+          padding: 8px;
+          margin-left: 5px;
+          position: relative;
+          top: 20px;
+          left: -48px;
+          &::before {
+            content: '';
+            width: 15px;
+            height: 10px;
+            background: url(../images/modal/arrow.png) no-repeat;
+            position: absolute;
+            top: -10px;
+            left: 42px;
+          }
         }
       }
     }
@@ -581,6 +637,47 @@ $w: 483px; $h: 149px;
       }
     }
   }
+  &.dialog-level {
+    width: 560px;
+    height: 380px;
+     &::before {
+      width: 560px - 10;
+      height: 380px - 10;
+    }
+    .content-wrap {
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.5;
+        color: #e8b664;
+        border-bottom: 1px solid  #202125;
+      }
+      .level-bg-wrap {
+        width: 480px;
+        height: 300px;
+        overflow-x: hidden;
+        .level-01 {
+          height: 341px;
+          background: url(../images/modal/level-01.png) no-repeat;
+        }
+        .level-02 {
+          height: 330px;
+          background: url(../images/modal/level-02.png) no-repeat;
+        }
+        .level-03 {
+          height: 201px;
+          background: url(../images/modal/level-03.png) no-repeat;
+        }
+        .level-04 {
+          height: 430px;
+          background: url(../images/modal/level-04.png) no-repeat;
+        }
+        .level-01, .level-02, .level-03, .level-04 {
+          width: 460px;
+        }
+      }
+    }
+  }
   .btn-close {
     z-index: 10;
     position: absolute;
@@ -597,6 +694,8 @@ $w: 483px; $h: 149px;
     }
   }
   .content-wrap {
+    position: relative;
+    z-index: 10;
     color: #b3b3b3;
     .p1 {
       font-size: 14px;

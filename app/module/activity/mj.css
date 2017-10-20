@@ -495,12 +495,7 @@ body {
   background: #463714;
 }
 
-/** 渐变 **/
-h2, li, a, div {
-  -webkit-transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-  transition: background-color .12s ease-in,color .12s ease-in,box-shadow .12s ease-in;
-}
-
+/** 线性渐变 **/
 html {
   background: black;
 }
@@ -557,6 +552,79 @@ html {
   height: 660px;
   overflow-x: hidden;
   overflow-y: auto;
+}
+
+.box .content_box .flush {
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 16px;
+  top: 765px;
+  right: 61px;
+  z-index: 100;
+}
+
+.box .content_box .flush:before {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  margin-right: 5px;
+  content: "\e608";
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#e9c05f), to(#b9843e));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.box .content_box .flush span {
+  font-size: 12px;
+  color: #e9c05f;
+}
+
+.box .content_box .flush:hover {
+  color: #ffe7a9;
+}
+
+.box .content_box .flush:hover:before {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  margin-right: 5px;
+  content: "\e608";
+  background-image: none;
+  -webkit-text-fill-color: inherit;
+}
+
+.box .content_box .flush:hover span {
+  font-size: 12px;
+  color: #ffe7a9;
+}
+
+.box .content_box .flush:active {
+  color: #ae8339;
+}
+
+.box .content_box .flush:active:before {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 12px;
+  margin-right: 5px;
+  content: "\e608";
+  background-image: none;
+  -webkit-text-fill-color: inherit;
+}
+
+.box .content_box .flush:active span {
+  font-size: 12px;
+  color: #ae8339;
 }
 
 .box .content_box .content {
@@ -616,6 +684,11 @@ html {
 .box .content_box .content .btn_apply.disable {
   cursor: default;
   background-position: 0px -321px;
+}
+
+.box .content_box .content .btn_apply.close {
+  cursor: default;
+  background-position: 0px -394px;
 }
 
 .box .content_box .content .list_box {
