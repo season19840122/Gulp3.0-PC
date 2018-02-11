@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp"
   },
   "author": "Season",
   "license": "ISC",
@@ -13,7 +14,7 @@
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-polyfill": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.24.1",
@@ -34,10 +35,19 @@
     "gulp-pug": "^3.2.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemap": "^1.0.1",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp.spritesmith": "^6.2.1",
     "jstransformer-babel": "^2.1.0",
     "postcss-px2rem": "^0.3.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ],
+    "plugins": []
   },
   "browserslist": [
     "last 2 version",
